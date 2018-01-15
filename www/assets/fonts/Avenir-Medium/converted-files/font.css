@@ -1,0 +1,12 @@
+@font-face {
+  font-family: 'AvenirNextW1G-Medium';
+  src: url('AvenirNextW1G-Medium.eot');
+  src: url('AvenirNextW1G-Medium.woff2') format('woff2'),
+       url('AvenirNextW1G-Medium.woff') format('woff'),
+       url('AvenirNextW1G-Medium.ttf') format('truetype'),
+       url('AvenirNextW1G-Medium.svg#AvenirNextW1G-Medium') format('svg'),
+       url('AvenirNextW1G-Medium.eot?#iefix') format('embedded-opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
