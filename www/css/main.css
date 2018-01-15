@@ -130,6 +130,7 @@ body {
       text-shadow: 2px 2px #501d69; }
     .header__link:focus {
       text-decoration: none;
+      outline: none;
       color: white; }
     .header__link:active {
       color: rgba(255, 255, 255, 0.7);
@@ -137,8 +138,8 @@ body {
       text-shadow: none; }
     @media (min-width: 992px) {
       .header__link {
-        margin: 0 5px;
-        padding: 0 5px; } }
+        margin: 0 10px;
+        padding: 0 0; } }
   @media (min-width: 1200px) {
     .header__logo {
       height: 63px;
@@ -156,7 +157,7 @@ body {
     left: 0;
     overflow: hidden;
     width: 100%;
-    height: 100%;
+    height: 110%;
     max-height: 816px; }
     .main-info__bg-lining {
       position: absolute;
@@ -188,6 +189,9 @@ body {
     @media (min-width: 992px) {
       .main-info__bg {
         padding-top: 152px; } }
+    @media (min-width: 1200px) {
+      .main-info__bg {
+        height: 100%; } }
   @media (min-width: 1200px) {
     .main-info {
       min-height: 815px;
