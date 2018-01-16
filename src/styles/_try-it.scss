@@ -1,0 +1,191 @@
+.try-it {
+  position: relative;
+  margin: 0 -15px;
+  padding-top: 87.5px;
+  padding-bottom: 85.5px;
+  background-image: linear-gradient(225deg, #b44faa, #4b2669);
+  overflow: hidden;
+
+  @media(min-width: 768px) {
+    padding-top: 100px;
+    padding-bottom: 127px;
+  }
+
+  @media(min-width: 992px) {
+    padding-top: 150px;
+    padding-bottom: 177px;
+  }
+
+  &__pattern {
+    opacity: .43;
+    position: absolute;
+    top: 50%;
+    left: 24.74%;
+    transform: translate(-24.74%, 50%);
+    & svg {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+
+    &-layer1 {
+      width: 214px;
+      height: 214px;
+    }
+
+    &-layer2 {
+      width: 428px;
+      height: 428px;
+    }
+
+    &-layer3 {
+      width: 642px;
+      height: 642px;
+    }
+    &-layer4 {
+      width: 856px;
+      height: 856px;
+    }
+    &-layer5 {
+      width: 1070px;
+      height: 1070px;
+    }
+    &-layer6 {
+      width: 1284px;
+      height: 1284px;
+    }
+    &-layer7 {
+      width: 1498px;
+      height: 1498px;
+    }
+  }
+
+  &__content {
+    position: relative;
+    left: 53.87%;
+    width: 280px;
+
+    height: auto;
+
+    @media(min-width: 768px) {
+      width: 300px;
+    }
+
+    @media(min-width: 992px) {
+      width: 390px;
+    }
+  }
+
+  &__text {
+    font-family: $avenir;
+    color: white;
+    font-weight: 300;
+    line-height: 1.30;
+    margin-bottom: 48px;
+    font-size: 32px;
+
+    @media(min-width: 768px) {
+      font-size: 36px;
+    }
+
+    @media(min-width: 992px) {
+      font-size: 48px;
+    }
+  }
+
+  &__devices {
+    position: absolute;
+    top: 50%;
+    left: 24.74%;
+    transform: translate(-24.74%, 50%);
+  }
+
+  &__iphone {
+    position: absolute;
+    width: 103.5px;
+    height: 210.68px;
+    top: -59.778px;
+    left: -36.45px;
+    background: transparent url('../assets/imgs/iphone.png') no-repeat center;
+    background-size: 100%;
+    @media(min-width: 576px) {
+      top: -66.42px;
+      left: -40.5px;
+      width: 115.02px;
+      height: 234.09px;
+    }
+    @media(min-width: 768px) {
+      top: -73.8px;
+      left: -45px;
+      width: 127.8px;
+      height: 260.1px;
+    }
+    @media(min-width: 992px) {
+      top: -82px;
+      left: -50px;
+      width: 142px;
+      height: 289px;
+    }
+  }
+  &__macbook {
+    position: absolute;
+    width: 554.77px;
+    height: 322.95px;
+    top: -153.09px;
+    right: -61.965px;
+    background: transparent url('../assets/imgs/macbook.png') no-repeat center;
+    background-size: 100%;
+
+    @media(min-width: 576px) {
+      width: 616.41px;
+      height: 358.83px;
+      top: -170.1px;
+      right: -68.85px;
+    }
+    @media(min-width: 768px) {
+      width: 684.9px;
+      height: 398.7px;
+      top: -189px;
+      right: -76.5px;
+    }
+    @media(min-width: 992px) {
+      width: 761px;
+      height: 443px;
+      top: -210px;
+      right: -85px;
+    }
+  }
+
+  &__btn {
+    display: inline-block;
+    color: white;
+    font-size: 15px;
+    font-family: $avenir;
+    padding: 8px 30px;
+    border: solid 2px #ffffff;
+    border-radius: 29.5px;
+    text-transform: uppercase;
+
+    &:focus {
+      outline: none;
+      color: white;
+      text-decoration: none;
+    }
+
+    &:hover {
+      color: rgba(255, 255, 255, .80);
+      border-color: rgba(255, 255, 255, .80);
+      text-decoration: none;
+    }
+
+    &:active {
+      color: rgba(255, 255, 255, .60);
+      border-color: rgba(255, 255, 255, .60);
+    }
+
+    @media(min-width: 768px) {
+      padding: 16px 61px;
+    }
+  }
+}

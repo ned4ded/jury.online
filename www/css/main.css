@@ -1300,6 +1300,161 @@ body {
       .documents__name {
         margin-bottom: 45px; } }
 
+.try-it {
+  position: relative;
+  margin: 0 -15px;
+  padding-top: 87.5px;
+  padding-bottom: 85.5px;
+  background-image: linear-gradient(225deg, #b44faa, #4b2669);
+  overflow: hidden; }
+  @media (min-width: 768px) {
+    .try-it {
+      padding-top: 100px;
+      padding-bottom: 127px; } }
+  @media (min-width: 992px) {
+    .try-it {
+      padding-top: 150px;
+      padding-bottom: 177px; } }
+  .try-it__pattern {
+    opacity: .43;
+    position: absolute;
+    top: 50%;
+    left: 24.74%;
+    -webkit-transform: translate(-24.74%, 50%);
+            transform: translate(-24.74%, 50%); }
+    .try-it__pattern svg {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      -webkit-transform: translate(-50%, -50%);
+              transform: translate(-50%, -50%); }
+    .try-it__pattern-layer1 {
+      width: 214px;
+      height: 214px; }
+    .try-it__pattern-layer2 {
+      width: 428px;
+      height: 428px; }
+    .try-it__pattern-layer3 {
+      width: 642px;
+      height: 642px; }
+    .try-it__pattern-layer4 {
+      width: 856px;
+      height: 856px; }
+    .try-it__pattern-layer5 {
+      width: 1070px;
+      height: 1070px; }
+    .try-it__pattern-layer6 {
+      width: 1284px;
+      height: 1284px; }
+    .try-it__pattern-layer7 {
+      width: 1498px;
+      height: 1498px; }
+  .try-it__content {
+    position: relative;
+    left: 53.87%;
+    width: 280px;
+    height: auto; }
+    @media (min-width: 768px) {
+      .try-it__content {
+        width: 300px; } }
+    @media (min-width: 992px) {
+      .try-it__content {
+        width: 390px; } }
+  .try-it__text {
+    font-family: "AvenirNext", "Arial", sans-serif;
+    color: white;
+    font-weight: 300;
+    line-height: 1.30;
+    margin-bottom: 48px;
+    font-size: 32px; }
+    @media (min-width: 768px) {
+      .try-it__text {
+        font-size: 36px; } }
+    @media (min-width: 992px) {
+      .try-it__text {
+        font-size: 48px; } }
+  .try-it__devices {
+    position: absolute;
+    top: 50%;
+    left: 24.74%;
+    -webkit-transform: translate(-24.74%, 50%);
+            transform: translate(-24.74%, 50%); }
+  .try-it__iphone {
+    position: absolute;
+    width: 103.5px;
+    height: 210.68px;
+    top: -59.778px;
+    left: -36.45px;
+    background: transparent url("../assets/imgs/iphone.png") no-repeat center;
+    background-size: 100%; }
+    @media (min-width: 576px) {
+      .try-it__iphone {
+        top: -66.42px;
+        left: -40.5px;
+        width: 115.02px;
+        height: 234.09px; } }
+    @media (min-width: 768px) {
+      .try-it__iphone {
+        top: -73.8px;
+        left: -45px;
+        width: 127.8px;
+        height: 260.1px; } }
+    @media (min-width: 992px) {
+      .try-it__iphone {
+        top: -82px;
+        left: -50px;
+        width: 142px;
+        height: 289px; } }
+  .try-it__macbook {
+    position: absolute;
+    width: 554.77px;
+    height: 322.95px;
+    top: -153.09px;
+    right: -61.965px;
+    background: transparent url("../assets/imgs/macbook.png") no-repeat center;
+    background-size: 100%; }
+    @media (min-width: 576px) {
+      .try-it__macbook {
+        width: 616.41px;
+        height: 358.83px;
+        top: -170.1px;
+        right: -68.85px; } }
+    @media (min-width: 768px) {
+      .try-it__macbook {
+        width: 684.9px;
+        height: 398.7px;
+        top: -189px;
+        right: -76.5px; } }
+    @media (min-width: 992px) {
+      .try-it__macbook {
+        width: 761px;
+        height: 443px;
+        top: -210px;
+        right: -85px; } }
+  .try-it__btn {
+    display: inline-block;
+    color: white;
+    font-size: 15px;
+    font-family: "AvenirNext", "Arial", sans-serif;
+    padding: 8px 30px;
+    border: solid 2px #ffffff;
+    border-radius: 29.5px;
+    text-transform: uppercase; }
+    .try-it__btn:focus {
+      outline: none;
+      color: white;
+      text-decoration: none; }
+    .try-it__btn:hover {
+      color: rgba(255, 255, 255, 0.8);
+      border-color: rgba(255, 255, 255, 0.8);
+      text-decoration: none; }
+    .try-it__btn:active {
+      color: rgba(255, 255, 255, 0.6);
+      border-color: rgba(255, 255, 255, 0.6); }
+    @media (min-width: 768px) {
+      .try-it__btn {
+        padding: 16px 61px; } }
+
 .footer {
   padding-top: 50px;
   padding-bottom: 30px;
