@@ -74,6 +74,7 @@
   }
 
   &__play-btn{
+    font-size: 0;
     position: absolute;
     left: 50%;
     transform: translateX(-50%);
@@ -88,10 +89,16 @@
     padding: 0;
     cursor: pointer;
 
-    &:active {
-      outline: none;
-      padding: 0;
-      border-color: rgba(255, 255, 255, 0.5);
+    &:after {
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: 51%;
+      transform: translate(-49%, -50%);
+      width: 30.4%;
+      height: 34.7%;
+      background: transparent url('../assets/imgs/icon-video-play.png') center no-repeat;
+      background-size: 100%;
     }
 
     &:focus {
@@ -100,6 +107,10 @@
 
     &:hover {
       border-color: rgba(255, 255, 255, 0.75);
+
+      &:after {
+        opacity: .75;
+      }
     }
 
     @media (min-width: 1200px) {
