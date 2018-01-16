@@ -37,6 +37,17 @@ body {
   text-transform: uppercase;
 }
 
+.heading-2 {  
+  text-align: center;
+
+  color: #4e4d4d;
+
+  font-family: $avenir;
+  font-size: 50px;
+  font-weight: 300;
+  line-height: 1.32;
+}
+
 .btn {
   position: relative;
   padding: 16px 39px 16px;
@@ -70,4 +81,6 @@ body {
 @import './main-info.scss';
 @import './news.scss';
 @import './video.scss';
+@import './concept.scss';
+@import './ads.scss';
 @import './footer.scss';
