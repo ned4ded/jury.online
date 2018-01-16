@@ -37,7 +37,8 @@ body {
   text-transform: uppercase;
 }
 
-.heading-2 {  
+.heading-2 {
+  position: relative;
   text-align: center;
 
   color: #4e4d4d;
@@ -46,6 +47,21 @@ body {
   font-size: 50px;
   font-weight: 300;
   line-height: 1.32;
+
+  &[data-text-abaft]:after {
+    content: attr(data-text-abaft);
+    position: absolute;
+    bottom: 28%;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 92px;
+    line-height: 100%;
+    letter-spacing: 3.7px;
+    color: rgba(78, 77, 77, 0.05);
+    font-family: $avenir;
+    font-weight: 600;
+    text-transform: uppercase;
+  }
 }
 
 .btn {
