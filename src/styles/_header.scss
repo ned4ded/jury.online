@@ -51,7 +51,7 @@
     }
 
     @media (min-width: 1200px) {
-      height: 38px;
+      min-height: 38px;
       flex-flow: row nowrap;
       align-items: baseline;
       justify-content: flex-end;
@@ -191,10 +191,27 @@
   }
 
   &__logo {
+    display: inline-block;
+    height: auto;
+    padding-top: 8px;
 
     @media(min-width: 1200px) {
-      height: 63px;
-      padding-top: 25px;
+
+    }
+  }
+
+  &__toggle {
+    top: 14px;
+    background-color: rgba(255, 255, 255, 0);
+    transition: background-color .2s ease-in;
+
+    &[aria-expanded="true"] {
+
+      background-color: rgba(255, 255, 255, .1);
+    }
+
+    &:focus {
+      outline: none;
     }
   }
 }

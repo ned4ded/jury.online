@@ -17,6 +17,6 @@
   $('#menu-toggler').on('click', () => {
     if($(window).scrollTop()) return;
     if($('#menu-toggler').attr('aria-expanded') === 'false') return add();
-    return remove();
+    return setTimeout(() => remove(), 300);
   });
 }());

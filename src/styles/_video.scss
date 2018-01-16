@@ -27,6 +27,8 @@
   }
 
   &__player {
+    width: 100%;
+    height: 100%;
     border: 5px solid rgba(255, 255, 255, .43);
     border-radius: 12px;
     box-shadow: 0px 5px 30px 0px rgba(0, 0, 0, 0.1);
@@ -36,30 +38,52 @@
 
   &__text {
     position: absolute;
-    bottom: 26%;
+    user-select: none;
+    bottom: 20%;
     left: 50%;
     transform: translateX(-50%);
     width: 60%;
 
     text-align: center;
 
-    font-size: 32px;
+    font-size: 16px;
     font-family: $avenir;
     font-weight: 300;
     color: rgba(255, 255, 255, 1);
-    line-height: 36px;
+    line-height: 1.125;
+
+    @media (min-width: 576px) {
+      font-size: 18px;
+      bottom: 20%;
+    }
+
+    @media (min-width: 768px) {
+      font-size: 22px;
+      bottom: 22%;
+    }
+
+    @media (min-width: 992px) {
+      font-size: 28px;
+      bottom: 24%;
+    }
+
+    @media (min-width: 1200px) {
+      font-size: 32px;
+      bottom: 26%;
+    }
   }
 
-  &__play-btn[type="button"] {
+  &__play-btn{
     position: absolute;
     left: 50%;
     transform: translateX(-50%);
-    bottom: 46.5%;
+    bottom: 50%;
     background-color: rgba(0,0,0,0);
     border: none;
-    width: 93px;
-    height: 93px;
-    border: 3px solid rgba(255, 255, 255, 1);
+    width: 60px;
+    height: 60px;
+    border: 1px solid rgba(255, 255, 255, 1);
+
     border-radius: 100%;
     padding: 0;
     cursor: pointer;
@@ -77,6 +101,14 @@
     &:hover {
       border-color: rgba(255, 255, 255, 0.75);
     }
+
+    @media (min-width: 1200px) {
+      width: 93px;
+      height: 93px;
+      border: 3px solid rgba(255, 255, 255, 1);
+
+      bottom: 46.5%;
+    }
   }
 
   &__icon-play {
@@ -84,7 +116,11 @@
     top: 50%;
     left: 53%;
     transform: translate(-47%, -50%);
-    width: 24px;
+    width: 15.5px;
+
+    @media (min-width: 1200px) {
+      width: 24px;
+    }
   }
 
 }
