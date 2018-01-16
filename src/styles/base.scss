@@ -44,7 +44,7 @@ body {
   color: #4e4d4d;
 
   font-family: $avenir;
-  font-size: 50px;
+  font-size: 46px;
   font-weight: 300;
   line-height: 1.32;
 
@@ -54,41 +54,65 @@ body {
     bottom: 28%;
     left: 50%;
     transform: translateX(-50%);
-    font-size: 92px;
+    font-size: 68px;
     line-height: 100%;
     letter-spacing: 3.7px;
     color: rgba(78, 77, 77, 0.05);
     font-family: $avenir;
     font-weight: 600;
     text-transform: uppercase;
+
+    @media (min-width: 768px) {
+      font-size: 92px;
+    }
+  }
+
+  @media (min-width: 768px) {
+    font-size: 50px;
   }
 }
 
+.main-description {
+  font-size: 22px;
+  line-height: 1.36;
+  color: #4e4d4d;
+  text-align: center;
+  width: 100%;
+}
+
 .btn {
-  position: relative;
-  padding: 16px 39px 16px;
+  display: inline-block;
 
-  &__bg {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    top: 0;
-    left: 0;
-  }
+  transition: box-shadow .1s ease-in, transform .1s ease-in;
+  transform: scale(1);
+  letter-spacing: -0.4px;
+  text-transform: uppercase;
 
-  &__text {
-    font-family: $avenir;
-    font-weight: 400;
-    color: white;
-    text-align: center;
-    line-height: 100%;
-    letter-spacing: 0.7px;
-  }
+  color: white;
+  border: none;
+  border-radius: 10px;
+  background-image: linear-gradient( -76deg, rgb(80,29,105) 0%, rgb(163,50,130)100%);
+  box-shadow: 0px 0px 32px 9px rgba(132, 28, 185, .15);
+
+  font-family: $avenir;
+  padding: 10px 21px;
+  font-size: 12px;
 
   &:hover {
-    & .btn__text {
-      text-decoration: underline;
-    }
+    transform: scale(0.98);
+
+    color: white;
+    box-shadow: 0px 0px 15px 3px rgba(132, 28, 185, .3);
+  }
+
+  @media (min-width: 768px) {
+    padding: 13px 32px;
+    font-size: 15px;
+  }
+
+  @media (min-width: 992px) {
+    padding: 16px 48px;
+    font-size: 17px;
   }
 }
 
@@ -99,4 +123,5 @@ body {
 @import './video.scss';
 @import './concept.scss';
 @import './ads.scss';
+@import './experts';
 @import './footer.scss';

@@ -76,7 +76,7 @@
                       </div>
                     </li>
                     <li class="header__menu-item header__menu-btn">
-                      <a href="#" class="btn header__btn">
+                      <a href="#" class="header__btn">
                         <span class="btn__text">Log in</span>
                       </a>
                     </li>
@@ -196,7 +196,7 @@
           </div>
           <div class="container ads">
             <h2 class="heading-2 ads__heading" data-text-abaft="advantages">Member benefits</h2>
-            <p class="ads__text">
+            <p class="main-description ads__text">
               Regardless of the character of participation, all members have their own advantages
             </p>
             <ul class="row justify-content-center ads__tabs" role="tablist">
@@ -459,6 +459,31 @@
               </div>
             </div>
           </div>
+
+          <div class="container experts">
+            <h2 class="heading-2 experts__heading" data-text-abaft="experts">Arbiters</h2>
+            <p class="main-description experts__text">Meet our experts-arbiters</p>
+            <div class="experts__card">
+              <img src="assets/imgs/expert-placeholder.jpg" alt="Photo of expert" class="experts__photo">
+              <div class="experts__card-content">
+                <p class="experts__name">Mark John</p>
+                <p class="experts__post">CEO of Big Blockchain Company</p>
+                <div class="experts__rating">
+                  <i class="experts__rating-star" data-has-star="true"></i>
+                  <i class="experts__rating-star" data-has-star="true"></i>
+                  <i class="experts__rating-star" data-has-star="true"></i>
+                  <i class="experts__rating-star" data-has-star="true"></i>
+                  <i class="experts__rating-star" data-has-star="false"></i>
+                </div>
+                <p class="experts__card-text">
+                  Sed ut perspiciatis unde omnis iste natus error sit vo luptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo...
+                </p>
+                <div class="experts__btn-container">
+                  <a href="#" class="btn experts__btn">Read More</a>
+                </div>
+              </div>
+            </div>
+          </div>
         </main>
         <footer class="container-fluid footer">
           <div class="row">
@@ -510,11 +535,8 @@
                     <form action="#" method="POST">
                       <div class="social__wrapper">
                           <input id="subscribe" class="social__input" type="email" placeholder="Weekly newsletter">
-                          <button class="btn social__btn" type="submit" name="submit-subscribe">
-                            <svg preserveAspectRatio="none" class="btn__bg" viewBox="0 0 116 39">
-                              <use href="assets/sprite.svg#btn-bg-2"></use>
-                            </svg>
-                            <span class="btn__text">Subscribe</span>
+                          <button class="social__btn" type="submit" name="submit-subscribe">
+                            Subscribe
                           </button>
                       </div>
                     </form>
