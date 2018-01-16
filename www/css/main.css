@@ -911,9 +911,10 @@ body {
   .experts__photo {
     width: 34.71%;
     height: auto;
-    -o-object-fit: cover;
-       object-fit: cover;
-    border-radius: 10px; }
+    border-radius: 10px;
+    background-repeat: no-repeat;
+    background-position: 50% 0;
+    background-size: cover; }
   .experts__rating {
     width: 100%;
     height: 12px;
@@ -993,32 +994,142 @@ body {
 .team {
   background-color: #eee8ef;
   margin: 0 -15px;
-  padding-top: 60px;
-  padding-bottom: 30px; }
+  padding-top: 60px; }
   @media (min-width: 768px) {
     .team {
-      padding-top: 120px;
-      padding-bottom: 60p; } }
+      padding-top: 120px; } }
   @media (min-width: 992px) {
     .team {
-      padding-top: 177px;
-      padding-bottom: 83; } }
+      padding-top: 177px; } }
   .team__heading {
-    margin-bottom: 20px; }
+    margin-bottom: 12px; }
     @media (min-width: 768px) {
       .team__heading {
-        margin-bottom: 40px; } }
+        margin-bottom: 25px; } }
     @media (min-width: 992px) {
       .team__heading {
-        margin-bottom: 57px; } }
-  .team_text {
+        margin-bottom: 37px; } }
+  .team__text {
     margin-bottom: 30px; }
     @media (min-width: 768px) {
-      .team_text {
+      .team__text {
         margin-bottom: 60px; } }
     @media (min-width: 992px) {
-      .team_text {
+      .team__text {
         margin-bottom: 92px; } }
+  .team__list {
+    padding: 0;
+    margin: 0;
+    list-style: none; }
+  .team__card {
+    width: 100%;
+    max-width: 370px;
+    margin: auto;
+    margin-bottom: 30px; }
+    @media (min-width: 768px) {
+      .team__card {
+        margin-bottom: 45px; } }
+    @media (min-width: 992px) {
+      .team__card {
+        margin-bottom: 79px; } }
+  .team__photo {
+    position: relative;
+    width: 100%;
+    height: 456px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 50% 0;
+    margin-bottom: 5px;
+    border-radius: 5px; }
+    @media (min-width: 768px) {
+      .team__photo {
+        margin-bottom: 26px; } }
+    .team__photo:hover .team__photo-cover {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex; }
+    .team__photo-cover {
+      width: 100%;
+      height: 100%;
+      display: none;
+      -webkit-box-align: center;
+          -ms-flex-align: center;
+              align-items: center;
+      -webkit-box-pack: center;
+          -ms-flex-pack: center;
+              justify-content: center;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+          -ms-flex-flow: column nowrap;
+              flex-flow: column nowrap;
+      border-radius: 5px;
+      background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(189, 75, 163, 0.851)), to(rgba(68, 27, 101, 0.851)));
+      background-image: linear-gradient(180deg, rgba(189, 75, 163, 0.851) 0%, rgba(68, 27, 101, 0.851) 100%); }
+      .team__photo-cover .team__name {
+        letter-spacing: -0.8px;
+        color: white;
+        margin-bottom: 21px; }
+      .team__photo-cover .team__role {
+        font-size: 22px;
+        letter-spacing: -0.6px;
+        color: white;
+        margin-bottom: 35px; }
+  .team__social-links {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: row nowrap;
+            flex-flow: row nowrap;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    width: 81px;
+    height: 16px; }
+  .team__social-link {
+    display: block;
+    color: white;
+    width: 16px;
+    height: 16px;
+    line-height: 100%;
+    text-align: center; }
+    .team__social-link:focus {
+      color: white;
+      outline: none;
+      text-decoration: none; }
+    .team__social-link:hover {
+      color: rgba(255, 255, 255, 0.7);
+      text-decoration: none; }
+    .team__social-link:active {
+      color: rgba(255, 255, 255, 0.5);
+      text-decoration: none; }
+  .team__name {
+    font-family: "AvenirNext", "Arial", sans-serif;
+    font-size: 30px;
+    letter-spacing: -0.7px;
+    line-height: 100%;
+    color: #4e4d4d;
+    text-align: center;
+    display: block;
+    margin-bottom: 6px; }
+    @media (min-width: 768px) {
+      .team__name {
+        margin-bottom: 9px; } }
+  .team__role {
+    text-align: center;
+    display: block;
+    font-family: "AvenirNext", "Arial", sans-serif;
+    font-size: 18px;
+    line-height: 100%;
+    color: #4e4d4d;
+    font-weight: 300; }
 
 .footer {
   padding-top: 50px;

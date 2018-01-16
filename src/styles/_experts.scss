@@ -82,8 +82,10 @@
   &__photo {
     width: 34.71%;
     height: auto;
-    object-fit: cover;
     border-radius: 10px;
+    background-repeat: no-repeat;
+    background-position: 50% 0;
+    background-size: cover;
   }
 
   &__rating {
