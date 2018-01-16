@@ -275,51 +275,18 @@ body {
 
 .main-info {
   position: relative;
-  z-index: 1;
-  padding-top: 98px;
+  display: none;
   margin: 0 -15px;
-  padding-bottom: 40px; }
-  .main-info__bg {
-    position: absolute;
-    top: 0;
-    left: 0;
-    overflow: hidden;
-    width: 100%;
-    height: 110%;
-    max-height: 816px; }
-    .main-info__bg-lining {
-      position: absolute;
-      bottom: 0; }
-      .main-info__bg-lining--layer1 {
-        top: 0;
-        bottom: auto;
-        width: 100%;
-        height: 100%;
-        max-height: 776px; }
-      .main-info__bg-lining--layer2 {
-        width: 105.78%;
-        max-height: 179px; }
-      .main-info__bg-lining--layer3 {
-        width: 105.71%;
-        max-height: 217px; }
-    .main-info__bg:after {
-      content: '';
-      position: absolute;
-      width: 100%;
-      height: 100%;
-      top: 0;
-      opacity: .1;
-      background: transparent url(../assets/imgs/index-main-bg.png) no-repeat top center; }
-      @media (min-width: 1366px) {
-        .main-info__bg:after {
-          height: 95%;
-          background-size: cover; } }
-    @media (min-width: 992px) {
-      .main-info__bg {
-        padding-top: 152px; } }
-    @media (min-width: 1200px) {
-      .main-info__bg {
-        height: 100%; } }
+  padding-top: 98px;
+  padding-bottom: 60px; }
+  .main-info--index {
+    display: block;
+    background: transparent url("../assets/imgs/index-main-bg.png") no-repeat;
+    background-position: 50% bottom;
+    background-size: cover; }
+  @media (min-width: 992px) {
+    .main-info {
+      padding-bottom: 70px; } }
   @media (min-width: 1200px) {
     .main-info {
       min-height: 815px;
@@ -891,15 +858,13 @@ body {
     margin-bottom: 25px; }
     @media (min-width: 768px) {
       .experts__heading {
-        margin-bottom: 50px; } }
+        margin-bottom: 38px; } }
   .experts__text {
     margin-bottom: 46px; }
     @media (min-width: 768px) {
       .experts__text {
         margin-bottom: 93px; } }
   .experts__card {
-    width: 100%;
-    max-width: 1066px;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -907,6 +872,9 @@ body {
     -webkit-box-direction: normal;
         -ms-flex-flow: row nowrap;
             flex-flow: row nowrap;
+    width: 100%;
+    max-width: 1066px;
+    margin: auto;
     border-radius: 10px;
     background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(243, 243, 243, 0.15)), to(rgba(221, 221, 221, 0.15))), -webkit-gradient(linear, left top, left bottom, from(rgba(255, 255, 255, 0.15)), to(rgba(255, 255, 255, 0.15)));
     background-image: linear-gradient(to bottom, rgba(243, 243, 243, 0.15), rgba(221, 221, 221, 0.15)), linear-gradient(rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0.15));
@@ -922,24 +890,24 @@ body {
         .experts__card-content {
           padding: 54px 42px 43px 74px; } }
     .experts__card-text {
+      margin-bottom: 10px;
       text-align: justify;
-      font-family: "AvenirNext", "Arial", sans-serif;
+      letter-spacing: -0.15px;
       color: #9a9a9a;
+      font-family: "AvenirNext", "Arial", sans-serif;
       font-size: 16px;
       font-weight: 300;
-      letter-spacing: -0.15px;
-      line-height: 1.2;
-      margin-bottom: 10px; }
+      line-height: 1.2; }
       @media (min-width: 768px) {
         .experts__card-text {
-          font-size: 20px;
+          margin-bottom: 20px;
           letter-spacing: -0.3px;
-          margin-bottom: 20px; } }
+          font-size: 20px; } }
       @media (min-width: 992px) {
         .experts__card-text {
-          font-size: 24px;
+          margin-bottom: 29px;
           letter-spacing: -0.6px;
-          margin-bottom: 32px; } }
+          font-size: 24px; } }
   .experts__photo {
     width: 34.71%;
     height: auto;
@@ -973,19 +941,19 @@ body {
       height: 12px;
       background: transparent url("../assets/imgs/icon-raiting-star-empty.png") center no-repeat;
       background-size: 100%;
-      margin: 0 2px; }
+      margin: 0 1px; }
       .experts__rating-star:first-of-type {
         margin-left: 0; }
       @media (min-width: 768px) {
         .experts__rating-star {
           width: 18px;
           height: 18px;
-          margin: 0 3.5px; } }
+          margin: 0 2px; } }
       @media (min-width: 992px) {
         .experts__rating-star {
           width: 24px;
           height: 24px;
-          margin: 0 5px; } }
+          margin: 0 3px; } }
       .experts__rating-star[data-has-star="true"] {
         background: transparent url("../assets/imgs/icon-raiting-star.png") center no-repeat;
         background-size: 100%; }
@@ -996,15 +964,13 @@ body {
     letter-spacing: -2.3px;
     text-align: left;
     color: #3e3e3e;
-    margin-bottom: 5px; }
+    margin-bottom: 0; }
     @media (min-width: 768px) {
       .experts__name {
-        font-size: 30px;
-        margin-bottom: 1px; } }
+        font-size: 30px; } }
     @media (min-width: 992px) {
       .experts__name {
-        font-size: 38px;
-        margin-bottom: 15px; } }
+        font-size: 38px; } }
   .experts__post {
     font-size: 15px;
     margin-bottom: 6px;
@@ -1019,10 +985,40 @@ body {
       .experts__post {
         letter-spacing: -1.8px;
         font-size: 30px;
-        margin-bottom: 18px; } }
+        margin-bottom: 13px; } }
   .experts__btn-container {
     width: 100%;
     text-align: right; }
+
+.team {
+  background-color: #eee8ef;
+  margin: 0 -15px;
+  padding-top: 60px;
+  padding-bottom: 30px; }
+  @media (min-width: 768px) {
+    .team {
+      padding-top: 120px;
+      padding-bottom: 60p; } }
+  @media (min-width: 992px) {
+    .team {
+      padding-top: 177px;
+      padding-bottom: 83; } }
+  .team__heading {
+    margin-bottom: 20px; }
+    @media (min-width: 768px) {
+      .team__heading {
+        margin-bottom: 40px; } }
+    @media (min-width: 992px) {
+      .team__heading {
+        margin-bottom: 57px; } }
+  .team_text {
+    margin-bottom: 30px; }
+    @media (min-width: 768px) {
+      .team_text {
+        margin-bottom: 60px; } }
+    @media (min-width: 992px) {
+      .team_text {
+        margin-bottom: 92px; } }
 
 .footer {
   padding-top: 50px;

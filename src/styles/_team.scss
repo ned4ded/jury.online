@@ -1,0 +1,40 @@
+.team {
+  background-color: #eee8ef;
+  margin: 0 -15px;
+  padding-top: 60px;
+  padding-bottom: 30px;
+
+  @media(min-width: 768px) {
+    padding-top: 120px;
+    padding-bottom: 60p;
+  }
+
+  @media(min-width: 992px) {
+    padding-top: 177px;
+    padding-bottom: 83;
+  }
+
+  &__heading {
+    margin-bottom: 20px;
+
+    @media(min-width: 768px) {
+      margin-bottom: 40px;
+    }
+
+    @media(min-width: 992px) {
+      margin-bottom: 57px;
+    }
+  }
+
+  &_text {
+    margin-bottom: 30px;
+
+    @media(min-width: 768px) {
+      margin-bottom: 60px;
+    }
+
+    @media(min-width: 992px) {
+      margin-bottom: 92px;
+    }
+  }
+}

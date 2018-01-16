@@ -1,69 +1,26 @@
 .main-info {
   position: relative;
-  z-index: 1;
 
-  padding-top: 98px;
+  display: none;
+
   margin: 0 -15px;
-  padding-bottom: 40px;
+  padding-top: 98px;
+  padding-bottom: 60px;
 
-  &__bg {
-    position: absolute;
-    top: 0;
-    left: 0;
 
-    overflow: hidden;
 
-    width: 100%;
-    height: 110%;
-    max-height: 816px;
+  &--index {
+    display: block;
 
-    &-lining {
-      position: absolute;
-      bottom: 0;
-
-      &--layer1 {
-        top: 0;
-        bottom: auto;
-
-        width: 100%;
-        height: 100%;
-        max-height: 776px;
-      }
-
-      &--layer2 {
-        width: 105.78%;
-        max-height: 179px;
-      }
-
-      &--layer3 {
-        width: 105.71%;
-        max-height: 217px;
-      }
-    }
-
-    &:after {
-      content: '';
-      position: absolute;
-      width: 100%;
-      height: 100%;
-      top: 0;
-      opacity: .1;
-      background: rgba(0,0,0,0) url(../assets/imgs/index-main-bg.png) no-repeat top center;
-
-      @media (min-width: 1366px) {
-        height: 95%;
-        background-size: cover;
-      }
-    }
-
-    @media (min-width: 992px) {
-      padding-top: 152px;
-    }
-
-    @media (min-width: 1200px) {
-      height: 100%;
-    }
+    background: transparent url('../assets/imgs/index-main-bg.png') no-repeat;
+    background-position: 50% bottom;
+    background-size: cover;
   }
+
+  @media (min-width: 992px) {
+    padding-bottom: 70px;
+  }
+
   @media (min-width: 1200px) {
     min-height: 815px;
     padding-top: 150px;
