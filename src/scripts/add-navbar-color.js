@@ -3,7 +3,7 @@
   const remove = () =>  $('#header').removeClass('header__bg');
 
   $(document).ready(() => {
-    remove();
+    if($(window).scrollTop() <= 0) remove();
   });
 
   $(window).scroll((ev) => {
