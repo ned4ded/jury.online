@@ -102,30 +102,309 @@
   }
 }
 
-.login-form {
+.signup {
   display: flex;
   flex-flow: column nowrap;
 
   width: 350px;
-  height: 479px;
+  min-height: 479px;
   margin: auto;
 
-  background-color: rgba(255, 255, 255, 0.1);
   border: solid 1px #6a3681;
   border-radius: 10px;
+  background-color: rgba(255, 255, 255, 0.1);
 
   &__heading {
-    padding: 22px 141px 24px 138px;
+    display: block;
+
+    padding: 22px 0 20px;
+    margin: 0;
+
+    text-align: center;
+    text-transform: uppercase;
 
     color: rgba(255, 255, 255, 0.9);
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
+    background-color: rgba(255, 255, 255, 0.1);
     box-shadow: inset 0px 1px 0 0 rgba(255, 255, 255, 0.2);
 
     font-family: $avenir;
+    font-size: 23.2px;
     font-weight: bold;
     line-height: 30.2px;
+  }
+
+  &__form {
+    padding: 18px 29px 17px;
+  }
+
+  &__input {
+    width: 100%;
+    height: 57px;
+    padding: 20px;
+
+    color: #42285b;
+    border: none;
+    border-radius: 10px;
+    background-color: rgba(255, 255, 255, 0.3);
+    box-shadow: 0px 1px 0px 0px rgba(255, 255, 255, 0.1),
+                inset 0px 1px 0px 0px rgba(0, 0, 0, 0.15);
+
+    font-family: $avenir;
+    font-size: 21px;
+
+    &:not(:last-of-type) {
+      margin-bottom: 15px;
+    }
+
+    &::placeholder {
+      text-align: center;
+      text-transform: uppercase;
+
+      opacity: 1;
+      color: #42285b;
+
+      font-family: $avenir;
+      font-size: 21px;
+    }
+
+    &:focus {
+      background-color: rgba(255, 255, 255, 0.6);
+      box-shadow: 0px 1px 0px 0px rgba(255, 255, 255, 0.2),
+                  inset 0px 1px 0px 0px rgba(0, 0, 0, 0.3);
+    }
+
+  }
+
+  &__terms {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    display: flex;
+    flex-flow: row nowrap;
+
+    &-list {
+      margin-top: 12px;
+      margin-bottom: 12px;
+      padding: 6px 15px;
+      width: 100%;
+
+      & p {
+        line-height: 100%;
+        margin-bottom: 0;
+
+        letter-spacing: -0.4px;
+
+        color: rgba(255, 255, 255, 0.6);
+
+        font-family: $avenir;
+        font-size: 16px;
+        font-weight: 300;
+
+        &:not(:last-child) {
+          margin-bottom: 12px;
+        }
+      }
+    }
+
+    &-checkbox {
+      position: relative;
+
+      width: 64px;
+
+      border-left: 1px solid rgba(255, 255, 255, 0.2);
+
+      input[type="checkbox"] {
+        display: none;
+      }
+
+      &-icon {
+        position: absolute;
+        top: 50%;
+        right: 16px;
+
+        width: 26px;
+        height: 26px;
+
+        cursor: pointer;
+        transform: translateY(-50%);
+
+        &:after {
+          position: absolute;
+          bottom: 1px;
+          left: 1px;
+
+          width: 21px;
+          height: 20px;
+
+          content: '';
+
+          border: 2px solid rgba(255, 255, 255, 0.4);
+          border-radius: 100%;
+
+          input[type="checkbox"]:checked ~ & {
+            display: none;
+          }
+        }
+
+        input[type="checkbox"]:checked ~ & {
+          border: none;
+          background: transparent url('../assets/imgs/icon-signup.png') center no-repeat;
+        }
+      }
+    }
+  }
+
+  &__btn {
+    position: relative;
+
+    width: 100%;
+    padding: 17px 0;
+
+    cursor: pointer;
+    text-align: center;
     text-transform: uppercase;
-    font-size: 23.2px;
+
+    color: white;
+    border: none;
+    border-radius: 10px;
+    background-image:  linear-gradient(166deg, #de6391 29%, #be3a63 100%);
+    box-shadow: 0px 1px 0px 0px rgba(21, 31, 123, 0.54),
+                0px 0px 32px 7px rgba(225, 103, 144, 0.17),
+                inset 0px 1px 0px 0px rgba(255, 255, 255, 0.4);
+    text-shadow: 0px 1px 2.9px rgba(8, 11, 45, 0.27);
+
+    font-family: $avenir;
+    font-size: 23px;
+    font-weight: bold;
+    line-height: 30.3px;
+
+    &:hover {
+      box-shadow: 0px 1px 0px 0px rgba(21, 31, 123, 0.54),
+                  0px 0px 32px 7px rgba(225, 103, 144, 0.34),
+                  inset 0px 1px 0px 0px rgba(255, 255, 255, 0.4);
+    }
+
+    &:focus {
+      outline: none;
+    }
+
+    &:active {
+      outline: none;
+      background-image:  linear-gradient(166deg, #be3a63 9%, #de6391 69%);
+      box-shadow: 0px -1px 0px 0px rgba(21, 31, 123, 0.54),
+                  0px 0px 32px 7px rgba(225, 103, 144, 0),
+                  inset 0px -1px 0px 0px rgba(255, 255, 255, 0.4);
+    }
+  }
+
+  &__socials-auth {
+    margin-top: 10px;
+  }
+}
+
+.socials-auth {
+  display: flex;
+  flex-flow: column nowrap;
+  width: 250px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0;
+
+  &__divider {
+    position: relative;
+    display: block;
+    text-transform: uppercase;
+    color: rgba(255, 255, 255, 0.4);
+    text-align: center;
+    margin-bottom: 16px;
+
+    &:after {
+      content: '';
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      width: calc(50% - 20px);
+      right: 0;
+      height: 1px;
+      background-color: rgba(255, 255, 255, 0.4);
+    }
+
+    &:before {
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: 0;
+      transform: translateY(-50%);
+      width: calc(50% - 20px);
+      height: 1px;
+      background-color: rgba(255, 255, 255, 0.4);
+    }
+  }
+
+  &__list {
+    width: 100%;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+
+    list-style: none;
+    padding: 0 30px;
+    margin: 0;
+  }
+
+  &__icon {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    &--facebook {
+      background: transparent url('../assets/imgs/icon-facebook.png') center no-repeat;
+      background-position: 8px 50%;
+      opacity: .4;
+    }
+    &--google {
+      background: transparent url('../assets/imgs/icon-google-plus.png') center no-repeat;
+      opacity: .4;
+    }
+    &--github {
+      background: transparent url('../assets/imgs/icon-github.png') center no-repeat;
+      opacity: .4;
+      background-position: 50% 120%;
+    }
+  }
+
+  &__link {
+    position: relative;
+    display: block;
+
+    width: 32px;
+    height: 32px;
+
+    border: 2px solid rgba(255, 255, 255, 0.4);
+    border-radius: 100%;
+
+    &:hover {
+      border: 2px solid rgba(255, 255, 255, 0.6);
+
+      & .socials-auth__icon {
+        opacity: .6;
+      }
+    }
+
+    &:focus {
+      outline: none;
+    }
+
+    &:active {
+      border: 2px solid rgba(255, 255, 255, 0.8);
+
+      & .socials-auth__icon {
+        opacity: .8;
+      }
+    }
   }
 }

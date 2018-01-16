@@ -59,7 +59,19 @@
                       <a href="#" class="header__link">FAQ</a>
                     </li>
                     <li class="header__menu-item">
-                      <a href="#" class="header__link">About us</a>
+                      <div class="dropdown header__dropdown">
+                        <button class="dropdown-toggle header__dropdown-btn" type="button" id="navDropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                          English
+                        </button>
+                        <div class="dropdown-menu header__dropdown-menu" aria-labelledby="navDropdownMenuButton">
+                          <a class="dropdown-item" href="#">Русский</a>
+                          <a class="dropdown-item" href="#">Espanol</a>
+                          <a class="dropdown-item" href="#">Deutsch</a>
+                          <a class="dropdown-item" href="#">Portugues</a>
+                          <a class="dropdown-item" href="#">한국어</a>
+                          <a class="dropdown-item" href="#">日本</a>
+                        </div>
+                      </div>
                     </li>
                     <li class="header__menu-item header__menu-btn">
                       <a href="#" class="btn header__btn">
@@ -85,7 +97,6 @@
                 <use href="assets/sprite.svg#main-info-bg-1"></use>
               </svg>
             </div>
-
             <div class="container">
               <div class="row justify-content-center">
                 <div class="col-12 col-lg-7 col-xl-8">
@@ -99,35 +110,43 @@
                     </p>
                   </div>
                 </div>
-                <div class="col-12 col-lg-5 col-xl-4 hidden-md-down">
-                  <div class="login-form">
-                    <h2 class="login-form__heading">Login</h2>
-                    <form action="#" method="GET">
-                      <input class="login-form__input" type="login" name="login">
-                      <input class="login-form__input" type="password" name="password">
-                      <div class="login-form__terms">
-                        <div class="login-form__terms-labels">
-                          <label for="terms">I accept terms and conditions</label>
-                          <label for="terms">I am not a US or P.R.C. citizen</label>
+                <div class="col-lg-5 col-xl-4 hidden-md-down">
+                  <div class="signup hidden-md-down">
+                    <h2 class="signup__heading">Get started now!</h2>
+                    <form action="#" method="GET" class="signup__form">
+                        <input id="signup-login" class="signup__input" type="login" name="login" placeholder="e-mail">
+                        <input id="signup-password" class="signup__input" type="password" name="password" placeholder="password">
+                      <div class="signup__terms">
+                        <div class="signup__terms-list">
+                          <p>I accept terms and conditions</p>
+                          <p>I am not a US or P.R.C. citizen</p>
                         </div>
-                        <div class="login-form__terms-checkbox">
+                        <div class="signup__terms-checkbox">
                           <input id="terms" type="checkbox" name="terms" checked>
-
-
+                          <label for="terms" class="signup__terms-checkbox-icon"></label>
                         </div>
                       </div>
-                      <button type="submit" name="submit">SIGN UP</button>
-                      <ul class="login-form__socials-auth">
-                        <li>
-                          <i class="fa fa-facebook" aria-hidden="true"></i>
-                        </li>
-                        <li>
-                          <i class="fa fa-google-plus" aria-hidden="true"></i>
-                        </li>
-                        <li>
-                          <i class="fa fa-github" aria-hidden="true"></i>
-                        </li>
-                      </ul>
+                      <button class="signup__btn" type="submit" name="submit">Sign up</button>
+                      <div class="signup__socials-auth socials-auth">
+                        <span class="socials-auth__divider">or</span>
+                        <ul class="socials-auth__list">
+                          <li>
+                            <a href="#" class="socials-auth__link">
+                              <i class="socials-auth__icon socials-auth__icon--facebook" aria-hidden="true"></i>
+                            </a>
+                          </li>
+                          <li>
+                            <a href="#" class="socials-auth__link">
+                              <i class="socials-auth__icon socials-auth__icon--google" aria-hidden="true"></i>
+                            </a>
+                          </li>
+                          <li>
+                            <a href="#" class="socials-auth__link">
+                              <i class="socials-auth__icon socials-auth__icon--github" aria-hidden="true"></i>
+                            </a>
+                          </li>
+                        </ul>
+                      </div>
                     </form>
                   </div>
                 </div>
@@ -136,6 +155,29 @@
           </div>
           <div class="news">
 
+          </div>
+          <div class="video">
+            <div class="container">
+              <div class="row">
+                <h2 class="col-12 video__heading">How it Works</h2>
+                <div class="col-12">
+                  <div class="video__container">
+                    <button class="video__play-btn" type="button" name="video-play">
+                      <svg class="video__icon-play">
+                        <use href="assets/sprite.svg#icon-play"></use>
+                      </svg>
+                    </button>
+                    <p class="video__text">
+                      Beautifully designed with technical excellence and exceptional attention to detail.
+                    </p>
+                    <video class="video__player" width="1060" height="615" poster="assets/imgs/video-placeholder.jpg">
+                      <source src="movie.mp4" type="video/mp4">
+                      <source src="movie.ogg" type="video/ogg">
+                      Your browser does not support the video tag.
+                    </video>
+                  </div>
+                </div>
+              </div>
           </div>
         </main>
         <footer class="container-fluid footer">

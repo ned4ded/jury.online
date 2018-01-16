@@ -2,14 +2,13 @@
   background-color: rgba(0, 0, 0, 0);
 
   &__bg {
-    background-color: $main-color;
+    background: $main-color linear-gradient( 101deg, rgb(74,36,111) 0%, rgb(133,51,140) 100%);
   }
 
   &__navbar {
     padding-top: 7px;
-    padding-bottom: 20px;
 
-    @media (min-width: 1200px) {
+    @media (min-width: 1366px) {
       padding-right: 57px;
       padding-left: 35px;
     }
@@ -26,6 +25,7 @@
     list-style: none;
 
     &-item {
+
       @media (min-width: 992px) {
         padding-left: 12px;
       }
@@ -35,19 +35,18 @@
       }
 
       @media (min-width: 1366px) {
-        padding-left: 36px;
+        padding-left: 26px;
       }
     }
 
     &-btn {
-
 
       @media (min-width: 1200px) {
         padding-left: 30px;
       }
 
       @media (min-width: 1366px) {
-        padding-left: 65px;
+        padding-left: 48px;
       }
     }
 
@@ -61,10 +60,77 @@
     }
   }
 
+  &__dropdown {
+    position: relative;
+
+    &-btn {
+      background-color: rgba(0,0,0,0);
+      border: none;
+      border-bottom: 1px solid rgba(0,0,0,0);
+      color: white;
+      font-family: $avenir;
+      font-size: 18.1px;
+      line-height: 30.1px;
+      padding: 0;
+
+      &:active {
+        color: rgba(255, 255, 255, 0.7);
+      }
+
+      &:hover {
+        border-bottom: 1px solid white;
+        text-shadow: 2px 2px $main-color-dark;
+      }
+    }
+
+    &-menu {
+      position: absolute;
+      top: 38px;
+      left: -52px;
+      padding: 6px 15px 20px;
+      border: 1px solid rgb(184, 150, 187);
+      background-color: rgb(77, 36, 100);
+      opacity: 0.949;
+
+      & .dropdown-item {
+        position: relative;
+        color: rgb(184, 150, 187);
+        font-family: $avenir;
+        line-height: 18px;
+        font-size: 18px;
+        padding: 10px 14px 10px 38px;
+        font-weight: 300;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+
+        &:hover {
+          background-color: rgba(0,0,0,0);
+          color: #f7e1fe;
+          border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+
+          &:before {
+            background-color: rgba(255,255,255,0.75);
+          }
+        }
+
+        &:before {
+          position: absolute;
+          content: '';
+          width: 4px;
+          height: 4px;
+          border-radius: 100%;
+          top: 50%;
+          transform: translateY(-50%);
+          left: 2px;
+          background-color: rgba(255,255,255,0.6);
+        }
+      }
+    }
+  }
+
   &__btn {
     position: relative;
 
-    padding: 16px 49px;
+    padding: 12px 49px;
 
     background-color: rgba(255, 255, 255, 0.29);
     box-shadow: inset 0px 1px 0 0 rgba(255, 255, 255, 0.2),
@@ -93,6 +159,7 @@
 
     color: white;
 
+    font-family: $avenir;
     font-size: 18.1px;
     line-height: 30.1px;
 
@@ -106,9 +173,9 @@
 
     &:focus {
       text-decoration: none;
-      outline: none;
 
       color: white;
+      outline: none;
     }
 
     &:active {
