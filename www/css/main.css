@@ -1433,27 +1433,37 @@ body {
         right: -85px; } }
   .try-it__btn {
     display: inline-block;
-    color: white;
-    font-size: 15px;
+    color: #65616d;
+    font-size: 18px;
+    line-height: 100%;
     font-family: "AvenirNext", "Arial", sans-serif;
-    padding: 8px 30px;
-    border: solid 2px #ffffff;
-    border-radius: 29.5px;
-    text-transform: uppercase; }
+    padding: 19px 41px;
+    text-transform: uppercase;
+    border-radius: 10px;
+    background-image: -webkit-gradient(linear, left top, right top, from(#f3f3f3), to(#dddddd));
+    background-image: linear-gradient(90deg, #f3f3f3 0%, #dddddd 100%);
+    -webkit-box-shadow: 0px 6px 27px 0px rgba(35, 31, 32, 0.29);
+            box-shadow: 0px 6px 27px 0px rgba(35, 31, 32, 0.29);
+    -webkit-transition: margin .1s ease-in, padding .1s ease-in, font-size .1s ease-in, -webkit-box-shadow .1s ease-in;
+    transition: margin .1s ease-in, padding .1s ease-in, font-size .1s ease-in, -webkit-box-shadow .1s ease-in;
+    transition: margin .1s ease-in, padding .1s ease-in, font-size .1s ease-in, box-shadow .1s ease-in;
+    transition: margin .1s ease-in, padding .1s ease-in, font-size .1s ease-in, box-shadow .1s ease-in, -webkit-box-shadow .1s ease-in; }
     .try-it__btn:focus {
       outline: none;
-      color: white;
+      color: #65616d;
       text-decoration: none; }
     .try-it__btn:hover {
-      color: rgba(255, 255, 255, 0.8);
-      border-color: rgba(255, 255, 255, 0.8);
-      text-decoration: none; }
+      color: #65616d;
+      text-decoration: none;
+      padding: 17px 39px;
+      font-size: 16px;
+      margin: 3px 2px;
+      -webkit-box-shadow: 0px 5px 15px 0px rgba(35, 31, 32, 0.6);
+              box-shadow: 0px 5px 15px 0px rgba(35, 31, 32, 0.6); }
     .try-it__btn:active {
-      color: rgba(255, 255, 255, 0.6);
-      border-color: rgba(255, 255, 255, 0.6); }
-    @media (min-width: 768px) {
-      .try-it__btn {
-        padding: 16px 61px; } }
+      background-image: -webkit-gradient(linear, right top, left top, from(#f3f3f3), to(#dddddd));
+      background-image: linear-gradient(-90deg, #f3f3f3 0%, #dddddd 100%);
+      color: #65616d; }
 
 .footer {
   padding-top: 50px;
