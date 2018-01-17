@@ -1,0 +1,51 @@
+.cta {
+  padding-top: 40px;
+  padding-bottom: 60px;
+  margin-right: -15px;
+  margin-left: -15px;
+  background-image: linear-gradient(169deg, #85338c, #4a246f);
+
+  @media(min-width: 768px) {
+    padding-top: 60px;
+    padding-bottom: 120px;
+  }
+
+  @media(min-width: 1200px) {
+    padding-top: 86px;
+    padding-bottom: 185px;
+  }
+}
+
+.discount {
+  display: flex;
+  flex-flow: column nowrap;
+  width: 379px;
+  margin: auto;
+
+  &__heading {
+    font-size: 48px;
+    line-height: 1.04;
+    font-family: $avenir;
+    font-weight: 600;
+    color: rgba(255, 255, 255, 0.9);
+    letter-spacing: -1.2px;
+    text-transform: uppercase;
+  }
+
+  &__offering {
+    & svg {
+        overflow: visible;
+    }
+
+    & text {
+      display: block;
+      font-size: 78px;
+      font-family: $avenir;
+      font-weight: 600;
+      color: rgba(218, 105, 222, 1);
+      background: linear-gradient(-90grad, rgba(255, 178, 245, 1) 0%, rgba(218, 105, 222, 1) 100%);
+      text-transform: uppercase;
+      line-height: 0.718;
+    }
+  }
+}

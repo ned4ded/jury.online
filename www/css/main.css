@@ -849,6 +849,51 @@ body {
       font-family: "AvenirNext", "Arial", sans-serif;
       font-weight: 300; }
 
+.cta {
+  padding-top: 40px;
+  padding-bottom: 60px;
+  margin-right: -15px;
+  margin-left: -15px;
+  background-image: linear-gradient(169deg, #85338c, #4a246f); }
+  @media (min-width: 768px) {
+    .cta {
+      padding-top: 60px;
+      padding-bottom: 120px; } }
+  @media (min-width: 1200px) {
+    .cta {
+      padding-top: 86px;
+      padding-bottom: 185px; } }
+
+.discount {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column nowrap;
+          flex-flow: column nowrap;
+  width: 379px;
+  margin: auto; }
+  .discount__heading {
+    font-size: 48px;
+    line-height: 1.04;
+    font-family: "AvenirNext", "Arial", sans-serif;
+    font-weight: 600;
+    color: rgba(255, 255, 255, 0.9);
+    letter-spacing: -1.2px;
+    text-transform: uppercase; }
+  .discount__offering svg {
+    overflow: visible; }
+  .discount__offering text {
+    display: block;
+    font-size: 78px;
+    font-family: "AvenirNext", "Arial", sans-serif;
+    font-weight: 600;
+    color: #da69de;
+    background: linear-gradient(-90grad, #ffb2f5 0%, #da69de 100%);
+    text-transform: uppercase;
+    line-height: 0.718; }
+
 .experts {
   padding-top: 90px;
   padding-bottom: 80px; }
