@@ -1,5 +1,5 @@
 .clients {
-  margin: 50px -15px 85px;
+  margin: 50px -15px 45px;
   position: relative;
 
   &:before {
@@ -16,12 +16,12 @@
 
   @media(min-width: 768px) {
     margin-top: 100px;
-    margin-bottom: 170px;
+    margin-bottom: 110px;
   }
 
   @media(min-width: 992px) {
     margin-top: 154px;
-    margin-bottom: 223px;
+    margin-bottom: 175px;
 
     &:before { display: block };
   }
@@ -101,7 +101,7 @@
       }
 
       @media(min-width: 992px) {
-        margin-bottom: 45px;
+        margin-bottom: 40px;
       }
     }
 
