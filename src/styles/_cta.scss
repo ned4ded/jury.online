@@ -30,8 +30,12 @@
     font-weight: 300;
     text-align: center;
     color: #c57cae;
-    margin-bottom: 128px;
+    margin-bottom: 60px;
     text-transform: uppercase;
+
+    @media(min-width: 768px) {
+      margin-bottom: 128px;
+    }
   }
 }
 
@@ -41,6 +45,11 @@
   width: 100%;
   max-width: 395px;
   margin: auto;
+  margin-bottom: 70px;
+
+  @media(min-width: 992px) {
+    margin-bottom: 0;
+  }
 
   &__heading {
     margin-bottom: 32px;
@@ -110,9 +119,13 @@
 }
 
 .infographic {
-  margin-top: -64px;
   width: 100%;
   max-width: 550px;
+  margin: auto;
+
+  @media(min-width: 1200px) {
+    margin-top: -64px;
+  }
 
   &__divider {
     position: relative;
