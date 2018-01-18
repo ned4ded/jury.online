@@ -134,6 +134,12 @@
         height: 34px;
       }
     }
+
+    &--arbiters {
+      padding-right: 0;
+      padding-left: 0;
+      font-size: 19px;
+    }
   }
 }
 
@@ -508,6 +514,55 @@
 
     @media (min-width: 992px) {
       margin-bottom: 40px;
+    }
+  }
+}
+
+.main-info--arbiters {
+  padding-top: 110px;
+  background: transparent url('../assets/imgs/arbiters-main-bg.jpg') no-repeat;
+  background-position: 50% bottom;
+  background-size: cover;
+
+  box-shadow: 0 7px 30px 13px rgba(0,0,0, .15);
+
+  @media (min-width: 992px) {
+    padding-top: 210px;
+    padding-bottom: 70px;
+  }
+
+  @media (min-width: 1200px) {
+    padding-top: 360px;
+    padding-bottom: 170px;
+  }
+
+  & .heading-1 {
+    color: rgba(255, 255, 255, 0.85);
+    font-size: 48.5px;
+    text-shadow: 0 0 4.8px rgba(0, 0, 0, 0.21);
+    margin-bottom: 9px;
+
+    @media (min-width: 992px) {
+      margin-bottom: 36px;
+    }
+  }
+
+  & .jumbo__text {
+    color: rgba(255, 255, 255, 0.9);
+    font-size: 24px;
+    line-height: 1;
+    letter-spacing: 0.2px;
+    font-weight: 300;
+    text-shadow: 0 0 4.8px rgba(0, 0, 0, 0.21);
+
+    margin-bottom: 5px;
+
+    &:last-of-type {
+      margin-bottom: 28px;
+
+      @media (min-width: 768px) {
+        margin-bottom: 56px;
+      }
     }
   }
 }

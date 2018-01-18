@@ -1,0 +1,36 @@
+.arbiters-block {
+  padding-top: 90px;
+  padding-bottom: 60px;
+
+  @media (min-width: 768px) {
+    padding-top: 174px;
+    padding-bottom: 120px;
+  }
+  
+  &__element {
+
+  }
+
+  &__heading {
+    margin-bottom: 25px;
+
+    @media (min-width: 768px) {
+      margin-bottom: 38px;
+    }
+  }
+
+  &__text {
+    margin-bottom: 46px;
+
+    @media (min-width: 768px) {
+      margin-bottom: 93px;
+    }
+  }
+
+  &__btn {
+    &-container {
+      width: 100%;
+      text-align: right;
+    }
+  }
+}
