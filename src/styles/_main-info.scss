@@ -69,9 +69,30 @@
     }
 
     &--arbiters {
-      padding-right: 0;
-      padding-left: 0;
+      padding-right: 70px;
+      padding-left: 30px;
       font-size: 19px;
+
+      &:before {
+
+      }
+    }
+
+    &--arbiter-form {
+      padding: 17px 70px 17px 30px;
+      font-size: 19px;
+
+      &:before {
+        content: '';
+        position: absolute;
+        width: 23px;
+        height: 14px;
+        background: transparent url('../assets/imgs/icon-arrow-down.png');
+        background-size: 100%;
+        top: 50%;
+        transform: translateY(-50%);
+        right: 30px;
+      }
     }
 
     &--ico {
@@ -107,6 +128,13 @@
     font-size: 20px;
     font-weight: 300;
     line-height: 30px;
+
+    &-appeal {
+      display: block;
+      margin-bottom: 25px;
+      font-weight: 400;
+      text-align: center;
+    }
   }
 
   @media (min-width: 1200px) {
@@ -585,5 +613,51 @@
 
   @media (min-width: 1200px) {
     height: 730px;
+  }
+}
+
+.main-info--arbiter-form {
+  padding-top: 110px;
+  background: transparent url('../assets/imgs/arbiter-form-main-bg.jpg') no-repeat;
+  background-position: 50% center;
+  background-size: cover;
+
+  box-shadow: 0 7px 30px 13px rgba(0,0,0, .15);
+
+  @media (min-width: 1200px) {
+    padding-top: 190px;
+    padding-bottom: 110px;
+  }
+
+  & .heading-1 {
+    color: rgba(255, 255, 255, 0.85);
+    font-size: 48.5px;
+    letter-spacing: 1.2px;
+    text-shadow: 0 0 4.8px rgba(0, 0, 0, 0.21);
+    margin-bottom: 15px;
+    font-weight: 400;
+    letter-spacing: 1.2px;
+
+    @media (min-width: 992px) {
+      margin-bottom: 30px;
+    }
+  }
+
+  & .jumbo__text {
+    color: rgba(255, 255, 255, 0.9);
+    font-size: 28px;
+    line-height: 1.3;
+    letter-spacing: 0.2px;
+    font-weight: 300;
+    text-shadow: 0 0 4.8px rgba(0, 0, 0, 0.21);
+    text-align: justify;
+    max-width: 1100px;
+    margin: auto;
+
+    margin-bottom: 15px;
+
+    @media (min-width: 768px) {
+      margin-bottom: 56px;
+    }
   }
 }
