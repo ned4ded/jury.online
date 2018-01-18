@@ -1,0 +1,274 @@
+<!doctype html>
+<html class="no-js" lang="ru">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>Jury Online</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width">
+
+        <link rel="stylesheet" href="css/normalize.css">
+        <link rel="stylesheet" href="css/bootstrap.min.css">
+        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="css/main.css">
+    </head>
+    <body>
+        <!--[if lte IE 9]>
+            <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
+        <![endif]-->
+
+        <header id="header" class="container-fluid fixed-top header header__bg">
+          <div class="row">
+            <div class="col-12">
+              <nav class="container navbar navbar-toggleable-lg header__navbar">
+                <button id="menu-toggler" class="navbar-toggler navbar-toggler-right header__toggle" type="button" data-toggle="collapse" data-target="#headerDropdown" aria-expanded="false">
+                  <span class="header__toggle-icon">
+                    <i class="fa fa-bars" aria-hidden="true"></i>
+                  </span>
+                </button>
+                <div class="navbar-brand">
+                  <a class="logo header__logo" href="/">
+                    <img src="assets/imgs/logo-navbar-white.png" alt="logotype" width="207" height="38">
+                  </a>
+                </div>
+                <div id="headerDropdown" class="collapse navbar-collapse">
+                  <ul class="header__menu">
+                    <li class="header__menu-item">
+                      <a href="#" class="header__link">News</a>
+                    </li>
+                    <li class="header__menu-item">
+                      <a href="#" class="header__link">Become an arbiter</a>
+                    </li>
+                    <li class="header__menu-item">
+                      <span class="header__link active">ICO</span>
+                    </li>
+                    <li class="header__menu-item">
+                      <a href="#" class="header__link">Documents</a>
+                    </li>
+                    <li class="header__menu-item">
+                      <a href="faq.html" class="header__link">FAQ</a>
+                    </li>
+                    <li class="header__menu-item">
+                      <div class="dropdown header__dropdown">
+                        <button class="dropdown-toggle header__dropdown-btn" type="button" id="navDropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                          English
+                        </button>
+                        <div class="dropdown-menu header__dropdown-menu" aria-labelledby="navDropdownMenuButton">
+                          <a class="dropdown-item" href="#">Русский</a>
+                          <a class="dropdown-item" href="#">Espanol</a>
+                          <a class="dropdown-item" href="#">Deutsch</a>
+                          <a class="dropdown-item" href="#">Portugues</a>
+                          <a class="dropdown-item" href="#">한국어</a>
+                          <a class="dropdown-item" href="#">日本</a>
+                        </div>
+                      </div>
+                    </li>
+                    <li class="header__menu-item header__menu-btn">
+                      <a href="#" class="header__btn">
+                        <span class="btn__text">Log in</span>
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+              </nav>
+            </div>
+          </div>
+        </header>
+        <main class="container-fluid">
+          <div class="main-info main-info--ico">
+            <div class="container">
+              <h2 class="heading-1">Start bringing your idea into reality</h2>
+              <div class="infographic">
+                <div class="timer infographic__divider">
+                  <p class="timer__dates">
+                    <time datetime="2018-02-12">12 february</time> - <time  datetime="2018-03-14">14 march</time>
+                  </p>
+                  <div class="timer__counter">
+                    <div class="timer__property">
+                      <p class="timer__property-container">
+                        <span id="timer-days" class="timer__property-value">53</span>
+                        <span class="timer__property-name">Days</span>
+                      </p>
+                    </div>
+                    <span class="timer__divider"></span>
+                    <div class="timer__property">
+                      <p class="timer__property-container">
+                        <span id="timer-days" class="timer__property-value">53</span>
+                        <span class="timer__property-name">Days</span>
+                      </p>
+                    </div>
+                    <span class="timer__divider"></span>
+                    <div class="timer__property">
+                      <p class="timer__property-container">
+                        <span id="timer-days" class="timer__property-value">53</span>
+                        <span class="timer__property-name">Days</span>
+                      </p>
+                    </div>
+                    <span class="timer__divider"></span>
+                    <div class="timer__property">
+                      <p class="timer__property-container">
+                        <span id="timer-days" class="timer__property-value">53</span>
+                        <span class="timer__property-name">Days</span>
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <div class="fees-diagram">
+                  <p class="fees-diagram__currency">1 ETH = 420 JOT</p>
+                  <div id="fees-diagram" class="fees-diagram__form" data-complete-percent="23.9">
+                    <span class="fees-diagram__soft-cap">Soft Cap</span>
+                    <span id="fees-reached" class="fees-diagram__reached" style="width:25%;"></span>
+                  </div>
+                </div>
+              </div>
+              <div class="main-info__btns">
+                <a href="#" class="btn btn--white main-info__btn--ico">Start Now</a>
+              </div>
+            </div>
+          </div>
+          <div class="ico">
+            <div class="container">
+              <div class="ico__distribution">
+                <h2 class="heading-2 ico__heading">Tokens Distribution</h2>
+                <div class="ico__diagrams">
+                  <img src="assets/imgs/ico-chart.png" alt="pie chart" class="ico__pie" width="415" height="420">
+                  <div class="ico__bar-graph bar-graph">
+                    <div class="bar-graph__item bar-graph__item">
+                      <p class="bar-graph__legend"><span class="bar-graph__percent">70 <span class="bar-graph__percent-sign">%</span></span><span class="bar-graph__descr">Will be available for sale</span></p>
+                      <div class="bar-graph__diagram" style="width:70%;"></div>
+                    </div>
+                    <div class="bar-graph__item bar-graph__item--green">
+                      <p class="bar-graph__legend"><span class="bar-graph__percent">20 <span class="bar-graph__percent-sign">%</span></span><span class="bar-graph__descr">Go to the Jury.Online team</span></p>
+                      <div class="bar-graph__diagram" style="width:20%;"></div>
+                    </div>
+                    <div class="bar-graph__item bar-graph__item--blue">
+                      <p class="bar-graph__legend"><span class="bar-graph__percent">7 <span class="bar-graph__percent-sign">%</span></span><span class="bar-graph__descr">Go to advisers and for bounty </span></p>
+                      <div class="bar-graph__diagram" style="width:7%;"></div>
+                    </div>
+                    <div class="bar-graph__item bar-graph__item--red">
+                      <p class="bar-graph__legend"><span class="bar-graph__percent">3 <span class="bar-graph__percent-sign">%</span></span><span class="bar-graph__descr">Remain as a stock of liquidity</span></p>
+                      <div class="bar-graph__diagram" style="width:3%;"></div>
+                    </div>
+
+                  </div>
+                </div>
+                <div class="ico__terms">
+                  <p class="ico__text">
+                    For every <span class="ico__text--bold">7 JOTs</span> sold through ICO Jury.Online issues 3 JOTs for itself. So up to 7 000 000 JOT will be available for public and up to 3 000 000 JOT will be reserved by Jury.Online.
+                  </p>
+                  <p class="ico__text">
+                    ICO minimum cap: <span class="ico__text--bold">3 000 000 JOT</span> <br>(10 000 ETH ≈ $3 mln during presale, 14 285 ETH ≈ $4.29 mln during sale, with 1 ETH ≈ $300).
+                  </p>
+                  <p class="ico__text">
+                    Tokens can be bought for <span class="ico__text--bold">ETH</span> and <span class="ico__text--bold">BTC</span>, as well as for fiat money.
+                  </p>
+                </div>
+              </div>
+              <div class="ico__roadmap">
+                <h2 class="heading-2 ico__roadmap-heading">Road Map</h2>
+                <img src="assets/imgs/roadmap.png" alt="roadmap" class="ico__roadmap-image" width="786" height="1951">
+              </div>
+            </div>
+          </div>
+        </main>
+        <footer class="container-fluid footer">
+          <div class="row">
+            <div class="col-12">
+              <div class="container">
+                <div class="row">
+                  <div class="col-12 col-md-6 col-lg-8 footer__block">
+                    <div class="row">
+                      <div class="col-3 col-md-6 col-lg-3">
+                        <h2 class="footer__heading">Key Features</h2>
+                        <ul class="footer__menu">
+                          <li><span class="footer__link">Accessibility</span></li>
+                          <li><span class="footer__link">Compatbility</span></li>
+                          <li><span class="footer__link">Flexibility</span></li>
+                          <li><span class="footer__link">Safety & Security</span></li>
+                        </ul>
+                      </div>
+                      <div class="col-3 col-md-6 col-lg-3">
+                        <h2 class="footer__heading">Support</h2>
+                        <ul class="footer__menu">
+                          <li><a href="#" class="footer__link">Documentation</a></li>
+                          <li><a href="#" class="footer__link">FAQs</a></li>
+                          <li><a href="#" class="footer__link">Live Chat</a></li>
+                          <li><a href="#" class="footer__link">Contact Us</a></li>
+                        </ul>
+                      </div>
+                      <div class="col-3 col-md-6 col-lg-3">
+                        <h2 class="footer__heading">News & Resources</h2>
+                        <ul class="footer__menu">
+                          <li><a href="#" class="footer__link">Latest News</a></li>
+                          <li><a href="#" class="footer__link">Compatbility</a></li>
+                          <li><a href="#" class="footer__link">Flexibility</a></li>
+                          <li><a href="#" class="footer__link">Safety & Security</a></li>
+                        </ul>
+                      </div>
+                      <div class="col-3 col-md-6 col-lg-3">
+                        <h2 class="footer__heading">Developers</h2>
+                        <ul class="footer__menu">
+                          <li><a href="#" class="footer__link">Suada API</a></li>
+                          <li><a href="#" class="footer__link">Tutorials</a></li>
+                          <li><a href="#" class="footer__link">Dev Forum</a></li>
+                          <li><a href="#" class="footer__link">Open Source</a></li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-12 col-md-6 col-lg-4 footer__block">
+                    <h2 class="footer__heading"><label for="subscribe">Stay in touch with us</label></h2>
+                    <form action="#" method="POST">
+                      <div class="social__wrapper">
+                          <input id="subscribe" class="social__input" type="email" placeholder="Weekly newsletter">
+                          <button class="social__btn" type="submit" name="submit-subscribe">
+                            Subscribe
+                          </button>
+                      </div>
+                    </form>
+                    <ul class="footer__social social">
+                      <li>
+                        <a href="#" class="social__links">
+                          <i class="fa fa-twitter" aria-hidden="true"></i>
+                        </a>
+                      </li>
+                      <li>
+                        <a href="#" class="social__links  social__links--facebook">
+                          <i class="fa fa-facebook" aria-hidden="true"></i>
+                        </a>
+                      </li>
+                      <li>
+                        <a href="#" class="social__links">
+                          <i class="fa fa-google-plus" aria-hidden="true"></i>
+                        </a>
+                      </li>
+                      <li>
+                        <a href="#" class="social__links">
+                          <i class="fa fa-instagram" aria-hidden="true"></i>
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="col-12 footer__block">
+                    <div class="copyright">
+                      <img src="assets/imgs/logo-single-white.png" alt="logotype" class="copyright__logo" width="39" height="51">
+                      <div class="copyright__content">
+                        <p class="copyright__text">Copyright © 2018 Jury.Online</p>
+                        <p class="copyright__text">All rights reserved.</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </footer>
+
+        <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+        <script>window.jQuery || document.write('<script src="js/vendor/jquery-3.2.1.min.js"><\/script>')</script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+        <script>(typeof $().modal) == 'function' || document.write('<script src="js/vendor/bootstrap.min.js"><\/script>')</script>
+        <script src="js/main.js"></script>
+
+    </body>
+</html>
