@@ -565,3 +565,17 @@
     text-shadow: 0 0 4.8px rgba(0, 0, 0, 0.21);
   }
 }
+
+.main-info--single-news {
+  padding: 0;
+  height: 400px;
+  background: transparent url('../assets/imgs/single-news-main-bg.jpg') no-repeat;
+  background-position: 50% bottom;
+  background-size: cover;
+
+  box-shadow: 0 7px 30px 13px rgba(0,0,0, .15);
+
+  @media (min-width: 992px) {
+    height: 730px;
+  }
+}

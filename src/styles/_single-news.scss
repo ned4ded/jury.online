@@ -1,0 +1,25 @@
+.single-news {
+  margin-left: -15px;
+  margin-right: -15px;
+  background-color: #e9e9e9;
+  padding-top: 150px;
+  padding-bottom: 150px;
+
+  &__heading {
+    margin-bottom: 86px;
+  }
+
+  &__text {
+    margin: auto;
+    max-width: 818px;
+    font-family: $avenir;
+    font-size: 30px;
+    font-weight: 300;
+    text-align: justify;
+    color: #5e5d5d;
+
+    &:not(:last-of-type) {
+      margin-bottom: 40px;
+    }
+  }
+}
