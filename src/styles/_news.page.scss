@@ -1,0 +1,17 @@
+.news {
+  padding-top: 133px;
+  padding-bottom: 150px;
+  background-color: #e9e9e9;
+  margin-left: -15px;
+  margin-right: -15px;
+
+  &__heading {
+    margin-bottom: 53px;
+  }
+
+  &__content {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+  }
+}

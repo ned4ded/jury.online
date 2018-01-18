@@ -1,0 +1,179 @@
+.news-card {
+  margin: auto;
+  padding: 11px 33px 3px;
+  position: relative;
+  opacity: .5;
+
+
+  .active > & {
+    opacity: 1;
+  }
+
+  &:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0px;
+    height: 100%;
+    background-color: rgba(0,0,0,.05);
+    width: 1px;
+  }
+
+  &:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: -1px;
+    height: 100%;
+    background-color: rgba(0,0,0,.05);
+    width: 1px;
+  }
+
+  &__share {
+    float: right;
+    display: inline-block;
+    width: 22px;
+    height: 22px;
+    font-size: 0;
+    background: transparent url('../assets/imgs/icon-share.png') center no-repeat;
+    background-size: 100%;
+    opacity: .8;
+
+    &:hover {
+      opacity: 1;
+      filter: contrast(120%);
+    }
+
+    &:active {
+      opacity: 0.6;
+      filter: contrast(140%);
+    }
+  }
+
+  &__image {
+    max-width: 569px;
+    height: 325px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    border-radius: 10px;
+    margin-bottom: 50px;
+    box-shadow: 0px 0px 16px 0px rgba(35, 31, 32, .55),
+      0px 0px 29px 9px rgba(165, 93, 202, 0.27),
+      inset 0px 0px 29px 9px rgba(165, 93, 202, 0.27);
+  }
+
+  &__name {
+    display: inline-block;
+    position: relative;
+    color: #6b4683;
+    font-family: $avenir;
+    font-weight: 600;
+    line-height: 100%;
+    text-align: left;
+    text-transform: uppercase;
+    letter-spacing: 1.2px;
+    margin-bottom: 7px;
+
+  }
+
+  &__type {
+    color: #ca1b4c;
+    font-family: $avenir;
+    font-weight: 300;
+    line-height: 100%;
+    font-size: 13px;
+    text-align: left;
+    margin-bottom: 20px;
+
+  }
+
+  &__text {
+    font-family: $avenir;
+    line-height: 1.29;
+    text-align: left;
+    margin-bottom: 18px;
+
+    font-size: 14px;
+    font-weight: 300;
+    text-align: justify;
+    color: #6a5776;
+    max-width: 419px;
+  }
+
+  &__btn {
+    display: inline-block;
+    position: relative;
+    font-size: 14px;
+    font-family: $avenir;
+    font-weight: 300;
+    line-height: 2.29;
+    color: #6c4684;
+    padding-left: 24px;
+
+    &:before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 50%;
+      width: 11px;
+      height: 11px;
+      transform: translateY(-50%);
+      background: transparent url('../assets/imgs/icon-arrow.png') center no-repeat;
+      background-size: 100%;
+    }
+
+    &:focus {
+      outline: none;
+      text-decoration: none;
+      color: #6c4684;
+    }
+
+    &:hover {
+      color: #6c4684;
+      text-decoration: underline;
+    }
+
+    &:active {
+      opacity: .8;
+    }
+  }
+
+  .news & {
+    opacity: 1;
+    margin: 0;
+    width: 100%;
+    margin-bottom: 40px;
+
+    @media(min-width: 992px) {
+      width: 50%;
+    }
+
+    &__image {
+      max-height: 291px;
+      margin-bottom: 43px;
+    }
+
+    &__name {
+      font-size: 27px;
+    }
+
+    &__type {
+      font-size: 12px;
+    }
+
+    &__text {
+      font-size: 12.5px;
+      margin-bottom: 8px;
+    }
+
+    &__btn {
+      font-size: 12.5px;
+
+      &-icon {
+        width: 12px;
+        height: 11px;
+      }
+    }
+  }
+}

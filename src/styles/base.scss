@@ -150,15 +150,18 @@ body {
 
 @import './bootfix.scss';
 @import './header.scss';
+@import './input-group.scss';
 @import './main-info.scss';
-@import './news.scss';
+@import './news-card.scss';
+@import './news.block.scss';
+@import './news.page.scss';
 @import './video.scss';
 @import './concept.scss';
 @import './ads.scss';
 @import './cta.scss';
 @import './arbiter-card.scss';
 @import './arbiters.block.scss';
-@import './arbiters.list.scss';
+@import './arbiters.page.scss';
 @import './team.scss';
 @import './clients.scss';
 @import './press.scss';
