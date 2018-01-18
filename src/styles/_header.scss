@@ -153,7 +153,17 @@
 
     &:hover {
       color: white;
-      text-decoration: underline;
+      text-decoration: none;
+      background-color: rgba(255, 255, 255, 0.4);
+      box-shadow: inset 0px 1px 2px 0 rgba(255, 255, 255, 0.4),
+                        0px 1px 16px 0px rgba(0, 0, 0, 0.2);
+    }
+
+    &:active {
+      background-color: rgba(255, 255, 255, 0.35);
+      box-shadow: inset 0px -1px 2px 0 rgba(255, 255, 255, 0.4),
+                  inset 0px 1px 2px 0 rgba(0, 0, 0, 0.2),
+                        0px 1px 16px 0px rgba(0, 0, 0, 0.3);
     }
 
     & .btn__text {

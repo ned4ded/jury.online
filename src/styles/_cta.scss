@@ -65,7 +65,7 @@
   }
 
   &__offering {
-    margin-bottom: 46px;
+    margin-bottom: 38px;
 
     & svg {
         overflow: visible;
@@ -76,8 +76,6 @@
       font-size: 78px;
       font-family: $avenir;
       font-weight: 600;
-      color: rgba(218, 105, 222, 1);
-      background: linear-gradient(-90grad, rgba(255, 178, 245, 1) 0%, rgba(218, 105, 222, 1) 100%);
       text-transform: uppercase;
       line-height: 0.718;
     }
@@ -88,9 +86,9 @@
     box-sizing: border-box;
     width: 100%;
     border-radius: 10px;
-    background-image: linear-gradient( -284deg, rgb(222,99,145) 29%, rgb(190,58,99) 100%);
-    box-shadow: 0px 13px 50px 0px rgba(35, 31, 32, 0.2),
-      0px 0px 32px 9px rgba(225, 103, 141, 0.3),
+    background-image: linear-gradient(166deg, #de6391 29%, #be3a63 80%);
+    box-shadow: 0px 15px 70px 0px rgba(35, 31, 32, 0.3),
+      0px 0px 15px 9px rgba(225, 103, 141, 0.35),
       inset 0px 0px 32px 9px rgba(225, 103, 141, 0.3);
     font-family: $avenir;
     font-size: 24px;
@@ -113,6 +111,10 @@
       box-shadow: 0px 6px 25px 0px rgba(35, 31, 32, 0.4),
         0px 0px 25px 6px rgba(225, 103, 141, 0.6),
         inset 0px 0px 25px 6px rgba(225, 103, 141, 0.6);
+    }
+
+    &:active {
+      background-image: linear-gradient(346deg, #de6391 29%, #be3a63 80%);
     }
 
   }
@@ -166,7 +168,7 @@
   }
 
   &__divider {
-    width: 9px;
+    width: 10px;
     height: 10px;
     opacity: 0.8;
     border-radius: 4.5px;
