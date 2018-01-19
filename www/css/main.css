@@ -49,7 +49,8 @@ body {
     color: rgba(78, 77, 77, 0.05);
     font-family: "AvenirNext", "Arial", sans-serif;
     font-weight: 600;
-    text-transform: uppercase; }
+    text-transform: uppercase;
+    width: 100%; }
     @media (min-width: 768px) {
       .heading-2[data-text-abaft]:after {
         font-size: 92px; } }
@@ -76,7 +77,8 @@ body {
   color: white;
   border: none;
   border-radius: 10px;
-  background-image: linear-gradient(166deg, #a33282, #501d69);
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#a33282), to(#501d69));
+  background-image: linear-gradient(180deg, #a33282, #501d69);
   -webkit-box-shadow: 0px 0px 32px 9px rgba(132, 28, 185, 0.15);
           box-shadow: 0px 0px 32px 9px rgba(132, 28, 185, 0.15);
   font-family: "AvenirNext", "Arial", sans-serif;
@@ -471,7 +473,7 @@ body {
       padding-top: 132px;
       padding-bottom: 170px; } }
   .main-info--index {
-    background: transparent url("../assets/imgs/index-main-bg.png") no-repeat;
+    background: transparent url("../assets/imgs/index-main-bg.jpg") no-repeat;
     background-position: 50% bottom;
     background-size: cover; }
   .main-info__btns {
@@ -708,7 +710,8 @@ body {
     color: white;
     border: none;
     border-radius: 10px;
-    background-image: linear-gradient(168deg, #de6391 29%, #be3a63 90%);
+    background-image: -webkit-gradient(linear, left top, left bottom, color-stop(29%, #de6391), color-stop(90%, #be3a63));
+    background-image: linear-gradient(180deg, #de6391 29%, #be3a63 90%);
     -webkit-box-shadow: 0px 1px 0px 0px rgba(21, 31, 123, 0.2), 0px 0px 32px 7px rgba(225, 103, 144, 0.17), inset 0px 1px 0px 0px rgba(255, 255, 255, 0.1);
             box-shadow: 0px 1px 0px 0px rgba(21, 31, 123, 0.2), 0px 0px 32px 7px rgba(225, 103, 144, 0.17), inset 0px 1px 0px 0px rgba(255, 255, 255, 0.1);
     text-shadow: 0px 1px 2.9px rgba(8, 11, 45, 0.27);
@@ -723,7 +726,8 @@ body {
       outline: none; }
     .signup__btn:active {
       outline: none;
-      background-image: linear-gradient(166deg, #be3a63 9%, #de6391 69%);
+      background-image: -webkit-gradient(linear, left top, left bottom, color-stop(9%, #be3a63), color-stop(69%, #de6391));
+      background-image: linear-gradient(180deg, #be3a63 9%, #de6391 69%);
       -webkit-box-shadow: 0px -1px 0px 0px rgba(21, 31, 123, 0.54), 0px 0px 32px 7px rgba(225, 103, 144, 0), inset 0px -1px 0px 0px rgba(255, 255, 255, 0.4);
               box-shadow: 0px -1px 0px 0px rgba(21, 31, 123, 0.54), 0px 0px 32px 7px rgba(225, 103, 144, 0), inset 0px -1px 0px 0px rgba(255, 255, 255, 0.4); }
   .signup__socials-auth {
@@ -1406,7 +1410,8 @@ body {
       color: white;
       text-shadow: 0 0 1.9px rgba(0, 15, 41, 0.28);
       border-radius: 10px;
-      background-image: linear-gradient(168deg, #853582 27%, #4b2669);
+      background-image: -webkit-gradient(linear, left top, left bottom, color-stop(27%, #853582), to(#4b2669));
+      background-image: linear-gradient(180deg, #853582 27%, #4b2669);
       -webkit-box-shadow: 0px 13px 50px 0px rgba(35, 31, 32, 0.2), 0px 0px 30px 9px rgba(132, 28, 185, 0.3);
               box-shadow: 0px 13px 50px 0px rgba(35, 31, 32, 0.2), 0px 0px 30px 9px rgba(132, 28, 185, 0.3); }
       .ads__tab.active:focus {
@@ -1419,7 +1424,8 @@ body {
         -webkit-box-shadow: 0px 13px 50px 0px rgba(35, 31, 32, 0.2), 0px 0px 30px 9px rgba(132, 28, 185, 0.4);
                 box-shadow: 0px 13px 50px 0px rgba(35, 31, 32, 0.2), 0px 0px 30px 9px rgba(132, 28, 185, 0.4); }
       .ads__tab.active:active {
-        background-image: linear-gradient(166deg, #4b2669 27%, #853582);
+        background-image: -webkit-gradient(linear, left top, left bottom, color-stop(27%, #4b2669), to(#853582));
+        background-image: linear-gradient(180deg, #4b2669 27%, #853582);
         -webkit-box-shadow: 0px -13px 50px 0px rgba(35, 31, 32, 0.2), 0px 0px 15px 3px rgba(132, 28, 185, 0.5);
                 box-shadow: 0px -13px 50px 0px rgba(35, 31, 32, 0.2), 0px 0px 15px 3px rgba(132, 28, 185, 0.5); }
     @media (min-width: 992px) {
@@ -1499,6 +1505,101 @@ body {
       font-family: "AvenirNext", "Arial", sans-serif;
       font-weight: 300; }
 
+.features {
+  background-color: #efeaf1;
+  padding-top: 70px;
+  margin-right: -15px;
+  margin-left: -15px;
+  padding-bottom: 60px; }
+  @media (min-width: 576px) {
+    .features {
+      padding-top: 100px; } }
+  @media (min-width: 768px) {
+    .features {
+      padding-top: 140px; } }
+  @media (min-width: 992px) {
+    .features {
+      padding-top: 120px;
+      padding-bottom: 100px; } }
+  .features__heading {
+    margin-bottom: 20px; }
+    @media (min-width: 992px) {
+      .features__heading {
+        margin-bottom: 35px; } }
+  .features__text {
+    max-width: 610px;
+    margin: auto;
+    margin-bottom: 35px; }
+    @media (min-width: 992px) {
+      .features__text {
+        margin-bottom: 52px; } }
+  .features__item {
+    padding-top: 188px;
+    position: relative;
+    min-width: 172px;
+    max-width: 274px;
+    width: 100%;
+    text-align: center;
+    margin: auto; }
+    .features__item:after {
+      top: 0;
+      left: 50%;
+      -webkit-transform: translateX(-50%);
+              transform: translateX(-50%);
+      position: absolute;
+      content: '';
+      width: 172px;
+      height: 172px; }
+    .features__item:before {
+      top: 0;
+      left: 50%;
+      -webkit-transform: translateX(-50%);
+              transform: translateX(-50%);
+      position: absolute;
+      content: '';
+      background: transparent url("../assets/imgs/icon-features-rhomb.png");
+      width: 172px;
+      height: 172px; }
+    .features__item--funds {
+      margin-left: auto; }
+      @media (min-width: 992px) {
+        .features__item--funds {
+          margin-left: 30px; } }
+      @media (min-width: 1200px) {
+        .features__item--funds {
+          margin-left: 55px; } }
+    .features__item--escrow {
+      margin-right: auto; }
+      @media (min-width: 992px) {
+        .features__item--escrow {
+          margin-right: 30px; } }
+      @media (min-width: 1200px) {
+        .features__item--escrow {
+          margin-right: 55px; } }
+    .features__item--escrow:after {
+      background: transparent url("../assets/imgs/icon-features-doc.png") center no-repeat; }
+    .features__item--funds:after {
+      background: transparent url("../assets/imgs/icon-features-graph.png") center no-repeat; }
+    .features__item--resolution:after {
+      background: transparent url("../assets/imgs/icon-features-like.png") center no-repeat; }
+    .features__item--market:after {
+      background: transparent url("../assets/imgs/icon-features-atom.png") center no-repeat; }
+    .features__item--security:after {
+      background: transparent url("../assets/imgs/icon-features-shield.png") center no-repeat; }
+    .features__item-heading {
+      font-family: "AvenirNext", "Arial", sans-serif;
+      font-size: 24px;
+      font-weight: 600;
+      color: #494949;
+      margin-bottom: 20px; }
+    .features__item-text {
+      font-family: "AvenirNext", "Arial", sans-serif;
+      font-size: 16px;
+      font-weight: 300;
+      line-height: 1.74;
+      color: #7c7c7c;
+      margin-bottom: 25px; }
+
 .cta {
   padding-top: 40px;
   padding-bottom: 60px;
@@ -1574,7 +1675,8 @@ body {
             box-sizing: border-box;
     width: 100%;
     border-radius: 10px;
-    background-image: linear-gradient(166deg, #de6391 29%, #be3a63 80%);
+    background-image: -webkit-gradient(linear, left top, left bottom, color-stop(29%, #de6391), color-stop(80%, #be3a63));
+    background-image: linear-gradient(180deg, #de6391 29%, #be3a63 80%);
     -webkit-box-shadow: 0px 15px 70px 0px rgba(35, 31, 32, 0.3), 0px 0px 15px 9px rgba(225, 103, 141, 0.35), inset 0px 0px 32px 9px rgba(225, 103, 141, 0.3);
             box-shadow: 0px 15px 70px 0px rgba(35, 31, 32, 0.3), 0px 0px 15px 9px rgba(225, 103, 141, 0.35), inset 0px 0px 32px 9px rgba(225, 103, 141, 0.3);
     font-family: "AvenirNext", "Arial", sans-serif;
@@ -1598,7 +1700,8 @@ body {
       -webkit-box-shadow: 0px 6px 25px 0px rgba(35, 31, 32, 0.4), 0px 0px 25px 6px rgba(225, 103, 141, 0.6), inset 0px 0px 25px 6px rgba(225, 103, 141, 0.6);
               box-shadow: 0px 6px 25px 0px rgba(35, 31, 32, 0.4), 0px 0px 25px 6px rgba(225, 103, 141, 0.6), inset 0px 0px 25px 6px rgba(225, 103, 141, 0.6); }
     .discount__btn:active {
-      background-image: linear-gradient(346deg, #de6391 29%, #be3a63 80%); }
+      background-image: -webkit-gradient(linear, left top, left bottom, from(0), color-stop(29%, #de6391), color-stop(80%, #be3a63));
+      background-image: linear-gradient(0, #de6391 29%, #be3a63 80%); }
 
 .infographic {
   width: 100%;
@@ -1760,7 +1863,8 @@ body {
   display: block;
   position: relative;
   border-radius: 10px;
-  background-image: linear-gradient(166deg, #de6391 29%, #be3a63 100%);
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(29%, #de6391), to(#be3a63));
+  background-image: linear-gradient(180deg, #de6391 29%, #be3a63 100%);
   -webkit-box-shadow: 0px 13px 50px 0 rgba(35, 31, 32, 0.2);
           box-shadow: 0px 13px 50px 0 rgba(35, 31, 32, 0.2);
   height: 100%;
@@ -2005,7 +2109,10 @@ body {
           margin-bottom: 96px; } }
 
 .arbiter-form {
+  margin-right: -15px;
+  margin-left: -15px;
   padding-top: 90px;
+  padding-bottom: 40px;
   background-color: #e9e9e9; }
   .arbiter-form__section {
     width: 100%;
@@ -2071,7 +2178,7 @@ body {
       margin: 0; }
       @media (min-width: 992px) {
         .arbiter-form__label--radio {
-          text-align: left; } }
+          text-align: center; } }
     .arbiter-form__label-icon {
       display: inline-block;
       margin-right: 21px;
@@ -2801,8 +2908,8 @@ body {
     padding: 19px 41px;
     text-transform: uppercase;
     border-radius: 10px;
-    background-image: -webkit-gradient(linear, left top, right top, from(#f3f3f3), to(#dddddd));
-    background-image: linear-gradient(90deg, #f3f3f3 0%, #dddddd 100%);
+    background-image: -webkit-gradient(linear, left top, left bottom, from(#f3f3f3), to(#dddddd));
+    background-image: linear-gradient(180deg, #f3f3f3 0%, #dddddd 100%);
     -webkit-box-shadow: 0px 6px 27px 0px rgba(35, 31, 32, 0.29);
             box-shadow: 0px 6px 27px 0px rgba(35, 31, 32, 0.29);
     -webkit-transition: all .1s ease-in;
@@ -2817,8 +2924,8 @@ body {
       -webkit-box-shadow: 0px 5px 15px 0px rgba(35, 31, 32, 0.6);
               box-shadow: 0px 5px 15px 0px rgba(35, 31, 32, 0.6); }
     .try-it__btn:active {
-      background-image: -webkit-gradient(linear, right top, left top, from(#f3f3f3), to(#dddddd));
-      background-image: linear-gradient(-90deg, #f3f3f3 0%, #dddddd 100%);
+      background-image: -webkit-gradient(linear, left bottom, left top, from(#f3f3f3), to(#dddddd));
+      background-image: linear-gradient(0deg, #f3f3f3 0%, #dddddd 100%);
       color: #65616d; }
 
 .faq {
