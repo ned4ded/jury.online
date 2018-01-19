@@ -512,8 +512,8 @@ body {
       width: 37px;
       height: 34px; }
   .main-info__btn--arbiters {
-    padding-right: 70px;
-    padding-left: 30px;
+    padding-right: 48px;
+    padding-left: 48px;
     font-size: 19px; }
   .main-info__btn--arbiter-form {
     padding: 17px 70px 17px 30px;
@@ -1577,15 +1577,22 @@ body {
         .features__item--escrow {
           margin-right: 55px; } }
     .features__item--escrow:after {
-      background: transparent url("../assets/imgs/icon-features-doc.png") center no-repeat; }
+      background: transparent url("../assets/imgs/icon-features-doc.png") center no-repeat;
+      top: 5px;
+      left: 49%; }
     .features__item--funds:after {
-      background: transparent url("../assets/imgs/icon-features-graph.png") center no-repeat; }
+      background: transparent url("../assets/imgs/icon-features-graph.png") center no-repeat;
+      top: 1px; }
     .features__item--resolution:after {
-      background: transparent url("../assets/imgs/icon-features-like.png") center no-repeat; }
+      background: transparent url("../assets/imgs/icon-features-like.png") center no-repeat;
+      top: 2px; }
     .features__item--market:after {
-      background: transparent url("../assets/imgs/icon-features-atom.png") center no-repeat; }
+      background: transparent url("../assets/imgs/icon-features-atom.png") center no-repeat;
+      top: 3px; }
     .features__item--security:after {
-      background: transparent url("../assets/imgs/icon-features-shield.png") center no-repeat; }
+      background: transparent url("../assets/imgs/icon-features-shield.png") center no-repeat;
+      top: 8px;
+      left: 49.5%; }
     .features__item-heading {
       font-family: "AvenirNext", "Arial", sans-serif;
       font-size: 24px;

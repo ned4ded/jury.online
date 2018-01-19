@@ -92,18 +92,25 @@
 
     &--escrow:after {
       background: transparent url('../assets/imgs/icon-features-doc.png') center no-repeat;
+      top: 5px;
+      left: 49%;
     }
     &--funds:after {
       background: transparent url('../assets/imgs/icon-features-graph.png') center no-repeat;
+      top: 1px;
     }
     &--resolution:after {
       background: transparent url('../assets/imgs/icon-features-like.png') center no-repeat;
+      top: 2px;
     }
     &--market:after {
       background: transparent url('../assets/imgs/icon-features-atom.png') center no-repeat;
+      top: 3px;
     }
     &--security:after {
       background: transparent url('../assets/imgs/icon-features-shield.png') center no-repeat;
+      top: 8px;
+      left: 49.5%;
     }
 
     &-heading {
