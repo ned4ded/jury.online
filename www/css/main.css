@@ -473,7 +473,7 @@ body {
       padding-top: 132px;
       padding-bottom: 170px; } }
   .main-info--index {
-    background: transparent url("../assets/imgs/index-main-bg.jpg") no-repeat;
+    background: transparent url("../assets/imgs/index-main-bg.png") no-repeat;
     background-position: 50% bottom;
     background-size: cover; }
   .main-info__btns {
@@ -825,7 +825,7 @@ body {
         opacity: .8; }
 
 .main-info--faq {
-  background: transparent url("../assets/imgs/faq-main-bg.png") no-repeat;
+  background: transparent url("../assets/imgs/faq-main-bg.jpg") no-repeat;
   background-position: 50% bottom;
   background-size: cover;
   -webkit-box-shadow: 0 7px 30px 13px rgba(0, 0, 0, 0.15);
