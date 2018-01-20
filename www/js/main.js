@@ -66,20 +66,19 @@
     }, duration);
   }
 
-  const testList = [
-    { value: 'Category1', data: 'Ct1' },
-    { value: 'Category2', data: 'Ct2' },
-    { value: 'Category3', data: 'Ct3' },
-    { value: 'Category4', data: 'Ct4' },
-    { value: 'Category5', data: 'Ct5' },
-  ]
+  $.getJSON("assets/cities.json", function(json) {
+    const parsed = json.map(object => {
+      return { value: object['city'] }
+    });
 
-  $input.autocomplete({
-    lookup: testList,
-    appendTo: $suggestions,
-    zIndex: 1030,
-    onSelect: () => $container.trigger("submit"),
-});
+    $input.autocomplete({
+      lookup: parsed,
+      lookupLimit: 5,
+      appendTo: $suggestions,
+      zIndex: 1030,
+      onSelect: () => $container.trigger("submit"),
+    });
+  });
 
   $container.on('click', inputListner);
 }());
