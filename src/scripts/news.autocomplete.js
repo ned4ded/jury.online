@@ -1,5 +1,7 @@
 (function() {
   const $container = $('#a-container');
+  const $input = $('#a-input');
+  const $suggestions = $('#a-list');
   const duration = 500;
 
   const windowListner = (ev) => {
@@ -24,12 +26,21 @@
     }, duration);
   }
 
-  // const input = document.getElementById("a-input");
-  // new Awesomplete(input, {
-  // 	list: ["Ada", "Java", "JavaScript", "Brainfuck", "LOLCODE", "Node.js", "Ruby on Rails"]
-  //   minChars: 2,
-  //   maxItems: 5,
-  // });
+  const testList = [
+    { value: 'Category1', data: 'Ct1' },
+    { value: 'Category2', data: 'Ct2' },
+    { value: 'Category3', data: 'Ct3' },
+    { value: 'Category4', data: 'Ct4' },
+    { value: 'Category5', data: 'Ct5' },
+  ]
+
+  $input.autocomplete({
+    lookup: testList,
+    appendTo: $suggestions,
+    zIndex: 1030,
+    autoSelectFirst: true,
+    onSelect: () => $container.trigger("submit"),
+});
 
   $container.on('click', inputListner);
 }());

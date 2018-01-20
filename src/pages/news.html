@@ -80,18 +80,15 @@
               <h2 class="heading-1">Recent News</h2>
               <p class="jumbo__text">Get the answers on your questions or just contact us if you don’t find what you are looking for</p>
             </div>
-            <div id="a-container" class="input-group main-info__select">
-              <ul class="autocomplete">
-               <li class="a-item"><strong>Auto</strong>complite 1</li>
-               <li class="a-item"><strong>Auto</strong>complite 2</li>
-               <li class="a-item">complite <strong>Auto</strong></li>
-               <li class="a-item">comp<strong>Auto</strong>lite 4</li>
-               <li class="a-item">comp<strong>Auto</strong>lite 4</li>
+            <form id="a-container" class="input-group main-info__select" action="/news.html" method="get">
+              <ul id="a-list" class="autocomplete">
+
              </ul>
               <label class="input-group__label">
-                <input id="a-input" class="input-group__input" type="text" placeholder="Choose the category or enter a search term here...">
+                <input id="a-input" class="input-group__input" type="text" name="search-news" placeholder="Choose the category or enter a search term here...">
               </label>
-            </div>
+              <!-- <button id="search-submit" type="submit" name="button" style="display: none;"></button> -->
+            </form>
           </div>
         </main>
 
@@ -100,7 +97,9 @@
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
         <script>(typeof $().modal) == 'function' || document.write('<script src="js/vendor/bootstrap.min.js"><\/script>')</script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/awesomplete/1.1.2/awesomplete.min.js"></script>
+        <script src="js/vendor/jquery.autocomplete.min.js"></script>
         <script src="js/main.js"></script>
+
 
     </body>
 </html>

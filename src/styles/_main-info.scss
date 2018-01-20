@@ -567,12 +567,12 @@
   background: transparent url('../assets/imgs/news-main-bg.jpg') no-repeat;
   background-position: 50% bottom;
   background-size: cover;
+  padding-bottom: 308px;
 
   box-shadow: 0 7px 30px 13px rgba(0,0,0, .15);
 
   @media (min-width: 992px) {
-    padding-top: 212px;
-    padding-bottom: 0;
+    padding-bottom: 308px;
   }
 
   & .heading-1 {
