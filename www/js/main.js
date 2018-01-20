@@ -78,7 +78,6 @@
     lookup: testList,
     appendTo: $suggestions,
     zIndex: 1030,
-    autoSelectFirst: true,
     onSelect: () => $container.trigger("submit"),
 });
 
