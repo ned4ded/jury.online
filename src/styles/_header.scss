@@ -9,8 +9,8 @@
     padding-top: 7px;
 
     @media (min-width: 1366px) {
-      padding-right: 57px;
-      padding-left: 35px;
+      padding-right: 63px;
+      padding-left: 39px;
     }
   }
 
@@ -57,7 +57,7 @@
       }
 
       @media (min-width: 1366px) {
-        padding-left: 26px;
+        padding-left: 23px;
       }
     }
 
@@ -70,7 +70,7 @@
       }
 
       @media (min-width: 1366px) {
-        padding-left: 48px;
+        padding-left: 43px;
       }
     }
   }
@@ -131,7 +131,7 @@
       position: static;
       top: 38px;
       left: -52px;
-      padding: 6px 15px 20px;
+      padding: 7px 14px 18px;
       border: 1px solid rgb(184, 150, 187);
       background-color: rgb(77, 36, 100);
       opacity: 0.949;
@@ -144,9 +144,9 @@
         position: relative;
         color: rgb(184, 150, 187);
         font-family: $avenir;
-        line-height: 18px;
-        font-size: 18px;
-        padding: 10px 14px 10px 38px;
+        line-height: 16px;
+        font-size: 16px;
+        padding: 9px 13px 9px 34px;
         font-weight: 300;
         border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 
@@ -189,7 +189,7 @@
     border-radius: .25rem;
     position: relative;
 
-    padding: 12px 49px;
+    padding: 10px 44px 10px;
 
     background-color: rgba(255, 255, 255, 0.29);
     box-shadow: inset 0px 1px 0 0 rgba(255, 255, 255, 0.2),
@@ -218,7 +218,7 @@
     & .btn__text {
       text-transform: uppercase;
 
-      font-style: 18px;
+      font-size: 16px;
     }
 
   }
@@ -241,8 +241,8 @@
     color: white;
 
     font-family: $avenir;
-    font-size: 18.1px;
-    line-height: 30.1px;
+    font-size: 16.1px;
+    line-height: 27.1px;
 
     &:hover {
       border-bottom: 1px solid white;

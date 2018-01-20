@@ -144,8 +144,8 @@ body {
     padding-top: 7px; }
     @media (min-width: 1366px) {
       .header__navbar {
-        padding-right: 57px;
-        padding-left: 35px; } }
+        padding-right: 63px;
+        padding-left: 39px; } }
   .header__menu {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -179,7 +179,7 @@ body {
           padding-left: 20px; } }
       @media (min-width: 1366px) {
         .header__menu-item {
-          padding-left: 26px; } }
+          padding-left: 23px; } }
     .header__menu-btn {
       padding-top: 15px; }
       @media (min-width: 1200px) {
@@ -188,7 +188,7 @@ body {
           padding-left: 30px; } }
       @media (min-width: 1366px) {
         .header__menu-btn {
-          padding-left: 48px; } }
+          padding-left: 43px; } }
   .header__dropdown {
     position: relative; }
     .header__dropdown-btn {
@@ -253,7 +253,7 @@ body {
       position: static;
       top: 38px;
       left: -52px;
-      padding: 6px 15px 20px;
+      padding: 7px 14px 18px;
       border: 1px solid #b896bb;
       background-color: #4d2464;
       opacity: 0.949; }
@@ -264,9 +264,9 @@ body {
         position: relative;
         color: #b896bb;
         font-family: "AvenirNext", "Arial", sans-serif;
-        line-height: 18px;
-        font-size: 18px;
-        padding: 10px 14px 10px 38px;
+        line-height: 16px;
+        font-size: 16px;
+        padding: 9px 13px 9px 34px;
         font-weight: 300;
         border-bottom: 1px solid rgba(255, 255, 255, 0.1); }
         .header__dropdown-menu .dropdown-item:hover {
@@ -300,7 +300,7 @@ body {
     border: 1px solid transparent;
     border-radius: .25rem;
     position: relative;
-    padding: 12px 49px;
+    padding: 10px 44px 10px;
     background-color: rgba(255, 255, 255, 0.29);
     -webkit-box-shadow: inset 0px 1px 0 0 rgba(255, 255, 255, 0.2), 0px 3px 8px 0px rgba(0, 0, 0, 0.09);
             box-shadow: inset 0px 1px 0 0 rgba(255, 255, 255, 0.2), 0px 3px 8px 0px rgba(0, 0, 0, 0.09); }
@@ -319,7 +319,7 @@ body {
               box-shadow: inset 0px -1px 2px 0 rgba(255, 255, 255, 0.4), inset 0px 1px 2px 0 rgba(0, 0, 0, 0.2), 0px 1px 16px 0px rgba(0, 0, 0, 0.3); }
     .header__btn .btn__text {
       text-transform: uppercase;
-      font-style: 18px; }
+      font-size: 16px; }
   .header__toggle {
     display: inline-block; }
     .header__toggle-icon {
@@ -331,8 +331,8 @@ body {
     border-bottom: 1px solid transparent;
     color: white;
     font-family: "AvenirNext", "Arial", sans-serif;
-    font-size: 18.1px;
-    line-height: 30.1px; }
+    font-size: 16.1px;
+    line-height: 27.1px; }
     .header__link:hover {
       border-bottom: 1px solid white;
       text-decoration: none;
@@ -785,7 +785,9 @@ body {
           flex-flow: column nowrap; }
   .jumbo__logo {
     margin: 0;
-    margin-bottom: 20px; }
+    margin-bottom: 20px;
+    width: 350px;
+    height: auto; }
   .jumbo__heading {
     margin: 0 0 47px; }
   .jumbo__text {
@@ -793,7 +795,7 @@ body {
     letter-spacing: 0.8px;
     color: #fff;
     font-family: "AvenirNext", "Arial", sans-serif;
-    font-size: 20px;
+    font-size: 18px;
     font-weight: 300;
     line-height: 30px; }
     .jumbo__text-appeal {
@@ -813,15 +815,15 @@ body {
   -webkit-box-direction: normal;
       -ms-flex-flow: column nowrap;
           flex-flow: column nowrap;
-  width: 350px;
-  min-height: 479px;
+  width: 315px;
+  min-height: 431px;
   margin: auto;
   border: solid 1px #6a3681;
   border-radius: 10px;
   background-color: rgba(255, 255, 255, 0.1); }
   .signup__heading {
     display: block;
-    padding: 22px 0 20px;
+    padding: 19px 0 18px;
     margin: 0;
     text-align: center;
     text-transform: uppercase;
@@ -832,15 +834,15 @@ body {
     -webkit-box-shadow: inset 0px 1px 0 0 rgba(255, 255, 255, 0.2);
             box-shadow: inset 0px 1px 0 0 rgba(255, 255, 255, 0.2);
     font-family: "AvenirNext", "Arial", sans-serif;
-    font-size: 23.2px;
+    font-size: 21px;
     font-weight: bold;
-    line-height: 30.2px; }
+    line-height: 28px; }
   .signup__form {
-    padding: 18px 29px 17px; }
+    padding: 16px 26px 15px; }
   .signup__input {
     width: 100%;
-    height: 57px;
-    padding: 20px;
+    height: 51px;
+    padding: 18px;
     color: #42285b;
     border: none;
     border-radius: 10px;
@@ -848,44 +850,44 @@ body {
     -webkit-box-shadow: 0px 1px 0px 0px rgba(255, 255, 255, 0.1), inset 0px 1px 0px 0px rgba(0, 0, 0, 0.15);
             box-shadow: 0px 1px 0px 0px rgba(255, 255, 255, 0.1), inset 0px 1px 0px 0px rgba(0, 0, 0, 0.15);
     font-family: "AvenirNext", "Arial", sans-serif;
-    font-size: 21px; }
+    font-size: 19px; }
     .signup__input:not(:last-of-type) {
-      margin-bottom: 15px; }
+      margin-bottom: 13px; }
     .signup__input::-webkit-input-placeholder {
       text-align: center;
       text-transform: uppercase;
       opacity: 1;
       color: #42285b;
       font-family: "AvenirNext", "Arial", sans-serif;
-      font-size: 21px; }
+      font-size: 18px; }
     .signup__input:-ms-input-placeholder {
       text-align: center;
       text-transform: uppercase;
       opacity: 1;
       color: #42285b;
       font-family: "AvenirNext", "Arial", sans-serif;
-      font-size: 21px; }
+      font-size: 18px; }
     .signup__input::-ms-input-placeholder {
       text-align: center;
       text-transform: uppercase;
       opacity: 1;
       color: #42285b;
       font-family: "AvenirNext", "Arial", sans-serif;
-      font-size: 21px; }
+      font-size: 18px; }
     .signup__input::placeholder {
       text-align: center;
       text-transform: uppercase;
       opacity: 1;
       color: #42285b;
       font-family: "AvenirNext", "Arial", sans-serif;
-      font-size: 21px; }
+      font-size: 18px; }
     .signup__input:focus {
       background-color: rgba(255, 255, 255, 0.6);
       -webkit-box-shadow: 0px 1px 0px 0px rgba(255, 255, 255, 0.2), inset 0px 1px 0px 0px rgba(0, 0, 0, 0.3);
               box-shadow: 0px 1px 0px 0px rgba(255, 255, 255, 0.2), inset 0px 1px 0px 0px rgba(0, 0, 0, 0.3); }
   .signup__terms {
-    margin-top: 10px;
-    margin-bottom: 10px;
+    margin-top: 9px;
+    margin-bottom: 9px;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -894,9 +896,9 @@ body {
         -ms-flex-flow: row nowrap;
             flex-flow: row nowrap; }
     .signup__terms-list {
-      margin-top: 12px;
-      margin-bottom: 12px;
-      padding: 6px 15px;
+      margin-top: 11px;
+      margin-bottom: 11px;
+      padding: 5px 14px;
       width: 100%; }
       .signup__terms-list p {
         line-height: 100%;
@@ -904,30 +906,30 @@ body {
         letter-spacing: -0.4px;
         color: rgba(255, 255, 255, 0.6);
         font-family: "AvenirNext", "Arial", sans-serif;
-        font-size: 16px;
+        font-size: 14px;
         font-weight: 300; }
         .signup__terms-list p:not(:last-child) {
-          margin-bottom: 12px; }
+          margin-bottom: 11px; }
     .signup__terms-checkbox {
       position: relative;
-      width: 64px;
+      width: 58px;
       border-left: 1px solid rgba(255, 255, 255, 0.2); }
       .signup__terms-checkbox input[type="checkbox"] {
         display: none; }
       .signup__terms-checkbox-icon {
         position: absolute;
         top: 50%;
-        right: 16px;
-        width: 26px;
-        height: 26px;
+        right: 14px;
+        width: 24px;
+        height: 24px;
         cursor: pointer;
         -webkit-transform: translateY(-50%);
                 transform: translateY(-50%); }
         .signup__terms-checkbox-icon:after {
           position: absolute;
-          bottom: 1px;
-          left: 1px;
-          width: 21px;
+          bottom: 0px;
+          left: 0px;
+          width: 20px;
           height: 20px;
           content: '';
           border: 2px solid rgba(255, 255, 255, 0.4);
@@ -940,7 +942,7 @@ body {
   .signup__btn {
     position: relative;
     width: 100%;
-    padding: 17px 0;
+    padding: 15px 0;
     cursor: pointer;
     text-align: center;
     text-transform: uppercase;
@@ -953,9 +955,9 @@ body {
             box-shadow: 0px 1px 0px 0px rgba(21, 31, 123, 0.2), 0px 0px 32px 7px rgba(225, 103, 144, 0.17), inset 0px 1px 0px 0px rgba(255, 255, 255, 0.1);
     text-shadow: 0px 1px 2.9px rgba(8, 11, 45, 0.27);
     font-family: "AvenirNext", "Arial", sans-serif;
-    font-size: 23px;
+    font-size: 21px;
     font-weight: bold;
-    line-height: 30.3px; }
+    line-height: 28px; }
     .signup__btn:hover {
       -webkit-box-shadow: 0px 1px 0px 0px rgba(21, 31, 123, 0.54), 0px 0px 32px 7px rgba(225, 103, 144, 0.34), inset 0px 1px 0px 0px rgba(255, 255, 255, 0.4);
               box-shadow: 0px 1px 0px 0px rgba(21, 31, 123, 0.54), 0px 0px 32px 7px rgba(225, 103, 144, 0.34), inset 0px 1px 0px 0px rgba(255, 255, 255, 0.4); }
@@ -978,7 +980,7 @@ body {
   -webkit-box-direction: normal;
       -ms-flex-flow: column nowrap;
           flex-flow: column nowrap;
-  width: 250px;
+  width: 225px;
   margin-left: auto;
   margin-right: auto;
   padding: 0; }
@@ -988,7 +990,7 @@ body {
     text-transform: uppercase;
     color: rgba(255, 255, 255, 0.4);
     text-align: center;
-    margin-bottom: 16px; }
+    margin-bottom: 15px; }
     .socials-auth__divider:after {
       content: '';
       position: absolute;
@@ -1022,7 +1024,7 @@ body {
         -ms-flex-pack: justify;
             justify-content: space-between;
     list-style: none;
-    padding: 0 30px;
+    padding: 0 33px;
     margin: 0; }
   .socials-auth__icon {
     position: absolute;
@@ -1034,20 +1036,22 @@ body {
             transform: translate(-50%, -50%); }
     .socials-auth__icon--facebook {
       background: transparent url("../assets/imgs/icon-facebook.png") center no-repeat;
-      background-position: 8px 50%;
+      background-position: 6px 50%;
       opacity: .4; }
     .socials-auth__icon--google {
       background: transparent url("../assets/imgs/icon-google-plus.png") center no-repeat;
-      opacity: .4; }
+      opacity: .4;
+      background-size: 70%; }
     .socials-auth__icon--github {
       background: transparent url("../assets/imgs/icon-github.png") center no-repeat;
       opacity: .4;
-      background-position: 50% 120%; }
+      background-position: 50% 120%;
+      background-size: 80%; }
   .socials-auth__link {
     position: relative;
     display: block;
-    width: 32px;
-    height: 32px;
+    width: 29px;
+    height: 29px;
     border: 2px solid rgba(255, 255, 255, 0.4);
     border-radius: 100%; }
     .socials-auth__link:hover {

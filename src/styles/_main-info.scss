@@ -109,6 +109,8 @@
   &__logo {
     margin: 0;
     margin-bottom: 20px;
+    width: 350px;
+    height: auto;
   }
 
   &__heading {
@@ -122,7 +124,7 @@
     color: #fff;
 
     font-family: $avenir;
-    font-size: 20px;
+    font-size: 18px;
     font-weight: 300;
     line-height: 30px;
 
@@ -143,8 +145,8 @@
   display: flex;
   flex-flow: column nowrap;
 
-  width: 350px;
-  min-height: 479px;
+  width: 315px;
+  min-height: 431px;
   margin: auto;
 
   border: solid 1px #6a3681;
@@ -154,7 +156,7 @@
   &__heading {
     display: block;
 
-    padding: 22px 0 20px;
+    padding: 19px 0 18px;
     margin: 0;
 
     text-align: center;
@@ -167,19 +169,19 @@
     box-shadow: inset 0px 1px 0 0 rgba(255, 255, 255, 0.2);
 
     font-family: $avenir;
-    font-size: 23.2px;
+    font-size: 21px;
     font-weight: bold;
-    line-height: 30.2px;
+    line-height: 28px;
   }
 
   &__form {
-    padding: 18px 29px 17px;
+    padding: 16px 26px 15px;
   }
 
   &__input {
     width: 100%;
-    height: 57px;
-    padding: 20px;
+    height: 51px;
+    padding: 18px;
 
     color: #42285b;
     border: none;
@@ -189,10 +191,10 @@
                 inset 0px 1px 0px 0px rgba(0, 0, 0, 0.15);
 
     font-family: $avenir;
-    font-size: 21px;
+    font-size: 19px;
 
     &:not(:last-of-type) {
-      margin-bottom: 15px;
+      margin-bottom: 13px;
     }
 
     &::placeholder {
@@ -203,7 +205,7 @@
       color: #42285b;
 
       font-family: $avenir;
-      font-size: 21px;
+      font-size: 18px;
     }
 
     &:focus {
@@ -215,15 +217,15 @@
   }
 
   &__terms {
-    margin-top: 10px;
-    margin-bottom: 10px;
+    margin-top: 9px;
+    margin-bottom: 9px;
     display: flex;
     flex-flow: row nowrap;
 
     &-list {
-      margin-top: 12px;
-      margin-bottom: 12px;
-      padding: 6px 15px;
+      margin-top: 11px;
+      margin-bottom: 11px;
+      padding: 5px 14px;
       width: 100%;
 
       & p {
@@ -235,11 +237,11 @@
         color: rgba(255, 255, 255, 0.6);
 
         font-family: $avenir;
-        font-size: 16px;
+        font-size: 14px;
         font-weight: 300;
 
         &:not(:last-child) {
-          margin-bottom: 12px;
+          margin-bottom: 11px;
         }
       }
     }
@@ -247,7 +249,7 @@
     &-checkbox {
       position: relative;
 
-      width: 64px;
+      width: 58px;
 
       border-left: 1px solid rgba(255, 255, 255, 0.2);
 
@@ -258,20 +260,20 @@
       &-icon {
         position: absolute;
         top: 50%;
-        right: 16px;
+        right: 14px;
 
-        width: 26px;
-        height: 26px;
+        width: 24px;
+        height: 24px;
 
         cursor: pointer;
         transform: translateY(-50%);
 
         &:after {
           position: absolute;
-          bottom: 1px;
-          left: 1px;
+          bottom: 0px;
+          left: 0px;
 
-          width: 21px;
+          width: 20px;
           height: 20px;
 
           content: '';
@@ -296,7 +298,7 @@
     position: relative;
 
     width: 100%;
-    padding: 17px 0;
+    padding: 15px 0;
 
     cursor: pointer;
     text-align: center;
@@ -310,9 +312,9 @@
     text-shadow: 0px 1px 2.9px rgba(8, 11, 45, 0.27);
 
     font-family: $avenir;
-    font-size: 23px;
+    font-size: 21px;
     font-weight: bold;
-    line-height: 30.3px;
+    line-height: 28px;
 
     &:hover {
       box-shadow: 0px 1px 0px 0px rgba(21, 31, 123, 0.54),
@@ -341,7 +343,7 @@
 .socials-auth {
   display: flex;
   flex-flow: column nowrap;
-  width: 250px;
+  width: 225px;
   margin-left: auto;
   margin-right: auto;
   padding: 0;
@@ -352,7 +354,7 @@
     text-transform: uppercase;
     color: rgba(255, 255, 255, 0.4);
     text-align: center;
-    margin-bottom: 16px;
+    margin-bottom: 15px;
 
     &:after {
       content: '';
@@ -384,7 +386,7 @@
     justify-content: space-between;
 
     list-style: none;
-    padding: 0 30px;
+    padding: 0 33px;
     margin: 0;
   }
 
@@ -398,17 +400,19 @@
 
     &--facebook {
       background: transparent url('../assets/imgs/icon-facebook.png') center no-repeat;
-      background-position: 8px 50%;
+      background-position: 6px 50%;
       opacity: .4;
     }
     &--google {
       background: transparent url('../assets/imgs/icon-google-plus.png') center no-repeat;
       opacity: .4;
+      background-size: 70%;
     }
     &--github {
       background: transparent url('../assets/imgs/icon-github.png') center no-repeat;
       opacity: .4;
       background-position: 50% 120%;
+      background-size: 80%;
     }
   }
 
@@ -416,8 +420,8 @@
     position: relative;
     display: block;
 
-    width: 32px;
-    height: 32px;
+    width: 29px;
+    height: 29px;
 
     border: 2px solid rgba(255, 255, 255, 0.4);
     border-radius: 100%;
