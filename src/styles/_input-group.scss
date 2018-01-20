@@ -66,17 +66,6 @@
     background: transparent url('../assets/imgs/icon-search.png');
     background-size: 100%;
   }
-
-  &.main-info__select &__label:before {
-    background: transparent url('../assets/imgs/icon-arrow-select.png');
-    background-size: 100%;
-    opacity: .5;
-    width: 24px;
-    height: 14px;
-    left: 34px;
-  }
-
-  &.main-info__select {
-    margin-bottom: 0;
-  }
 }
+
+@import './autocomplete.scss';
