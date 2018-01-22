@@ -5,7 +5,8 @@
   opacity: .5;
 
 
-  .active > & {
+  .slick-current &,
+  .active & {
     opacity: 1;
   }
 

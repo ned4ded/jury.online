@@ -10,6 +10,7 @@
         <link rel="stylesheet" href="css/normalize.css">
         <link rel="stylesheet" href="css/bootstrap.min.css">
         <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.css"/>
         <link rel="stylesheet" href="css/main.css">
     </head>
     <body>
@@ -134,8 +135,9 @@
           </div>
           <div class="news-block">
             <h2 class="heading-2 news-block__heading">Latest News</h2>
-            <span class="news-block__slider-btn news-block__slider-btn--left"></span>
-            <div class="news-block__slider">
+            <span id="news-block-slider-btn-left" class="news-block__slider-btn news-block__slider-btn--left"></span>
+            <div id="news-block-slider" class="slick-slider news-block__slider">
+              <div>
                 <div class="news-block__slider-item">
                   <div class="news-block__card news-card">
                     <div class="news-card__image" style="background-image:url('assets/imgs/news-placeholder.jpg')"></div>
@@ -146,16 +148,8 @@
                     <a href="#" class="news-card__btn">View details</a>
                   </div>
                 </div>
-                <div class="news-block__slider-item active">
-                  <div class="news-block__card news-card">
-                    <div class="news-card__image" style="background-image:url('assets/imgs/news-placeholder.jpg')"></div>
-                    <h3 class="news-card__name">Our new APP</h3>
-                    <a href="#" class="news-card__share">Поделиться</a>
-                    <div class="news-card__type">ICO news/Fontend Development</div>
-                    <div class="news-card__text">Totam rem aperiam, eaque ipsa quae ab inventore veritatis et quasi architecto beatae vitae dicta sunt eaque ipsa quae ab inventore veritatis et quasi arch. Totam rem aperiam, eaque ipsa quae ab inventore veritatis et quasi architecto beatae ...</div>
-                    <a href="#" class="news-card__btn">View details</a>
-                  </div>
-                </div>
+              </div>
+              <div>
                 <div class="news-block__slider-item">
                   <div class="news-block__card news-card">
                     <div class="news-card__image" style="background-image:url('assets/imgs/news-placeholder.jpg')"></div>
@@ -166,6 +160,31 @@
                     <a href="#" class="news-card__btn">View details</a>
                   </div>
                 </div>
+              </div>
+              <div>
+                <div class="news-block__slider-item">
+                  <div class="news-block__card news-card">
+                    <div class="news-card__image" style="background-image:url('assets/imgs/news-placeholder.jpg')"></div>
+                    <h3 class="news-card__name">Our new APP</h3>
+                    <a href="#" class="news-card__share">Поделиться</a>
+                    <div class="news-card__type">ICO news/Fontend Development</div>
+                    <div class="news-card__text">Totam rem aperiam, eaque ipsa quae ab inventore veritatis et quasi architecto beatae vitae dicta sunt eaque ipsa quae ab inventore veritatis et quasi arch. Totam rem aperiam, eaque ipsa quae ab inventore veritatis et quasi architecto beatae ...</div>
+                    <a href="#" class="news-card__btn">View details</a>
+                  </div>
+                </div>
+              </div>
+              <div>
+                <div class="news-block__slider-item">
+                  <div class="news-block__card news-card">
+                    <div class="news-card__image" style="background-image:url('assets/imgs/news-placeholder.jpg')"></div>
+                    <h3 class="news-card__name">Our new APP</h3>
+                    <a href="#" class="news-card__share">Поделиться</a>
+                    <div class="news-card__type">ICO news/Fontend Development</div>
+                    <div class="news-card__text">Totam rem aperiam, eaque ipsa quae ab inventore veritatis et quasi architecto beatae vitae dicta sunt eaque ipsa quae ab inventore veritatis et quasi arch. Totam rem aperiam, eaque ipsa quae ab inventore veritatis et quasi architecto beatae ...</div>
+                    <a href="#" class="news-card__btn">View details</a>
+                  </div>
+                </div>
+              </div>
             </div>
             <div class="news-block__slider-dots">
               <span></span>
@@ -175,8 +194,10 @@
               <span></span>
               <span></span>
             </div>
-            <span class="news-block__slider-btn news-block__slider-btn--right"></span>
-
+            <span id="news-block-slider-btn-right" class="news-block__slider-btn news-block__slider-btn--right"></span>
+            <div class="news-block__btn-container">
+              <a href="news.html" class="btn">See all news</a>
+            </div>
           </div>
           <div class="video">
             <div class="container">
@@ -991,6 +1012,8 @@
         <script>window.jQuery || document.write('<script src="js/vendor/jquery-3.2.1.min.js"><\/script>')</script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
         <script>(typeof $().modal) == 'function' || document.write('<script src="js/vendor/bootstrap.min.js"><\/script>')</script>
+        <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+        <script>(typeof $().slick) == 'function' || document.write('<script src="js/vendor/slick.min.js"><\/script>')</script>
         <script src="js/main.js"></script>
 
     </body>
