@@ -35,6 +35,7 @@
       lookup: parsed,
       lookupLimit: 5,
       appendTo: $suggestions,
+      width: '100%',
       zIndex: 1030,
       onSelect: () => $container.trigger("submit"),
     });

@@ -500,7 +500,7 @@ body {
     display: block;
     position: absolute;
     width: 100%;
-    top: 80px;
+    top: 65px;
     left: 50%;
     -webkit-transform: translateX(-50%);
             transform: translateX(-50%);
@@ -511,13 +511,19 @@ body {
     list-style: none;
     overflow-y: hidden;
     padding: 0; }
+    @media (min-width: 992px) {
+      .input-group.main-info__select .autocomplete {
+        top: 80px; } }
     .input-group.main-info__select .autocomplete-suggestion {
       padding: 10px 0 10px 40px;
       color: rgba(255, 255, 255, 0.8);
       text-shadow: 0 0 4.8px rgba(0, 0, 0, 0.21);
-      font-size: 24px;
+      font-size: 16px;
       cursor: pointer; }
-    .input-group.main-info__select .autocomplete-selected, .input-group.main-info__select .autocomplete-suggestion:hover {
+      @media (min-width: 992px) {
+        .input-group.main-info__select .autocomplete-suggestion {
+          font-size: 24px; } }
+    .input-group.main-info__select .autocomplete-selected {
       padding-bottom: 9px;
       border-bottom: 1px solid white;
       -o-border-image: linear-gradient(to right, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.2) 10%, transparent 100%) 1% round;
@@ -532,17 +538,32 @@ body {
     width: 24px;
     height: 14px;
     left: 34px;
-    top: 37px;
+    top: 28px;
     -webkit-transform: rotate(0);
             transform: rotate(0); }
+    @media (min-width: 992px) {
+      .input-group.main-info__select .input-group__label:before {
+        top: 37px; } }
 
 @-webkit-keyframes container-shape {
+  from {
+    width: 80%; }
+  to {
+    width: 100%; } }
+
+@keyframes container-shape {
+  from {
+    width: 80%; }
+  to {
+    width: 100%; } }
+
+@-webkit-keyframes container-shape-mw992 {
   from {
     width: 690px; }
   to {
     width: 100%; } }
 
-@keyframes container-shape {
+@keyframes container-shape-mw992 {
   from {
     width: 690px; }
   to {
@@ -570,7 +591,7 @@ body {
     background-color: #281131;
     border-radius: 0; } }
 
-@-webkit-keyframes label-shape {
+@-webkit-keyframes label-shape-mw992 {
   from {
     left: 34px;
     top: 37px;
@@ -582,10 +603,34 @@ body {
     -webkit-transform: rotate(-90deg);
             transform: rotate(-90deg); } }
 
-@keyframes label-shape {
+@keyframes label-shape-mw992 {
   from {
     left: 34px;
     top: 37px;
+    -webkit-transform: rotate(0);
+            transform: rotate(0); }
+  to {
+    left: 11px;
+    top: 34px;
+    -webkit-transform: rotate(-90deg);
+            transform: rotate(-90deg); } }
+
+@-webkit-keyframes label-shape {
+  from {
+    left: 34px;
+    top: 28px;
+    -webkit-transform: rotate(0);
+            transform: rotate(0); }
+  to {
+    left: 11px;
+    top: 34px;
+    -webkit-transform: rotate(-90deg);
+            transform: rotate(-90deg); } }
+
+@keyframes label-shape {
+  from {
+    left: 34px;
+    top: 28px;
     -webkit-transform: rotate(0);
             transform: rotate(0); }
   to {
@@ -598,9 +643,21 @@ body {
   from {
     height: 0; }
   to {
-    height: 311px; } }
+    height: 220px; } }
 
 @keyframes autocomplete-shape {
+  from {
+    height: 0; }
+  to {
+    height: 220px; } }
+
+@-webkit-keyframes autocomplete-shape-mw992 {
+  from {
+    height: 0; }
+  to {
+    height: 311px; } }
+
+@keyframes autocomplete-shape-mw992 {
   from {
     height: 0; }
   to {
@@ -613,6 +670,10 @@ body {
     -webkit-animation-duration: .3s;
             animation-duration: .3s;
     animation-direction: reverse; }
+    @media (min-width: 992px) {
+      .input-group.main-info__select.deactivating {
+        -webkit-animation-name: container-shape-mw992;
+                animation-name: container-shape-mw992; } }
     .input-group.main-info__select.deactivating .input-group__input {
       -webkit-animation-name: input-shape;
               animation-name: input-shape;
@@ -629,6 +690,10 @@ body {
       -webkit-animation-duration: .3s;
               animation-duration: .3s;
       animation-direction: reverse; }
+      @media (min-width: 992px) {
+        .input-group.main-info__select.deactivating .input-group__label:before {
+          -webkit-animation-name: label-shape-mw992;
+                  animation-name: label-shape-mw992; } }
     .input-group.main-info__select.deactivating .autocomplete {
       -webkit-animation-name: autocomplete-shape;
               animation-name: autocomplete-shape;
@@ -637,6 +702,10 @@ body {
               animation-fill-mode: forwards;
       -webkit-animation-duration: .2s;
               animation-duration: .2s; }
+      @media (min-width: 992px) {
+        .input-group.main-info__select.deactivating .autocomplete {
+          -webkit-animation-name: autocomplete-shape-mw992;
+                  animation-name: autocomplete-shape-mw992; } }
   .input-group.main-info__select.activating {
     -webkit-animation-name: container-shape;
             animation-name: container-shape;
@@ -644,6 +713,10 @@ body {
             animation-fill-mode: forwards;
     -webkit-animation-duration: .3s;
             animation-duration: .3s; }
+    @media (min-width: 992px) {
+      .input-group.main-info__select.activating {
+        -webkit-animation-name: container-shape-mw992;
+                animation-name: container-shape-mw992; } }
     .input-group.main-info__select.activating .input-group__input {
       -webkit-animation-name: input-shape;
               animation-name: input-shape;
@@ -658,6 +731,10 @@ body {
               animation-fill-mode: forwards;
       -webkit-animation-duration: .3s;
               animation-duration: .3s; }
+      @media (min-width: 992px) {
+        .input-group.main-info__select.activating .input-group__label:before {
+          -webkit-animation-name: label-shape-mw992;
+                  animation-name: label-shape-mw992; } }
     .input-group.main-info__select.activating .autocomplete {
       -webkit-animation-name: autocomplete-shape;
               animation-name: autocomplete-shape;
@@ -667,6 +744,10 @@ body {
               animation-duration: .2s;
       -webkit-animation-delay: .3s;
               animation-delay: .3s; }
+      @media (min-width: 992px) {
+        .input-group.main-info__select.activating .autocomplete {
+          -webkit-animation-name: autocomplete-shape-mw992;
+                  animation-name: autocomplete-shape-mw992; } }
   .input-group.main-info__select.active {
     width: 100%; }
     .input-group.main-info__select.active .input-group__input {
@@ -683,7 +764,10 @@ body {
       line-height: 2.1;
       border-radius: 0; }
     .input-group.main-info__select.active .autocomplete {
-      height: 311px; }
+      height: 220px; }
+      @media (min-width: 992px) {
+        .input-group.main-info__select.active .autocomplete {
+          height: 311px; } }
     .input-group.main-info__select.active .input-group__label {
       display: block;
       margin: 0;
@@ -691,9 +775,12 @@ body {
       width: 100%; }
       .input-group.main-info__select.active .input-group__label:before {
         left: 11px;
-        top: 34px;
+        top: 29px;
         -webkit-transform: rotate(-90deg);
                 transform: rotate(-90deg); }
+        @media (min-width: 992px) {
+          .input-group.main-info__select.active .input-group__label:before {
+            top: 34px; } }
 
 .main-info {
   position: relative;
@@ -1168,7 +1255,7 @@ body {
   background: transparent url("../assets/imgs/news-main-bg.jpg") no-repeat;
   background-position: 50% bottom;
   background-size: cover;
-  padding-bottom: 308px;
+  padding-bottom: 220px;
   -webkit-box-shadow: 0 7px 30px 13px rgba(0, 0, 0, 0.15);
           box-shadow: 0 7px 30px 13px rgba(0, 0, 0, 0.15); }
   @media (min-width: 992px) {

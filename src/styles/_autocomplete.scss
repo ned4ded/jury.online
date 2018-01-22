@@ -9,7 +9,7 @@
     display: block;
     position: absolute;
     width: 100%;
-    top: 80px;
+    top: 65px;
     left: 50%;
     transform: translateX(-50%);
     z-index: -1;
@@ -19,16 +19,23 @@
     overflow-y: hidden;
     padding: 0;
 
+    @media(min-width: 992px) {
+      top: 80px;
+    }
+
     &-suggestion {
       padding: 10px 0 10px 40px;
       color: rgba(255, 255, 255, 0.8);
       text-shadow: 0 0 4.8px rgba(0, 0, 0, 0.21);
-      font-size: 24px;
+      font-size: 16px;
       cursor: pointer;
+
+      @media (min-width: 992px) {
+        font-size: 24px;
+      }
     }
 
-    &-selected,
-    &-suggestion:hover {
+    &-selected {
      padding-bottom: 9px;
      border-bottom: 1px solid white;
      border-image: linear-gradient(to right, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.2) 10%, rgba(0, 0, 0, 0) 100%) 1% round;
@@ -45,13 +52,21 @@
       width: 24px;
       height: 14px;
       left: 34px;
-      top: 37px;
+      top: 28px;
       transform: rotate(0);
+      @media(min-width: 992px) {
+        top: 37px;
+      }
     }
   }
 
   @keyframes container-shape {
-    from {width:690px;}
+    from {width:80%;}
+    to {width:100%;}
+  }
+
+  @keyframes container-shape-mw992 {
+    from {width: 690px;}
     to {width:100%;}
   }
 
@@ -69,7 +84,7 @@
     }
   }
 
-  @keyframes label-shape {
+  @keyframes label-shape-mw992 {
     from {
       left: 34px;
       top: 37px;
@@ -83,9 +98,27 @@
     }
   }
 
+  @keyframes label-shape {
+    from {
+      left: 34px;
+      top: 28px;
+      transform: rotate(0);
+    }
+
+    to {
+      left: 11px;
+      top: 34px;
+      transform: rotate(-90deg);
+    }
+  }
+
   @keyframes autocomplete-shape {
-    from { height: 0;}
-    to { height: 311px;}
+    from {height: 0;}
+    to {height: 220px;}
+  }
+  @keyframes autocomplete-shape-mw992 {
+    from {height: 0;}
+    to {height: 311px;}
   }
 
   &.deactivating {
@@ -93,6 +126,10 @@
     animation-delay: .2s;
     animation-duration: .3s;
     animation-direction: reverse;
+
+    @media(min-width: 992px) {
+      animation-name: container-shape-mw992;
+    }
 
     .input-group__input {
       animation-name: input-shape;
@@ -107,6 +144,10 @@
         animation-delay: .2s;
         animation-duration: .3s;
         animation-direction: reverse;
+
+        @media(min-width: 992px) {
+          animation-name: label-shape-mw992;
+        }
       }
     }
 
@@ -115,6 +156,10 @@
       animation-direction: reverse;
       animation-fill-mode: forwards;
       animation-duration: .2s;
+
+      @media(min-width: 992px) {
+        animation-name: autocomplete-shape-mw992;
+      }
     }
   }
 
@@ -122,6 +167,10 @@
     animation-name: container-shape;
     animation-fill-mode: forwards;
     animation-duration: .3s;
+
+    @media(min-width: 992px) {
+      animation-name: container-shape-mw992;
+    }
 
     .input-group__input {
       animation-name: input-shape;
@@ -134,6 +183,10 @@
         animation-name: label-shape;
         animation-fill-mode: forwards;
         animation-duration: .3s;
+
+        @media(min-width: 992px) {
+          animation-name: label-shape-mw992;
+        }
       }
     }
 
@@ -142,6 +195,10 @@
       animation-fill-mode: forwards;
       animation-duration: .2s;
       animation-delay: .3s;
+
+      @media(min-width: 992px) {
+        animation-name: autocomplete-shape-mw992;
+      }
     }
   }
 
@@ -161,9 +218,11 @@
       border-radius: 0;
     }
     .autocomplete {
+      height: 220px;
 
-      height: 311px;
-
+      @media(min-width: 992px) {
+        height: 311px;
+      }
     }
 
     .input-group__label {
@@ -173,9 +232,13 @@
       width: 100%;
 
       &:before {
+
         left: 11px;
-        top: 34px;
+        top: 29px;
         transform: rotate(-90deg);
+        @media(min-width: 992px) {
+          top: 34px;
+        }
       }
     }
   }
