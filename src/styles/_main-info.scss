@@ -97,6 +97,20 @@
       padding-left: 0;
       min-width: 226px;
       font-size: 24px;
+
+      &-pink {
+        color: white;
+        background-image: linear-gradient(rgb(222, 99, 145) 29%, rgb(190, 58, 99) 100%);
+
+        &:hover {
+          color: white;
+        }
+
+        &:active {
+          color: white;
+          background-image: linear-gradient(rgb(190, 58, 99) 29%, rgb(222, 99, 145) 100%);
+        }
+      }
     }
   }
 }

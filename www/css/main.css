@@ -575,6 +575,16 @@ body {
     padding-left: 0;
     min-width: 226px;
     font-size: 24px; }
+    .main-info__btn--ico-pink {
+      color: white;
+      background-image: -webkit-gradient(linear, left top, left bottom, color-stop(29%, #de6391), to(#be3a63));
+      background-image: linear-gradient(#de6391 29%, #be3a63 100%); }
+      .main-info__btn--ico-pink:hover {
+        color: white; }
+      .main-info__btn--ico-pink:active {
+        color: white;
+        background-image: -webkit-gradient(linear, left top, left bottom, color-stop(29%, #be3a63), to(#de6391));
+        background-image: linear-gradient(#be3a63 29%, #de6391 100%); }
 
 .jumbo {
   display: -webkit-box;
