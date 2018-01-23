@@ -11,6 +11,7 @@
         <link rel="stylesheet" href="css/bootstrap.min.css">
         <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
         <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.css"/>
+        <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.9.5/jquery.fullpage.min.css"/>
         <link rel="stylesheet" href="css/main.css">
     </head>
     <body>
@@ -76,7 +77,7 @@
           </div>
         </header>
         <main class="container-fluid">
-          <div class="main-info main-info--index">
+          <div id="main-info" class="main-info main-info--index" data-scrollable="true">
             <div class="container">
               <div class="row justify-content-center">
                 <div class="col-12 col-lg-7 col-xl-8">
@@ -133,7 +134,7 @@
               </div>
             </div>
           </div>
-          <div class="news-block">
+          <div id="news-block" class="news-block" data-scrollable="false">
             <h2 class="heading-2 news-block__heading">Latest News</h2>
             <span id="news-block-slider-btn-left" class="news-block__slider-btn news-block__slider-btn--left"></span>
             <div id="news-block-slider" class="slick-slider news-block__slider">
@@ -196,10 +197,10 @@
             </div>
             <span id="news-block-slider-btn-right" class="news-block__slider-btn news-block__slider-btn--right"></span>
             <div class="news-block__btn-container">
-              <a href="news.html" class="btn">See all news</a>
-            </div>
+                <a href="news.html" class="btn">See all news</a>
+              </div>
           </div>
-          <div class="video">
+          <div id="video" class="video" data-scrollable="true">
             <div class="container">
               <div class="row">
                 <h2 class="col-12 video__heading">How it Works</h2>
@@ -219,7 +220,7 @@
               </div>
             </div>
           </div>
-          <div class="concept">
+          <div class="concept" data-scrollable="true">
             <div class="container">
               <div class="row">
                 <h2 class="col-12 heading-2 concept__heading">General Concept</h2>
@@ -231,7 +232,7 @@
               </div>
             </div>
           </div>
-          <div class="container ads">
+          <div class="container ads" data-scrollable="true">
             <h2 class="heading-2 ads__heading" data-text-abaft="advantages">Member benefits</h2>
             <p class="main-description ads__text">
               Regardless of the character of participation, all members have their own advantages
@@ -496,7 +497,7 @@
               </div>
             </div>
           </div>
-          <div class="features">
+          <div class="features" data-scrollable="true">
             <div class="container">
               <h2 class="heading-2 features__heading" data-text-abaft="key features">Key Features</h2>
               <p class="main-description features__text">
@@ -536,7 +537,7 @@
               </div>
             </div>
           </div>
-          <div class="cta">
+          <div class="cta" data-scrollable="true">
             <div class="container">
               <h2 class="cta__heading">Start bringing your idea into reality</h2>
               <p class="cta__text">(Here should be a Call-to-action)</p>
@@ -614,32 +615,34 @@
               </div>
             </div>
           </div>
-          <div class="container arbiters-block">
-            <h2 class="heading-2 arbiters-block__heading" data-text-abaft="experts">Arbiters</h2>
-            <p class="main-description arbiters-block__text">Meet our experts-arbiters</p>
-            <div class="arbiters-block__element arbiter-card">
-              <div class="arbiter-card__photo" style="background-image: url('assets/imgs/expert-placeholder.jpg');">
-              </div>
-              <div class="arbiter-card__content">
-                <p class="arbiter-card__name">Mark John</p>
-                <p class="arbiter-card__post">CEO of Big Blockchain Company</p>
-                <div class="arbiter-card__rating">
-                  <i class="arbiter-card__rating-star" data-has-star="true"></i>
-                  <i class="arbiter-card__rating-star" data-has-star="true"></i>
-                  <i class="arbiter-card__rating-star" data-has-star="true"></i>
-                  <i class="arbiter-card__rating-star" data-has-star="true"></i>
-                  <i class="arbiter-card__rating-star" data-has-star="false"></i>
+          <div class="container arbiters-block" data-scrollable="true">
+            <div>
+              <h2 class="heading-2 arbiters-block__heading" data-text-abaft="experts">Arbiters</h2>
+              <p class="main-description arbiters-block__text">Meet our experts-arbiters</p>
+              <div class="arbiters-block__element arbiter-card">
+                <div class="arbiter-card__photo" style="background-image: url('assets/imgs/expert-placeholder.jpg');">
                 </div>
-                <p class="arbiter-card__text">
-                  Sed ut perspiciatis unde omnis iste natus error sit vo luptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo...
-                </p>
-                <div class="arbiter-card__btn-container">
-                  <a href="arbiters.html" class="btn arbiter-card__btn">Read More</a>
+                <div class="arbiter-card__content">
+                  <p class="arbiter-card__name">Mark John</p>
+                  <p class="arbiter-card__post">CEO of Big Blockchain Company</p>
+                  <div class="arbiter-card__rating">
+                    <i class="arbiter-card__rating-star" data-has-star="true"></i>
+                    <i class="arbiter-card__rating-star" data-has-star="true"></i>
+                    <i class="arbiter-card__rating-star" data-has-star="true"></i>
+                    <i class="arbiter-card__rating-star" data-has-star="true"></i>
+                    <i class="arbiter-card__rating-star" data-has-star="false"></i>
+                  </div>
+                  <p class="arbiter-card__text">
+                    Sed ut perspiciatis unde omnis iste natus error sit vo luptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo...
+                  </p>
+                  <div class="arbiter-card__btn-container">
+                    <a href="arbiters.html" class="btn arbiter-card__btn">Read More</a>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
-          <div class="team">
+          <div class="team" data-scrollable="true">
             <div class="container">
               <h2 class="heading-2 team__heading" data-text-abaft="team">Team</h2>
               <p class="main-description team__text">Meet our team</p>
@@ -722,7 +725,7 @@
               </ul>
             </div>
           </div>
-          <div class="clients">
+          <div class="clients" data-scrollable="true">
             <div class="container">
               <h2 class="heading-2 clients__heading" data-text-abaft="Partners">Clients</h2>
               <div class="row">
@@ -768,7 +771,7 @@
               </div>
             </div>
           </div>
-          <div class="press">
+          <div class="press" data-scrollable="true">
             <div id="press-carousel" class="press__carousel carousel slide" data-ride="carousel">
               <ol class="carousel-indicators press__carousel-indicators">
                 <li data-target="#press-carousel" data-slide-to="0" class="active"></li>
@@ -847,7 +850,7 @@
               </ul>
             </div>
           </div>
-          <div class="documents">
+          <div class="documents" data-scrollable="true">
             <div class="container">
                 <h2 class="heading-2 documents__heading">Documents</h2>
                 <div class="row">
@@ -870,7 +873,7 @@
                 </div>
             </div>
           </div>
-          <div class="try-it">
+          <div class="try-it" data-scrollable="true">
             <div class="try-it__pattern">
               <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
                 <defs>
@@ -1014,6 +1017,9 @@
         <script>(typeof $().modal) == 'function' || document.write('<script src="js/vendor/bootstrap.min.js"><\/script>')</script>
         <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
         <script>(typeof $().slick) == 'function' || document.write('<script src="js/vendor/slick.min.js"><\/script>')</script>
+        <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.9.5/jquery.fullpage.min.js"></script>
+        <script>(typeof $().fullpage) == 'function' || document.write('<script src="js/vendor/jquery.fullpage.min.js"><\/script>')</script>
+
         <script src="js/main.js"></script>
 
     </body>

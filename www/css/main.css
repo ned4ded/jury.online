@@ -514,7 +514,7 @@ body {
       padding-top: 132px;
       padding-bottom: 170px; } }
   .main-info--index {
-    background: transparent url("../assets/imgs/index-main-bg.png") no-repeat;
+    background: rgba(234, 234, 234, 0.7) url("../assets/imgs/index-main-bg.png") no-repeat;
     background-position: 50% bottom;
     background-size: cover; }
   .main-info__btns {
@@ -3477,3 +3477,18 @@ body {
     font-family: "AvenirNext", "Arial", sans-serif;
     font-size: 15px;
     line-height: 15px; }
+
+.news-block {
+  margin-top: 0; }
+
+.scrollable {
+  height: 101vh;
+  margin-bottom: 0;
+  margin-top: 0;
+  padding-top: 0;
+  padding-bottom: 0; }
+  .scrollable__wrapper {
+    position: relative;
+    top: calc(50% - 31px);
+    -webkit-transform: translateY(calc(-50%));
+            transform: translateY(calc(-50%)); }
