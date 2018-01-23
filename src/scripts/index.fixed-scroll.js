@@ -1,4 +1,4 @@
-// (function() {
+const scrolable = function() {
   var keys = {37: 1, 38: 1, 39: 1, 40: 1};
 
   function preventDefault(e) {
@@ -34,6 +34,8 @@
   }
 
   const $scrollArr = $('[data-scrollable]');
+  if(!$('[data-scrollable]').length) return;
+
   const globalScrollTop = () => $( document ).scrollTop();
   const headerHeight = $('header').outerHeight();
   const arr = [];
@@ -58,10 +60,8 @@
 
       $( element ).append(wrapper);
 
-
-      console.log('A LOT OF CHILDREN!')
     } else {
-      console.log($( element ).children().first().addClass('scrollable__wrapper'));
+      $( element ).children().first().addClass('scrollable__wrapper');
     }
   });
 
@@ -79,32 +79,26 @@
     });
   };
 
-  console.log(arr);
 
   const listner = function() {
     const currentScrollTop = globalScrollTop();
     const isTopDirection = lastScrollTop > currentScrollTop ? true : false;
-    console.log(curElementIndex);
 
     if(isTopDirection) {
-      console.log('top dir terminak');
-      if(curElementIndex === 0) return console.log('returned');
+      if(curElementIndex === 0) return;
       curElementIndex = curElementIndex - 1;
     } else {
-      console.log('bottom dir terminal');
-      if(curElementIndex === (arr.length - 1)) return console.log('returned');
+      if(curElementIndex === (arr.length - 1)) return;
       curElementIndex = curElementIndex + 1;
     }
 
-    if(!curElement().scrollable) console.log('FIND IT');
+    // if(!curElement().scrollable) console.log('FIND IT');
 
     disableScroll();
     $( window ).unbind('scroll', listner);
 
-    console.log(arr.find(e => e.index === curElementIndex).begin);
-
     $('html, body').animate({
-         scrollTop: curElement().begin - headerHeight + 1,
+         scrollTop: curElement().begin - headerHeight,
        }, 1000);
 
 
@@ -121,4 +115,17 @@
   $( window ).on( "load", function() {
     $( window ).scroll(listner);
   });
-// }());
+};
+
+if(window.innerWidth >= 992 && window.innerHeight >= 1024) {
+ if( !navigator.userAgent.match(/Android/i)
+ || !navigator.userAgent.match(/webOS/i)
+ || !navigator.userAgent.match(/iPhone/i)
+ || !navigator.userAgent.match(/iPad/i)
+ || !navigator.userAgent.match(/iPod/i)
+ || !navigator.userAgent.match(/BlackBerry/i)
+ || !navigator.userAgent.match(/Windows Phone/i)
+ ){
+    scrolable();
+  }
+}

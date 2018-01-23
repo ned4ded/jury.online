@@ -31,7 +31,7 @@ gulp.task('webserver', ['styles', 'html', 'scripts'], function() {
     logConnections: true,
   });
 
-  gulp.watch('./src/styles/*.scss', ['styles']);
+  gulp.watch('./src/styles/**/*.scss', ['styles']);
   gulp.watch('./src/scripts/*.js', ['scripts']);
   gulp.watch('./src/pages/*.html', ['html']);
 });

@@ -2490,7 +2490,9 @@ body {
     font-weight: 300; }
 
 .clients {
-  margin: 50px -15px 45px;
+  margin: 0 -15px 0;
+  padding-top: 50px;
+  padding-bottom: 45px;
   position: relative; }
   .clients:before {
     display: none;
@@ -2505,12 +2507,12 @@ body {
     height: 434px; }
   @media (min-width: 768px) {
     .clients {
-      margin-top: 100px;
-      margin-bottom: 110px; } }
+      padding-top: 100px;
+      padding-bottom: 110px; } }
   @media (min-width: 992px) {
     .clients {
-      margin-top: 154px;
-      margin-bottom: 175px; }
+      padding-top: 154px;
+      padding-bottom: 175px; }
       .clients:before {
         display: block; } }
   .clients__heading {
@@ -3482,13 +3484,71 @@ body {
   margin-top: 0; }
 
 .scrollable {
-  height: 101vh;
+  height: 100vh;
   margin-bottom: 0;
   margin-top: 0;
   padding-top: 0;
   padding-bottom: 0; }
+  .footer .scrollable {
+    height: 25vh; }
   .scrollable__wrapper {
     position: relative;
-    top: calc(50% - 31px);
-    -webkit-transform: translateY(calc(-50%));
-            transform: translateY(calc(-50%)); }
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+            transform: translateY(-50%); }
+    .main-info--index .scrollable__wrapper {
+      top: 45%; }
+    .news-block .scrollable__wrapper {
+      top: 45%; }
+    .video .scrollable__wrapper {
+      top: 43%; }
+    .concept .scrollable__wrapper {
+      top: 45%; }
+    .features .scrollable__wrapper {
+      top: 47%; }
+    .cta .scrollable__wrapper {
+      top: 44%; }
+    .arbiters-block .scrollable__wrapper {
+      top: 46%; }
+    .team .scrollable__wrapper {
+      top: 46%; }
+    .clients .scrollable__wrapper {
+      top: 46%; }
+    .press .scrollable__wrapper {
+      top: 45%; }
+    .documents .scrollable__wrapper {
+      top: 45%; }
+  .scrollable .ads__heading {
+    margin-bottom: 15px; }
+  .scrollable .ads__text {
+    margin-bottom: 90px; }
+  .scrollable .ads__tabs {
+    margin-bottom: 80px; }
+  .scrollable .ads__item {
+    margin-bottom: 55px; }
+    .scrollable .ads__item:nth-of-type(3 + n) {
+      margin-bottom: 0; }
+  .scrollable .features__heading {
+    margin-bottom: 15px; }
+  .scrollable .features__text {
+    margin-bottom: 30px; }
+  .scrollable .features__item {
+    padding-top: 140px; }
+    .scrollable .features__item:after {
+      width: 140px;
+      height: 140px; }
+    .scrollable .features__item:before {
+      width: 140px;
+      height: 140px;
+      background-size: 100%; }
+  .scrollable .team__heading {
+    margin-bottom: 15px; }
+  .scrollable .team__text {
+    margin-bottom: 30px; }
+  .scrollable .team__card {
+    margin-bottom: 0; }
+  .scrollable .clients__heading {
+    margin-bottom: 45px; }
+  .scrollable .press__list {
+    margin-top: 65px;
+    margin-bottom: 0; }

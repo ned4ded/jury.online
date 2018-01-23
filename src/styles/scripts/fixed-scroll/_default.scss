@@ -1,0 +1,135 @@
+.scrollable {
+  height: 100vh;
+  margin-bottom: 0;
+  margin-top: 0;
+  padding-top: 0;
+  padding-bottom: 0;
+
+  .footer & {
+    height: 25vh;
+  }
+
+  &__wrapper {
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+
+    .main-info--index & {
+      top: 45%;
+    }
+
+    .news-block & {
+      top: 45%;
+    }
+
+    .video & {
+      top: 43%;
+    }
+
+    .concept & {
+      top: 45%;
+    }
+
+    .features & {
+      top: 47%;
+    }
+
+    .cta & {
+      top: 44%;
+    }
+
+    .arbiters-block & {
+      top: 46%;
+    }
+
+    .team & {
+      top: 46%;
+    }
+
+    .clients & {
+      top: 46%;
+    }
+
+    .press & {
+      top: 45%;
+    }
+
+    .documents & {
+      top: 45%;
+    }
+  }
+
+  & .ads {
+    &__heading {
+      margin-bottom: 15px;
+    }
+
+    &__text {
+      margin-bottom: 90px;
+    }
+
+    &__tabs {
+      margin-bottom: 80px;
+    }
+
+    &__item {
+      margin-bottom: 55px;
+
+      &:nth-of-type(3 + n) {
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  & .features {
+    &__heading {
+      margin-bottom: 15px;
+    }
+
+    &__text {
+      margin-bottom: 30px;
+    }
+
+    &__item {
+      padding-top: 140px;
+
+      &:after {
+        width: 140px;
+        height: 140px;
+      }
+
+      &:before {
+        width: 140px;
+        height: 140px;
+        background-size: 100%;
+      }
+    }
+  }
+
+  & .team {
+    &__heading {
+      margin-bottom: 15px;
+    }
+
+    &__text {
+      margin-bottom: 30px;
+    }
+
+    &__card {
+      margin-bottom: 0;
+    }
+  }
+
+  & .clients {
+    &__heading {
+      margin-bottom: 45px;
+    }
+  }
+
+  & .press {
+    &__list {
+      margin-top: 65px;
+      margin-bottom: 0;
+    }
+  }
+}
