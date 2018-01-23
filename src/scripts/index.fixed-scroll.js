@@ -107,7 +107,7 @@ const scrolable = function() {
       $( window ).unbind('scroll', scrollEnd);
       enableScroll();
       $( window ).scroll(listner);
-    }, 45);
+    }, 100);
   }
 
   $( document ).ready(() => window.scroll(0, 0));
