@@ -161,7 +161,7 @@ const scrolable = function() {
   });
 };
 
-if(window.innerWidth >= 992 && window.innerHeight >= 1024) {
+if(window.innerWidth >= 992 && window.innerHeight >= 850) {
  if( !navigator.userAgent.match(/Android/i)
  || !navigator.userAgent.match(/webOS/i)
  || !navigator.userAgent.match(/iPhone/i)
@@ -171,7 +171,11 @@ if(window.innerWidth >= 992 && window.innerHeight >= 1024) {
  || !navigator.userAgent.match(/Windows Phone/i)
  ){
     scrolable();
+  } else {
+    console.log('Aborted; Case: not appropriate device');
   }
+} else {
+  console.log('Aborted; Case: not appropriate height or width');
 }
 
 (function() {
