@@ -177,6 +177,9 @@ body {
 
 @import './scripts/fixed-scroll/default.scss';
 
+html:not(.no-js) *[data-appearance]:not([data-appearance-custom]) {
+  opacity: 0;
+}
 
 @keyframes appearance {
   from {

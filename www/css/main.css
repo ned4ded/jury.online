@@ -3557,6 +3557,9 @@ body {
     margin-top: 65px;
     margin-bottom: 0; }
 
+html:not(.no-js) *[data-appearance]:not([data-appearance-custom]) {
+  opacity: 0; }
+
 @-webkit-keyframes appearance {
   from {
     -webkit-transform: translateY(100px);
