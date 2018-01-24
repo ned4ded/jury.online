@@ -10,9 +10,9 @@
       slidesToShow: 3,
       arrows: false,
       dots: true,
-      appendDots: $('.slick-slider'),
+      appendDots: $('.news-block__slider-dots'),
       variableWidth: true,
-      dotsClass: 'news-block__slider-dots'
+      // dotsClass: 'news-block__slider-dots',
     });
 
     $btn('left').click(() => $slider.slick('slickPrev'));

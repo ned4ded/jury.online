@@ -2,6 +2,7 @@ const fs = require('fs');
 const gulp = require('gulp');
 // JS plugins
 const uglify = require('gulp-uglify');
+const babel = require('gulp-babel');
 
 // CSS plugins
 const sass = require('gulp-sass');
@@ -52,6 +53,9 @@ gulp.task('styles', function() {
 
 gulp.task('scripts', function() {
   return gulp.src(__dirname + '/src/scripts/*.js')
+          .pipe(babel({
+            presets: ['env']
+          }))
           .pipe(concat('main.js'))
           .pipe(gulp.dest('www/js'))
           .pipe(browserSync.stream());
