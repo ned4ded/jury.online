@@ -2,7 +2,7 @@
   position: relative;
   padding-top: 210px;
   padding-bottom: 30px;
-  margin: -150px -15px 0;
+  margin: 0 -15px;
   background-color: rgba(234,234,234, 0.7);
   overflow: hidden;
   z-index: 1;
@@ -11,36 +11,29 @@
     padding-bottom: 40px;
   }
 
+  &__btn-container {
+    display: none;
+    text-align: center;
+
+    .no-js & {
+      display: block;
+    }
+  }
+
   &__slider {
-    position: relative;
-    left: 50%;
-    transform: translateX(-50%);
     display: flex;
-    flex-flow: row;
+    flex-flow: row wrap;
     align-items: center;
     justify-content: center;
-    width: 250%;
-    margin-bottom: 25px;
-
-    @media(min-width: 768px) {
-      width: 200%;
-    }
-
-    @media(min-width: 1200px) {
-      width: 150%;
-    }
+    margin-bottom: 15px;
 
     &-item {
-      width: 75%;
+      width: 100%;
+      margin-top: 20px;
+      margin-bottom: 15px;
 
-      @media(min-width: 768px) {
-        width: 77.66%;
-        max-width: 636px;
-      }
-
-      @media(min-width: 1200px) {
-        width: 50%;
-        max-width: 636px;
+      @media(min-width: 992px) {
+        width: 636px;
       }
     }
 
@@ -48,17 +41,17 @@
       display: block;
       text-align: center;
 
-      & span {
+      & li {
         display: inline-block;
         width: 10px;
         height: 10px;
-        margin-right: 4px;
-        margin-left: 4px;
+        margin-right: 8px;
+        margin-left: 8px;
         border-radius: 100%;
         background-color: rgba(208, 193, 218, .6);
         cursor: pointer;
 
-        &.active {
+        &.slick-active {
           background-image: linear-gradient(180grad, rgba(163, 51, 170, 1) 0%, rgba(64, 59, 123, 1) 100%);
           box-shadow: 0px 0px 9px 4px rgba(165, 93, 202, .39), inset 0px 0px 9px 2px rgba(165, 93, 202, .39);
         }
@@ -66,6 +59,20 @@
         &:hover {
           background-color: rgba(208, 193, 218, .8);
           box-shadow: 0px 0px 10px 4px rgba(165, 93, 202, 0.2), inset 0px 0px 1px 1px rgba(165, 93, 202, 0.3);
+        }
+
+        & button {
+          border: none;
+          background: none;
+          font-size: 0;
+
+          &:active {
+            outline: none;
+          }
+
+          &:focus {
+            outline: none;
+          }
         }
       }
     }

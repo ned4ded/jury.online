@@ -10,6 +10,8 @@
         <link rel="stylesheet" href="css/normalize.css">
         <link rel="stylesheet" href="css/bootstrap.min.css">
         <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.css"/>
+        <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.9.5/jquery.fullpage.min.css"/>
         <link rel="stylesheet" href="css/main.css">
     </head>
     <body>
@@ -75,7 +77,7 @@
           </div>
         </header>
         <main class="container-fluid">
-          <div class="main-info main-info--index">
+          <div id="main-info" class="main-info main-info--index" data-scrollable="true">
             <div class="container">
               <div class="row justify-content-center">
                 <div class="col-12 col-lg-7 col-xl-8">
@@ -132,11 +134,12 @@
               </div>
             </div>
           </div>
-          <div class="news-block">
-            <h2 class="heading-2 news-block__heading">Latest News</h2>
-            <span class="news-block__slider-btn news-block__slider-btn--left"></span>
-            <div class="news-block__slider">
-                <div class="news-block__slider-item">
+          <div id="news-block" class="news-block" data-scrollable="false">
+            <h2 class="heading-2 news-block__heading" data-appearance="true">Latest News</h2>
+            <span id="news-block-slider-btn-left" class="news-block__slider-btn news-block__slider-btn--left"></span>
+            <div id="news-block-slider" class="slick-slider news-block__slider">
+              <div>
+                <div class="news-block__slider-item" data-appearance="true">
                   <div class="news-block__card news-card">
                     <div class="news-card__image" style="background-image:url('assets/imgs/news-placeholder.jpg')"></div>
                     <h3 class="news-card__name">Our new APP</h3>
@@ -146,7 +149,9 @@
                     <a href="#" class="news-card__btn">View details</a>
                   </div>
                 </div>
-                <div class="news-block__slider-item active">
+              </div>
+              <div>
+                <div class="news-block__slider-item" data-appearance="true">
                   <div class="news-block__card news-card">
                     <div class="news-card__image" style="background-image:url('assets/imgs/news-placeholder.jpg')"></div>
                     <h3 class="news-card__name">Our new APP</h3>
@@ -156,7 +161,9 @@
                     <a href="#" class="news-card__btn">View details</a>
                   </div>
                 </div>
-                <div class="news-block__slider-item">
+              </div>
+              <div>
+                <div class="news-block__slider-item" data-appearance="true">
                   <div class="news-block__card news-card">
                     <div class="news-card__image" style="background-image:url('assets/imgs/news-placeholder.jpg')"></div>
                     <h3 class="news-card__name">Our new APP</h3>
@@ -166,24 +173,33 @@
                     <a href="#" class="news-card__btn">View details</a>
                   </div>
                 </div>
+              </div>
+              <div>
+                <div class="news-block__slider-item" data-appearance="true">
+                  <div class="news-block__card news-card">
+                    <div class="news-card__image" style="background-image:url('assets/imgs/news-placeholder.jpg')"></div>
+                    <h3 class="news-card__name">Our new APP</h3>
+                    <a href="#" class="news-card__share">Поделиться</a>
+                    <div class="news-card__type">ICO news/Fontend Development</div>
+                    <div class="news-card__text">Totam rem aperiam, eaque ipsa quae ab inventore veritatis et quasi architecto beatae vitae dicta sunt eaque ipsa quae ab inventore veritatis et quasi arch. Totam rem aperiam, eaque ipsa quae ab inventore veritatis et quasi architecto beatae ...</div>
+                    <a href="#" class="news-card__btn">View details</a>
+                  </div>
+                </div>
+              </div>
             </div>
-            <div class="news-block__slider-dots">
-              <span></span>
-              <span class="active"></span>
-              <span></span>
-              <span></span>
-              <span></span>
-              <span></span>
+            <div class="news-block__slider-dots" data-appearance="true" data-appearance-type="opacity">
             </div>
-            <span class="news-block__slider-btn news-block__slider-btn--right"></span>
-
+            <span id="news-block-slider-btn-right" class="news-block__slider-btn news-block__slider-btn--right"></span>
+            <div class="news-block__btn-container" data-appearance="true">
+                <a href="news.html" class="btn">See all news</a>
+              </div>
           </div>
-          <div class="video">
+          <div id="video" class="video" data-scrollable="true">
             <div class="container">
               <div class="row">
-                <h2 class="col-12 video__heading">How it Works</h2>
+                <h2 class="col-12 video__heading" data-appearance="true">How it Works</h2>
                 <div class="col-12">
-                  <div class="video__container">
+                  <div class="video__container" data-appearance="true">
                     <span class="video__play-btn">Play button</span>
                     <p class="video__text">
                       Beautifully designed with technical excellence and exceptional attention to detail.
@@ -198,11 +214,11 @@
               </div>
             </div>
           </div>
-          <div class="concept">
+          <div class="concept" data-scrollable="true">
             <div class="container">
               <div class="row">
-                <h2 class="col-12 heading-2 concept__heading">General Concept</h2>
-                <div class="col-12">
+                <h2 class="col-12 heading-2 concept__heading" data-appearance="true">General Concept</h2>
+                <div class="col-12" data-appearance="true">
                   <div class="concept__container">
                     <img class="concept__image" src="assets/imgs/general-scheme.png" alt="General Concept Diagram" width="1122" height="731">
                   </div>
@@ -210,12 +226,12 @@
               </div>
             </div>
           </div>
-          <div class="container ads">
-            <h2 class="heading-2 ads__heading" data-text-abaft="advantages">Member benefits</h2>
-            <p class="main-description ads__text">
+          <div class="container ads" data-scrollable="true">
+            <h2 class="heading-2 ads__heading" data-text-abaft="advantages" data-appearance="true">Member benefits</h2>
+            <p class="main-description ads__text" data-appearance="true">
               Regardless of the character of participation, all members have their own advantages
             </p>
-            <ul class="row justify-content-center ads__tabs" role="tablist">
+            <ul class="row justify-content-center ads__tabs" role="tablist" data-appearance="true">
               <li class="nav-item col-4 col-md-3 col-lg-3 ads__tabs-container">
                 <a class="ads__tab active" data-toggle="pill" href="#investor">Investor</a>
               </li>
@@ -226,7 +242,7 @@
                 <a class="ads__tab" data-toggle="pill" href="#arbiter">Arbiter</a>
               </li>
             </ul>
-            <div class="tab-content">
+            <div class="tab-content" data-appearance="true">
               <div id="investor" class="tab-pane active">
                 <div class="row">
                   <div class="col-6 col-lg-4 ads__item">
@@ -475,39 +491,39 @@
               </div>
             </div>
           </div>
-          <div class="features">
+          <div class="features" data-scrollable="true">
             <div class="container">
-              <h2 class="heading-2 features__heading" data-text-abaft="key features">Key Features</h2>
-              <p class="main-description features__text">
+              <h2 class="heading-2 features__heading" data-text-abaft="key features" data-appearance="true">Key Features</h2>
+              <p class="main-description features__text" data-appearance="true">
                 Regardless of the character of participation, all members have their own advantages
               </p>
               <div class="row justify-content-center">
                 <div class="col-6">
-                  <div class="features__item features__item--escrow">
+                  <div class="features__item features__item--escrow" data-appearance="true">
                     <h3 class="features__item-heading">Escrow</h3>
                     <p class="features__item-text">There are many variations of passages  available, but the majorityalteration in some form with design</p>
                   </div>
                 </div>
                 <div class="col-6">
-                  <div class="features__item features__item--funds">
+                  <div class="features__item features__item--funds" data-appearance="true">
                     <h3 class="features__item-heading">Multistep Funds</h3>
                     <p class="features__item-text">There are many variations of passages  available, but the majorityalteration in some form with design</p>
                   </div>
                 </div>
                 <div class="col-6 col-lg-4">
-                  <div class="features__item features__item--resolution">
+                  <div class="features__item features__item--resolution" data-appearance="true">
                     <h3 class="features__item-heading">ICO Dispute Resolution</h3>
                     <p class="features__item-text">There are many variations of passages  available, but the majorityalteration in some form with design</p>
                   </div>
                 </div>
                 <div class="col-6 col-lg-4">
-                  <div class="features__item features__item--market">
+                  <div class="features__item features__item--market" data-appearance="true">
                     <h3 class="features__item-heading">Arbiter Market</h3>
                     <p class="features__item-text">There are many variations of passages  available, but the majorityalteration in some form with design</p>
                   </div>
                 </div>
                 <div class="col-6 col-lg-4">
-                  <div class="features__item features__item--security">
+                  <div class="features__item features__item--security" data-appearance="true">
                     <h3 class="features__item-heading">Security</h3>
                     <p class="features__item-text">There are many variations of passages  available, but the majorityalteration in some form with design</p>
                   </div>
@@ -515,13 +531,13 @@
               </div>
             </div>
           </div>
-          <div class="cta">
+          <div class="cta" data-scrollable="true">
             <div class="container">
-              <h2 class="cta__heading">Start bringing your idea into reality</h2>
-              <p class="cta__text">(Here should be a Call-to-action)</p>
+              <h2 class="cta__heading" data-appearance="true" data-appearance-type="opacity" data-appearance-delay="0.5s">Start bringing your idea into reality</h2>
+              <p class="cta__text" data-appearance="true" data-appearance-type="opacity" data-appearance-delay="0.5s">(Here should be a Call-to-action)</p>
               <div class="cta__container row justify-content-between align-items-center align-items-xl-start">
                 <div class="col-12 col-lg-6">
-                  <div class="discount">
+                  <div class="discount" data-appearance="true" data-appearance-type="opacity" data-appearance-delay="0.5s">
                     <h3 class="discount__heading">Join us and get discount now </h3>
                     <div class="discount__offering">
                       <span class="hidden-lg-up hidden-lg-down">-20% off</span>
@@ -546,7 +562,7 @@
                   </div>
                 </div>
                 <div class="col-12 col-lg-6">
-                  <div class="infographic">
+                  <div class="infographic" data-appearance="true" data-appearance-type="opacity" data-appearance-delay="0.5s">
                     <div class="timer infographic__divider">
                       <p class="timer__dates">
                         <time datetime="2018-02-12">12 february</time> - <time  datetime="2018-03-14">14 march</time>
@@ -583,9 +599,9 @@
                     </div>
                     <div class="fees-diagram">
                       <p class="fees-diagram__currency">1 ETH = 420 JOT</p>
-                      <div id="fees-diagram" class="fees-diagram__form" data-complete-percent="23.9">
+                      <div id="fees-diagram" class="fees-diagram__form">
                         <span class="fees-diagram__soft-cap">Soft Cap</span>
-                        <span id="fees-reached" class="fees-diagram__reached" style="width:25%;"></span>
+                        <span id="fees-reached" class="fees-diagram__reached" style="width:0%;"  data-appearance="true" data-appearance-custom="width:25%" data-appearance-delay="1000"></span>
                       </div>
                     </div>
                   </div>
@@ -593,37 +609,37 @@
               </div>
             </div>
           </div>
-          <div class="container arbiters-block">
-            <h2 class="heading-2 arbiters-block__heading" data-text-abaft="experts">Arbiters</h2>
-            <p class="main-description arbiters-block__text">Meet our experts-arbiters</p>
-            <div class="arbiters-block__element arbiter-card">
-              <div class="arbiter-card__photo" style="background-image: url('assets/imgs/expert-placeholder.jpg');">
-              </div>
-              <div class="arbiter-card__content">
-                <p class="arbiter-card__name">Mark John</p>
-                <p class="arbiter-card__post">CEO of Big Blockchain Company</p>
-                <div class="arbiter-card__rating">
-                  <i class="arbiter-card__rating-star" data-has-star="true"></i>
-                  <i class="arbiter-card__rating-star" data-has-star="true"></i>
-                  <i class="arbiter-card__rating-star" data-has-star="true"></i>
-                  <i class="arbiter-card__rating-star" data-has-star="true"></i>
-                  <i class="arbiter-card__rating-star" data-has-star="false"></i>
+          <div class="container arbiters-block" data-scrollable="true">
+            <h2 class="heading-2 arbiters-block__heading" data-text-abaft="experts" data-appearance="true">Arbiters</h2>
+            <p class="main-description arbiters-block__text" data-appearance="true">Meet our experts-arbiters</p>
+            <div class="arbiters-block__element arbiter-card" data-appearance="true">
+                <div class="arbiter-card__photo" style="background-image: url('assets/imgs/expert-placeholder.jpg');">
                 </div>
-                <p class="arbiter-card__text">
-                  Sed ut perspiciatis unde omnis iste natus error sit vo luptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo...
-                </p>
-                <div class="arbiter-card__btn-container">
-                  <a href="arbiters.html" class="btn arbiter-card__btn">Read More</a>
+                <div class="arbiter-card__content">
+                  <p class="arbiter-card__name">Mark John</p>
+                  <p class="arbiter-card__post">CEO of Big Blockchain Company</p>
+                  <div class="arbiter-card__rating">
+                    <i class="arbiter-card__rating-star" data-has-star="true"></i>
+                    <i class="arbiter-card__rating-star" data-has-star="true"></i>
+                    <i class="arbiter-card__rating-star" data-has-star="true"></i>
+                    <i class="arbiter-card__rating-star" data-has-star="true"></i>
+                    <i class="arbiter-card__rating-star" data-has-star="false"></i>
+                  </div>
+                  <p class="arbiter-card__text">
+                    Sed ut perspiciatis unde omnis iste natus error sit vo luptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo...
+                  </p>
+                  <div class="arbiter-card__btn-container">
+                    <a href="arbiters.html" class="btn arbiter-card__btn">Read More</a>
+                  </div>
                 </div>
               </div>
-            </div>
           </div>
-          <div class="team">
+          <div class="team" data-scrollable="true">
             <div class="container">
-              <h2 class="heading-2 team__heading" data-text-abaft="team">Team</h2>
-              <p class="main-description team__text">Meet our team</p>
+              <h2 class="heading-2 team__heading" data-text-abaft="team" data-appearance="true">Team</h2>
+              <p class="main-description team__text" data-appearance="true">Meet our team</p>
               <ul class="row team__list">
-                <li class="col-12 col-md-6 col-lg-4 team__card">
+                <li class="col-12 col-md-6 col-lg-4 team__card" data-appearance="true">
                   <div class="team__photo" style="background-image: url(assets/imgs/team-placeholder-3.jpg)" width="370" height="456">
                     <div class="team__photo-cover">
                       <span class="team__name">Mark John</span>
@@ -648,7 +664,7 @@
                     Developer
                   </span>
                 </li>
-                <li class="col-12 col-md-6 col-lg-4 team__card">
+                <li class="col-12 col-md-6 col-lg-4 team__card" data-appearance="true">
                   <div class="team__photo" style="background-image: url(assets/imgs/team-placeholder-2.jpg)" width="370" height="456">
                     <div class="team__photo-cover">
                       <span class="team__name">Sarah Levo</span>
@@ -673,7 +689,7 @@
                     PR
                   </span>
                 </li>
-                <li class="col-12 col-md-6 col-lg-4 team__card">
+                <li class="col-12 col-md-6 col-lg-4 team__card" data-appearance="true">
                   <div class="team__photo" style="background-image: url(assets/imgs/team-placeholder-1.jpg)" width="370" height="456">
                     <div class="team__photo-cover">
                       <span class="team__name">Xavi Miko</span>
@@ -701,11 +717,11 @@
               </ul>
             </div>
           </div>
-          <div class="clients">
+          <div class="clients" data-scrollable="true">
             <div class="container">
-              <h2 class="heading-2 clients__heading" data-text-abaft="Partners">Clients</h2>
+              <h2 class="heading-2 clients__heading" data-text-abaft="Partners" data-appearance="true">Clients</h2>
               <div class="row">
-                <div class="col-12 col-lg-6">
+                <div class="col-12 col-lg-6" data-appearance="true">
                   <h3 class="clients__block-heading">
                     Success stories
                   </h3>
@@ -736,7 +752,7 @@
                     </li>
                   </ul>
                 </div>
-                <div class="hidden-md-down col-lg-6 clients__block">
+                <div class="hidden-md-down col-lg-6 clients__block" data-appearance="true">
                   <div class="clients__poster clients__poster--forward">
 
                   </div>
@@ -747,7 +763,7 @@
               </div>
             </div>
           </div>
-          <div class="press">
+          <div class="press" data-scrollable="true">
             <div id="press-carousel" class="press__carousel carousel slide" data-ride="carousel">
               <ol class="carousel-indicators press__carousel-indicators">
                 <li data-target="#press-carousel" data-slide-to="0" class="active"></li>
@@ -777,7 +793,7 @@
               </ul>
             </div>
             <div class="container">
-              <ul class="press__list">
+              <ul class="press__list" data-appearance="true">
                 <li class="press__company">
                   <img class="press__company-logo" src="assets/imgs/press/forbes.png" alt="forbes logo" width="173" height="45">
                 </li>
@@ -826,30 +842,30 @@
               </ul>
             </div>
           </div>
-          <div class="documents">
+          <div class="documents" data-scrollable="true">
             <div class="container">
-                <h2 class="heading-2 documents__heading">Documents</h2>
+                <h2 class="heading-2 documents__heading" data-appearance="true">Documents</h2>
                 <div class="row">
-                  <div class="col-6 col-lg-3">
+                  <div class="col-6 col-lg-3" data-appearance="true">
                     <img src="assets/imgs/document-placeholder.jpg" alt="document" class="documents__copy" width="205" height="289">
                     <span class="documents__name">White Paper</span>
                   </div>
-                  <div class="col-6 col-lg-3">
+                  <div class="col-6 col-lg-3" data-appearance="true">
                     <img src="assets/imgs/document-placeholder.jpg" alt="document" class="documents__copy" width="205" height="289">
                     <span class="documents__name">Light Paper</span>
                   </div>
-                  <div class="col-6 col-lg-3">
+                  <div class="col-6 col-lg-3" data-appearance="true">
                     <img src="assets/imgs/document-placeholder.jpg" alt="document" class="documents__copy" width="205" height="289">
                     <span class="documents__name">White Paper</span>
                   </div>
-                  <div class="col-6 col-lg-3">
+                  <div class="col-6 col-lg-3" data-appearance="true">
                     <img src="assets/imgs/document-placeholder.jpg" alt="document" class="documents__copy" width="205" height="289">
                     <span class="documents__name">Light Paper</span>
                   </div>
                 </div>
             </div>
           </div>
-          <div class="try-it">
+          <div class="try-it" data-scrollable="true">
             <div class="try-it__pattern">
               <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
                 <defs>
@@ -881,10 +897,10 @@
               </svg>
             </div>
             <div class="try-it__devices">
-              <div class="try-it__macbook"></div>
-              <div class="try-it__iphone"></div>
+              <div class="try-it__macbook" data-appearance="true" data-appearance-type="opacity" data-appearance-delay=".5s"></div>
+              <div class="try-it__iphone" data-appearance="true" data-appearance-type="opacity" data-appearance-delay=".5s"></div>
             </div>
-            <div class="try-it__content">
+            <div class="try-it__content" data-appearance="true" data-appearance-type="opacity" data-appearance-delay=".5s">
               <p class="try-it__text">
                 Want start your ICO much better? Try it right now!
               </p>
@@ -895,7 +911,7 @@
           </div>
         </main>
         <footer class="container-fluid footer">
-          <div class="row">
+          <div class="row" data-scrollable="true">
             <div class="col-12">
               <div class="container">
                 <div class="row">
@@ -991,6 +1007,11 @@
         <script>window.jQuery || document.write('<script src="js/vendor/jquery-3.2.1.min.js"><\/script>')</script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
         <script>(typeof $().modal) == 'function' || document.write('<script src="js/vendor/bootstrap.min.js"><\/script>')</script>
+        <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+        <script>(typeof $().slick) == 'function' || document.write('<script src="js/vendor/slick.min.js"><\/script>')</script>
+        <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.9.5/jquery.fullpage.min.js"></script>
+        <script>(typeof $().fullpage) == 'function' || document.write('<script src="js/vendor/jquery.fullpage.min.js"><\/script>')</script>
+
         <script src="js/main.js"></script>
 
     </body>

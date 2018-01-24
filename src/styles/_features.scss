@@ -21,6 +21,11 @@
   &__heading {
     margin-bottom: 20px;
 
+    &:after {
+      max-width: 750px;
+      width: 100%;
+    }
+
     @media(min-width: 992px) {
       margin-bottom: 35px;
     }

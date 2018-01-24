@@ -1,4 +1,11 @@
 // (function() {
+//
+//   }
+//
+//   $( document ).scroll(appearanceListner);
+// }());
+"use strict";
+// (function() {
 //   const $diagram = () => $('#fees-diagram');
 //   const wholeW = $diagram().width();
 //   const startW = (window.getComputedStyle(document.querySelector('#fees-diagram'), ':before').width).replace(/\D/g,'');
@@ -12,18 +19,26 @@
 //     }
 //   });
 // }());
+"use strict";
+'use strict';
 
-(function() {
-  const $add = () => $('#header').addClass('header__bg');
-  const $remove = () =>  $('#header').removeClass('header__bg');
-  const $togglerState = () => ($('#menu-toggler').attr('aria-expanded') === 'true');
+(function () {
+  var $add = function $add() {
+    return $('#header').addClass('header__bg');
+  };
+  var $remove = function $remove() {
+    return $('#header').removeClass('header__bg');
+  };
+  var $togglerState = function $togglerState() {
+    return $('#menu-toggler').attr('aria-expanded') === 'true';
+  };
 
-  $(document).ready(() => {
-    if($(window).scrollTop() <= 0) $remove();
+  $(document).ready(function () {
+    if ($(window).scrollTop() <= 0) $remove();
   });
 
-  $(window).scroll(() => {
-    if($(window).scrollTop()) {
+  $(window).scroll(function () {
+    if ($(window).scrollTop()) {
       $add();
     } else if (!$togglerState()) {
       $remove();
@@ -31,10 +46,12 @@
     return;
   });
 
-  $('#menu-toggler').on('click', () => {
-    if($(window).scrollTop()) return;
-    if(!$togglerState()) return $add();
-    return setTimeout(() => $remove(), 300);
+  $('#menu-toggler').on('click', function () {
+    if ($(window).scrollTop()) return;
+    if (!$togglerState()) return $add();
+    return setTimeout(function () {
+      return $remove();
+    }, 300);
   });
 }());
 
