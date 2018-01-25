@@ -27,7 +27,7 @@
 
   const sizeCheck = () => {
       if(window.innerWidth >= 992
-      && window.innerHeight >= 850) {
+      && window.innerHeight >= 650) { 
         return true;
       } else {
         console.log('sizeCheck not passed');

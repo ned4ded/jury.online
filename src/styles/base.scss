@@ -175,57 +175,5 @@ body {
 @import './single-news.scss';
 @import './footer.scss';
 
-@import './scripts/fixed-scroll/default.scss';
-
-html:not(.no-js) *[data-appearance]:not([data-appearance-custom]) {
-  opacity: 0;
-}
-
-@keyframes appearance {
-  from {
-    transform: translateY(100px);
-    opacity: .3;
-  }
-  to {
-    transform: translateY(0);
-    opacity: 1;
-  }
-}
-
-@keyframes appearance-opacity {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-}
-
-.appearance {
-
-  &--default {
-    transform: translateY(100px);
-    opacity: 0;
-    animation-name: appearance;
-    animation-duration: 1s;
-    animation-delay: .5s;
-    animation-fill-mode: forwards;
-
-    &:after,
-    &:before {
-      opacity: 0;
-      animation-duration: 1s;
-      animation-delay: 1s;
-      animation-fill-mode: forwards;
-      animation-name: appearance-opacity;
-    }
-  }
-
-  &--opacity {
-    opacity: 0;
-    animation-duration: 1s;
-    animation-delay: 1s;
-    animation-fill-mode: forwards;
-    animation-name: appearance-opacity;
-  }
-}
+@import './scripts/scrollix/default.scss';
+@import './scripts/appearance/default.scss';

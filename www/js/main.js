@@ -4,6 +4,7 @@
   var $container = $('#a-container');
   var $input = $('#a-input');
   var $suggestions = $('#a-list');
+  if (!$container || !$input || !$suggestions) return;
   var duration = 500;
 
   var windowListner = function windowListner(ev) {
@@ -105,7 +106,7 @@
   };
 
   var sizeCheck = function sizeCheck() {
-    if (window.innerWidth >= 992 && window.innerHeight >= 850) {
+    if (window.innerWidth >= 992 && window.innerHeight >= 650) {
       return true;
     } else {
       console.log('sizeCheck not passed');
