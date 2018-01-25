@@ -1,8 +1,9 @@
 .arbiters-list {
-  margin-left: -15px;
   margin-right: -15px;
+  margin-left: -15px;
   padding-top: 75px;
   padding-bottom: 75px;
+
   background-color: #e9e9e9;
 
   @media(min-width: 992px) {
@@ -16,8 +17,8 @@
 
   &__element {
     width: 100%;
-    margin: auto;
     max-width: 1066px;
+    margin: auto;
 
     @media(min-width: 992px) {
       min-height: 457px;

@@ -1,0 +1,89 @@
+.timer {
+  margin-bottom: 20px;
+  &__date {
+    &s{
+      margin-bottom: 25px;
+
+      text-align: center;
+      letter-spacing: 0.6px;
+      text-transform: uppercase;
+
+      color: rgba(255, 255, 255, 0.8);
+      text-shadow: 0px 9px 8px rgba(35, 31, 32, 0.2);
+
+      font-family: $avenir;
+      font-size: 24px;
+    }
+  }
+
+  &__counter {
+    display: flex;
+    align-items: center;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+
+    width: 100%;
+    margin: auto;
+  }
+
+  &__divider {
+    width: 10px;
+    height: 10px;
+
+    opacity: 0.8;
+    border-radius: 4.5px;
+    background-color: #f9e8fe;
+  }
+
+  &__property {
+    position: relative;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &-container {
+      display: flex;
+      align-items: center;
+      flex-flow: column nowrap;
+      justify-content: center;
+
+      min-width: 101px;
+      min-height: 101px;
+      margin-bottom: 0;
+      padding: 5px;
+
+      border-radius: 10px;
+      background-color: rgba(45, 20, 55, .4);
+    }
+
+    &-name {
+      display: block;
+      display: block;
+
+      text-align: center;
+      letter-spacing: -0.5px;
+
+      color: #ceafff;
+
+      font-family: $avenir;
+      font-size: 20.1px;
+      line-height: 1;
+    }
+
+    &-value {
+      display: block;
+
+      text-align: center;
+      letter-spacing: -1.2px;
+      text-transform: uppercase;
+
+      color: #f9e8fe;
+
+      font-family: $avenir;
+      font-size: 48.3px;
+      font-weight: 600;
+      line-height: 1;
+    }
+  }
+}

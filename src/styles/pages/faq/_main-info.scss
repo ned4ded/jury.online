@@ -1,0 +1,40 @@
+.main-info--faq {
+  background: transparent url('../assets/imgs/faq-main-bg.jpg') no-repeat;
+  background-position: 50% bottom;
+  background-size: cover;
+  box-shadow: 0 7px 30px 13px rgba(0,0,0, .15);
+
+  @media (min-width: 992px) {
+    padding-bottom: 70px;
+  }
+
+  @media (min-width: 1200px) {
+    padding-top: 210px;
+    padding-bottom: 170px;
+  }
+
+  & .heading-1 {
+    color: rgba(255, 255, 255, 0.85);
+    text-shadow: 0 0 4.8px rgba(0, 0, 0, 0.21);
+
+    font-size: 48.5px;
+
+    @media (min-width: 992px) {
+      margin-bottom: 16px;
+    }
+  }
+
+  & .jumbo__text {
+    letter-spacing: 0.2px;
+
+    color: rgba(255, 255, 255, 0.9);
+    text-shadow: 0 0 4.8px rgba(0, 0, 0, 0.21);
+
+    font-size: 24px;
+    line-height: 2.1;
+
+    @media (min-width: 992px) {
+      margin-bottom: 40px;
+    }
+  }
+}

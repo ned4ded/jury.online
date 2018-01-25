@@ -115,9 +115,9 @@
                 </div>
                 <div class="fees-diagram">
                   <p class="fees-diagram__currency">1 ETH = 420 JOT</p>
-                  <div id="fees-diagram" class="fees-diagram__form" data-complete-percent="23.9">
+                  <div id="fees-diagram" class="fees-diagram__form">
                     <span class="fees-diagram__soft-cap">Soft Cap</span>
-                    <span id="fees-reached" class="fees-diagram__reached" style="width:25%;"></span>
+                    <span id="fees-reached" class="fees-diagram__reached" style="width:0;" data-appearance="true" data-appearance-delay="1" data-appearance-custom="width:25%"></span>
                   </div>
                 </div>
               </div>
@@ -135,20 +135,44 @@
                   <img src="assets/imgs/ico-chart.png" alt="pie chart" class="ico__pie" width="415" height="420">
                   <div class="ico__bar-graph bar-graph">
                     <div class="bar-graph__item bar-graph__item">
-                      <p class="bar-graph__legend"><span class="bar-graph__percent">70 <span class="bar-graph__percent-sign">%</span></span><span class="bar-graph__descr">Will be available for sale</span></p>
-                      <div class="bar-graph__diagram" style="width:70%;"></div>
+                      <p class="bar-graph__legend">
+                        <span class="bar-graph__percent">
+                          <span id="ico-bar-pink-percent">0</span>
+                          <span class="bar-graph__percent-sign">%</span>
+                        </span>
+                        <span class="bar-graph__descr">Will be available for sale</span>
+                      </p>
+                      <div class="bar-graph__diagram" style="width:0;" data-appearance="true" data-appearance-delay="200" data-appearance-custom="width:70%,progress:ico-bar-pink-percent" data-percent="70"></div>
                     </div>
                     <div class="bar-graph__item bar-graph__item--green">
-                      <p class="bar-graph__legend"><span class="bar-graph__percent">20 <span class="bar-graph__percent-sign">%</span></span><span class="bar-graph__descr">Go to the Jury.Online team</span></p>
-                      <div class="bar-graph__diagram" style="width:20%;"></div>
+                      <p class="bar-graph__legend">
+                        <span class="bar-graph__percent">
+                          <span id="ico-bar-green-percent">0</span>
+                          <span class="bar-graph__percent-sign">%</span>
+                        </span>
+                        <span class="bar-graph__descr">Go to the Jury.Online team</span>
+                      </p>
+                      <div class="bar-graph__diagram" style="width:0;" data-appearance="true" data-appearance-delay="200" data-appearance-custom="width:20%,progress:ico-bar-green-percent" data-percent="20"></div>
                     </div>
                     <div class="bar-graph__item bar-graph__item--blue">
-                      <p class="bar-graph__legend"><span class="bar-graph__percent">7 <span class="bar-graph__percent-sign">%</span></span><span class="bar-graph__descr">Go to advisers and for bounty </span></p>
-                      <div class="bar-graph__diagram" style="width:7%;"></div>
+                      <p class="bar-graph__legend">
+                        <span class="bar-graph__percent">
+                          <span id="ico-bar-blue-percent">0</span>
+                          <span class="bar-graph__percent-sign">%</span>
+                        </span>
+                        <span class="bar-graph__descr">Go to advisers and for bounty</span>
+                      </p>
+                      <div class="bar-graph__diagram" style="width:0;" data-appearance="true" data-appearance-delay="200" data-appearance-custom="width:7%,progress:ico-bar-blue-percent" data-percent="7"></div>
                     </div>
                     <div class="bar-graph__item bar-graph__item--red">
-                      <p class="bar-graph__legend"><span class="bar-graph__percent">3 <span class="bar-graph__percent-sign">%</span></span><span class="bar-graph__descr">Remain as a stock of liquidity</span></p>
-                      <div class="bar-graph__diagram" style="width:3%;"></div>
+                      <p class="bar-graph__legend">
+                        <span class="bar-graph__percent">
+                          <span id="ico-bar-red-percent">0</span>
+                          <span class="bar-graph__percent-sign">%</span>
+                        </span>
+                        <span class="bar-graph__descr">Remain as a stock of liquidity</span>
+                      </p>
+                      <div class="bar-graph__diagram" style="width:0;" data-appearance="true" data-appearance-delay="200" data-appearance-custom="width:3%,progress:ico-bar-red-percent" data-percent="3"></div>
                     </div>
 
                   </div>
@@ -269,6 +293,9 @@
         <script>window.jQuery || document.write('<script src="js/vendor/jquery-3.2.1.min.js"><\/script>')</script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
         <script>(typeof $().modal) == 'function' || document.write('<script src="js/vendor/bootstrap.min.js"><\/script>')</script>
+        <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+        <script>(typeof $().slick) == 'function' || document.write('<script src="js/vendor/slick.min.js"><\/script>')</script>
+        <script src="js/vendor/jquery.autocomplete.min.js"></script>
         <script src="js/main.js"></script>
 
     </body>

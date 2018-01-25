@@ -14,7 +14,9 @@ class ScrollixEvents {
 
   scrollHandler() {
     this.base.setScrollProperties();
-    this.customHandler(null, this.base.getNextElement().end);
+
+    const h = this.base.getNextElement() ? this.base.getNextElement().end : this.base.scrollBottom + 150;
+    this.customHandler(null,h);
     return;
   }
 

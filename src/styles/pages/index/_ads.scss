@@ -17,6 +17,7 @@
   &__tabs {
     margin: 0 0 55px;
     padding: 0;
+
     list-style: none;
 
     &-container {
@@ -45,16 +46,20 @@
 
   &__tab {
     display: inline-block;
+
     width: 100%;
-    font-family: $avenir;
-    font-weight: 300;
-    color: #65616d;
-    text-shadow: 0 0 1.9px rgba(0, 15, 41, 0.28);
-    text-transform: uppercase;
-    text-align: center;
     padding: 9px 0 8px;
+
+    text-align: center;
+    text-transform: uppercase;
+
+    color: #65616d;
     background-image: linear-gradient(to bottom, rgba(243, 243, 243, 0.15), rgba(221, 221, 221, 0.15)), linear-gradient(rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0.15));
     box-shadow: 0px 9px 50px 0 rgba(35, 31, 32, 0.1);
+    text-shadow: 0 0 1.9px rgba(0, 15, 41, 0.28);
+
+    font-family: $avenir;
+    font-weight: 300;
 
     &:focus {
       color: #65616d;
@@ -67,17 +72,19 @@
     }
 
     &.active {
-      font-weight: 600;
       color: white;
-      text-shadow: 0 0 1.9px rgba(0, 15, 41, 0.28);
       border-radius: 10px;
       background-image: linear-gradient(180deg, #853582 27%, #4b2669);
       box-shadow: 0px 13px 50px 0px rgba(35, 31, 32, 0.2),
                   0px 0px 30px 9px rgba(132, 28, 185, 0.3);
+      text-shadow: 0 0 1.9px rgba(0, 15, 41, 0.28);
+
+      font-weight: 600;
 
       &:focus {
-        color: white;
         text-decoration: none;
+
+        color: white;
 
         &:hover {
           text-decoration: underline;
@@ -99,9 +106,9 @@
     }
 
     @media(min-width: 992px) {
-      padding: 16px 0 15px;
       width: auto;
       min-width: 185px;
+      padding: 16px 0 15px;
     }
 
   }
@@ -109,6 +116,7 @@
   &__item {
     display: flex;
     flex-flow: row nowrap;
+
     width: 100%;
     margin-bottom: 110px;
 
@@ -119,48 +127,61 @@
 
       &-container {
         position: relative;
+
         width: 68px;
       }
 
       &--lamp {
         top: -11px;
+
         width: 33px;
         height: 48px;
+
         background: transparent url('../assets/imgs/icon-lamp.png') no-repeat;
         background-size: 100%;
       }
       &--browser {
         top: -4px;
+
         width: 43px;
         height: 34px;
+
         background: transparent url('../assets/imgs/icon-browser.png') no-repeat;
         background-size: 100%;
       }
       &--gamepad {
         top: -5px;
+
         width: 49px;
         height: 35px;
+
         background: transparent url('../assets/imgs/icon-gamepad.png') no-repeat;
         background-size: 100%;
       }
       &--resize {
         top: -4px;
+
         width: 34px;
         height: 34px;
+
         background: transparent url('../assets/imgs/icon-resize.png') no-repeat;
         background-size: 100%;
       }
       &--cart {
         top: -8px;
+
         width: 48px;
         height: 42px;
+
         background: transparent url('../assets/imgs/icon-cart.png') no-repeat;
         background-size: 100%;
       }
       &--gift {
         top: -10px;
+
         width: 43px;
         height: 46px;
+
         background: transparent url('../assets/imgs/icon-gift.png') no-repeat;
         background-size: 100%;
       }
@@ -171,11 +192,14 @@
     }
 
     &-heading {
-      font-size: 24px;
       margin-bottom: 12px;
+
       text-align: left;
+
       color: #494949;
+
       font-family: $avenir;
+      font-size: 24px;
       font-weight: 600;
 
       @media(min-width: 768px) {
@@ -184,11 +208,12 @@
     }
 
     &-text {
-      font-size: 16px;
-      line-height: 1.743;
       color: #7c7c7c;
+
       font-family: $avenir;
+      font-size: 16px;
       font-weight: 300;
+      line-height: 1.743;
     }
   }
 }

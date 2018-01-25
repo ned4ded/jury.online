@@ -114,12 +114,16 @@
     }
   };
 
+  var elements = function elements() {
+    return $('[data-scrollable]');
+  };
+
   $(document).ready(function () {
     $('html').removeClass('no-js');
   }());
 
   $(document).ready(function () {
-    return new ScrollixBase(undefined, appearanceHandler, deviceCheck() && browserCheck() && sizeCheck());
+    return new ScrollixBase(elements(), appearanceHandler, deviceCheck() && browserCheck() && sizeCheck() && !!elements().length);
   });
 })();
 'use strict';
@@ -146,19 +150,32 @@ var appearanceHandler = function appearanceHandler(ev, height) {
           _e$data$split2 = _toArray(_e$data$split),
           properties = _e$data$split2.slice(0);
 
+      var progressTarget;
+
       var object = properties.reduce(function (acc, p) {
         var _p$split = p.split(':'),
             _p$split2 = _slicedToArray(_p$split, 2),
             name = _p$split2[0],
             value = _p$split2[1];
 
+        if (name == 'progress') {
+          progressTarget = value;
+          acc.percent = 100;
+          return acc;
+        }
         acc[name] = value;
         return acc;
       }, {});
 
-      e.delay(delay || 1000).animate(object);
+      var animate = function animate(obj, progress) {
+        return e.delay(delay || 1000).animate(obj, { duration: 700, progress: progress });
+      };
 
-      return;
+      return progressTarget ? animate(object, function (promise, remaining) {
+        console.log('progress');
+        var percent = (e.data('percent') * remaining).toFixed(0);
+        $('#' + progressTarget).text(percent);
+      }) : animate(object);
     }
     if (delay) e.attr('style', 'animation-delay: ' + delay);
 
@@ -206,157 +223,11 @@ var _createClass = function () { function defineProperties(target, props) { for 
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
-var ScrollixEvents = function () {
-  function ScrollixEvents(base, customHandler) {
-    var _this2 = this;
-
-    _classCallCheck(this, ScrollixEvents);
-
-    if (!(base instanceof ScrollixBase)) return;
-
-    this.base = base;
-    this.customHandler = customHandler;
-
-    var _this = this;
-
-    $(window).scroll(function () {
-      return _this2.scrollHandler();
-    });
-    this.setWheelListner();
-    this.setButtonsListner();
-  }
-
-  _createClass(ScrollixEvents, [{
-    key: 'scrollHandler',
-    value: function scrollHandler() {
-      this.base.setScrollProperties();
-      this.customHandler(null, this.base.getNextElement().end);
-      return;
-    }
-  }, {
-    key: 'setWheelListner',
-    value: function setWheelListner() {
-      var _this3 = this;
-
-      var _this = this;
-      $(window).bind('wheel', function (e) {
-        return _this3.wheelHandler(e);
-      });
-    }
-  }, {
-    key: 'setButtonsListner',
-    value: function setButtonsListner() {
-      var _this4 = this;
-
-      var _this = this;
-      $(window).bind('keydown', function (e) {
-        return _this4.buttonsHandler(e);
-      });
-    }
-  }, {
-    key: 'wheelHandler',
-    value: function wheelHandler(event) {
-      // if(!this.base.getNextElement().isScrollable()) return console.log(this.base.elements);
-      $(window).unbind('wheel');
-      var block = function block(e) {
-        return e.preventDefault();
-      };
-      $(window).bind('wheel', block);
-
-      event.preventDefault();
-      var dir = event.originalEvent.deltaY < 0 ? 1 : 0;
-      this.base.setScrollDirection(dir);
-      this.base.setNextIndex();
-      this.base.next();
-
-      var _this = this;
-
-      var fn = function fn() {
-        return _this.setScrollEndAsync(function () {
-          $(window).unbind('scroll', fn);
-          _this.base.setScrollProperties(dir);
-          _this.base.setNextIndex();
-          $(window).unbind('wheel', block);
-          _this.setWheelListner();
-          return;
-        }, 100);
-      };
-
-      $(window).scroll(fn);
-    }
-  }, {
-    key: 'buttonsHandler',
-    value: function buttonsHandler(event) {
-      var keys = { 'KeyW': 1, 'KeyS': 0, 'Space': 0, 'ArrowUp': 1, 'ArrowDown': 0 };
-      var curKey = event.originalEvent.code;
-
-      if (curKey === 'Escape') return this.clean();
-      if (!Object.keys(keys).find(function (e) {
-        return e === curKey;
-      })) return;
-      // if(!this.base.getNextElement().isScrollable()) return console.log(this.base.elements);
-      event.preventDefault();
-
-      $(window).unbind('keydown');
-      var block = function block(e) {
-        return e.preventDefault();
-      };
-      $(window).bind('keydown', block);
-
-      var dir = keys[curKey];
-      this.base.setScrollDirection(dir);
-      this.base.setNextIndex();
-      this.base.next();
-
-      var _this = this;
-
-      var fn = function fn() {
-        return _this.setScrollEndAsync(function () {
-          $(window).unbind('scroll', fn);
-          _this.base.setScrollProperties(dir);
-          _this.base.setNextIndex();
-          $(window).unbind('keydown', block);
-          _this.setButtonsListner();
-          return;
-        }, 100);
-      };
-
-      $(window).scroll(fn);
-    }
-  }, {
-    key: 'setScrollEndAsync',
-    value: function setScrollEndAsync(callback, timeout) {
-      var $this = $(window);
-      if ($this.data('scrollTimeout')) {
-        clearTimeout($this.data('scrollTimeout'));
-      }
-      $this.data('scrollTimeout', setTimeout(callback, timeout));
-    }
-  }, {
-    key: 'clean',
-    value: function clean() {
-      $(window).unbind('wheel keydown');
-      return;
-    }
-  }]);
-
-  return ScrollixEvents;
-}();
-'use strict';
-
-var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
 var ScrollixBase = function () {
-  function ScrollixBase() {
-    var elements = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : $('[data-scrollable]');
-    var customHandler = arguments[1];
+  function ScrollixBase(elements, customHandler) {
     var makeStructure = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : true;
 
     _classCallCheck(this, ScrollixBase);
-
-    if (!(elements instanceof jQuery)) return;
 
     this.rootElements = elements;
     this.elements = this.loadElements(this.rootElements, makeStructure);
@@ -551,4 +422,148 @@ var ScrollixBlock = function () {
   }]);
 
   return ScrollixBlock;
+}();
+'use strict';
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+var ScrollixEvents = function () {
+  function ScrollixEvents(base, customHandler) {
+    var _this2 = this;
+
+    _classCallCheck(this, ScrollixEvents);
+
+    if (!(base instanceof ScrollixBase)) return;
+
+    this.base = base;
+    this.customHandler = customHandler;
+
+    var _this = this;
+
+    $(window).scroll(function () {
+      return _this2.scrollHandler();
+    });
+    this.setWheelListner();
+    this.setButtonsListner();
+  }
+
+  _createClass(ScrollixEvents, [{
+    key: 'scrollHandler',
+    value: function scrollHandler() {
+      this.base.setScrollProperties();
+
+      var h = this.base.getNextElement() ? this.base.getNextElement().end : this.base.scrollBottom + 150;
+      this.customHandler(null, h);
+      return;
+    }
+  }, {
+    key: 'setWheelListner',
+    value: function setWheelListner() {
+      var _this3 = this;
+
+      var _this = this;
+      $(window).bind('wheel', function (e) {
+        return _this3.wheelHandler(e);
+      });
+    }
+  }, {
+    key: 'setButtonsListner',
+    value: function setButtonsListner() {
+      var _this4 = this;
+
+      var _this = this;
+      $(window).bind('keydown', function (e) {
+        return _this4.buttonsHandler(e);
+      });
+    }
+  }, {
+    key: 'wheelHandler',
+    value: function wheelHandler(event) {
+      // if(!this.base.getNextElement().isScrollable()) return console.log(this.base.elements);
+      $(window).unbind('wheel');
+      var block = function block(e) {
+        return e.preventDefault();
+      };
+      $(window).bind('wheel', block);
+
+      event.preventDefault();
+      var dir = event.originalEvent.deltaY < 0 ? 1 : 0;
+      this.base.setScrollDirection(dir);
+      this.base.setNextIndex();
+      this.base.next();
+
+      var _this = this;
+
+      var fn = function fn() {
+        return _this.setScrollEndAsync(function () {
+          $(window).unbind('scroll', fn);
+          _this.base.setScrollProperties(dir);
+          _this.base.setNextIndex();
+          $(window).unbind('wheel', block);
+          _this.setWheelListner();
+          return;
+        }, 100);
+      };
+
+      $(window).scroll(fn);
+    }
+  }, {
+    key: 'buttonsHandler',
+    value: function buttonsHandler(event) {
+      var keys = { 'KeyW': 1, 'KeyS': 0, 'Space': 0, 'ArrowUp': 1, 'ArrowDown': 0 };
+      var curKey = event.originalEvent.code;
+
+      if (curKey === 'Escape') return this.clean();
+      if (!Object.keys(keys).find(function (e) {
+        return e === curKey;
+      })) return;
+      // if(!this.base.getNextElement().isScrollable()) return console.log(this.base.elements);
+      event.preventDefault();
+
+      $(window).unbind('keydown');
+      var block = function block(e) {
+        return e.preventDefault();
+      };
+      $(window).bind('keydown', block);
+
+      var dir = keys[curKey];
+      this.base.setScrollDirection(dir);
+      this.base.setNextIndex();
+      this.base.next();
+
+      var _this = this;
+
+      var fn = function fn() {
+        return _this.setScrollEndAsync(function () {
+          $(window).unbind('scroll', fn);
+          _this.base.setScrollProperties(dir);
+          _this.base.setNextIndex();
+          $(window).unbind('keydown', block);
+          _this.setButtonsListner();
+          return;
+        }, 100);
+      };
+
+      $(window).scroll(fn);
+    }
+  }, {
+    key: 'setScrollEndAsync',
+    value: function setScrollEndAsync(callback, timeout) {
+      var $this = $(window);
+      if ($this.data('scrollTimeout')) {
+        clearTimeout($this.data('scrollTimeout'));
+      }
+      $this.data('scrollTimeout', setTimeout(callback, timeout));
+    }
+  }, {
+    key: 'clean',
+    value: function clean() {
+      $(window).unbind('wheel keydown');
+      return;
+    }
+  }]);
+
+  return ScrollixEvents;
 }();

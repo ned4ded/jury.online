@@ -1,7 +1,8 @@
 .team {
-  background-color: #eee8ef;
   margin: 0 -15px;
   padding-top: 60px;
+
+  background-color: #eee8ef;
 
   @media(min-width: 768px) {
     padding-top: 120px;
@@ -36,8 +37,9 @@
   }
 
   &__list {
-    padding: 0;
     margin: 0;
+    padding: 0;
+
     list-style: none;
   }
   &__card {
@@ -57,13 +59,15 @@
 
   &__photo {
     position: relative;
+
     width: 100%;
     height: 456px;
-    background-size: cover;
+    margin-bottom: 5px;
+
+    border-radius: 5px;
     background-repeat: no-repeat;
     background-position: 50% 0;
-    margin-bottom: 5px;
-    border-radius: 5px;
+    background-size: cover;
 
     @media(min-width: 768px) {
       margin-bottom: 26px;
@@ -74,77 +78,96 @@
     }
 
     &-cover {
-      width: 100%;
-      height: 100%;
       display: none;
       align-items: center;
-      justify-content: center;
       flex-flow: column nowrap;
+      justify-content: center;
+
+      width: 100%;
+      height: 100%;
+
       border-radius: 5px;
       background-image: linear-gradient( 180deg, rgba(189,75,163,.851) 0%, rgba(68,27,101,.851) 100%);
 
       & .team__name {
-        letter-spacing: -0.8px;
-        color: white;
         margin-bottom: 21px;
+
+        letter-spacing: -0.8px;
+
+        color: white;
       }
 
       & .team__role {
-        font-size: 22px;
+        margin-bottom: 35px;
+
         letter-spacing: -0.6px;
+
         color: white;
 
-        margin-bottom: 35px;
+        font-size: 22px;
       }
     }
   }
 
   &__social-links {
     display: flex;
+    align-items: center;
     flex-flow: row nowrap;
     justify-content: space-between;
-    align-items: center;
-    padding: 0;
-    margin: 0;
-    list-style: none;
+
     width: 81px;
     height: 16px;
+    margin: 0;
+    padding: 0;
+
+    list-style: none;
   }
 
   &__social-link {
     display: block;
-    color: white;
+
     width: 16px;
     height: 16px;
-    line-height: 100%;
+
     text-align: center;
 
+    color: white;
+
+    line-height: 100%;
+
     &:focus {
+      text-decoration: none;
+
       color: rgba(255, 255, 255, 1);
       outline: none;
-      text-decoration: none;
     }
 
     &:hover {
-      color: rgba(255, 255, 255, .7);
       text-decoration: none;
+
+      color: rgba(255, 255, 255, .7);
     }
 
     &:active {
-      color: rgba(255, 255, 255, .5);
       text-decoration: none;
+
+      color: rgba(255, 255, 255, .5);
     }
   }
 
   &__name {
+    display: block;
+
+    margin-bottom: 6px;
+
+    text-align: center;
+    letter-spacing: -0.7px;
+
+    color: #4e4d4d;
+
     font-family: $avenir;
     font-size: 30px;
-    letter-spacing: -0.7px;
     line-height: 100%;
-    color: #4e4d4d;
-    text-align: center;
-    display: block;
-    margin-bottom: 6px;
 
     @media(min-width: 768px) {
       margin-bottom: 9px;
@@ -152,12 +175,15 @@
   }
 
   &__role {
-    text-align: center;
     display: block;
+
+    text-align: center;
+
+    color: #4e4d4d;
+
     font-family: $avenir;
     font-size: 18px;
-    line-height: 100%;
-    color: #4e4d4d;
     font-weight: 300;
+    line-height: 100%;
   }
 }

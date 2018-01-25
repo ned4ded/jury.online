@@ -1,0 +1,52 @@
+.main-info--arbiters {
+  padding-top: 110px;
+
+  background: transparent url('../assets/imgs/arbiters-main-bg.jpg') no-repeat;
+  background-position: 50% center;
+  background-size: cover;
+  box-shadow: 0 7px 30px 13px rgba(0,0,0, .15);
+
+  @media (min-width: 992px) {
+    padding-top: 210px;
+    padding-bottom: 70px;
+  }
+
+  @media (min-width: 1200px) {
+    padding-top: 360px;
+    padding-bottom: 170px;
+  }
+
+  & .heading-1 {
+    margin-bottom: 9px;
+
+    color: rgba(255, 255, 255, 0.85);
+    text-shadow: 0 0 4.8px rgba(0, 0, 0, 0.21);
+
+    font-size: 48.5px;
+
+    @media (min-width: 992px) {
+      margin-bottom: 36px;
+    }
+  }
+
+  & .jumbo__text {
+    margin-bottom: 5px;
+
+    letter-spacing: 0.2px;
+
+    color: rgba(255, 255, 255, 0.9);
+    text-shadow: 0 0 4.8px rgba(0, 0, 0, 0.21);
+
+    font-size: 24px;
+    font-weight: 300;
+    line-height: 1;
+
+    &:last-of-type {
+      margin-bottom: 28px;
+
+      @media (min-width: 768px) {
+        margin-bottom: 56px;
+      }
+    }
+  }
+}

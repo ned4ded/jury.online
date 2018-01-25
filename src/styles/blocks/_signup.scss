@@ -1,0 +1,310 @@
+.signup {
+  display: flex;
+  flex-flow: column nowrap;
+
+  width: 300px;
+  min-height: 400px;
+  margin: auto;
+
+  border: solid 1px $color4;
+  border-radius: 8px;
+  background-color: rgba(255, 255, 255, 0.1);
+
+  &__heading {
+    display: block;
+
+    padding: 16px 0 16px;
+    margin: 0;
+
+    text-align: center;
+    text-transform: uppercase;
+
+    color: rgba(255, 255, 255, 0.9);
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    background-color: rgba(255, 255, 255, 0.1);
+    box-shadow: inset 0px 1px 0 0 rgba(255, 255, 255, 0.2);
+
+    font-family: $avenir;
+    font-size: $font-sz-md;
+    font-weight: bold;
+    line-height: $lh-md;
+  }
+
+  &__form {
+    padding: 16px 22px 14px;
+  }
+
+  &__input {
+    width: 100%;
+    height: 50px;
+    padding: 16px 16px 14px;
+
+    color: $color3;
+    border: none;
+    border-radius: 8px;
+    background-color: rgba(255, 255, 255, 0.3);
+    box-shadow: 0px 1px 0px 0px rgba(255, 255, 255, 0.1),
+                inset 0px 1px 0px 0px rgba(0, 0, 0, 0.15);
+
+    font-family: $avenir;
+    font-size: $font-sz-md;
+
+    &:not(:last-of-type) {
+      margin-bottom: 10px;
+    }
+
+    &::placeholder {
+      text-align: center;
+      text-transform: uppercase;
+
+      opacity: 1;
+      color: $color3;
+
+      font-family: $avenir;
+      font-size: $font-sz-md;
+    }
+
+    &:focus {
+      background-color: rgba(255, 255, 255, 0.6);
+      box-shadow: 0px 1px 0px 0px rgba(255, 255, 255, 0.2),
+                  inset 0px 1px 0px 0px rgba(0, 0, 0, 0.3);
+    }
+
+  }
+
+  &__terms {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    display: flex;
+    flex-flow: row nowrap;
+
+    &-list {
+      margin-top: 10px;
+      margin-bottom: 10px;
+      padding: 5px 15px;
+      width: 100%;
+
+      & p {
+        line-height: 1;
+        margin-bottom: 0;
+
+        letter-spacing: -0.4px;
+
+        color: rgba(255, 255, 255, 0.6);
+
+        font-family: $avenir;
+        font-size: $font-sz-sm;
+        font-weight: 300;
+
+        &:not(:last-child) {
+          margin-bottom: 10px;
+        }
+      }
+    }
+
+    &-checkbox {
+      position: relative;
+
+      width: 58px;
+
+      border-left: 1px solid rgba(255, 255, 255, 0.2);
+
+      input[type="checkbox"] {
+        display: none;
+      }
+
+      &-icon {
+        position: absolute;
+        top: 50%;
+        right: 14px;
+
+        width: 24px;
+        height: 24px;
+
+        cursor: pointer;
+        transform: translateY(-50%);
+
+        &:after {
+          position: absolute;
+          bottom: 0px;
+          left: 0px;
+
+          width: 20px;
+          height: 20px;
+
+          content: '';
+
+          border: 2px solid rgba(255, 255, 255, 0.4);
+          border-radius: 100%;
+
+          input[type="checkbox"]:checked ~ & {
+            display: none;
+          }
+        }
+
+        input[type="checkbox"]:checked ~ & {
+          border: none;
+          background: transparent url('../assets/imgs/icon-signup.png') center no-repeat;
+        }
+      }
+    }
+  }
+
+  &__btn {
+    position: relative;
+
+    width: 100%;
+    padding: 14px 0;
+
+    cursor: pointer;
+    text-align: center;
+    text-transform: uppercase;
+
+    color: white;
+    border: none;
+    border-radius: 10px;
+    background-image:  linear-gradient(180deg, $color5 29%, $color6 90%);
+    box-shadow: 0px 1px 0px 0px rgba(21, 31, 123, 0.2), 0px 0px 32px 7px rgba(225, 103, 144, 0.17), inset 0px 1px 0px 0px rgba(255, 255, 255, 0.1);
+    text-shadow: 0px 1px 2.9px rgba(8, 11, 45, 0.27);
+
+    font-family: $avenir;
+    font-size: $font-sz-lg;
+    font-weight: bold;
+    line-height: $lh-lg;
+
+    &:hover {
+      box-shadow: 0px 1px 0px 0px rgba(21, 31, 123, 0.54),
+                  0px 0px 32px 7px rgba(225, 103, 144, 0.34),
+                  inset 0px 1px 0px 0px rgba(255, 255, 255, 0.4);
+    }
+
+    &:focus {
+      outline: none;
+    }
+
+    &:active {
+      outline: none;
+      background-image:  linear-gradient(180deg, $color6 10%, $color5 70%);
+      box-shadow: 0px -1px 0px 0px rgba(21, 31, 123, 0.54),
+                  0px 0px 32px 7px rgba(225, 103, 144, 0),
+                  inset 0px -1px 0px 0px rgba(255, 255, 255, 0.4);
+    }
+  }
+
+  &__socials-auth {
+    margin-top: 10px;
+  }
+}
+
+.socials-auth {
+  display: flex;
+  flex-flow: column nowrap;
+  width: 225px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0;
+
+  &__divider {
+    position: relative;
+    display: block;
+    text-transform: uppercase;
+    color: rgba(255, 255, 255, 0.4);
+    text-align: center;
+    margin-bottom: 15px;
+
+    &:after {
+      content: '';
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      width: calc(50% - 20px);
+      right: 0;
+      height: 1px;
+      background-color: rgba(255, 255, 255, 0.4);
+    }
+
+    &:before {
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: 0;
+      transform: translateY(-50%);
+      width: calc(50% - 20px);
+      height: 1px;
+      background-color: rgba(255, 255, 255, 0.4);
+    }
+  }
+
+  &__list {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+
+    width: 100%;
+    margin: 0;
+    padding: 0 33px;
+
+    list-style: none;
+  }
+
+  &__icon {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+
+    width: 100%;
+    height: 100%;
+
+    transform: translate(-50%, -50%);
+
+    &--facebook {
+      opacity: .4;
+      background: transparent url('../assets/imgs/icon-facebook.png') center no-repeat;
+      background-position: 6px 50%;
+    }
+    &--google {
+      opacity: .4;
+      background: transparent url('../assets/imgs/icon-google-plus.png') center no-repeat;
+      background-size: 70%;
+    }
+    &--github {
+      opacity: .4;
+      background: transparent url('../assets/imgs/icon-github.png') center no-repeat;
+      background-position: 50% 120%;
+      background-size: 80%;
+    }
+  }
+
+  &__link {
+    position: relative;
+
+    display: block;
+
+    width: 28px;
+    height: 28px;
+
+    border: 2px solid rgba(255, 255, 255, 0.4);
+    border-radius: 100%;
+
+    &:hover {
+      border: 2px solid rgba(255, 255, 255, 0.6);
+
+      & .socials-auth__icon {
+        opacity: .6;
+      }
+    }
+
+    &:focus {
+      outline: none;
+    }
+
+    &:active {
+      border: 2px solid rgba(255, 255, 255, 0.8);
+
+      & .socials-auth__icon {
+        opacity: .8;
+      }
+    }
+  }
+}

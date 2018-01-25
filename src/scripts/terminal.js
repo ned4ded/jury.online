@@ -27,7 +27,7 @@
 
   const sizeCheck = () => {
       if(window.innerWidth >= 992
-      && window.innerHeight >= 650) { 
+      && window.innerHeight >= 650) {
         return true;
       } else {
         console.log('sizeCheck not passed');
@@ -35,13 +35,15 @@
       }
   }
 
+  const elements = () => $('[data-scrollable]');
+
   $( document ).ready(function() {
     $('html').removeClass('no-js');
   }());
 
   $( document ).ready(() => new ScrollixBase(
-    undefined,
+    elements(),
     appearanceHandler,
-    deviceCheck() && browserCheck() && sizeCheck(),
+    deviceCheck() && browserCheck() && sizeCheck() && !!elements().length,
   ));
 }());

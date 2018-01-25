@@ -1,7 +1,5 @@
 class ScrollixBase {
-  constructor( elements = $('[data-scrollable]'), customHandler, makeStructure = true ) {
-    if(!(elements instanceof jQuery)) return;
-
+  constructor( elements, customHandler, makeStructure = true ) {
     this.rootElements = elements;
     this.elements = this.loadElements(this.rootElements, makeStructure);
     this.events = new ScrollixEvents(this, customHandler);
