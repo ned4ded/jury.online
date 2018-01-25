@@ -2882,7 +2882,7 @@ body {
     -webkit-box-shadow: 0px 2px 3px 0 rgba(1, 2, 2, 0.15);
             box-shadow: 0px 2px 3px 0 rgba(1, 2, 2, 0.15); }
   .arbiter-form__group {
-    padding: 30px 20px 10px;
+    padding: 30px 50px 10px;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -2907,7 +2907,7 @@ body {
   .arbiter-form__label {
     display: block;
     text-align: center;
-    margin-bottom: 29px;
+    margin-bottom: 20px;
     font-family: "AvenirNext", "Arial", sans-serif;
     font-size: 21px;
     line-height: 1;
@@ -2948,11 +2948,14 @@ body {
       padding: 14px;
       border: 2px solid #401d58; }
     .arbiter-form__input-text--half {
-      width: 413px; }
+      width: 413px;
+      margin-left: 30px; }
   .arbiter-form__radio {
     display: none; }
     .arbiter-form__radio-heading {
-      text-align: left; }
+      text-align: left;
+      padding-right: 30px;
+      padding-left: 30px; }
   .arbiter-form__btn {
     font-family: "AvenirNext", "Arial", sans-serif;
     font-size: 24px;
@@ -2966,7 +2969,8 @@ body {
     background-image: linear-gradient(to bottom, rgba(134, 98, 172, 0.9) 0%, rgba(89, 70, 136, 0.9));
     -webkit-box-shadow: 0px 2px 8.4px 0.6px rgba(1, 2, 2, 0.35);
             box-shadow: 0px 2px 8.4px 0.6px rgba(1, 2, 2, 0.35);
-    border: none; }
+    border: none;
+    margin-bottom: 40px; }
     .arbiter-form__btn:focus {
       outline: none; }
     .arbiter-form__btn:hover {
