@@ -11,7 +11,7 @@
   background-color: rgba(234,234,234, 0.7);
 
   &__heading {
-    padding-bottom: 40px;
+    padding-bottom: 35px;
   }
 
   &__btn-container {
@@ -30,7 +30,7 @@
     flex-flow: row wrap;
     justify-content: center;
 
-    margin-bottom: 15px;
+    margin-bottom: 13px;
 
     &-item {
       width: 100%;
@@ -38,7 +38,7 @@
       margin-bottom: 15px;
 
       @media(min-width: 992px) {
-        width: 636px;
+        width: 575px;
       }
     }
 

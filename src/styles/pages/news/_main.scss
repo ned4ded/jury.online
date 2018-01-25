@@ -12,25 +12,25 @@
   }
 
   & .heading-1 {
-    margin-bottom: 20px;
+    margin-bottom: 15px;
 
     color: rgba(255, 255, 255, 0.85);
     text-shadow: 0 0 4.8px rgba(0, 0, 0, 0.21);
 
-    font-size: 48.5px;
+    font-size: 46px;
     font-weight: 400;
 
     @media (min-width: 992px) {
-      margin-bottom: 26px;
+      margin-bottom: 24px;
     }
   }
 
   & .jumbo__text {
-    margin-bottom: 53px;
+    margin-bottom: 45px;
 
     color: rgba(255, 255, 255, 0.9);
     text-shadow: 0 0 4.8px rgba(0, 0, 0, 0.21);
 
-    font-size: 23px;
+    font-size: 21px;
   }
 }

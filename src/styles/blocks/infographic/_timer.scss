@@ -1,8 +1,8 @@
 .timer {
-  margin-bottom: 20px;
+  margin-bottom: 18px;
   &__date {
     &s{
-      margin-bottom: 25px;
+      margin-bottom: 22px;
 
       text-align: center;
       letter-spacing: 0.6px;
@@ -12,7 +12,7 @@
       text-shadow: 0px 9px 8px rgba(35, 31, 32, 0.2);
 
       font-family: $avenir;
-      font-size: 24px;
+      font-size: 21px;
     }
   }
 
@@ -48,8 +48,8 @@
       flex-flow: column nowrap;
       justify-content: center;
 
-      min-width: 101px;
-      min-height: 101px;
+      min-width: 90px;
+      min-height: 90px;
       margin-bottom: 0;
       padding: 5px;
 
@@ -67,7 +67,7 @@
       color: #ceafff;
 
       font-family: $avenir;
-      font-size: 20.1px;
+      font-size: 18px;
       line-height: 1;
     }
 
@@ -81,7 +81,7 @@
       color: #f9e8fe;
 
       font-family: $avenir;
-      font-size: 48.3px;
+      font-size: 42px;
       font-weight: 600;
       line-height: 1;
     }

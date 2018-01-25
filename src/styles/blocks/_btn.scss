@@ -3,7 +3,7 @@
 
   display: inline-block;
 
-  padding: 10px 21px;
+  padding: 9px 19px;
 
   transition: box-shadow .1s ease-in;
   letter-spacing: -0.4px;
@@ -32,15 +32,15 @@
   }
 
   @media (min-width: 768px) {
-    padding: 13px 32px;
+    padding: 11px 28px;
 
-    font-size: 15px;
+    font-size: 14px;
   }
 
   @media (min-width: 992px) {
-    padding: 16px 48px;
+    padding: 14px 44px;
 
-    font-size: 17px;
+    font-size: 16px;
   }
 
   &--white {

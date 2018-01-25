@@ -11,10 +11,10 @@
   }
 
   &__heading {
-    margin-bottom: 43px;
+    margin-bottom: 36px;
 
     @media(min-width: 992px) {
-      margin-bottom: 86px;
+      margin-bottom: 75px;
     }
   }
 
@@ -33,7 +33,7 @@
     }
 
     @media(min-width: 992px) {
-      margin-bottom: 30px;
+      margin-bottom: 25px;
     }
   }
 
@@ -48,7 +48,7 @@
     color: #4e4d4d;
 
     font-family: $avenir;
-    font-size: 29.1px;
+    font-size: 28px;
     line-height: 100%;
 
     @media(min-width: 992px) {

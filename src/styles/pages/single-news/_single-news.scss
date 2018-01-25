@@ -12,6 +12,7 @@
 
   &__heading {
     margin-bottom: 30px;
+    font-size: 41px;
 
     @media(min-width: 992px) {
       margin-bottom: 86px;
@@ -22,7 +23,7 @@
     margin: auto;
     max-width: 818px;
     font-family: $avenir;
-    font-size: 30px;
+    font-size: 24px;
     font-weight: 300;
     text-align: justify;
     color: #5e5d5d;

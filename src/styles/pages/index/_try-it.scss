@@ -69,12 +69,13 @@
 
   &__content {
     position: relative;
-    left: 53.87%;
+    left: 48%;
 
     width: 280px;
     height: auto;
 
     @media(min-width: 768px) {
+      left: 52%;
       width: 300px;
     }
 

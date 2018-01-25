@@ -1,26 +1,26 @@
 .features {
   margin-right: -15px;
   margin-left: -15px;
-  padding-top: 70px;
-  padding-bottom: 60px;
+  padding-top: 62px;
+  padding-bottom: 54px;
 
   background-color: #efeaf1;
 
   @media(min-width: 576px) {
-    padding-top: 100px;
+    padding-top: 90px;
   }
 
   @media(min-width: 768px) {
-    padding-top: 140px;
+    padding-top: 125px;
   }
 
   @media(min-width: 992px) {
-    padding-top: 120px;
-    padding-bottom: 100px;
+    padding-top: 108px;
+    padding-bottom: 90px;
   }
 
   &__heading {
-    margin-bottom: 20px;
+    margin-bottom: 18px;
 
     &:after {
       width: 100%;
@@ -28,26 +28,26 @@
     }
 
     @media(min-width: 992px) {
-      margin-bottom: 35px;
+      margin-bottom: 30px;
     }
   }
 
   &__text {
     max-width: 610px;
     margin: auto;
-    margin-bottom: 35px;
+    margin-bottom: 30px;
 
     @media(min-width: 992px) {
-      margin-bottom: 52px;
+      margin-bottom: 48px;
     }
   }
 
   &__item {
     position: relative;
 
-    width: 100%;
-    min-width: 172px;
-    max-width: 274px;
+    width: 90%;
+    min-width: 170px;
+    max-width: 300px;
     margin: auto;
     padding-top: 188px;
 
@@ -132,12 +132,12 @@
     }
 
     &-heading {
-      margin-bottom: 20px;
+      margin-bottom: 18px;
 
       color: #494949;
 
       font-family: $avenir;
-      font-size: 24px;
+      font-size: 21px;
       font-weight: 600;
     }
 
