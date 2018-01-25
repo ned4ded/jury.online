@@ -6,7 +6,7 @@
   padding-bottom: 0;
 
   .footer & {
-    height: 25vh;
+    height: auto;
   }
 
   &__wrapper {
@@ -16,6 +16,11 @@
 
     .main-info--index & {
       top: 45%;
+    }
+
+    .footer & {
+      top: 0;
+      transform: none;
     }
 
     .news-block & {
