@@ -1,6 +1,0 @@
-// (function() {
-//
-//   }
-//
-//   $( document ).scroll(appearanceListner);
-// }());

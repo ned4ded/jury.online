@@ -1,0 +1,29 @@
+const appearanceHandler = (ev, height) => {
+  const animated = $('[data-appearance]');
+  const scrollBottom = () => $( window ).scrollTop() + $( window ).innerHeight();
+  const curHeight = height || (scrollBottom() + 150);
+  
+  animated.each((i, element) => {
+    const e = $( element );
+    if(e.hasClass('appearance') || e.offset().top > (curHeight - 150)) return;
+    e.addClass('appearance');
+
+    const delay = e.data('appearanceDelay') || null;
+    if(e.data('appearanceCustom')) {
+      const [ ...properties ] = e.data('appearanceCustom').split(',');
+      const object = properties.reduce((acc, p) => {
+        const [name, value] = p.split(':');
+        acc[name] = value;
+        return acc;
+      }, {});
+
+      e.delay(delay || 1000).animate(object);
+
+      return;
+    }
+    if(delay) e.attr('style', `animation-delay: ${delay}`);
+
+    const typeName = e.data('appearanceType') || 'default';
+    e.addClass(`appearance--${typeName}`);
+  });
+}

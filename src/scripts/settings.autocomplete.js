@@ -2,6 +2,7 @@
   const $container = $('#a-container');
   const $input = $('#a-input');
   const $suggestions = $('#a-list');
+  if(!$container || !$input || !$suggestions) return;
   const duration = 500;
 
   const windowListner = (ev) => {

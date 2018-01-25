@@ -33,7 +33,7 @@ gulp.task('webserver', ['styles', 'html', 'scripts'], function() {
   });
 
   gulp.watch('./src/styles/**/*.scss', ['styles']);
-  gulp.watch('./src/scripts/*.js', ['scripts']);
+  gulp.watch('./src/scripts/**/*.js', ['scripts']);
   gulp.watch('./src/pages/*.html', ['html']);
 });
 
@@ -52,7 +52,7 @@ gulp.task('styles', function() {
 });
 
 gulp.task('scripts', function() {
-  return gulp.src(__dirname + '/src/scripts/*.js')
+  return gulp.src(__dirname + '/src/scripts/**/*.js')
           .pipe(babel({
             presets: ['env']
           }))
