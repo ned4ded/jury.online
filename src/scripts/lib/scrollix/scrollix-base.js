@@ -16,6 +16,12 @@ class ScrollixBase {
     return $( window ).scrollTop();
   }
 
+  getScreenSize() {
+    const width = window.innerWidth;
+    const height = window.innerHeight;
+    return { width, height };
+  }
+
   getScrollBottom() {
     return this.getScrollTop() + $( window ).innerHeight();
   }

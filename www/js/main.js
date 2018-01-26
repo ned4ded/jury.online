@@ -246,6 +246,13 @@ var ScrollixBase = function () {
       return $(window).scrollTop();
     }
   }, {
+    key: 'getScreenSize',
+    value: function getScreenSize() {
+      var width = window.innerWidth;
+      var height = window.innerHeight;
+      return { width: width, height: height };
+    }
+  }, {
     key: 'getScrollBottom',
     value: function getScrollBottom() {
       return this.getScrollTop() + $(window).innerHeight();
@@ -445,6 +452,7 @@ var ScrollixEvents = function () {
     $(window).scroll(function () {
       return _this2.scrollHandler();
     });
+    this.setResizeListner();
     this.setWheelListner();
     this.setButtonsListner();
   }
@@ -459,23 +467,38 @@ var ScrollixEvents = function () {
       return;
     }
   }, {
-    key: 'setWheelListner',
-    value: function setWheelListner() {
+    key: 'setResizeListner',
+    value: function setResizeListner() {
       var _this3 = this;
 
-      var _this = this;
+      $(window).bind('resize', function () {
+        var screen = _this3.base.getScreenSize();
+        _this3.clean();
+        if (screen.width < 992 || screen.height < 650) return;
+        _this3.base.updateElements();
+        _this3.base.setScrollProperties();
+        _this3.base.setNextIndex();
+        _this3.setWheelListner();
+        _this3.setButtonsListner();
+      });
+    }
+  }, {
+    key: 'setWheelListner',
+    value: function setWheelListner() {
+      var _this4 = this;
+
       $(window).bind('wheel', function (e) {
-        return _this3.wheelHandler(e);
+        return _this4.wheelHandler(e);
       });
     }
   }, {
     key: 'setButtonsListner',
     value: function setButtonsListner() {
-      var _this4 = this;
+      var _this5 = this;
 
       var _this = this;
       $(window).bind('keydown', function (e) {
-        return _this4.buttonsHandler(e);
+        return _this5.buttonsHandler(e);
       });
     }
   }, {

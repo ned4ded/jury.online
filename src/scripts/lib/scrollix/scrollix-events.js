@@ -8,6 +8,7 @@ class ScrollixEvents {
     const _this = this;
 
     $( window ).scroll(() => this.scrollHandler());
+    this.setResizeListner();
     this.setWheelListner();
     this.setButtonsListner();
   }
@@ -20,8 +21,20 @@ class ScrollixEvents {
     return;
   }
 
+  setResizeListner() {
+    $( window ).bind('resize', () => {
+        const screen = this.base.getScreenSize();
+        this.clean();
+        if(screen.width < 992 || screen.height < 650) return;
+        this.base.updateElements();
+        this.base.setScrollProperties();
+        this.base.setNextIndex();
+        this.setWheelListner();
+        this.setButtonsListner();
+      });
+  }
+
   setWheelListner() {
-    const _this = this;
     $( window ).bind('wheel', (e) => this.wheelHandler(e));
   }
 
