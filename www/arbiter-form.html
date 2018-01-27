@@ -141,15 +141,15 @@
                       <label class="arbiter-form__label" for="residence">Country of residence*</label>
                       <input class="arbiter-form__input-text" type="text" id="residence">
                     </div>
-                    <div class="arbiter-form__item p-0 mb-5">
+                    <div class="arbiter-form__item arbiter-form__item--multi">
                       <label class="arbiter-form__label  arbiter-form__radio-heading">Which area of expertise do you think you are qualified to arbiter?*</label>
-                      <div class="container px-4">
+                      <div class="arbiter-form__input-container">
                         <div class="row align-items-center">
-                          <div class="arbiter-form__item arbiter-form__item--radio col-6 col-lg-3">
+                          <div class="arbiter-form__item arbiter-form__item--radio col-12 col-lg-3">
                             <input id="area-legal" type="radio" class="arbiter-form__radio" name="area" value="legal" checked>
                             <label for="area-legal" class="arbiter-form__label arbiter-form__label--radio"><span class="arbiter-form__label-icon"></span>Legal</label>
                           </div>
-                          <div class="arbiter-form__item arbiter-form__item--radio col-6 col-lg-5">
+                          <div class="arbiter-form__item arbiter-form__item--radio col-12 col-lg-5">
                             <input id="area-it" type="radio" class="arbiter-form__radio" name="area" value="it">
                             <label for="area-it" class="arbiter-form__label arbiter-form__label--radio"><span class="arbiter-form__label-icon"></span>IT</label>
                           </div>
@@ -157,26 +157,26 @@
                             <input id="area-finance" type="radio" class="arbiter-form__radio" name="area" value="finance">
                             <label for="area-finance" class="arbiter-form__label arbiter-form__label--radio"><span class="arbiter-form__label-icon"></span>Finance</label>
                           </div>
-                          <div class="arbiter-form__item arbiter-form__item--radio col-6 col-lg-3">
+                          <div class="arbiter-form__item arbiter-form__item--radio arbiter-form__item--other col-12 col-lg-3">
                             <input id="area-other" type="radio" class="arbiter-form__radio" name="area" value="other">
                             <label for="area-other" class="arbiter-form__label arbiter-form__label--radio"><span class="arbiter-form__label-icon"></span>Other: </label>
                           </div>
-                          <div class="arbiter-form__item arbiter-form__item--radio col-6 col-lg-5">
+                          <div class="arbiter-form__item arbiter-form__item--radio col-12 col-lg-5">
                             <input type="text" class="arbiter-form__input-text">
                           </div>
                         </div>
                       </div>
 
                     </div>
-                    <div class="arbiter-form__item p-0 mb-5">
+                    <div class="arbiter-form__item arbiter-form__item--multi">
                       <p class="arbiter-form__label arbiter-form__radio-heading">Level of education?</p>
-                      <div class="container px-4">
+                      <div class="arbiter-form__input-container">
                         <div class="row align-items-center">
-                          <div class="arbiter-form__item arbiter-form__item--radio col-6 col-lg-3">
+                          <div class="arbiter-form__item arbiter-form__item--radio col-12 col-lg-3">
                             <input id="edu-ba" type="radio" class="arbiter-form__radio" name="edu" value="ba" checked>
                             <label for="edu-ba" class="arbiter-form__label arbiter-form__label--radio"><span class="arbiter-form__label-icon"></span>BA</label>
                           </div>
-                          <div class="arbiter-form__item arbiter-form__item--radio col-6 col-lg-5">
+                          <div class="arbiter-form__item arbiter-form__item--radio col-12 col-lg-5">
                             <input id="edu-ms" type="radio" class="arbiter-form__radio" name="edu" value="ms">
                             <label for="edu-ms" class="arbiter-form__label arbiter-form__label--radio"><span class="arbiter-form__label-icon"></span>MS</label>
                           </div>
@@ -184,11 +184,11 @@
                             <input id="edu-phd" type="radio" class="arbiter-form__radio" name="edu" value="phd">
                             <label for="edu-phd" class="arbiter-form__label arbiter-form__label--radio"><span class="arbiter-form__label-icon"></span>PhD</label>
                           </div>
-                          <div class="arbiter-form__item arbiter-form__item--radio col-6 col-lg-3">
+                          <div class="arbiter-form__item arbiter-form__item--radio arbiter-form__item--other col-12 col-lg-3">
                             <input id="edu-other" type="radio" class="arbiter-form__radio" name="edu" value="other">
                             <label for="edu-other" class="arbiter-form__label arbiter-form__label--radio"><span class="arbiter-form__label-icon"></span>Other:</label>
                           </div>
-                          <div class="arbiter-form__item arbiter-form__item--radio col-6 col-lg-5">
+                          <div class="arbiter-form__item arbiter-form__item--radio col-12 col-lg-5">
                             <input type="text" class="arbiter-form__input-text">
                           </div>
                         </div>
@@ -203,9 +203,9 @@
                       <label class="arbiter-form__label" for="workplace">Place of work*</label>
                       <input class="arbiter-form__input-text" type="text" id="workplace">
                     </div>
-                    <div class="arbiter-form__item p-0 mb-5">
-                      <p class="arbiter-form__label arbiter-form__radio-heading">Verification of proficiency (workshops/certificates/additional studies)*</p>
-                      <div class="container px-4">
+                    <div class="arbiter-form__item arbiter-form__item--browser">
+                      <p class="arbiter-form__label">Verification of proficiency (workshops/certificates/additional studies)*</p>
+                      <div class="arbiter-form__input-container">
                         <div class="row align-items-start">
                           <ul class="arbiter-form__docs col-12 col-lg-9">
                             <li>CV</li>
@@ -220,20 +220,20 @@
                       </div>
 
                     </div>
-                    <div class="arbiter-form__item p-0 mb-5">
+                    <div class="arbiter-form__item arbiter-form__item--text">
                       <label class="arbiter-form__label arbiter-form__radio-heading" for="projects">Which other ICO projects have you participated in? <br>
                         Please include the links to the projects</label>
                       <input class="arbiter-form__input-text arbiter-form__input-text--half" type="text" id="projects">
                     </div>
-                    <div class="arbiter-form__item p-0 mb-5">
+                    <div class="arbiter-form__item arbiter-form__item--text">
                       <label class="arbiter-form__label arbiter-form__radio-heading" for="advisor">Have you been an advisor to any project before? If so, please specify</label>
                       <input class="arbiter-form__input-text arbiter-form__input-text--half" type="text" id="advisor">
                     </div>
-                    <div class="arbiter-form__item p-0 mb-5">
+                    <div class="arbiter-form__item arbiter-form__item--text">
                       <label class="arbiter-form__label arbiter-form__radio-heading" for="purpose">Why do you want to become an arbiter on Jury.Online?</label>
                       <input class="arbiter-form__input-text arbiter-form__input-text--half" type="text" id="purpose">
                     </div>
-                    <div class="arbiter-form__item p-0 mt-5 mb-0 align-items-center">
+                    <div class="arbiter-form__item  arbiter-form__item--submit align-items-center">
                       <button type="submit" class="arbiter-form__btn">send request</button>
                     </div>
                   </div>

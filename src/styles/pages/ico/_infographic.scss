@@ -17,7 +17,11 @@
     &__form:before,
     &__form:after,
     &__soft-cap,
-    &__reached:after { font-size: 24px;}
+    &__reached:after {
+      @media(min-width: 768px) {
+        font-size: 24px;
+      }
+    }
 
     &__soft-cap {
       width: 100px;

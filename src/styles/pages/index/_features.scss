@@ -22,9 +22,13 @@
   &__heading {
     margin-bottom: 18px;
 
-    &:after {
+    &[data-text-abaft]:after {
       width: 100%;
       max-width: 750px;
+
+      @media(max-width:767px) {
+        font-size: 58px;
+      }
     }
 
     @media(min-width: 992px) {

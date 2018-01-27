@@ -3,6 +3,7 @@ class ScrollixBase {
     this.rootElements = elements;
     this.elements = this.loadElements(this.rootElements, makeStructure);
     this.events = new ScrollixEvents(this, customHandler);
+    this.hasStructure = makeStructure;
     if(!makeStructure) this.events.clean();
     this.setBreakpoints();
     this.scrollTop = this.getScrollTop();

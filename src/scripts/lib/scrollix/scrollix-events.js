@@ -25,7 +25,7 @@ class ScrollixEvents {
     $( window ).bind('resize', () => {
         const screen = this.base.getScreenSize();
         this.clean();
-        if(screen.width < 992 || screen.height < 650) return;
+        if((screen.width < 992 || screen.height < 650) || !this.base.hasStructure) return;
         this.base.updateElements();
         this.base.setScrollProperties();
         this.base.setNextIndex();

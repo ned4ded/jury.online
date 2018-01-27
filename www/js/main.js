@@ -232,6 +232,7 @@ var ScrollixBase = function () {
     this.rootElements = elements;
     this.elements = this.loadElements(this.rootElements, makeStructure);
     this.events = new ScrollixEvents(this, customHandler);
+    this.hasStructure = makeStructure;
     if (!makeStructure) this.events.clean();
     this.setBreakpoints();
     this.scrollTop = this.getScrollTop();
@@ -474,7 +475,7 @@ var ScrollixEvents = function () {
       $(window).bind('resize', function () {
         var screen = _this3.base.getScreenSize();
         _this3.clean();
-        if (screen.width < 992 || screen.height < 650) return;
+        if (screen.width < 992 || screen.height < 650 || !_this3.base.hasStructure) return;
         _this3.base.updateElements();
         _this3.base.setScrollProperties();
         _this3.base.setNextIndex();

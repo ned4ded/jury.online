@@ -370,8 +370,7 @@ body {
       font-size: 16px; } }
   .btn--white {
     min-width: 220px;
-    margin-right: 14px;
-    margin-left: 14px;
+    margin: 10px 14px;
     padding-right: 2px;
     padding-left: 20px;
     color: #56387b;
@@ -832,7 +831,7 @@ body {
     font-family: "AvenirNext", "Arial", sans-serif;
     font-weight: 300;
     line-height: 100%;
-    font-size: 12px;
+    font-size: 14px;
     text-align: left;
     margin-bottom: 18px; }
   .news-card__text {
@@ -840,7 +839,7 @@ body {
     line-height: 1.3;
     text-align: left;
     margin-bottom: 16px;
-    font-size: 14px;
+    font-size: 16px;
     font-weight: 300;
     text-align: justify;
     color: #6a5776;
@@ -874,29 +873,6 @@ body {
       text-decoration: underline; }
     .news-card__btn:active {
       opacity: .8; }
-  .news .news-card {
-    opacity: 1;
-    margin: 0;
-    width: 100%;
-    margin-bottom: 36px; }
-    @media (min-width: 992px) {
-      .news .news-card {
-        width: 45%; } }
-    .news .news-card__image {
-      max-height: 275px;
-      margin-bottom: 40px; }
-    .news .news-card__name {
-      font-size: 25px; }
-    .news .news-card__type {
-      font-size: 12px; }
-    .news .news-card__text {
-      font-size: 12px;
-      margin-bottom: 7px; }
-    .news .news-card__btn {
-      font-size: 12px; }
-      .news .news-card__btn-icon {
-        width: 12px;
-        height: 11px; }
 
 .infographic {
   width: 90%;
@@ -1982,9 +1958,12 @@ body {
       padding-bottom: 90px; } }
   .features__heading {
     margin-bottom: 18px; }
-    .features__heading:after {
+    .features__heading[data-text-abaft]:after {
       width: 100%;
       max-width: 750px; }
+      @media (max-width: 767px) {
+        .features__heading[data-text-abaft]:after {
+          font-size: 58px; } }
     @media (min-width: 992px) {
       .features__heading {
         margin-bottom: 30px; } }
@@ -2811,6 +2790,30 @@ body {
         -ms-flex-pack: center;
             justify-content: center; }
 
+.news .news-card {
+  opacity: 1;
+  margin: 0;
+  width: 100%;
+  margin-bottom: 36px; }
+  @media (min-width: 992px) {
+    .news .news-card {
+      width: 45%; } }
+  .news .news-card__image {
+    max-height: 275px;
+    margin-bottom: 40px; }
+  .news .news-card__name {
+    font-size: 25px; }
+  .news .news-card__type {
+    font-size: 14px; }
+  .news .news-card__text {
+    font-size: 16px;
+    margin-bottom: 7px; }
+  .news .news-card__btn {
+    font-size: 14px; }
+    .news .news-card__btn-icon {
+      width: 12px;
+      height: 11px; }
+
 .main-info--arbiter-form {
   padding-top: 110px;
   background: transparent url("../assets/imgs/arbiter-form-main-bg.jpg") no-repeat;
@@ -2905,6 +2908,20 @@ body {
     @media (min-width: 992px) {
       .arbiter-form__item--half {
         width: 50%; } }
+    .arbiter-form__item--multi .arbiter-form__label {
+      padding: 0; }
+      @media (max-width: 991px) {
+        .arbiter-form__item--multi .arbiter-form__label {
+          text-align: justify; } }
+    .arbiter-form__item--other {
+      margin-bottom: 5px; }
+    .arbiter-form__item--browser .arbiter-form__label {
+      text-align: left; }
+    .arbiter-form__item--text {
+      padding: 0; }
+      @media (max-width: 767px) {
+        .arbiter-form__item--text > .arbiter-form__label {
+          padding: 0; } }
   .arbiter-form__label {
     display: block;
     text-align: center;
@@ -2935,6 +2952,9 @@ body {
       background-image: linear-gradient(to bottom, #8662ac 0%, #594688);
       -webkit-box-shadow: 0px 2px 3px 0 rgba(1, 2, 2, 0.15);
               box-shadow: 0px 2px 3px 0 rgba(1, 2, 2, 0.15); }
+  .arbiter-form__input-container {
+    margin-left: -15px;
+    margin-right: -15px; }
   .arbiter-form__input-text {
     font-size: 30px;
     line-height: 1;
@@ -2949,8 +2969,11 @@ body {
       padding: 14px;
       border: 2px solid #401d58; }
     .arbiter-form__input-text--half {
-      width: 413px;
-      margin-left: 30px; }
+      width: 100%;
+      max-width: 413px; }
+      @media (min-width: 768px) {
+        .arbiter-form__input-text--half {
+          margin-left: 30px; } }
   .arbiter-form__radio {
     display: none; }
     .arbiter-form__radio-heading {
@@ -3068,8 +3091,9 @@ body {
       font-size: 36px;
       letter-spacing: 0.9px;
       margin-bottom: 20px; }
-  .main-info--ico .infographic .fees-diagram__form:before, .main-info--ico .infographic .fees-diagram__form:after, .main-info--ico .infographic .fees-diagram__soft-cap, .main-info--ico .infographic .fees-diagram__reached:after {
-    font-size: 24px; }
+  @media (min-width: 768px) {
+    .main-info--ico .infographic .fees-diagram__form:before, .main-info--ico .infographic .fees-diagram__form:after, .main-info--ico .infographic .fees-diagram__soft-cap, .main-info--ico .infographic .fees-diagram__reached:after {
+      font-size: 24px; } }
   .main-info--ico .infographic .fees-diagram__soft-cap {
     width: 100px; }
 

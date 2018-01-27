@@ -83,7 +83,7 @@
     font-family: $avenir;
     font-weight: 300;
     line-height: 100%;
-    font-size: 12px;
+    font-size: 14px;
     text-align: left;
     margin-bottom: 18px;
 
@@ -95,7 +95,7 @@
     text-align: left;
     margin-bottom: 16px;
 
-    font-size: 14px;
+    font-size: 16px;
     font-weight: 300;
     text-align: justify;
     color: #6a5776;
@@ -137,44 +137,6 @@
 
     &:active {
       opacity: .8;
-    }
-  }
-
-  .news & {
-    opacity: 1;
-    margin: 0;
-    width: 100%;
-    margin-bottom: 36px;
-
-    @media(min-width: 992px) {
-      width: 45%;
-    }
-
-    &__image {
-      max-height: 275px;
-      margin-bottom: 40px;
-    }
-
-    &__name {
-      font-size: 25px;
-    }
-
-    &__type {
-      font-size: 12px;
-    }
-
-    &__text {
-      font-size: 12px;
-      margin-bottom: 7px;
-    }
-
-    &__btn {
-      font-size: 12px;
-
-      &-icon {
-        width: 12px;
-        height: 11px;
-      }
     }
   }
 }
