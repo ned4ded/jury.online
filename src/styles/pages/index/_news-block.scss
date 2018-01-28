@@ -5,10 +5,15 @@
   overflow: hidden;
 
   margin: 0 -15px;
-  padding-top: 210px;
+  padding-top: 65px;
   padding-bottom: 30px;
 
   background-color: rgba(234,234,234, 0.7);
+
+  @media(min-width: 992px) {
+    padding-top: 210px;
+
+  }
 
   &__heading {
     padding-bottom: 35px;

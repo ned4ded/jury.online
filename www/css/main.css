@@ -1584,9 +1584,12 @@ body {
   z-index: 1;
   overflow: hidden;
   margin: 0 -15px;
-  padding-top: 210px;
+  padding-top: 65px;
   padding-bottom: 30px;
   background-color: rgba(234, 234, 234, 0.7); }
+  @media (min-width: 992px) {
+    .news-block {
+      padding-top: 210px; } }
   .news-block__heading {
     padding-bottom: 35px; }
   .news-block__btn-container {
