@@ -50,7 +50,13 @@
                       <a href="ico.html" class="header__link">ICO</a>
                     </li>
                     <li class="header__menu-item">
+                      <a href="index.html#documents" class="header__link">Documents</a>
+                    </li>
+                    <li class="header__menu-item">
                       <a href="faq.html" class="header__link">FAQ</a>
+                    </li>
+                    <li class="header__menu-item">
+                      <a href="#contacts" class="header__link">Contacts</a>
                     </li>
                     <li class="header__menu-item">
                       <div class="dropdown header__dropdown">
@@ -137,43 +143,107 @@
           <div class="row">
             <div class="col-12">
               <div class="container">
-                <div class="row">
-                  <div class="col-12 col-md-6 col-lg-8 footer__block">
-                    <div class="footer__menu row">
-                      <!-- /** WITH CATEGORY MARKUP **/
-                        {{#each category }}
-                          <div class="col-3 col-md-6 col-lg-3">
-                            <h2 class="footer__heading">{{ category.name }}</h2>
-                            <ul class="footer__menu">
-                              {{#each categoryItem}}
-                              <li><a href="{{categoryItem.link}}" class="footer__link">{{categoryItem.name}}</a></li>
-                              {{/each}}
-                            </ul>
-                          </div>
-                        {{/each}}
-                      -->
-                      <li class="col-3 col-md-6 col-lg-2">
-                          <a href="news.html" class="footer__link footer__link--no-category active">News</a>
+                <!-- /** WITH CATEGORY MARKUP **/
+                  .row
+                    .col-12 col-md-6 col-lg-8 footer__block
+                    {{#each category }}
+                      <div class="col-3 col-md-6 col-lg-3">
+                        <h2 class="footer__heading">{{ category.name }}</h2>
+                        <ul class="footer__menu">
+                          {{#each categoryItem}}
+                          <li><a href="{{categoryItem.link}}" class="footer__link">{{categoryItem.name}}</a></li>
+                          {{/each}}
+                        </ul>
+                      </div>
+                    {{/each}}
+                    .col-12 col-md-6 col-lg-4 footer__block
+                      .footer__heading
+                      form
+                      .footer__socials
+                    .col-12 footer__block
+                -->
+                <div class="row justify-content-between">
+                  <div class="col-12 col-md-7 col-lg-6 col-xl-7 footer__block">
+                    <div class="footer__menu footer__menu--no-category">
+                      <li class="text-left">
+                        <a href="news.html" class="footer__link footer__link--no-category active">News</a>
                       </li>
-                      <li class="col-6 col-md-6 col-lg-2">
-                          <a href="partners.html" class="text-center text-md-left footer__link footer__link--no-category">Partners</a>
+                      <li class="text-center">
+                        <a href="partners.html" class="footer__link footer__link--no-category">Partners</a>
                       </li>
-                      <li class="col-3 col-md-6 col-lg-2">
-                          <a href="arbiters.html" class="text-right text-md-left footer__link footer__link--no-category">Arbiters</a>
+                      <li class="text-right">
+                        <a href="arbiters.html" class="footer__link footer__link--no-category">Arbiters</a>
                       </li>
-                      <li class="col-3 col-md-6 col-lg-1">
-                          <a href="ico.html" class="footer__link footer__link--no-category">ICO</a>
+                      <li class="text-left">
+                        <a href="ico.html" class="footer__link footer__link--no-category">ICO</a>
                       </li>
-                      <li class="col-6 col-md-6 col-lg-3">
-                          <a href="arbiter-form.html" class="text-center text-md-left text-lg-center footer__link footer__link--no-category">Become an arbiter</a>
+                      <li class="text-center">
+                        <a href="arbiter-form.html" class="text-md-left text-lg-center footer__link footer__link--no-category">Become an arbiter</a>
                       </li>
-                      <li class="col-3 col-md-6 col-lg-2">
-                          <a href="faq.html" class="text-right text-md-left footer__link footer__link--no-category">FAQ</a>
+                      <li class="text-right">
+                        <a href="faq.html" class="footer__link footer__link--no-category">FAQ</a>
                       </li>
                     </div>
+                    <ul class="footer__social footer__social--no-category social">
+                      <li>
+                        <a href="//www.facebook.com/Jury.Online.Page" target="_blank" class="social__links  social__links--facebook" title="Jury.Online Facebook page">
+                          <i class="fa fa-facebook" aria-hidden="true"></i>
+                        </a>
+                      </li>
+                      <li>
+                        <a href="//t.me/juryonline_community" target="_blank" href="#" class="social__links" title="Jury.Online Telegram-chat">
+                          <i class="fa fa-telegram" aria-hidden="true"></i>
+                        </a>
+                      </li>
+                      <li>
+                        <a href="mailto:contact@jury.online" target="_blank" class="social__links" title="Jury.Online Email">
+                          <i class="fa fa-envelope-o" aria-hidden="true"></i>
+                        </a>
+                      </li>
+                      <li>
+                        <a href="//twitter.com/jury2beonline" target="_blank" class="social__links" title="Jury.Online Twitter">
+                          <i class="fa fa-twitter" aria-hidden="true"></i>
+                        </a>
+                      </li>
+                      <li>
+                        <a href="//medium.com/@Jury.Online" target="_blank" class="social__links" title="Jury.Online Medium">
+                          <i class="fa fa-medium" aria-hidden="true"></i>
+                        </a>
+                      </li>
+                      <li>
+                        <a href="//github.com/juryonline" target="_blank" class="social__links" title="Jury.Online Github">
+                          <i class="fa fa-github-alt" aria-hidden="true"></i>
+                        </a>
+                      </li>
+                      <li>
+                        <a href="//juryonline.slack.com/" target="_blank" class="social__links" title="Jury.Online Slack channel">
+                          <i class="fa fa-slack" aria-hidden="true"></i>
+                        </a>
+                      </li>
+                      <li>
+                        <a href="//steemit.com/@jury.online" target="_blank" class="social__links social__links--steemit" title="Jury.Online Steemit">
+                          <i class="fa" aria-hidden="true"></i>
+                        </a>
+                      </li>
+                      <li>
+                        <a href="//bitcointalk.org/index.php?topic=2273820" target="_blank" class="social__links" title="Jury.Online BitCoinTalk forum">
+                          <i class="fa fa-btc" aria-hidden="true"></i>
+                        </a>
+                      </li>
+                      <li>
+                        <a href="//youtube.com/channel/UChTfKXvkcJGUYuBgkTWtU-g" target="_blank" class="social__links" title="Jury.Online Youtube channel">
+                          <i class="fa fa-youtube-play" aria-hidden="true"></i>
+                        </a>
+                      </li>
+                      <li>
+                        <a href="//instagram.com/Jury.Online" target="_blank" class="social__links" title="Jury.Online instagram">
+                          <i class="fa fa-instagram" aria-hidden="true"></i>
+                        </a>
+                      </li>
+                    </ul>
                   </div>
-                  <div class="col-12 col-md-6 col-lg-4 footer__block">
-                    <h2 class="footer__heading"><label for="subscribe">Stay in touch with us</label></h2>
+                  <div class="col-12 col-md-5 col-lg-6 col-xl-4 footer__block">
+                    <h2 class="footer__heading footer__heading--no-category"><label for="subscribe">Stay in touch with us</label></h2>
                     <form action="#" method="POST">
                       <div class="social__wrapper">
                           <input id="subscribe" class="social__input" type="email" placeholder="Weekly newsletter">
@@ -182,28 +252,6 @@
                           </button>
                       </div>
                     </form>
-                    <ul class="footer__social social">
-                      <li>
-                        <a href="#" class="social__links">
-                          <i class="fa fa-twitter" aria-hidden="true"></i>
-                        </a>
-                      </li>
-                      <li>
-                        <a href="#" class="social__links  social__links--facebook">
-                          <i class="fa fa-facebook" aria-hidden="true"></i>
-                        </a>
-                      </li>
-                      <li>
-                        <a href="#" class="social__links">
-                          <i class="fa fa-google-plus" aria-hidden="true"></i>
-                        </a>
-                      </li>
-                      <li>
-                        <a href="#" class="social__links">
-                          <i class="fa fa-instagram" aria-hidden="true"></i>
-                        </a>
-                      </li>
-                    </ul>
                   </div>
                   <div class="col-12 footer__block">
                     <div class="copyright">

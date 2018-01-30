@@ -5,22 +5,23 @@
   background: #343141 linear-gradient(to right, #343141, #564f63);
 
   &__block {
-    &:not(:last-of-type) {
-      margin-bottom: 30px;
-
-      @media (min-width: 768px) {
-        margin-bottom: 40px;
-      }
-
-      @media (min-width: 1200px) {
-        margin-bottom: 105px;
-      }
-    }
+    // Uncomment after making categories
+    // &:not(:last-of-type) {
+    //   margin-bottom: 30px;
+    //
+    //   @media (min-width: 768px) {
+    //     margin-bottom: 40px;
+    //   }
+    //
+    //   @media (min-width: 1200px) {
+    //     margin-bottom: 105px;
+    //   }
+    // }
+    margin-bottom: 20px;
   }
 
   &__heading {
     margin-bottom: 9px;
-    margin-top: 2px;
 
     text-transform: uppercase;
 
@@ -30,13 +31,41 @@
     font-size: 13px;
     font-weight: 600;
     line-height: 100%;
+
+    &--no-category {
+      margin-top: 8px;
+    }
   }
 
   &__menu {
-    // margin-bottom: 30px; Uncomment with category markup
+    display: flex;
+    flex-flow: row wrap;
+    margin-bottom: 30px;
     padding: 0;
 
     list-style: none;
+
+    @media(min-width: 992px) {
+      display: block;
+    }
+
+    &--no-category {
+      justify-content: center;
+      margin-bottom: 15px;
+
+      & li {
+        width: 33%;
+
+        @media(min-width: 992px) {
+          display: inline-block;
+          width: auto;
+
+          &:not(:first-of-type) {
+            margin-left: 15px;
+          }
+        }
+      }
+    }
   }
 
   &__link {
@@ -69,9 +98,7 @@
     }
 
     &--no-category {
-      display: block;
       line-height: 1;
-      margin-bottom: 20px;
 
       &.active {
         color: rgba(255, 255, 255, 0.8);
@@ -100,6 +127,18 @@
   padding: 0;
 
   list-style: none;
+
+  &.footer__social {
+    flex-flow: wrap;
+    justify-content: center;
+    width: 100%;
+
+    margin: auto;
+
+    @media (min-width: 1200px) {
+      justify-content: flex-start;
+    }
+  }
 
   &__btn {
     position: absolute;
@@ -226,27 +265,44 @@
       padding-right: 2px;
     }
 
+    &--steemit {
+      background: transparent url('../assets/imgs/icon-steemit.png') no-repeat center;
+    }
+
     &:hover {
       text-decoration: none;
+      color: white;
 
-      color: rgba(255,255,255, 0.7);
-      border-color: rgba(255,255,255, 0.7);
+      opacity: .7;
+
     }
 
     &:focus {
       text-decoration: none;
 
-      color: rgba(255,255,255, 0.7);
-      border-color: rgba(255,255,255, 0.7);
+      opacity: .7;
+      color: white;
       outline: none;
     }
 
     &:active {
-      color: rgba(255,255,255, 0.5);
-      border-color: rgba(255,255,255, 0.5);
+      color: white;
+
+      opacity: .5;
+    }
+
+    .footer__social--no-category & {
+      margin-right: 5px;
+      margin-left: 5px;
+      margin-bottom: 10px;
+    }
+
+    .footer__social--no-category li:first-child & {
+      margin-left: 0;
     }
   }
 }
+
 
 .copyright {
   display: flex;
