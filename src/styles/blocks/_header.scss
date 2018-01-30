@@ -70,7 +70,7 @@
 
     &-item {
       @media (min-width: 1200px) {
-        margin-left: 20px;
+        margin-left: 15px;
       }
     }
 
@@ -79,11 +79,7 @@
 
       @media (min-width: 1200px) {
         margin-top: 0;
-        margin-left: 30px;
-      }
-
-      @media (min-width: 1366px) {
-        margin-left: 45px;
+        margin-left: 20px;
       }
     }
   }
@@ -129,7 +125,7 @@
 
     @media (min-width: 1200px) {
       display: inline-block;
-      margin: 0 10px;
+      margin: 0 5px;
       padding: 0 0;
     }
 

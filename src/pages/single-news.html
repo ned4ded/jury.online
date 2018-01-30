@@ -28,23 +28,26 @@
                   </span>
                 </button>
                 <div class="navbar-brand">
-                  <a class="logo header__logo" href="/">
+                  <a href="index.html" class="logo header__logo">
                     <img src="assets/imgs/logo-navbar-white.png" alt="logotype" width="207" height="38">
                   </a>
                 </div>
                 <div id="headerDropdown" class="collapse navbar-collapse">
                   <ul class="header__menu">
                     <li class="header__menu-item">
-                      <a href="#" class="header__link active">News</a>
+                      <a href="news.html" class="header__link active">News</a>
                     </li>
                     <li class="header__menu-item">
-                      <a href="#" class="header__link">Become an arbiter</a>
+                      <a href="partners.html" class="header__link">Partners</a>
                     </li>
                     <li class="header__menu-item">
-                      <a href="/ico.html" class="header__link">ICO</a>
+                      <a href="arbiter-form.html" class="header__link">Become an arbiter</a>
                     </li>
                     <li class="header__menu-item">
-                      <a href="#" class="header__link">Documents</a>
+                      <a href="arbiters.html" class="header__link">Arbiters</a>
+                    </li>
+                    <li class="header__menu-item">
+                      <a href="ico.html" class="header__link">ICO</a>
                     </li>
                     <li class="header__menu-item">
                       <a href="faq.html" class="header__link">FAQ</a>
@@ -90,49 +93,43 @@
             </div>
           </div>
         </main>
-        <footer class="container-fluid footer">
+        <footer id="contacts" class="container-fluid footer">
           <div class="row">
             <div class="col-12">
               <div class="container">
                 <div class="row">
                   <div class="col-12 col-md-6 col-lg-8 footer__block">
-                    <div class="row">
-                      <div class="col-3 col-md-6 col-lg-3">
-                        <h2 class="footer__heading">Key Features</h2>
-                        <ul class="footer__menu">
-                          <li><span class="footer__link">Accessibility</span></li>
-                          <li><span class="footer__link">Compatbility</span></li>
-                          <li><span class="footer__link">Flexibility</span></li>
-                          <li><span class="footer__link">Safety & Security</span></li>
-                        </ul>
-                      </div>
-                      <div class="col-3 col-md-6 col-lg-3">
-                        <h2 class="footer__heading">Support</h2>
-                        <ul class="footer__menu">
-                          <li><a href="#" class="footer__link">Documentation</a></li>
-                          <li><a href="#" class="footer__link">FAQs</a></li>
-                          <li><a href="#" class="footer__link">Live Chat</a></li>
-                          <li><a href="#" class="footer__link">Contact Us</a></li>
-                        </ul>
-                      </div>
-                      <div class="col-3 col-md-6 col-lg-3">
-                        <h2 class="footer__heading">News & Resources</h2>
-                        <ul class="footer__menu">
-                          <li><a href="#" class="footer__link">Latest News</a></li>
-                          <li><a href="#" class="footer__link">Compatbility</a></li>
-                          <li><a href="#" class="footer__link">Flexibility</a></li>
-                          <li><a href="#" class="footer__link">Safety & Security</a></li>
-                        </ul>
-                      </div>
-                      <div class="col-3 col-md-6 col-lg-3">
-                        <h2 class="footer__heading">Developers</h2>
-                        <ul class="footer__menu">
-                          <li><a href="#" class="footer__link">Suada API</a></li>
-                          <li><a href="#" class="footer__link">Tutorials</a></li>
-                          <li><a href="#" class="footer__link">Dev Forum</a></li>
-                          <li><a href="#" class="footer__link">Open Source</a></li>
-                        </ul>
-                      </div>
+                    <div class="footer__menu row">
+                      <!-- /** WITH CATEGORY MARKUP **/
+                        {{#each category }}
+                          <div class="col-3 col-md-6 col-lg-3">
+                            <h2 class="footer__heading">{{ category.name }}</h2>
+                            <ul class="footer__menu">
+                              {{#each categoryItem}}
+                              <li><a href="{{categoryItem.link}}" class="footer__link">{{categoryItem.name}}</a></li>
+                              {{/each}}
+                            </ul>
+                          </div>
+                        {{/each}}
+                      -->
+                      <li class="col-3 col-md-6 col-lg-2">
+                          <a href="news.html" class="footer__link footer__link--no-category active">News</a>
+                      </li>
+                      <li class="col-6 col-md-6 col-lg-2">
+                          <a href="partners.html" class="text-center text-md-left footer__link footer__link--no-category">Partners</a>
+                      </li>
+                      <li class="col-3 col-md-6 col-lg-2">
+                          <a href="arbiters.html" class="text-right text-md-left footer__link footer__link--no-category">Arbiters</a>
+                      </li>
+                      <li class="col-3 col-md-6 col-lg-1">
+                          <a href="ico.html" class="footer__link footer__link--no-category">ICO</a>
+                      </li>
+                      <li class="col-6 col-md-6 col-lg-3">
+                          <a href="arbiter-form.html" class="text-center text-md-left text-lg-center footer__link footer__link--no-category">Become an arbiter</a>
+                      </li>
+                      <li class="col-3 col-md-6 col-lg-2">
+                          <a href="faq.html" class="text-right text-md-left footer__link footer__link--no-category">FAQ</a>
+                      </li>
                     </div>
                   </div>
                   <div class="col-12 col-md-6 col-lg-4 footer__block">

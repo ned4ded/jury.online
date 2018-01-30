@@ -506,6 +506,7 @@ var ScrollixEvents = function () {
     key: 'wheelHandler',
     value: function wheelHandler(event) {
       // if(!this.base.getNextElement().isScrollable()) return console.log(this.base.elements);
+      console.log('hello');
       $(window).unbind('wheel');
       var block = function block(e) {
         return e.preventDefault();
