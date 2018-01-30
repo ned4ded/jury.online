@@ -1393,6 +1393,7 @@ body {
         margin-bottom: 105px; } }
   .footer__heading {
     margin-bottom: 9px;
+    margin-top: 2px;
     text-transform: uppercase;
     color: #fff;
     font-family: "AvenirNext", "Arial", sans-serif;
