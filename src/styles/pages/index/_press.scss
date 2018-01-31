@@ -134,7 +134,6 @@
 
   &__list {
     display: flex;
-    align-items: center;
     flex-flow: row wrap;
     justify-content: center;
 
@@ -145,15 +144,13 @@
     list-style: none;
 
     @media(min-width: 768px) {
-      justify-content: space-between;
+      justify-content: space-around;
 
       min-height: 600px;
       margin: 90px -15px;
     }
 
     @media(min-width: 992px) {
-      align-content: space-between;
-
       min-height: 370px;
     }
 
@@ -173,14 +170,22 @@
     &-logo {
       display: block;
 
-      max-width: 100%;
-      max-height: 100%;
+      width: 75%;
+      height: 60px;
 
       background-repeat: no-repeat;
       background-position: center;
-      background-size: initial;
+      background-size: contain;
 
       font-size: 0;
+
+      &:hover {
+        opacity: .7;
+      }
+
+      &:active {
+        filter: invert(25%);
+      }
     }
 
     @media(min-width: 768px) {

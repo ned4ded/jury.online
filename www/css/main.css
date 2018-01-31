@@ -2717,9 +2717,6 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
       -ms-flex-flow: row wrap;
@@ -2733,15 +2730,12 @@ body {
   list-style: none; }
   @media (min-width: 768px) {
     .press__list {
-      -webkit-box-pack: justify;
-          -ms-flex-pack: justify;
-              justify-content: space-between;
+      -ms-flex-pack: distribute;
+          justify-content: space-around;
       min-height: 600px;
       margin: 90px -15px; } }
   @media (min-width: 992px) {
     .press__list {
-      -ms-flex-line-pack: justify;
-          align-content: space-between;
       min-height: 370px; } }
   @media (min-width: 1200px) {
     .press__list {
@@ -2761,12 +2755,17 @@ body {
   height: 76px; }
   .press__company-logo {
     display: block;
-    max-width: 100%;
-    max-height: 100%;
+    width: 75%;
+    height: 60px;
     background-repeat: no-repeat;
     background-position: center;
-    background-size: initial;
+    background-size: contain;
     font-size: 0; }
+    .press__company-logo:hover {
+      opacity: .7; }
+    .press__company-logo:active {
+      -webkit-filter: invert(25%);
+              filter: invert(25%); }
   @media (min-width: 768px) {
     .press__company {
       width: 33.333%; } }
