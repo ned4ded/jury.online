@@ -72,6 +72,13 @@
         background-image: linear-gradient(180deg, rgb(75, 38, 105) 27%, rgb(133, 53, 130));
       }
     }
+
+    &--disabled {
+      border: 1px solid rgba(255, 255, 255, .5);
+      color: rgba(101, 97, 109, 0.5);
+      pointer-events: none;
+      filter: invert(15%) contrast(125%);
+    }
   }
 
   &__arrow {
