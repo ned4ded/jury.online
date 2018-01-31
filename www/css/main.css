@@ -1754,6 +1754,86 @@ body {
     text-shadow: 1px 1px white;
     margin-bottom: 0; }
 
+.pagination {
+  margin-top: 15px;
+  margin-bottom: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+  width: 100%;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center; }
+  .pagination__item {
+    width: 40px;
+    height: 40px;
+    font-size: 16px;
+    margin-right: 5px;
+    margin-left: 5px;
+    line-height: 1;
+    padding: 10px 15px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 5px;
+    color: #65616d;
+    background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(243, 243, 243, 0.15)), to(rgba(221, 221, 221, 0.15))), -webkit-gradient(linear, left top, left bottom, from(rgba(255, 255, 255, 0.15)), to(rgba(255, 255, 255, 0.15)));
+    background-image: linear-gradient(to bottom, rgba(243, 243, 243, 0.15), rgba(221, 221, 221, 0.15)), linear-gradient(rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0.15));
+    -webkit-box-shadow: 0px 5px 10px 0px rgba(35, 31, 32, 0.05);
+            box-shadow: 0px 5px 10px 0px rgba(35, 31, 32, 0.05);
+    text-shadow: 0 0 1.9px rgba(0, 15, 41, 0.28);
+    font-family: "AvenirNext", "Arial", sans-serif;
+    font-weight: 300; }
+    .pagination__item:focus {
+      color: #65616d;
+      text-decoration: none; }
+    .pagination__item:hover {
+      color: #65616d;
+      background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(243, 243, 243, 0.45)), to(rgba(221, 221, 221, 0.45))), -webkit-gradient(linear, left top, left bottom, from(rgba(255, 255, 255, 0.3)), to(rgba(255, 255, 255, 0.3)));
+      background-image: linear-gradient(to bottom, rgba(243, 243, 243, 0.45), rgba(221, 221, 221, 0.45)), linear-gradient(rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.3));
+      -webkit-box-shadow: 0px 4px 8px 0 rgba(35, 31, 32, 0.1);
+              box-shadow: 0px 4px 8px 0 rgba(35, 31, 32, 0.1);
+      text-decoration: none; }
+    .pagination__item:active {
+      color: white;
+      -webkit-box-shadow: 0px 4px 8px 0 rgba(35, 31, 32, 0.1), inset 0 1px 1px 0 rgba(255, 255, 255, 0.2);
+              box-shadow: 0px 4px 8px 0 rgba(35, 31, 32, 0.1), inset 0 1px 1px 0 rgba(255, 255, 255, 0.2);
+      background-image: -webkit-gradient(linear, left top, left bottom, color-stop(27%, #4b2669), to(#853582));
+      background-image: linear-gradient(180deg, #4b2669 27%, #853582); }
+    .pagination__item--empty {
+      pointer-events: none;
+      -webkit-filter: invert(15%) contrast(125%);
+              filter: invert(15%) contrast(125%); }
+      .pagination__item--empty:before {
+        content: '...'; }
+    .pagination__item--active {
+      color: white;
+      -webkit-box-shadow: 0px 4px 8px 0 rgba(35, 31, 32, 0.1), inset 0 -1px 1px 0 rgba(255, 255, 255, 0.2);
+              box-shadow: 0px 4px 8px 0 rgba(35, 31, 32, 0.1), inset 0 -1px 1px 0 rgba(255, 255, 255, 0.2);
+      background-image: -webkit-gradient(linear, left top, left bottom, from(0), color-stop(27%, #4b2669), to(#853582));
+      background-image: linear-gradient(0, #4b2669 27%, #853582); }
+      .pagination__item--active:hover {
+        -webkit-filter: grayscale(20%) contrast(110%);
+                filter: grayscale(20%) contrast(110%);
+        color: white;
+        -webkit-box-shadow: 0px 4px 8px 0 rgba(35, 31, 32, 0.1), inset 0 -1px 1px 0 rgba(255, 255, 255, 0.2);
+                box-shadow: 0px 4px 8px 0 rgba(35, 31, 32, 0.1), inset 0 -1px 1px 0 rgba(255, 255, 255, 0.2);
+        background-image: -webkit-gradient(linear, left top, left bottom, from(0), color-stop(27%, #4b2669), to(#853582));
+        background-image: linear-gradient(0, #4b2669 27%, #853582); }
+      .pagination__item--active:active {
+        -webkit-filter: none;
+                filter: none;
+        text-shadow: 2px 0 #4b2669;
+        color: white;
+        -webkit-box-shadow: 0px 4px 8px 0 rgba(35, 31, 32, 0.1), inset 0 1px 1px 0 rgba(255, 255, 255, 0.2);
+                box-shadow: 0px 4px 8px 0 rgba(35, 31, 32, 0.1), inset 0 1px 1px 0 rgba(255, 255, 255, 0.2);
+        background-image: -webkit-gradient(linear, left top, left bottom, color-stop(27%, #4b2669), to(#853582));
+        background-image: linear-gradient(180deg, #4b2669 27%, #853582); }
+  .pagination__arrow > *:not(.fa) {
+    font-size: 0; }
+
 .main-info--index {
   background: rgba(234, 234, 234, 0.7) url("../assets/imgs/index-main-bg.png") no-repeat;
   background-position: 50% bottom;
