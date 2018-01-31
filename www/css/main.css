@@ -1196,7 +1196,8 @@ body {
         padding: 25px 20px 20px 33px; } }
     @media (min-width: 992px) {
       .arbiter-card__content {
-        padding: 50px 38px 39px 65px; } }
+        padding: 50px 38px 39px 65px;
+        min-height: 415px; } }
   .arbiter-card__text {
     margin-bottom: 10px;
     text-align: justify;
@@ -1267,6 +1268,7 @@ body {
         background: transparent url("../assets/imgs/icon-raiting-star.png") center no-repeat;
         background-size: 100%; }
   .arbiter-card__name {
+    position: relative;
     margin-bottom: 0;
     text-align: left;
     letter-spacing: -2.3px;
@@ -1280,6 +1282,54 @@ body {
     @media (min-width: 992px) {
       .arbiter-card__name {
         font-size: 34px; } }
+  .arbiter-card__linkedin {
+    position: absolute;
+    top: 50%;
+    right: 0;
+    display: block;
+    -webkit-transform: translateY(-50%);
+            transform: translateY(-50%);
+    font-size: 12px;
+    line-height: 1;
+    color: #9a9a9a; }
+    @media (min-width: 768px) {
+      .arbiter-card__linkedin {
+        font-size: 14px; } }
+    @media (min-width: 992px) {
+      .arbiter-card__linkedin {
+        font-size: 21px; } }
+    .arbiter-card__linkedin:after {
+      content: '';
+      display: block;
+      width: 20px;
+      height: 20px;
+      position: absolute;
+      top: 55%;
+      left: 50%;
+      -webkit-transform: translate(-50%, -50%);
+              transform: translate(-50%, -50%);
+      border: 1px solid #9a9a9a;
+      border-radius: 100%; }
+      @media (min-width: 768px) {
+        .arbiter-card__linkedin:after {
+          width: 25px;
+          height: 25px; } }
+      @media (min-width: 992px) {
+        .arbiter-card__linkedin:after {
+          width: 35px;
+          height: 35px; } }
+    .arbiter-card__linkedin:focus {
+      color: #a33282; }
+      .arbiter-card__linkedin:focus:after {
+        border-color: #a33282; }
+    .arbiter-card__linkedin:hover {
+      color: #a33282; }
+      .arbiter-card__linkedin:hover:after {
+        border-color: #a33282; }
+    .arbiter-card__linkedin:active {
+      color: #501d69; }
+      .arbiter-card__linkedin:active:after {
+        border-color: #501d69; }
   .arbiter-card__post {
     margin-bottom: 6px;
     color: #9a9a9a;
@@ -1305,6 +1355,9 @@ body {
       padding-left: 40px; }
     .arbiter-card--mirrored-right .arbiter-card__name, .arbiter-card--mirrored-right .arbiter-card__post {
       text-align: right; }
+    .arbiter-card--mirrored-right .arbiter-card__linkedin {
+      right: auto;
+      left: 0; }
     .arbiter-card--mirrored-right .arbiter-card__rating {
       -webkit-box-pack: end;
           -ms-flex-pack: end;
