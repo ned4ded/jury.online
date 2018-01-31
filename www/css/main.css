@@ -2555,6 +2555,11 @@ body {
       background-position: center;
       background-size: contain;
       font-size: 0; }
+      .clients__list-item:hover {
+        opacity: .7; }
+      .clients__list-item:active {
+        -webkit-filter: invert(25%);
+                filter: invert(25%); }
   .clients__block {
     position: relative;
     height: 550px; }
@@ -2566,7 +2571,7 @@ body {
       left: 26px;
       width: 395px;
       height: 296px;
-      background: transparent url("../assets/imgs/client-1.jpg") top center no-repeat;
+      background: transparent url("../assets/imgs/client__brixby.io.jpg") top center no-repeat;
       background-size: 100%;
       -webkit-box-shadow: 0px 5px 30px 0 rgba(0, 0, 0, 0.22);
               box-shadow: 0px 5px 30px 0 rgba(0, 0, 0, 0.22); }
@@ -2580,7 +2585,7 @@ body {
       right: 0;
       width: 394px;
       height: 482px;
-      background: transparent url("../assets/imgs/client-2.jpg") top center no-repeat;
+      background: transparent url("../assets/imgs/client__bcshop.io.jpg") top center no-repeat;
       background-size: 100%;
       -webkit-box-shadow: 0px 5px 30px 0 rgba(0, 0, 0, 0.22);
               box-shadow: 0px 5px 30px 0 rgba(0, 0, 0, 0.22); }
@@ -3761,7 +3766,7 @@ body {
     .team .scrollable__wrapper {
       top: 46%; }
     .clients .scrollable__wrapper {
-      top: 46%; }
+      top: 40%; }
     .press .scrollable__wrapper {
       top: 45%; }
     .documents .scrollable__wrapper {
@@ -3989,11 +3994,7 @@ body {
   .scrollable.clients:before {
     display: none; } }
 
-@media (min-height: 650px) and (min-width: 992px) {
-  .scrollable .clients__heading {
-    margin-bottom: 45px; } }
-
-@media (min-height: 650px) and (max-height: 950px) {
+@media (min-height: 650px) and (max-height: 850px) {
   .scrollable .clients__heading {
     font-size: 40px;
     margin-bottom: 15px; }

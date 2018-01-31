@@ -134,6 +134,14 @@
       background-size: contain;
 
       font-size: 0;
+
+      &:hover {
+        opacity: .7;
+      }
+
+      &:active {
+        filter: invert(25%);
+      }
     }
   }
 
@@ -154,7 +162,7 @@
       width: 395px;
       height: 296px;
 
-      background: transparent url('../assets/imgs/client-1.jpg') top center no-repeat;
+      background: transparent url('../assets/imgs/client__brixby.io.jpg') top center no-repeat;
       background-size: 100%;
       box-shadow: 0px 5px 30px 0 rgba(0, 0, 0, 0.22);
 
@@ -172,7 +180,7 @@
       width: 394px;
       height: 482px;
 
-      background: transparent url('../assets/imgs/client-2.jpg') top center no-repeat;
+      background: transparent url('../assets/imgs/client__bcshop.io.jpg') top center no-repeat;
       background-size: 100%;
       box-shadow: 0px 5px 30px 0 rgba(0, 0, 0, 0.22);
 
