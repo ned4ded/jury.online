@@ -242,9 +242,21 @@
 
     & .arbiter-card {
       &__content {
-        padding-right: 65px;
-        padding-left: 40px;
+
         text-align: right;
+
+        padding-right: 18px;
+        padding-left: 9px;
+
+        @media (min-width: 768px) {
+          padding-right: 20px;
+          padding-left: 33px;
+        }
+
+        @media (min-width: 992px) {
+          padding-right: 65px;
+          padding-left: 40px;
+        }
       }
 
       &__name,
