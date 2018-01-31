@@ -1,0 +1,19 @@
+.partners__arbiter-card {
+  &.arbiter-card {
+    &--mirrored-right {
+      & .arbiter-card__photo {
+          transform: scale(1, 1);
+      }
+    }
+  }
+
+  & .arbiter-card {
+    &__name {
+      margin-bottom: 15px;
+    }
+
+    &__photo {
+      background-size: cover;
+    }
+  }
+}

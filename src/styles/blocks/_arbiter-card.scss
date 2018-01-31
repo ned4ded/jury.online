@@ -228,6 +228,15 @@
     }
   }
 
+  &__logo {
+    margin-bottom: 20px;
+
+    & img {
+      max-height: 50px;
+      width: auto;
+    }
+  }
+
   &--mirrored-right {
     flex-direction: row-reverse;
 
@@ -235,6 +244,7 @@
       &__content {
         padding-right: 65px;
         padding-left: 40px;
+        text-align: right;
       }
 
       &__name,
