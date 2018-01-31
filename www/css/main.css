@@ -2329,6 +2329,9 @@ body {
   @media (min-width: 992px) {
     .team {
       padding-top: 155px; } }
+  .team__slider-item {
+    padding-right: 15px;
+    padding-left: 15px; }
   .team__heading {
     margin-bottom: 10px; }
     @media (min-width: 768px) {
@@ -2363,11 +2366,13 @@ body {
   .team__photo {
     position: relative;
     width: 100%;
+    max-width: 305px;
     height: 420px;
+    margin: auto;
     margin-bottom: 5px;
     border-radius: 5px;
     background-repeat: no-repeat;
-    background-position: 50% 0;
+    background-position: 50% 50%;
     background-size: cover; }
     @media (min-width: 768px) {
       .team__photo {
@@ -2413,18 +2418,17 @@ body {
     -webkit-box-direction: normal;
         -ms-flex-flow: row nowrap;
             flex-flow: row nowrap;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
-    width: 81px;
-    height: 16px;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
     margin: 0;
     padding: 0;
     list-style: none; }
   .team__social-link {
     display: block;
-    width: 16px;
-    height: 16px;
+    margin-right: 7px;
+    margin-left: 7px;
+    font-size: 18px;
     text-align: center;
     color: white;
     line-height: 100%; }

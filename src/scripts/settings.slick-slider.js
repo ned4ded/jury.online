@@ -23,3 +23,35 @@
     $newsCards.addClass('active');
   }
 }());
+
+(function() {
+  const $slider = $('#team-slider');
+  const $btn = direction => $(`#team-slider-btn-${direction}`);
+
+
+  $slider.removeClass('team__slider');
+  $slider.slick({
+    slidesToShow: 1,
+    arrows: false,
+    dots: false,
+    infinit: true,
+    speed: 1000,
+    mobileFirst: true,
+    autoplay: true,
+    autoplaySpeed: 1500,
+    pauseOnHover: true,
+    responsive: [
+      {
+        breakpoint: 991,
+        settings: {
+          slidesToShow: 3,
+        }
+      }
+    ]
+
+
+  });
+
+  $btn('left').click(() => $slider.slick('slickPrev'));
+  $btn('right').click(() => $slider.slick('slickNext'));
+}());
