@@ -202,21 +202,19 @@
                 <a href="news.html" class="btn">See all news</a>
               </div>
           </div>
-          <div id="video" class="video" data-scrollable="true">
+          <div class="video" data-scrollable="true">
             <div class="container">
               <div class="row">
                 <h2 class="col-12 video__heading" data-appearance="true">How it Works</h2>
-                <div class="col-12">
-                  <div class="video__container" data-appearance="true">
-                    <span class="video__play-btn">Play button</span>
+                <div class="col-12" data-appearance="true">
+                  <div id="player-how-it-works-container" class="video__container video__playing">
+                    <span id="player-how-it-works-btn" class="video__play-btn">Play button</span>
                     <p class="video__text">
                       Beautifully designed with technical excellence and exceptional attention to detail.
                     </p>
-                    <video class="video__player" width="1060" height="615" poster="assets/imgs/video-placeholder.jpg">
-                      <source src="movie.mp4" type="video/mp4">
-                      <source src="movie.ogg" type="video/ogg">
+                    <iframe id="player-how-it-works" class="video__player" width="1060" height="615" src="//www.youtube.com/embed/ofFKvgUVxEE?modestbranding=1&showinfo=0&enablejsapi=1" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen>
                       Your browser does not support the video tag.
-                    </video>
+                    </iframe>
                   </div>
                 </div>
               </div>
@@ -1049,6 +1047,7 @@
 
         <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
         <script>window.jQuery || document.write('<script src="js/vendor/jquery-3.2.1.min.js"><\/script>')</script>
+        <script id="async-container"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
         <script>(typeof $().modal) == 'function' || document.write('<script src="js/vendor/bootstrap.min.js"><\/script>')</script>
         <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>

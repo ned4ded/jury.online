@@ -219,6 +219,56 @@ var appearanceHandler = function appearanceHandler(ev, height) {
 })();
 'use strict';
 
+var Player;
+var player = 'player-how-it-works';
+var $player = $('#' + player);
+var $container = $('#player-how-it-works-container');
+
+function onYouTubeIframeAPIReady() {
+  Player = new YT.Player(player, {
+    events: {
+      'onReady': onPlayerReady,
+      'onStateChange': onPlayerStateChange
+    }
+  });
+};
+
+function onPlayerReady(ev) {
+  $container.removeClass('video__playing');
+
+  var playButton = document.getElementById('player-how-it-works-btn');
+  $(playButton).click(function () {
+    return Player.playVideo();
+  });
+};
+
+function onPlayerStateChange(ev) {
+  if (ev.data === YT.PlayerState.PAUSED || ev.data === YT.PlayerState.ENDED) {
+    $container.removeClass('video__playing');
+    $container.addClass('video__pausing');
+    setTimeout(function () {
+      $container.removeClass('video__pausing');
+    }, 500);
+  } else if (ev.data === YT.PlayerState.PLAYING) {
+    $container.addClass('video__starting');
+    setTimeout(function () {
+      $container.removeClass('video__starting');
+      $container.addClass('video__playing');
+    }, 500);
+  }
+}
+
+(function () {
+  if (!$player) return;
+
+  var scriptContainer = document.getElementById('async-container');
+  var tag = document.createElement('script');
+  var src = '//www.youtube.com/player_api';
+  tag.src = src;
+  $(scriptContainer).append($(tag));
+})();
+'use strict';
+
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -506,7 +556,6 @@ var ScrollixEvents = function () {
     key: 'wheelHandler',
     value: function wheelHandler(event) {
       // if(!this.base.getNextElement().isScrollable()) return console.log(this.base.elements);
-      console.log('hello');
       $(window).unbind('wheel');
       var block = function block(e) {
         return e.preventDefault();

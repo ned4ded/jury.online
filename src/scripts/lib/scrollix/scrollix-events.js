@@ -45,7 +45,6 @@ class ScrollixEvents {
 
   wheelHandler(event) {
     // if(!this.base.getNextElement().isScrollable()) return console.log(this.base.elements);
-    console.log('hello');
     $( window ).unbind('wheel');
     const block = e => e.preventDefault();
     $( window ).bind('wheel', block);

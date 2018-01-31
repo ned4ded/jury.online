@@ -1720,6 +1720,18 @@ body {
   padding-top: 45px;
   padding-bottom: 95px;
   background-image: linear-gradient(121deg, rgba(133, 53, 130, 0.859) 0%, rgba(75, 38, 105, 0.859) 100%); }
+
+@-webkit-keyframes video-hide {
+  from {
+    opacity: 1; }
+  to {
+    opacity: 0; } }
+
+@keyframes video-hide {
+  from {
+    opacity: 1; }
+  to {
+    opacity: 0; } }
   .video__heading {
     margin-bottom: 36px;
     text-align: center;
@@ -1739,16 +1751,48 @@ body {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-flow: column nowrap;
-            flex-flow: column nowrap; }
+            flex-flow: column nowrap;
+    margin: auto;
+    z-index: 0; }
+    .video__container:before {
+      position: absolute;
+      z-index: 1;
+      opacity: 1;
+      display: block;
+      width: 100%;
+      height: 100%;
+      content: '';
+      border: 5px solid rgba(255, 255, 255, 0.43);
+      border-radius: 20px;
+      background: transparent url("../assets/imgs/video-placeholder.jpg") no-repeat center;
+      background-size: 110%; }
+    @media (min-width: 1200px) {
+      .video__container {
+        width: 80%; } }
+    @media (min-width: 1366px) {
+      .video__container {
+        width: 100%; } }
   .video__player {
+    position: relative;
     width: 100%;
-    height: 100%;
+    height: 290px;
     border: 5px solid rgba(255, 255, 255, 0.43);
     border-radius: 20px;
     -webkit-box-shadow: 0px 5px 30px 0px rgba(0, 0, 0, 0.1);
             box-shadow: 0px 5px 30px 0px rgba(0, 0, 0, 0.1);
-    -o-object-fit: cover;
-       object-fit: cover; }
+    z-index: 0; }
+    @media (min-width: 768px) {
+      .video__player {
+        height: 390px; } }
+    @media (min-width: 992px) {
+      .video__player {
+        height: 565px; } }
+    @media (min-width: 1200px) {
+      .video__player {
+        height: 550px; } }
+    @media (min-width: 1366px) {
+      .video__player {
+        height: 615px; } }
   .video__text {
     position: absolute;
     bottom: 20%;
@@ -1761,11 +1805,13 @@ body {
     -webkit-transform: translateX(-50%);
             transform: translateX(-50%);
     text-align: center;
+    opacity: 1;
     color: white;
     font-family: "AvenirNext", "Arial", sans-serif;
     font-size: 16px;
     font-weight: 300;
-    line-height: 1; }
+    line-height: 1;
+    z-index: 1; }
     @media (min-width: 576px) {
       .video__text {
         bottom: 20%;
@@ -1790,6 +1836,7 @@ body {
     width: 54px;
     height: 54px;
     padding: 0;
+    opacity: 1;
     cursor: pointer;
     -webkit-transform: translateX(-50%);
             transform: translateX(-50%);
@@ -1821,6 +1868,26 @@ body {
         width: 85px;
         height: 85px;
         border: 3px solid white; } }
+  .video__playing .video__play-btn,
+  .video__playing .video__text, .video__playing.video__container:before {
+    display: none; }
+  .video__starting .video__play-btn,
+  .video__starting .video__text, .video__starting.video__container:before {
+    -webkit-animation-name: video-hide;
+            animation-name: video-hide;
+    -webkit-animation-duration: .5s;
+            animation-duration: .5s;
+    -webkit-animation-fill-mode: forwards;
+            animation-fill-mode: forwards; }
+  .video__pausing .video__play-btn,
+  .video__pausing .video__text, .video__pausing.video__container:before {
+    -webkit-animation-name: video-hide;
+            animation-name: video-hide;
+    -webkit-animation-duration: .5s;
+            animation-duration: .5s;
+    -webkit-animation-fill-mode: forwards;
+            animation-fill-mode: forwards;
+    animation-direction: reverse; }
 
 .concept {
   margin: 0 -15px;
@@ -3631,15 +3698,19 @@ body {
     margin-bottom: 6px;
     line-height: 1.2; } }
 
-@media (min-height: 650px) and (max-height: 749px) {
+@media (min-height: 650px) and (max-height: 749px) and (max-width: 1199px) {
+  .scrollable .video__container {
+    width: 75%; }
   .scrollable .video__player {
-    width: 70%; }
+    height: 425px; }
   .scrollable .video__text {
     font-size: 20px; } }
 
-@media (min-height: 750px) and (max-height: 950px) {
-  .scrollable .video__player {
+@media (min-height: 750px) and (max-height: 950px) and (max-width: 1199px) {
+  .scrollable .video__container {
     width: 85%; }
+  .scrollable .video__player {
+    height: 480px; }
   .scrollable .video__text {
     font-size: 24px; } }
 

@@ -135,18 +135,24 @@
   }
 
   & .video {
-    @media (min-height:650px) and (max-height: 749px) {
+    @media (min-height:650px) and (max-height: 749px) and (max-width: 1199px) {
+      &__container{
+        width: 75%;
+      }
       &__player {
-        width: 70%;
+        height: 425px;
       }
 
       &__text {
         font-size: 20px;
       }
     }
-    @media (min-height:750px) and (max-height: 950px) {
-      &__player {
+    @media (min-height:750px) and (max-height: 950px) and (max-width: 1199px) {
+      &__container{
         width: 85%;
+      }
+      &__player {
+        height: 480px;
       }
 
       &__text {
