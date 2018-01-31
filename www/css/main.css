@@ -2982,6 +2982,18 @@ body {
       color: #65616d;
       background-image: -webkit-gradient(linear, left bottom, left top, from(#f3f3f3), to(#dddddd));
       background-image: linear-gradient(0deg, #f3f3f3 0%, #dddddd 100%); }
+    .try-it__btn--disabled {
+      opacity: .7;
+      color: grey;
+      pointer-events: none; }
+      .try-it__btn--disabled:hover {
+        color: grey;
+        -webkit-box-shadow: 0px 6px 27px 0px rgba(35, 31, 32, 0.29);
+                box-shadow: 0px 6px 27px 0px rgba(35, 31, 32, 0.29); }
+      .try-it__btn--disabled:active {
+        color: grey;
+        background-image: -webkit-gradient(linear, left top, left bottom, from(#f3f3f3), to(#dddddd));
+        background-image: linear-gradient(180deg, #f3f3f3 0%, #dddddd 100%); }
 
 .main-info--news {
   padding-top: 110px;
