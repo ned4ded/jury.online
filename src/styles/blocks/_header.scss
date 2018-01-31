@@ -70,6 +70,10 @@
 
     &-item {
       @media (min-width: 1200px) {
+        margin-left: 10px;
+      }
+
+      @media (min-width: 1366px) {
         margin-left: 15px;
       }
     }

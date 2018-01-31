@@ -447,7 +447,7 @@
   }
 
   & .discount {
-    @media (min-height:650px) and (max-height: 950px) {
+    @media (min-height:650px) and (max-height: 949px) and (max-width: 1199px){
       &__offering {
         margin-bottom: 62px;
       }

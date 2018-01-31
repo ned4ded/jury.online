@@ -125,6 +125,9 @@ body {
         margin: 0; } }
     @media (min-width: 1200px) {
       .header__menu-item {
+        margin-left: 10px; } }
+    @media (min-width: 1366px) {
+      .header__menu-item {
         margin-left: 15px; } }
     .header__menu-btn {
       margin-top: 15px; }
@@ -982,7 +985,9 @@ body {
   color: rgba(255, 255, 255, 0.8);
   text-shadow: 0px 9px 8px rgba(35, 31, 32, 0.2);
   font-family: "AvenirNext", "Arial", sans-serif;
-  font-size: 27px; }
+  font-size: 21px; }
+  .fees-diagram__currency span {
+    display: block; }
 
 .fees-diagram__form {
   position: relative;
@@ -1123,6 +1128,7 @@ body {
             box-sizing: border-box;
     width: 90%;
     padding: 18px 32px;
+    margin-bottom: 10px;
     -webkit-transition: -webkit-box-shadow .2s ease-in;
     transition: -webkit-box-shadow .2s ease-in;
     transition: box-shadow .2s ease-in;
@@ -1150,6 +1156,21 @@ body {
     .discount__btn:active {
       background-image: -webkit-gradient(linear, left top, left bottom, from(0), color-stop(29%, #de6391), color-stop(80%, #be3a63));
       background-image: linear-gradient(0, #de6391 29%, #be3a63 80%); }
+    .discount__btn--white {
+      background-image: -webkit-gradient(linear, left bottom, left top, from(#d7d7d7), to(white)), -webkit-gradient(linear, left top, left bottom, from(#e5e6d6), to(#e5e6d6));
+      background-image: linear-gradient(to top, #d7d7d7, white), linear-gradient(#e5e6d6, #e5e6d6);
+      -webkit-box-shadow: 0px 11px 13px 0 rgba(1, 2, 2, 0.15);
+              box-shadow: 0px 11px 13px 0 rgba(1, 2, 2, 0.15);
+      box-shadow: 0px 11px 13px 0 rgba(1, 2, 2, 0.15);
+      color: #56387b; }
+      .discount__btn--white:hover {
+        -webkit-box-shadow: 0px 4px 8px 0 rgba(1, 2, 2, 0.45);
+                box-shadow: 0px 4px 8px 0 rgba(1, 2, 2, 0.45);
+        color: #56387b; }
+      .discount__btn--white:active {
+        background-image: -webkit-gradient(linear, left top, left bottom, from(#d7d7d7), to(white)), -webkit-gradient(linear, left top, left bottom, from(#e5e6d6), to(#e5e6d6));
+        background-image: linear-gradient(to bottom, #d7d7d7, white), linear-gradient(#e5e6d6, #e5e6d6);
+        color: #56387b; }
 
 .arbiter-card {
   display: -webkit-box;
@@ -1615,6 +1636,34 @@ body {
     font-family: "AvenirNext", "Arial", sans-serif;
     font-size: 15px;
     line-height: 15px; }
+
+.placeholder {
+  padding: 30px 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  border-radius: 10px;
+  border: 1px solid rgba(52, 49, 65, 0.3);
+  background-color: #e1e1e1;
+  height: 100%;
+  width: 100%;
+  -webkit-box-shadow: inset 0 0 10px 1px rgba(52, 49, 65, 0.1), inset 0 15px 40px 20px rgba(255, 255, 255, 0.4);
+          box-shadow: inset 0 0 10px 1px rgba(52, 49, 65, 0.1), inset 0 15px 40px 20px rgba(255, 255, 255, 0.4); }
+  .placeholder__text {
+    text-transform: capitalize;
+    font-size: 46px;
+    font-weight: bold;
+    font-family: "AvenirNext", "Arial", sans-serif;
+    text-align: center;
+    color: rgba(52, 49, 65, 0.3);
+    text-shadow: 1px 1px white;
+    margin-bottom: 0; }
 
 .main-info--index {
   background: rgba(234, 234, 234, 0.7) url("../assets/imgs/index-main-bg.png") no-repeat;
@@ -3286,7 +3335,7 @@ body {
     .ico__roadmap-image {
       max-width: 786px;
       width: 100%;
-      height: 100%; }
+      min-height: 400px; }
 
 .bar-graph {
   display: -webkit-box;
@@ -3808,7 +3857,7 @@ body {
   .scrollable .infographic {
     margin-top: -39px; } }
 
-@media (min-height: 650px) and (max-height: 950px) {
+@media (min-height: 650px) and (max-height: 949px) and (max-width: 1199px) {
   .scrollable .discount__offering {
     margin-bottom: 62px; } }
 
