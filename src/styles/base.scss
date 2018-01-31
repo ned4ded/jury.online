@@ -63,6 +63,23 @@ body {
   width: 100%;
 }
 
+.profile {
+  &__btn {
+    width: 100%;
+    display: block;
+
+    &-container {
+      height: 100%;
+    }
+
+    &:hover,
+    &:focus {
+      color: white;
+      text-decoration: none;
+    }
+  }
+}
+
 // Blocks
 @import './blocks/header.scss';
 @import './blocks/btn.scss';

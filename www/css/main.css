@@ -78,6 +78,15 @@ body {
   text-align: center;
   width: 100%; }
 
+.profile__btn {
+  width: 100%;
+  display: block; }
+  .profile__btn-container {
+    height: 100%; }
+  .profile__btn:hover, .profile__btn:focus {
+    color: white;
+    text-decoration: none; }
+
 .header {
   background-color: transparent; }
   .header__bg {
@@ -329,6 +338,19 @@ body {
       background-color: rgba(255, 255, 255, 0.35);
       -webkit-box-shadow: inset 0px -1px 2px 0 rgba(255, 255, 255, 0.4), inset 0px 1px 2px 0 rgba(0, 0, 0, 0.2), 0px 1px 16px 0px rgba(0, 0, 0, 0.3);
               box-shadow: inset 0px -1px 2px 0 rgba(255, 255, 255, 0.4), inset 0px 1px 2px 0 rgba(0, 0, 0, 0.2), 0px 1px 16px 0px rgba(0, 0, 0, 0.3); }
+    .header__btn--login {
+      -webkit-box-shadow: inset 0px 1px 0 0 rgba(255, 255, 255, 0.1), 0px 3px 8px 0px rgba(0, 0, 0, 0.09);
+              box-shadow: inset 0px 1px 0 0 rgba(255, 255, 255, 0.1), 0px 3px 8px 0px rgba(0, 0, 0, 0.09);
+      background: -webkit-gradient(linear, left top, left bottom, color-stop(29%, #de6391), color-stop(90%, #be3a63));
+      background: linear-gradient(180deg, #de6391 29%, #be3a63 90%); }
+      .header__btn--login:hover {
+        -webkit-box-shadow: inset 0px 1px 5px 5px rgba(255, 255, 255, 0.05), 0px 1px 8px 0px rgba(0, 0, 0, 0.2);
+                box-shadow: inset 0px 1px 5px 5px rgba(255, 255, 255, 0.05), 0px 1px 8px 0px rgba(0, 0, 0, 0.2); }
+      .header__btn--login:active {
+        -webkit-box-shadow: inset 0px -1px 5px 2px rgba(255, 255, 255, 0.1), 0px 1px 16px 0px rgba(0, 0, 0, 0.15);
+                box-shadow: inset 0px -1px 5px 2px rgba(255, 255, 255, 0.1), 0px 1px 16px 0px rgba(0, 0, 0, 0.15);
+        background: -webkit-gradient(linear, left bottom, left top, color-stop(29%, rgba(222, 99, 145, 0.9)), color-stop(90%, rgba(190, 58, 99, 0.9)));
+        background: linear-gradient(0deg, rgba(222, 99, 145, 0.9) 29%, rgba(190, 58, 99, 0.9) 90%); }
     .header__btn .btn__text {
       text-transform: uppercase;
       font-size: 15px; }
