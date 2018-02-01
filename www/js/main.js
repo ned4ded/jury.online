@@ -159,6 +159,8 @@
   $(document).ready(function () {
     return new ScrollixBase(elements(), appearanceHandler, deviceCheck() && browserCheck() && sizeCheck() && !!elements().length);
   });
+
+  // $( document ).ready(() => );
 })();
 'use strict';
 
@@ -175,7 +177,7 @@ var appearanceHandler = function appearanceHandler(ev, height) {
 
   animated.each(function (i, element) {
     var e = $(element);
-    if (e.hasClass('appearance') || e.offset().top > curHeight - 150) return;
+    if (e.hasClass('appearance') || e.offset().top > curHeight) return;
     e.addClass('appearance');
 
     var delay = e.data('appearanceDelay') || null;
@@ -206,7 +208,6 @@ var appearanceHandler = function appearanceHandler(ev, height) {
       };
 
       return progressTarget ? animate(object, function (promise, remaining) {
-        console.log('progress');
         var percent = (e.data('percent') * remaining).toFixed(0);
         $('#' + progressTarget).text(percent);
       }) : animate(object);
@@ -528,11 +529,10 @@ var ScrollixEvents = function () {
     _classCallCheck(this, ScrollixEvents);
 
     if (!(base instanceof ScrollixBase)) return;
+    customHandler();
 
     this.base = base;
     this.customHandler = customHandler;
-
-    var _this = this;
 
     $(window).scroll(function () {
       return _this2.scrollHandler();

@@ -1,11 +1,10 @@
 class ScrollixEvents {
   constructor(base, customHandler) {
     if(!(base instanceof ScrollixBase)) return;
+    customHandler();
 
     this.base = base;
     this.customHandler = customHandler;
-
-    const _this = this;
 
     $( window ).scroll(() => this.scrollHandler());
     this.setResizeListner();

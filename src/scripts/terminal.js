@@ -42,8 +42,10 @@
   }());
 
   $( document ).ready(() => new ScrollixBase(
-    elements(),
-    appearanceHandler,
-    deviceCheck() && browserCheck() && sizeCheck() && !!elements().length,
-  ));
+      elements(),
+      appearanceHandler,
+      deviceCheck() && browserCheck() && sizeCheck() && !!elements().length,
+    ));
+
+  // $( document ).ready(() => );
 }());

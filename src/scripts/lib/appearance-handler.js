@@ -5,7 +5,7 @@ const appearanceHandler = (ev, height) => {
 
   animated.each((i, element) => {
     const e = $( element );
-    if(e.hasClass('appearance') || e.offset().top > (curHeight - 150)) return;
+    if(e.hasClass('appearance') || e.offset().top > (curHeight)) return;
     e.addClass('appearance');
 
     const delay = e.data('appearanceDelay') || null;
@@ -28,7 +28,6 @@ const appearanceHandler = (ev, height) => {
       const animate = (obj, progress) => e.delay(delay || 1000).animate(obj, { duration: 700, progress});
 
       return progressTarget ? animate(object, (promise, remaining) => {
-        console.log('progress');
         const percent = (e.data('percent') * remaining).toFixed(0)
         $(`#${progressTarget}`).text(percent);
       }) : animate(object);
