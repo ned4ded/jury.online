@@ -220,6 +220,75 @@ var appearanceHandler = function appearanceHandler(ev, height) {
 };
 'use strict';
 
+function _toConsumableArray(arr) { if (Array.isArray(arr)) { for (var i = 0, arr2 = Array(arr.length); i < arr.length; i++) { arr2[i] = arr[i]; } return arr2; } else { return Array.from(arr); } }
+
+(function () {
+  var classAdded = 'arbiter-form__docs-item--added';
+  var $labels = $('[data-file-label]');
+  var counters = $('[data-multiple-caption]').get();
+
+  if ($labels.length === 0) return;
+
+  var clear = function clear(e) {
+    e.value = '';return;
+  };
+  var findById = function findById(arr, id) {
+    return arr.find(function (e) {
+      return e.id === id;
+    });
+  };
+  var arr = $labels.get().reduce(function (acc, n) {
+    var id = $(n).attr('for');
+    var obj = { id: id, label: n, input: document.getElementById(id) };
+
+    var counter = counters.find(function (e) {
+      return $(e).attr('for') === id;
+    });
+    if (counter) obj.counter = counter;
+
+    return id ? [].concat(_toConsumableArray(acc), [obj]) : acc;
+  }, []);
+
+  $(document).ready(function () {
+    Array.from(document.getElementsByTagName('form')).forEach(function (n) {
+      return n.reset();
+    });
+
+    arr.forEach(function (e) {
+      var label = e.label,
+          input = e.input,
+          id = e.id,
+          counter = e.counter;
+
+      var $label = $(label);
+      var $input = $(input);
+      var $counter = $(counter);
+
+      var block = function block(ev) {
+        ev.preventDefault();
+        clear(input);
+        $label.unbind('click', block);
+        $label.removeClass(classAdded);
+      };
+
+      $input.on('change', function (ev) {
+        if (!$label.data('noCustomization')) {
+          $label.addClass(classAdded);
+          $label.click(block);
+        } else if ($input.is('[multiple]')) {
+          if (!counter) return;
+          var pattern = $counter.data('multipleCaption');
+
+          $counter.empty();
+
+          input.files.length > 1 ? $counter.append(pattern.multi.replace('{counter}', input.files.length)) : $counter.append(pattern.single.replace('{counter}', 1));
+        }
+      });
+    });
+  });
+})();
+'use strict';
+
 (function () {
   var $add = function $add() {
     return $('#header').addClass('header__bg');

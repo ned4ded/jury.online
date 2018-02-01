@@ -3364,6 +3364,7 @@ body {
     font-size: 24px;
     letter-spacing: 0.7px;
     text-align: center;
+    cursor: pointer;
     padding: 10px 58px;
     color: white;
     text-transform: uppercase;
@@ -3384,6 +3385,8 @@ body {
       background-image: linear-gradient(to top, rgba(134, 98, 172, 0.9) 0%, rgba(89, 70, 136, 0.9)); }
     .arbiter-form__btn[type="submit"] {
       padding: 12px 30px; }
+    .arbiter-form__btn--other {
+      margin-bottom: 10px; }
   .arbiter-form__docs {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -3401,12 +3404,12 @@ body {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center; }
-    .arbiter-form__docs li {
+    .arbiter-form__docs-item {
       margin-right: 5px;
       margin-left: 5px;
       min-width: 242px;
       border-radius: 10px;
-      padding: 12px 60px 12px 15px;
+      padding: 12px 26px;
       background-color: #f5f5f5;
       border: solid 2px #d6b2df;
       color: #7b64a1;
@@ -3417,26 +3420,44 @@ body {
       margin-bottom: 20px;
       text-align: center;
       cursor: pointer; }
-      .arbiter-form__docs li:hover {
+      .arbiter-form__docs-item:hover {
         background-color: #fafaff;
         border: solid 2px #eac8fd; }
-      .arbiter-form__docs li:active {
+      .arbiter-form__docs-item:active {
         opacity: .8; }
-      .arbiter-form__docs li:before {
-        content: '';
-        position: absolute;
-        top: 50%;
-        right: 26px;
-        -webkit-transform: translateY(-50%);
-                transform: translateY(-50%);
-        background: transparent url("../assets/imgs/icon-cancel.png") center no-repeat;
-        background-size: 100%;
-        width: 11px;
-        height: 11px; }
+      .arbiter-form__docs-item--added {
+        text-align: left;
+        background: #ebdfee; }
+        .arbiter-form__docs-item--added:before {
+          font-family: 'FontAwesome';
+          content: '\f00c';
+          font-weight: 200;
+          position: absolute;
+          top: 50%;
+          right: 26px;
+          -webkit-transform: translateY(-50%);
+                  transform: translateY(-50%);
+          font-size: 18px; }
+        .arbiter-form__docs-item--added:hover {
+          background: #ebdfee;
+          border-color: #401d58; }
+          .arbiter-form__docs-item--added:hover:before {
+            content: '\f00d';
+            color: #401d58; }
       @media (min-width: 992px) {
-        .arbiter-form__docs li {
+        .arbiter-form__docs-item {
           margin-right: 26px;
           margin-left: 0px; } }
+    .arbiter-form__docs-input {
+      display: none; }
+  .arbiter-form__file-counter {
+    display: block;
+    text-align: center;
+    color: #8662ac;
+    text-shadow: 1px 1px rgba(64, 29, 88, 0.2);
+    font-family: "AvenirNext", "Arial", sans-serif;
+    font-size: 16px;
+    line-height: 1; }
 
 .main-info--ico {
   padding-top: 110px;

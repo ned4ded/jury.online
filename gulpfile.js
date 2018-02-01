@@ -30,6 +30,7 @@ gulp.task('webserver', ['styles', 'html', 'scripts'], function() {
     port: 3001,
     reloadOnRestart: true,
     logConnections: true,
+    ghostMode: false,
   });
 
   gulp.watch('./src/styles/**/*.scss', ['styles']);

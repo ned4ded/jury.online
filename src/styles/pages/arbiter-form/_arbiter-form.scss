@@ -163,6 +163,7 @@
     font-size: 24px;
     letter-spacing: 0.7px;
     text-align: center;
+    cursor: pointer;
 
     padding: 10px 58px;
     color: white;
@@ -188,6 +189,10 @@
     &[type="submit"] {
       padding: 12px 30px;
     }
+
+    &--other {
+      margin-bottom: 10px;
+    }
   }
 
   &__docs {
@@ -199,12 +204,12 @@
     align-items: center;
     justify-content: center;
 
-    & li {
+    &-item {
       margin-right:5px;
       margin-left:5px;
       min-width: 242px;
       border-radius: 10px;
-      padding: 12px 60px 12px 15px;
+      padding: 12px 26px;
       background-color: #f5f5f5;
       border: solid 2px #d6b2df;
 
@@ -227,22 +232,52 @@
         opacity: .8;
       }
 
-      &:before {
-        content: '';
-        position: absolute;
-        top: 50%;
-        right: 26px;
-        transform: translateY(-50%);
-        background: transparent url("../assets/imgs/icon-cancel.png") center no-repeat;
-        background-size: 100%;
-        width: 11px;
-        height: 11px;
-      }
+      &--added {
+        text-align: left;
+        background: rgb(235, 223, 238);
 
+        &:before {
+          font-family: 'FontAwesome';
+          content: '\f00c';
+          font-weight: 200;
+          position: absolute;
+          top: 50%;
+          right: 26px;
+          transform: translateY(-50%);
+          font-size: 18px;
+        }
+
+        &:hover {
+          background: rgb(235, 223, 238);
+          border-color: rgb(64, 29, 88);
+
+          &:before {
+            content: '\f00d';
+            color: rgb(64, 29, 88);
+          }
+        }
+      }
       @media(min-width: 992px) {
         margin-right:26px;
         margin-left:0px;
       }
     }
+
+    &-input {
+      display: none;
+    }
+  }
+
+  &__file-counter {
+    display: block;
+
+    text-align: center;
+
+    color: rgb(134, 98, 172);
+    text-shadow: 1px 1px rgba(64, 29, 88, .2);
+
+    font-family: "AvenirNext", "Arial", sans-serif;
+    font-size: 16px;
+    line-height: 1;
   }
 }
