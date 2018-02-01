@@ -14,15 +14,28 @@
     margin-bottom: 36px;
 
     @media(min-width: 992px) {
-      margin-bottom: 75px;
+      margin-bottom: 55px;
     }
   }
 
   &__copy {
-    display: block;
+    &-container {
+      display: block;
+      margin-bottom: 10px;
 
+      @media(min-width: 992px) {
+        margin-bottom: 25px;
+      }
+    }
+
+    display: block;
     margin: auto;
-    margin-bottom: 10px;
+    width: auto;
+
+    @media(min-width: 992px) {
+      height: 230px;
+    }
+
 
     transition: all .2s ease-in;
 
@@ -31,16 +44,12 @@
     &:hover {
       transform: translateY(-20px) scale(1.1);
     }
-
-    @media(min-width: 992px) {
-      margin-bottom: 25px;
-    }
   }
 
   &__name {
     display: block;
 
-    margin-bottom: 20px;
+    margin-bottom: 40px;
 
     text-align: center;
     letter-spacing: -0.7px;
@@ -48,11 +57,22 @@
     color: #4e4d4d;
 
     font-family: $avenir;
-    font-size: 28px;
+    font-size: 21px;
     line-height: 100%;
 
     @media(min-width: 992px) {
       margin-bottom: 45px;
+    }
+
+    &:focus{
+      color: rgba(78, 77, 77, .8);
+    }
+
+    &:hover {
+      color: rgba(78, 77, 77, .8);
+    }
+    &:active {
+      color: rgba(78, 77, 77, .6);
     }
   }
 }
