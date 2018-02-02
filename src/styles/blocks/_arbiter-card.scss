@@ -122,6 +122,7 @@
     letter-spacing: -2.3px;
 
     color: #3e3e3e;
+    display: block;
 
     font-family: $avenir;
     font-size: 21px;
@@ -135,14 +136,20 @@
     @media (min-width: 992px) {
       font-size: 34px;
     }
+
+    &-container {
+      position: relative;
+    }
   }
 
-  &__linkedin {
+  &__linkedin,
+  &__social-links {
     position: absolute;
     top: 50%;
     right: 0;
 
     display: block;
+    list-style: none;
 
     transform: translateY(-50%);
 
@@ -200,6 +207,42 @@
       &:after {
         border-color: rgb(80, 29, 105);
       }
+    }
+  }
+
+  &__social-links {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    width: auto;
+    height: auto;
+    left: auto;
+    right: 0;
+
+    display: flex;
+
+    & li {
+      margin-right: 5px;
+      margin-left: 5px;
+    }
+
+    &:after {
+      display: none;
+    }
+  }
+
+  &__social-link {
+    color: rgb(62, 62, 62);
+    &:focus {
+      color: rgb(163, 50, 130);
+    }
+
+    &:hover {
+      color: rgb(163, 50, 130);
+    }
+
+    &:active {
+      color: rgb(80, 29, 105);
     }
   }
 
@@ -266,6 +309,11 @@
       }
 
       &__linkedin {
+        right: auto;
+        left: 0;
+      }
+
+      &__social-links {
         right: auto;
         left: 0;
       }

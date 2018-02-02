@@ -12,7 +12,6 @@
       dots: true,
       appendDots: $('.news-block__slider-dots'),
       variableWidth: true,
-      // dotsClass: 'news-block__slider-dots',
     });
 
     $btn('left').click(() => $slider.slick('slickPrev'));
@@ -37,7 +36,7 @@
     infinit: true,
     speed: 1000,
     mobileFirst: true,
-    // autoplay: true,
+    autoplay: true,
     autoplaySpeed: 1500,
     pauseOnHover: true,
     responsive: [

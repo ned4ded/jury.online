@@ -70,7 +70,6 @@
       dots: true,
       appendDots: $('.news-block__slider-dots'),
       variableWidth: true
-      // dotsClass: 'news-block__slider-dots',
     });
 
     $btn('left').click(function () {
@@ -99,7 +98,7 @@
     infinit: true,
     speed: 1000,
     mobileFirst: true,
-    // autoplay: true,
+    autoplay: true,
     autoplaySpeed: 1500,
     pauseOnHover: true,
     responsive: [{
@@ -290,6 +289,8 @@ function _toConsumableArray(arr) { if (Array.isArray(arr)) { for (var i = 0, arr
 'use strict';
 
 (function () {
+  if ($('#header').is('[data-colored]')) return;
+
   var $add = function $add() {
     return $('#header').addClass('header__bg');
   };

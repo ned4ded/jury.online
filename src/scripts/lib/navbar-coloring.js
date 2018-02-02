@@ -1,4 +1,6 @@
 (function() {
+  if($('#header').is('[data-colored]')) return;
+
   const $add = () => $('#header').addClass('header__bg');
   const $remove = () =>  $('#header').removeClass('header__bg');
   const $togglerState = () => ($('#menu-toggler').attr('aria-expanded') === 'true');

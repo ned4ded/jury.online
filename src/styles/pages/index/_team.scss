@@ -1,4 +1,4 @@
-.team {
+.team-block {
   margin: 0 -15px;
   padding-top: 55px;
 
@@ -100,7 +100,7 @@
       border-radius: 5px;
       background-image: linear-gradient( 180deg, rgba(189,75,163,.851) 0%, rgba(68,27,101,.851) 100%);
 
-      & .team__name {
+      & .team-block__name {
         margin-bottom: 21px;
 
         letter-spacing: -0.8px;
@@ -108,7 +108,7 @@
         color: white;
       }
 
-      & .team__role {
+      & .team-block__role {
         margin-bottom: 30px;
 
         letter-spacing: -0.6px;
