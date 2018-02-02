@@ -88,6 +88,9 @@
     text-align: left;
     margin-bottom: 18px;
 
+    @media(min-width: 768px) {
+      font-size: 17px;
+    }
   }
 
   &__text {
@@ -101,6 +104,10 @@
     text-align: justify;
     color: #6a5776;
     max-width: 419px;
+
+    @media(min-width: 768px) {
+      font-size: 17px;
+    }
   }
 
   &__btn {

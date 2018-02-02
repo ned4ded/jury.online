@@ -194,5 +194,9 @@
     font-size: 16px;
     font-weight: 300;
     line-height: 100%;
+
+    @media(min-width: 768px) {
+      font-size: 17px;
+    }
   }
 }

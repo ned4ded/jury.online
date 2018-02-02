@@ -34,14 +34,6 @@
     @media (min-width: 768px) {
       margin: 0 0 70px;
     }
-    //
-    // @media (min-width: 992px) {
-    //   margin: 0 0 135px;
-    // }
-    //
-    // @media (min-width: 1200px) {
-    //   margin: 0 0 170px;
-    // }
   }
 
   &__tab {
@@ -221,6 +213,10 @@
       font-size: 14px;
       font-weight: 300;
       line-height: 1.6;
+
+      @media(min-width: 768px) {
+        font-size: 17px;
+      }
     }
   }
 }

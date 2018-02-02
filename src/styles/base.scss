@@ -36,17 +36,20 @@ body {
     bottom: 28%;
     left: 50%;
     transform: translateX(-50%);
-    font-size: 68px;
+    font-size: 52px;
     line-height: 100%;
     letter-spacing: 3.7px;
     color: rgba(78, 77, 77, 0.05);
     font-family: $avenir;
     font-weight: 600;
     text-transform: uppercase;
-    // width: 100%;
+    width: 100%;
+    overflow:hidden;
 
     @media (min-width: 768px) {
       font-size: 81px;
+      width: auto;
+      overflow: inherit;
     }
   }
 

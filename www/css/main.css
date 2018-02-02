@@ -57,16 +57,20 @@ body {
     left: 50%;
     -webkit-transform: translateX(-50%);
             transform: translateX(-50%);
-    font-size: 68px;
+    font-size: 52px;
     line-height: 100%;
     letter-spacing: 3.7px;
     color: rgba(78, 77, 77, 0.05);
     font-family: "AvenirNext", "Arial", sans-serif;
     font-weight: 600;
-    text-transform: uppercase; }
+    text-transform: uppercase;
+    width: 100%;
+    overflow: hidden; }
     @media (min-width: 768px) {
       .heading-2[data-text-abaft]:after {
-        font-size: 81px; } }
+        font-size: 81px;
+        width: auto;
+        overflow: inherit; } }
   @media (min-width: 768px) {
     .heading-2 {
       font-size: 40px; } }
@@ -151,7 +155,7 @@ body {
     border-bottom: 1px solid transparent;
     color: white;
     font-family: "AvenirNext", "Arial", sans-serif;
-    font-size: 15px;
+    font-size: 17px;
     line-height: 1; }
     .header__link:hover {
       border-bottom: 1px solid white;
@@ -186,7 +190,6 @@ body {
     @media (min-width: 1200px) {
       .header__link {
         display: inline-block;
-        margin: 0 5px;
         padding: 0 0; } }
     .header__link.active {
       cursor: pointer;
@@ -223,7 +226,7 @@ body {
       border-bottom: 1px solid transparent;
       background-color: transparent;
       font-family: "AvenirNext", "Arial", sans-serif;
-      font-size: 15px;
+      font-size: 17px;
       line-height: 1; }
       .header__dropdown-btn:active {
         color: rgba(255, 255, 255, 0.7); }
@@ -287,7 +290,7 @@ body {
         color: #b896bb;
         border-bottom: 1px solid rgba(255, 255, 255, 0.1);
         font-family: "AvenirNext", "Arial", sans-serif;
-        font-size: 15px;
+        font-size: 17px;
         font-weight: 300;
         line-height: 1; }
         .header__dropdown-menu .dropdown-item:hover {
@@ -353,7 +356,7 @@ body {
         background: linear-gradient(0deg, rgba(222, 99, 145, 0.9) 29%, rgba(190, 58, 99, 0.9) 90%); }
     .header__btn .btn__text {
       text-transform: uppercase;
-      font-size: 15px; }
+      font-size: 17px; }
 
 .btn {
   position: relative;
@@ -523,7 +526,7 @@ body {
     letter-spacing: 0.8px;
     color: #fff;
     font-family: "AvenirNext", "Arial", sans-serif;
-    font-size: 16px;
+    font-size: 17px;
     font-weight: 300;
     line-height: 1.6; }
     .jumbo__text-appeal {
@@ -531,6 +534,9 @@ body {
       margin-bottom: 22px;
       text-align: center;
       font-weight: 400; }
+    .jumbo__text--notification .jumbo__text-appeal {
+      font-size: 24px;
+      margin-bottom: 10px; }
 
 .signup {
   display: -webkit-box;
@@ -559,7 +565,7 @@ body {
     -webkit-box-shadow: inset 0px 1px 0 0 rgba(255, 255, 255, 0.2);
             box-shadow: inset 0px 1px 0 0 rgba(255, 255, 255, 0.2);
     font-family: "AvenirNext", "Arial", sans-serif;
-    font-size: 16px;
+    font-size: 17px;
     font-weight: bold;
     line-height: 1.3; }
   .signup__form {
@@ -575,7 +581,7 @@ body {
     -webkit-box-shadow: 0px 1px 0px 0px rgba(255, 255, 255, 0.1), inset 0px 1px 0px 0px rgba(0, 0, 0, 0.15);
             box-shadow: 0px 1px 0px 0px rgba(255, 255, 255, 0.1), inset 0px 1px 0px 0px rgba(0, 0, 0, 0.15);
     font-family: "AvenirNext", "Arial", sans-serif;
-    font-size: 16px; }
+    font-size: 17px; }
     .signup__input:not(:last-of-type) {
       margin-bottom: 10px; }
     .signup__input::-webkit-input-placeholder {
@@ -584,28 +590,28 @@ body {
       opacity: 1;
       color: #42285b;
       font-family: "AvenirNext", "Arial", sans-serif;
-      font-size: 16px; }
+      font-size: 17px; }
     .signup__input:-ms-input-placeholder {
       text-align: center;
       text-transform: uppercase;
       opacity: 1;
       color: #42285b;
       font-family: "AvenirNext", "Arial", sans-serif;
-      font-size: 16px; }
+      font-size: 17px; }
     .signup__input::-ms-input-placeholder {
       text-align: center;
       text-transform: uppercase;
       opacity: 1;
       color: #42285b;
       font-family: "AvenirNext", "Arial", sans-serif;
-      font-size: 16px; }
+      font-size: 17px; }
     .signup__input::placeholder {
       text-align: center;
       text-transform: uppercase;
       opacity: 1;
       color: #42285b;
       font-family: "AvenirNext", "Arial", sans-serif;
-      font-size: 16px; }
+      font-size: 17px; }
     .signup__input:focus {
       background-color: rgba(255, 255, 255, 0.6);
       -webkit-box-shadow: 0px 1px 0px 0px rgba(255, 255, 255, 0.2), inset 0px 1px 0px 0px rgba(0, 0, 0, 0.3);
@@ -861,6 +867,9 @@ body {
     font-size: 14px;
     text-align: left;
     margin-bottom: 18px; }
+    @media (min-width: 768px) {
+      .news-card__type {
+        font-size: 17px; } }
   .news-card__text {
     font-family: "AvenirNext", "Arial", sans-serif;
     line-height: 1.3;
@@ -871,6 +880,9 @@ body {
     text-align: justify;
     color: #6a5776;
     max-width: 419px; }
+    @media (min-width: 768px) {
+      .news-card__text {
+        font-size: 17px; } }
   .news-card__btn {
     display: inline-block;
     position: relative;
@@ -905,9 +917,6 @@ body {
   width: 90%;
   max-width: 500px;
   margin: auto; }
-  @media (min-width: 1200px) {
-    .infographic {
-      margin-top: -55px; } }
   .infographic__divider {
     position: relative;
     padding-bottom: 36px; }
@@ -1129,6 +1138,9 @@ body {
   @media (min-width: 992px) {
     .discount {
       margin-bottom: 0; } }
+  @media (min-width: 1200px) {
+    .discount {
+      margin-top: 78px; } }
   .discount__heading {
     margin-bottom: 28px;
     text-align: center;
@@ -1510,8 +1522,9 @@ body {
     font-size: 13px;
     font-weight: 600;
     line-height: 100%; }
-    .footer__heading--no-category {
-      margin-top: 8px; }
+    @media (min-width: 768px) {
+      .footer__heading {
+        font-size: 17px; } }
   .footer__menu {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -1546,6 +1559,9 @@ body {
     font-size: 15px;
     font-weight: 400;
     line-height: 34px; }
+    @media (min-width: 768px) {
+      .footer__link {
+        font-size: 17px; } }
     .footer__link:hover {
       color: rgba(255, 255, 255, 0.5); }
     .footer__link:focus {
@@ -1629,7 +1645,7 @@ body {
   .social__input {
     position: absolute;
     display: block;
-    width: 70%;
+    width: 65%;
     height: 100%;
     padding: 0;
     border: none; }
@@ -2286,6 +2302,9 @@ body {
       font-size: 14px;
       font-weight: 300;
       line-height: 1.6; }
+      @media (min-width: 768px) {
+        .ads__item-text {
+          font-size: 17px; } }
 
 .features {
   margin-right: -15px;
@@ -2394,6 +2413,9 @@ body {
       font-size: 16px;
       font-weight: 300;
       line-height: 1.74; }
+      @media (min-width: 768px) {
+        .features__item-text {
+          font-size: 17px; } }
 
 .cta {
   margin-right: -15px;
@@ -2592,6 +2614,9 @@ body {
     font-size: 16px;
     font-weight: 300;
     line-height: 100%; }
+    @media (min-width: 768px) {
+      .team__role {
+        font-size: 17px; } }
 
 .clients {
   position: relative;
@@ -3184,9 +3209,15 @@ body {
     font-size: 25px; }
   .news .news-card__type {
     font-size: 14px; }
+    @media (min-width: 768px) {
+      .news .news-card__type {
+        font-size: 17px; } }
   .news .news-card__text {
     font-size: 16px;
     margin-bottom: 7px; }
+    @media (min-width: 768px) {
+      .news .news-card__text {
+        font-size: 17px; } }
   .news .news-card__btn {
     font-size: 14px; }
     .news .news-card__btn-icon {
