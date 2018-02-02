@@ -892,6 +892,9 @@ body {
     line-height: 2.29;
     color: #6c4684;
     padding-left: 22px; }
+    @media (min-width: 768px) {
+      .news-card__btn {
+        font-size: 17px; } }
     .news-card__btn:before {
       content: '';
       position: absolute;
@@ -3220,6 +3223,9 @@ body {
         font-size: 17px; } }
   .news .news-card__btn {
     font-size: 14px; }
+    @media (min-width: 768px) {
+      .news .news-card__btn {
+        font-size: 17px; } }
     .news .news-card__btn-icon {
       width: 12px;
       height: 11px; }

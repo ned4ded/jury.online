@@ -120,6 +120,10 @@
     color: #6c4684;
     padding-left: 22px;
 
+    @media(min-width: 768px) {
+      font-size: 17px;
+    }
+
     &:before {
       content: '';
       position: absolute;

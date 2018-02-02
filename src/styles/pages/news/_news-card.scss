@@ -38,6 +38,10 @@
   &__btn {
     font-size: 14px;
 
+    @media(min-width: 768px) {
+      font-size: 17px;
+    }
+
     &-icon {
       width: 12px;
       height: 11px;
