@@ -157,10 +157,10 @@
   }());
 
   $(document).ready(function () {
-    return new ScrollixBase(elements(), appearanceHandler, deviceCheck() && browserCheck() && sizeCheck() && !!elements().length);
+    return new ScrollixBase(elements(), appearanceHandler,
+    // deviceCheck() && browserCheck() && sizeCheck() && !!elements().length,
+    false);
   });
-
-  // $( document ).ready(() => );
 })();
 'use strict';
 

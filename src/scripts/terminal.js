@@ -44,8 +44,7 @@
   $( document ).ready(() => new ScrollixBase(
       elements(),
       appearanceHandler,
-      deviceCheck() && browserCheck() && sizeCheck() && !!elements().length,
+      // deviceCheck() && browserCheck() && sizeCheck() && !!elements().length,
+      false,
     ));
-
-  // $( document ).ready(() => );
 }());
