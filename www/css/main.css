@@ -2192,7 +2192,7 @@ body {
 
 .ads {
   padding-top: 130px;
-  padding-bottom: 20px; }
+  padding-bottom: 50px; }
   .ads__heading {
     margin-bottom: 35px; }
   .ads__text {
@@ -2213,6 +2213,8 @@ body {
     @media (min-width: 768px) {
       .ads__tabs {
         margin: 0 0 70px; } }
+    .ads__tabs-content {
+      min-height: 175px; }
   .ads__tab {
     display: inline-block;
     width: 100%;
