@@ -37,7 +37,7 @@
     infinit: true,
     speed: 1000,
     mobileFirst: true,
-    autoplay: true,
+    // autoplay: true,
     autoplaySpeed: 1500,
     pauseOnHover: true,
     responsive: [
