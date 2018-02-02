@@ -51,10 +51,11 @@
 
     &--no-category {
       justify-content: center;
-      margin-bottom: 15px;
+      margin-bottom: 5px;
 
       & li {
         width: 33%;
+        margin-bottom: 10px;
 
         @media(min-width: 992px) {
           display: inline-block;
@@ -141,6 +142,12 @@
 
     @media (min-width: 1200px) {
       justify-content: flex-start;
+    }
+
+    &--no-category {
+      @media(min-width: 992px) {
+        justify-content: flex-start;
+      }
     }
   }
 
@@ -296,8 +303,8 @@
     }
 
     .footer__social--no-category & {
-      margin-right: 5px;
-      margin-left: 5px;
+      margin-right: 3px;
+      margin-left: 3px;
       margin-bottom: 10px;
     }
 
