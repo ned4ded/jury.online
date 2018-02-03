@@ -1872,6 +1872,8 @@ body {
               filter: invert(15%) contrast(125%); }
       .pagination__item--empty:before {
         content: '...'; }
+      .pagination__item--empty:active:before {
+        color: white; }
     .pagination__item--active {
       color: white;
       -webkit-box-shadow: 0px 4px 8px 0 rgba(35, 31, 32, 0.1), inset 0 -1px 1px 0 rgba(255, 255, 255, 0.2);
@@ -1949,6 +1951,7 @@ body {
       margin-bottom: 15px; }
       @media (min-width: 580px) {
         .news-block__slider-item {
+          width: 575px;
           max-width: 575px; } }
     .news-block__slider-dots {
       display: block;

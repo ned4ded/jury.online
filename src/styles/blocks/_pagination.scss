@@ -49,7 +49,10 @@
 
       &:before {
         content: '...';
+
       }
+
+      &:active:before { color: white;}
     }
 
     &--active {
