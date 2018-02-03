@@ -39,11 +39,12 @@
 
     &-item {
       width: 100%;
+      max-width: 490px;
       margin-top: 20px;
       margin-bottom: 15px;
 
-      @media(min-width: 992px) {
-        width: 575px;
+      @media(min-width: 580px) {
+        max-width: 575px;
       }
     }
 

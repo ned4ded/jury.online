@@ -45,7 +45,6 @@
     }
 
     &--empty {
-      pointer-events: none;
       filter: invert(15%) contrast(125%);
 
       &:before {
