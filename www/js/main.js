@@ -288,6 +288,110 @@ function _toConsumableArray(arr) { if (Array.isArray(arr)) { for (var i = 0, arr
 })();
 'use strict';
 
+function _toConsumableArray(arr) { if (Array.isArray(arr)) { for (var i = 0, arr2 = Array(arr.length); i < arr.length; i++) { arr2[i] = arr[i]; } return arr2; } else { return Array.from(arr); } }
+
+(function () {
+  var form = document.getElementById('form-validation');
+  var requiredElems = $(form).find('input[required]').get();
+  var requiredGroups = $(form).find('input[data-required-group]').get().reduce(function (acc, e) {
+    var groups = Object.keys(acc);
+    var curGroup = $(e).data('requiredGroup');
+
+    var hasGroup = groups.find(function (g) {
+      return g === curGroup;
+    });
+
+    acc[curGroup] = hasGroup ? [].concat(_toConsumableArray(acc[curGroup]), [e]) : [e];
+
+    return acc;
+  }, {});
+
+  var invalidClass = 'arbiter-form__required';
+  var invalidGroupClass = 'arbiter-form__group-validation--active';
+
+  var hasInvalid = function hasInvalid(arr, fn) {
+    var invalidElems = arr.map(function (e) {
+      return fn(e);
+    }).filter(function (e) {
+      return e !== true;
+    });
+    return invalidElems.length > 0 ? invalidElems : false;
+  };
+
+  var isValidGroup = function isValidGroup(group, fn) {
+    var invalidElems = group.map(function (e) {
+      return fn(e);
+    }).filter(function (e) {
+      return e !== true;
+    });
+    return invalidElems.length !== group.length ? true : false;
+  };
+
+  var hasFile = function hasFile(i) {
+    return i.files.length > 0 ? true : false;
+  };
+
+  var requireValidation = function requireValidation(e) {
+    var value = e.checkValidity();
+    return value ? true : e;
+  };
+
+  var removeGroupError = function removeGroupError(ev, e, label) {
+    $(e).unbind('change', removeGroupError);
+    $(label).removeClass(invalidGroupClass);
+  };
+
+  $(document).ready(function () {
+    $(form).on('submit', function (ev) {
+      ev.preventDefault();
+
+      var invalidElems = hasInvalid(requiredElems, requireValidation);
+      var invalidGroups = Object.keys(requiredGroups).map(function (key) {
+        var group = requiredGroups[key];
+
+        return isValidGroup(group, hasFile) ? true : { name: key, group: group };
+      }).filter(function (e) {
+        return e !== true;
+      });
+
+      var $first = invalidElems.length > 0 ? $(invalidElems[0]) : $(invalidGroups[0].group[0]);
+
+      if (invalidElems === false && invalidGroups.length === 0) form.submit();
+
+      if (invalidElems !== false) invalidElems.forEach(function (e) {
+        return $(e).addClass(invalidClass);
+      });
+
+      if (invalidGroups.length !== 0) invalidGroups.forEach(function (g) {
+        var name = g.name;
+        var elems = g.group;
+        var $label = $('[data-for-group="' + name + '"]');
+
+        $label.addClass(invalidGroupClass);
+
+        elems.forEach(function (e) {
+          var cleanLabel = function cleanLabel(ev) {
+            return removeGroupError(ev, e, $label);
+          };
+          $(e).on('change', cleanLabel);
+        });
+      });
+
+      var height = $first.height();
+      var windowHeight = window.innerHeight;
+      var top = $first.offset().top || $first.parent().offset().top;
+      var target = top - windowHeight / 2 - height / 2;
+
+      $('html, body').animate({
+        scrollTop: target
+      }, 1000, function () {
+        return $first.focus();
+      });
+    });
+  });
+})();
+'use strict';
+
 (function () {
   if ($('#header').is('[data-colored]')) return;
 

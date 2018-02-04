@@ -3568,6 +3568,19 @@ body {
     font-family: "AvenirNext", "Arial", sans-serif;
     font-size: 16px;
     line-height: 1; }
+  .arbiter-form__required:invalid {
+    padding: 14px;
+    border: 2px solid #dc3545; }
+  .arbiter-form__group-validation {
+    display: none;
+    text-align: center;
+    border-top: 2px solid #dc3545;
+    padding: 5px;
+    font-size: 15px;
+    color: #dc3545;
+    text-shadow: 1px 0 rgba(64, 29, 88, 0.5); }
+    .arbiter-form__group-validation--active {
+      display: block; }
 
 .main-info--ico {
   padding-top: 110px;

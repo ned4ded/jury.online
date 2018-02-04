@@ -96,25 +96,25 @@
           </div>
           <div class="arbiter-form">
             <div class="container">
-              <form action="https://echo.htmlacademy.ru/" method="post">
+              <form id="form-validation" action="https://echo.htmlacademy.ru/" method="post" novalidate>
                 <div class="arbiter-form__section arbiter-form__general">
                   <span class="arbiter-form__heading">General information</span>
                   <div class="arbiter-form__group">
                     <div class="arbiter-form__item arbiter-form__item--half">
                       <label class="arbiter-form__label" for="firstName">First Name*</label>
-                      <input class="arbiter-form__input-text" type="text" id="firstName">
+                      <input class="arbiter-form__input-text" type="text" id="firstName" >
                     </div>
                     <div class="arbiter-form__item arbiter-form__item--half">
                       <label class="arbiter-form__label" for="lastName">Date of Birth*</label>
-                      <input class="arbiter-form__input-text" type="text" id="lastName">
+                      <input class="arbiter-form__input-text" type="text" id="lastName" >
                     </div>
                     <div class="arbiter-form__item arbiter-form__item--half">
                       <label class="arbiter-form__label" for="date">Last Name*</label>
-                      <input class="arbiter-form__input-text" type="text" id="date">
+                      <input class="arbiter-form__input-text" type="text" id="date" >
                     </div>
                     <div class="arbiter-form__item arbiter-form__item--half">
                       <label class="arbiter-form__label" for="languages">Languages*</label>
-                      <input class="arbiter-form__input-text" type="text" id="languages">
+                      <input class="arbiter-form__input-text" type="text" id="languages" >
                     </div>
                   </div>
                 </div>
@@ -123,11 +123,11 @@
                   <div class="arbiter-form__group">
                     <div class="arbiter-form__item arbiter-form__item--half">
                       <label class="arbiter-form__label" for="email">Email*</label>
-                      <input class="arbiter-form__input-text" type="email" id="email">
+                      <input class="arbiter-form__input-text" type="email" id="email" >
                     </div>
                     <div class="arbiter-form__item arbiter-form__item--half">
                       <label class="arbiter-form__label" for="linkedin">Linkedin*</label>
-                      <input class="arbiter-form__input-text" type="text" id="linkedin">
+                      <input class="arbiter-form__input-text" type="text" id="linkedin" >
                     </div>
                     <div class="arbiter-form__item arbiter-form__item--half">
                       <label class="arbiter-form__label" for="facebook">Facebook</label>
@@ -144,11 +144,11 @@
                   <div class="arbiter-form__group">
                     <div class="arbiter-form__item arbiter-form__item--half">
                       <label class="arbiter-form__label" for="citizenship">Citizenship*</label>
-                      <input class="arbiter-form__input-text" type="text" id="citizenship">
+                      <input class="arbiter-form__input-text" type="text" id="citizenship" >
                     </div>
                     <div class="arbiter-form__item arbiter-form__item--half">
                       <label class="arbiter-form__label" for="residence">Country of residence*</label>
-                      <input class="arbiter-form__input-text" type="text" id="residence">
+                      <input class="arbiter-form__input-text" type="text" id="residence" required>
                     </div>
                     <div class="arbiter-form__item arbiter-form__item--multi">
                       <label class="arbiter-form__label  arbiter-form__radio-heading">Which area of expertise do you think you are qualified to arbiter?*</label>
@@ -217,10 +217,10 @@
                       <div class="arbiter-form__input-container">
                         <div class="row align-items-start">
                           <div class="arbiter-form__docs col-12 col-lg-9">
-                            <input id="file-cv" name="cv" type="file" class="arbiter-form__docs-input">
-                            <input id="file-certificate" name="certificate" type="file" class="arbiter-form__docs-input">
-                            <input id="file-cover-letter" name="letter" type="file" class="arbiter-form__docs-input">
-                            <input id="file-diploma" name="diploma" type="file" class="arbiter-form__docs-input">
+                            <input id="file-cv" name="cv" type="file" class="arbiter-form__docs-input" data-required-group="proficience-files">
+                            <input id="file-certificate" name="certificate" type="file" class="arbiter-form__docs-input" data-required-group="proficience-files">
+                            <input id="file-cover-letter" name="letter" type="file" class="arbiter-form__docs-input" data-required-group="proficience-files">
+                            <input id="file-diploma" name="diploma" type="file" class="arbiter-form__docs-input" data-required-group="proficience-files">
 
                             <label for="file-cv" class="arbiter-form__docs-item" data-file-label>CV</label>
                             <label for="file-certificate" class="arbiter-form__docs-item" data-file-label>Certificate</label>
@@ -228,10 +228,11 @@
                             <label for="file-diploma" class="arbiter-form__docs-item" data-file-label>Diploma</label>
                           </div>
                           <div class="arbiter-form__docs col-12 col-lg-3">
-                            <input id="file-other" name="other" type="file" class="arbiter-form__docs-input" multiple>
+                            <input id="file-other" name="other" type="file" class="arbiter-form__docs-input" data-required-group="proficience-files" multiple>
                             <label for="file-other" class="arbiter-form__btn arbiter-form__btn--other" data-file-label data-no-customization="true">Other</label>
                             <span for="file-other" class="arbiter-form__file-counter" data-multiple-caption='{ "single": "{counter} file selected", "multi":"{counter} files selected" }'></span>
                           </div>
+                          <span class="arbiter-form__docs arbiter-form__group-validation col-12" data-for-group="proficience-files">You have to add at least one file</span>
                         </div>
                       </div>
 

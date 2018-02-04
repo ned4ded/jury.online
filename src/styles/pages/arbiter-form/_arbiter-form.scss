@@ -293,4 +293,25 @@
     font-size: 16px;
     line-height: 1;
   }
+
+  &__required {
+    &:invalid {
+      padding: 14px;
+      border: 2px solid rgb(220, 53, 69);
+    }
+  }
+
+  &__group-validation {
+    display: none;
+    text-align: center;
+    border-top: 2px solid rgb(220, 53, 69);
+    padding: 5px;
+    font-size: 15px;
+    color: rgb(220, 53, 69);
+    text-shadow: 1px 0 rgba(64, 29, 88, 0.5);
+
+    &--active {
+      display: block;
+    }
+  }
 }
