@@ -354,13 +354,13 @@ function _toConsumableArray(arr) { if (Array.isArray(arr)) { for (var i = 0, arr
         return e !== true;
       });
 
-      var $first = invalidElems.length > 0 ? $(invalidElems[0]) : $(invalidGroups[0].group[0]);
-
       if (invalidElems === false && invalidGroups.length === 0) form.submit();
 
       if (invalidElems !== false) invalidElems.forEach(function (e) {
         return $(e).addClass(invalidClass);
       });
+
+      var $first = invalidElems.length > 0 ? $(invalidElems[0]) : $(invalidGroups[0].group[0]);
 
       if (invalidGroups.length !== 0) invalidGroups.forEach(function (g) {
         var name = g.name;

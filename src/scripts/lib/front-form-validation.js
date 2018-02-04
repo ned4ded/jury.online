@@ -50,11 +50,11 @@
         return isValidGroup(group, hasFile) ? true : {name: key, group};
       }).filter(e => e !== true);
 
-      const $first = invalidElems.length > 0? $( invalidElems[0] ) : $( invalidGroups[0].group[0] );
-
       if(invalidElems === false && invalidGroups.length === 0) form.submit();
 
       if(invalidElems !== false) invalidElems.forEach(e => $( e ).addClass(invalidClass));
+
+      const $first = invalidElems.length > 0 ? $( invalidElems[0] ) : $( invalidGroups[0].group[0] );
 
       if(invalidGroups.length !== 0) invalidGroups.forEach(g => {
         const name = g.name;
