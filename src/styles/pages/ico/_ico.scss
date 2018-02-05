@@ -59,20 +59,10 @@
   }
 
   &__roadmap {
-    margin: auto;
     width: 90%;
-    display: flex;
-    flex-flow: column nowrap;
-    align-items: center;
-
+    margin: auto;
     &-heading {
       margin-bottom: 33px;
-    }
-
-    &-image {
-      max-width: 786px;
-      width: 100%;
-      min-height: 400px;
     }
   }
 }
