@@ -17,12 +17,6 @@
   font-weight: 400;
   font-style: normal; }
 
-@font-face {
-  font-family: 'Futura';
-  src: url("../assets/fonts/FuturaMediumC.woff") format("woff");
-  font-weight: 500;
-  font-style: normal; }
-
 @media (min-width: 1366px) {
   .container {
     width: 1366px;
