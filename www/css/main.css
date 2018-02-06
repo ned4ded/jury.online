@@ -2403,14 +2403,14 @@ body {
     min-width: 170px;
     max-width: 300px;
     margin: auto;
-    padding-top: 188px;
+    padding-top: 150px;
     text-align: center; }
     .features__item:after {
       position: absolute;
       top: 0;
       left: 50%;
-      width: 172px;
-      height: 172px;
+      width: 138px;
+      height: 138px;
       content: '';
       -webkit-transform: translateX(-50%);
               transform: translateX(-50%); }
@@ -2418,8 +2418,8 @@ body {
       position: absolute;
       top: 0;
       left: 50%;
-      width: 172px;
-      height: 172px;
+      width: 138px;
+      height: 138px;
       content: '';
       -webkit-transform: translateX(-50%);
               transform: translateX(-50%);
