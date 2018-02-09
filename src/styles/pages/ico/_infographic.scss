@@ -14,18 +14,22 @@
   }
 
   & .fees-diagram {
-    // &__form { margin-top: 25px;}
     &__form:before,
-    &__form:after,
     &__soft-cap,
-    &__reached:after {
+    &__reached:after,
+    &__hard-cap-text {
       @media(min-width: 768px) {
-        font-size: 24px;
+        font-size: 21px;
       }
     }
+  }
 
-    &__soft-cap {
-      width: 100px;
+  & .fees-diagram__soft-cap {
+    bottom: 120%;
+
+    &-plank:before {
+      height: 110%;
+      bottom: -120%;
     }
   }
 }

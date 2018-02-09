@@ -1038,7 +1038,7 @@ body {
   background-color: rgba(40, 17, 49, 0.4);
   -webkit-box-shadow: inset 0px 2px 7px 0 rgba(0, 0, 0, 0.3);
           box-shadow: inset 0px 2px 7px 0 rgba(0, 0, 0, 0.3); }
-  .fees-diagram__form:before, .fees-diagram__form:after {
+  .fees-diagram__form:before {
     position: absolute;
     bottom: -39px;
     content: 'Start';
@@ -1046,17 +1046,34 @@ body {
     color: rgba(255, 255, 255, 0.8);
     text-shadow: 0px 9px 8px rgba(35, 31, 32, 0.2);
     font-family: "Futura", serif;
-    font-size: 18px; }
-  .fees-diagram__form:after {
-    right: 0;
-    left: auto;
-    content: 'Hard cap'; }
+    font-size: 16px; }
   .fees-diagram__form[data-cap] {
     margin-bottom: 54px; }
   .fees-diagram__form[data-cap="start"]:before {
     bottom: -59px; }
   .fees-diagram__form[data-cap="finish"]:after {
     bottom: -59px; }
+
+.fees-diagram__hard-cap {
+  position: absolute;
+  right: 0;
+  bottom: -100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column nowrap;
+          flex-flow: column nowrap;
+  margin: 0; }
+  .fees-diagram__hard-cap-text {
+    display: block;
+    text-align: center;
+    letter-spacing: -0.5px;
+    color: rgba(255, 255, 255, 0.8);
+    text-shadow: 0px 9px 8px rgba(35, 31, 32, 0.2);
+    font-family: "Futura", serif;
+    font-size: 16px; }
 
 .fees-diagram__reached {
   position: relative;
@@ -1070,9 +1087,11 @@ body {
           box-shadow: 0px 13px 50px 0 rgba(35, 31, 32, 0.2); }
   .fees-diagram__reached:after {
     position: absolute;
-    right: -34.25px;
+    right: -10%;
     bottom: -39px;
     content: 'Reached';
+    -webkit-transform: translateX(10%);
+            transform: translateX(10%);
     letter-spacing: -0.5px;
     color: rgba(255, 255, 255, 0.8);
     text-shadow: 0px 9px 8px rgba(35, 31, 32, 0.2);
@@ -1081,12 +1100,18 @@ body {
 
 .fees-diagram__soft-cap {
   position: absolute;
-  position: absolute;
   z-index: 1;
-  top: -57px;
+  bottom: 110%;
   left: 0;
-  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column nowrap;
+          flex-flow: column nowrap;
   height: 100%;
+  margin: 0;
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
   text-align: center;
@@ -1095,9 +1120,10 @@ body {
   text-shadow: 0px 9px 8px rgba(35, 31, 32, 0.2);
   font-family: "Futura", serif;
   font-size: 16px; }
-  .fees-diagram__soft-cap:before {
+  .fees-diagram__soft-cap-text {
+    margin: 0; }
+  .fees-diagram__soft-cap-plank:before {
     position: absolute;
-    top: 33px;
     left: 50%;
     width: 3px;
     height: 131.5%;
@@ -1107,9 +1133,8 @@ body {
     background-image: linear-gradient(180grad, #eec7ff 54%, rgba(194, 63, 105, 0) 100%);
     -webkit-box-shadow: 0px 0px 8px 0px rgba(35, 31, 32, 0.2);
             box-shadow: 0px 0px 8px 0px rgba(35, 31, 32, 0.2); }
-  .fees-diagram__soft-cap:after {
+  .fees-diagram__soft-cap-plank:after {
     position: absolute;
-    top: 33px;
     left: 50%;
     width: 9px;
     height: 10px;
@@ -3607,10 +3632,13 @@ body {
       letter-spacing: 0.9px;
       margin-bottom: 20px; }
   @media (min-width: 768px) {
-    .main-info--ico .infographic .fees-diagram__form:before, .main-info--ico .infographic .fees-diagram__form:after, .main-info--ico .infographic .fees-diagram__soft-cap, .main-info--ico .infographic .fees-diagram__reached:after {
-      font-size: 24px; } }
+    .main-info--ico .infographic .fees-diagram__form:before, .main-info--ico .infographic .fees-diagram__soft-cap, .main-info--ico .infographic .fees-diagram__reached:after, .main-info--ico .infographic .fees-diagram__hard-cap-text {
+      font-size: 21px; } }
   .main-info--ico .infographic .fees-diagram__soft-cap {
-    width: 100px; }
+    bottom: 120%; }
+    .main-info--ico .infographic .fees-diagram__soft-cap-plank:before {
+      height: 110%;
+      bottom: -120%; }
 
 .ico {
   padding-top: 75px;

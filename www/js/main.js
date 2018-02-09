@@ -428,6 +428,19 @@ function _toConsumableArray(arr) { if (Array.isArray(arr)) { for (var i = 0, arr
 })();
 'use strict';
 
+(function () {
+  var $photos = $('.team-block__photo, .team__element > .arbiter-card__photo');
+
+  if ($photos.length === 0) return;
+
+  $photos.bind('contextmenu', function (e) {
+    if (e.button == 2) {
+      return false;
+    }
+  });
+})();
+'use strict';
+
 var Player;
 var player = 'player-how-it-works';
 var $player = $('#' + player);
