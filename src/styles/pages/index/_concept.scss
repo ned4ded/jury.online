@@ -6,6 +6,18 @@
 
   &__heading {
     margin-bottom: 34px;
+
+    &[data-text-abaft]:after {
+      width: 100%;
+      font-size: 50px;
+
+      @media(min-width: 768px) {
+        font-size: 72px;
+      }
+      @media(min-width: 991px) {
+        font-size: 81px;
+      }
+    }
   }
 
   &__image {
