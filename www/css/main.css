@@ -2970,6 +2970,10 @@ body {
       font-family: "Futura", serif;
       font-size: 14px;
       font-weight: 300; }
+    .press__quote-author.press__company-logo {
+      max-height: 16px; }
+      .press__quote-author.press__company-logo:before {
+        display: none; }
 
 .press__list {
   display: -webkit-box;

@@ -122,13 +122,21 @@
       font-family: $avenir;
       font-size: 14px;
       font-weight: 300;
-      &:before {
+
+      &:before { // use for text quotes
         content: '- ';
 
         font-family: $avenir;
         font-size: 14px;
         font-weight: 300;
       }
+
+      &.press__company-logo {
+        &:before { display: none; }
+        max-height: 16px;
+      }
+
+
     }
   }
 
