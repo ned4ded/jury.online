@@ -2733,8 +2733,10 @@ body {
   .clients:before {
     position: absolute;
     z-index: -3;
-    top: 235px;
+    top: 53%;
     right: 0;
+    -webkit-transform: translateY(-50%);
+            transform: translateY(-50%);
     display: none;
     width: 424px;
     height: 434px;

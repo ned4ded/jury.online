@@ -8,8 +8,9 @@
   &:before {
     position: absolute;
     z-index: -3;
-    top: 235px;
+    top: 53%;
     right: 0;
+    transform: translateY(-50%);
 
     display: none;
 
