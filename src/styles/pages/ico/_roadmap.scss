@@ -123,6 +123,21 @@
       &:nth-of-type(2n + 1):not(:first-of-type) {
         top: -150px;
       }
+
+      &--no-indent:nth-of-type(n):not(:checked) {
+        top: 0;
+        margin-top: 0;
+      }
+
+      &--double-indent:not(:checked) {
+        &:nth-of-type(2n + 1) {
+          top: -300px;
+        }
+
+        &:nth-of-type(2n) {
+          margin-top: 300px;
+        }
+      }
     }
 
     &.roadmap__block--june-2019 {

@@ -3898,7 +3898,14 @@ body {
           .roadmap__block:nth-of-type(2n) .roadmap__milestone {
             text-align: left; }
         .roadmap__block:nth-of-type(2n + 1):not(:first-of-type) {
-          top: -150px; } }
+          top: -150px; }
+        .roadmap__block--no-indent:nth-of-type(n):not(:checked) {
+          top: 0;
+          margin-top: 0; }
+        .roadmap__block--double-indent:not(:checked):nth-of-type(2n + 1) {
+          top: -300px; }
+        .roadmap__block--double-indent:not(:checked):nth-of-type(2n) {
+          margin-top: 300px; } }
     .roadmap__block.roadmap__block--june-2019 {
       margin-top: 0; }
   .roadmap__starting-point {
