@@ -31,9 +31,9 @@ class SmoothScrolling {
       return !!(anchor) ? anchor : false;
     }
 
-    const hash = el.hash.slice(1);
+    const hash = el.has ? el.hash.slice(1) : false;
 
-    return document.getElementById(hash);
+    return hash ? document.getElementById(hash) : false;
   }
 
   setListners(elements) {
@@ -51,6 +51,8 @@ class SmoothScrolling {
       ev.preventDefault();
 
       const target = this.getAnchor(el);
+      if(!target) return;
+      
       const offset = this.getAnchorOffset(target);
 
       $("html, body").animate({ scrollTop: offset - this.getFixedOffset() }, 500);
