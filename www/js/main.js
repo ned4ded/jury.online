@@ -441,6 +441,91 @@ function _toConsumableArray(arr) { if (Array.isArray(arr)) { for (var i = 0, arr
 })();
 'use strict';
 
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+var SmoothScrolling = function () {
+  function SmoothScrolling(elements) {
+    _classCallCheck(this, SmoothScrolling);
+
+    this.offsetHeight = 80;
+
+    if (!elements) return;
+    if (this.getAnchor()) this.jumpOnLoad();
+
+    this.setListners(elements);
+  }
+
+  _createClass(SmoothScrolling, [{
+    key: 'jumpOnLoad',
+    value: function jumpOnLoad() {
+      var offset = this.getAnchorOffset() - this.getFixedOffset();
+
+      $(document).ready(function () {
+        return window.scrollTo(window.pageXOffset, offset);
+      });
+    }
+  }, {
+    key: 'getFixedOffset',
+    value: function getFixedOffset() {
+      return this.offsetHeight;
+    }
+  }, {
+    key: 'getAnchorOffset',
+    value: function getAnchorOffset(el) {
+      var elem = el || document.getElementById(this.getAnchor());
+
+      return $(elem).offset().top;
+    }
+  }, {
+    key: 'getAnchor',
+    value: function getAnchor(el) {
+      if (!el) {
+        var anchor = window.location.hash.slice(1);
+
+        return !!anchor ? anchor : false;
+      }
+
+      var hash = el.hash.slice(1);
+
+      return document.getElementById(hash);
+    }
+  }, {
+    key: 'setListners',
+    value: function setListners(elements) {
+      var _this = this;
+
+      elements.forEach(function (el) {
+        var $el = $(el);
+        var fn = _this.getListner(el);
+
+        $el.on('click', fn);
+      });
+    }
+  }, {
+    key: 'getListner',
+    value: function getListner(el) {
+      var _this2 = this;
+
+      return function (ev) {
+        ev.preventDefault();
+
+        var target = _this2.getAnchor(el);
+        var offset = _this2.getAnchorOffset(target);
+
+        $("html, body").animate({ scrollTop: offset - _this2.getFixedOffset() }, 500);
+      };
+    }
+  }]);
+
+  return SmoothScrolling;
+}();
+
+var elements = $('[data-smooth-scroll="true"]').get();
+new SmoothScrolling(elements);
+'use strict';
+
 var Player;
 var player = 'player-how-it-works';
 var $player = $('#' + player);
