@@ -4533,37 +4533,37 @@ body {
     font-size: 20px; } }
 
 @media (min-height: 650px) and (min-width: 992px) {
-  .scrollable .team__heading {
+  .scrollable .team-block__heading {
     margin-bottom: 15px; }
-  .scrollable .team__text {
+  .scrollable .team-block__text {
     margin-bottom: 30px; }
-  .scrollable .team__card {
+  .scrollable .team-block__card {
     margin-bottom: 0; } }
 
 @media (min-height: 650px) and (max-height: 749px) {
-  .scrollable .team__heading {
+  .scrollable .team-block__heading {
     font-size: 40px;
     margin-bottom: 15px; }
-    .scrollable .team__heading:after {
+    .scrollable .team-block__heading:after {
       font-size: 55px; }
-  .scrollable .team__text {
+  .scrollable .team-block__text {
     margin-bottom: 30px;
     width: 100%;
     line-height: 1.1;
     font-size: 18px; }
-  .scrollable .team__photo {
+  .scrollable .team-block__photo {
     height: 300px; }
-  .scrollable .team__card {
+  .scrollable .team-block__card {
     margin-bottom: 0; } }
 
 @media (min-height: 750px) and (max-height: 950px) {
-  .scrollable .team__heading {
+  .scrollable .team-block__heading {
     margin-bottom: 0; }
-  .scrollable .team__text {
+  .scrollable .team-block__text {
     margin-bottom: 0; }
-  .scrollable .team__photo {
+  .scrollable .team-block__photo {
     height: 300px; }
-  .scrollable .team__card {
+  .scrollable .team-block__card {
     margin-bottom: 0; } }
 
 @media (min-height: 650px) and (max-height: 749px) {
@@ -4572,7 +4572,7 @@ body {
 
 @media (min-height: 749px) {
   .scrollable.clients:before {
-    top: 60px; } }
+    top: 60%; } }
 
 @media (min-height: 650px) and (max-height: 850px) {
   .scrollable .clients__heading {

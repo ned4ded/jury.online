@@ -435,7 +435,7 @@
     }
   }
 
-  & .team {
+  & .team-block {
     @media(min-height: 650px) and (min-width: 992px) {
       &__heading {
         margin-bottom: 15px;
@@ -501,7 +501,7 @@
     }
 
     @media (min-height:749px) {
-      top: 60px;
+      top: 60%;
     }
   }
 
