@@ -4570,6 +4570,10 @@ body {
   .scrollable.clients:before {
     display: none; } }
 
+@media (min-height: 749px) {
+  .scrollable.clients:before {
+    top: 60px; } }
+
 @media (min-height: 650px) and (max-height: 850px) {
   .scrollable .clients__heading {
     font-size: 40px;
