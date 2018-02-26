@@ -5,11 +5,13 @@ class ScrollixBase {
     this.events = new ScrollixEvents(this, customHandler);
     this.hasStructure = makeStructure;
     if(!makeStructure) this.events.clean();
-    this.setBreakpoints();
     this.scrollTop = this.getScrollTop();
     this.scrollBottom = this.getScrollBottom();
     this.setScrollDirection(1);
+    this.setBreakpoints();
     this.setNextIndex();
+
+    console.log(this.breakpoints);
 
   }
 
@@ -44,7 +46,7 @@ class ScrollixBase {
   setBreakpoints() {
     this.breakpoints = this.elements.map((element, index, array) => {
       const start = element.getStart();
-      const end = (index < array.length - 1) ? array[index + 1].getStart() : $( document ).innerHeight();
+      const end = (index < array.length - 1) ? start + $( element.getElement() ).outerHeight(true) : $( document ).innerHeight();
       return {index, start, end};
     });
   }
@@ -54,9 +56,15 @@ class ScrollixBase {
     const curBot = this.scrollBottom;
     const find = (fn) => this.breakpoints.find(brp => fn(brp));
 
-    const nextElement = this.scrollDirection ?
-      find((brp) => (brp.end - curTop) >= 0) :
-      find((brp) => (brp.start - curBot) >= 0);
+    var nextElement = this.scrollDirection ?
+      find((brp) => (brp.end >= curTop && curTop > brp.start)) :
+      find((brp) => (brp.start <= curBot && curBot < brp.end));
+
+    if(!nextElement) {
+      nextElement = this.scrollDirection ?
+        find((brp) => (brp.end - curTop) >= 0) :
+        find((brp) => (brp.start - curBot) >= 0);
+    }
 
     const nextIndex = nextElement ? nextElement.index : (this.elements.length - 1);
     this.nextIndex = nextIndex;
@@ -92,7 +100,7 @@ class ScrollixBase {
     const element = this.elements.find(e => e.index === this.nextIndex);
 
     $('html, body').animate({
-               scrollTop: element.start - 60,
+               scrollTop: element.start,
              }, 1000);
   }
 

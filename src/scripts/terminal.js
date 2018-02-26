@@ -37,14 +37,17 @@
 
   const elements = () => $('[data-scrollable]');
 
-  $( document ).ready(function() {
-    $('html').removeClass('no-js');
-  }());
-
   $( document ).ready(() => new ScrollixBase(
       elements(),
       appearanceHandler,
-      // deviceCheck() && browserCheck() && sizeCheck() && !!elements().length,
-      false,
+      deviceCheck() && browserCheck() && sizeCheck() && !!elements().length,
+      // false,
     ));
+
+    $( document ).ready(function() {
+      $('html').removeClass('no-js');
+      const elements = $('[data-smooth-scroll="true"]').get();
+
+      return () => new SmoothScrolling(elements);
+    }());
 }());

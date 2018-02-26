@@ -5,11 +5,13 @@ class ScrollixBlock {
     this.element = $( element ).get(0);
     this.index = index;
     this.start = Math.floor($( element ).offset().top);
-    this.scrollable = ($( element ).outerHeight() > this.getMaxHeight()) ? false : scrollable;
 
     if(makeStructure) this.makeStructure();
-
-
+    const innerH = $( element ).children().first().innerHeight() + 70;
+    this.scrollable = (innerH > this.getMaxHeight()) ? false : scrollable;
+    console.log(innerH);
+    console.log(this);
+    if(!this.scrollable) this.destroyStructure();
   }
 
   update() {
@@ -34,6 +36,11 @@ class ScrollixBlock {
     $( this.element ).addClass('scrollable');
   }
 
+  destroyStructure() {
+    $( this.element ).children().first().removeClass('scrollable__wrapper');
+    $( this.element ).removeClass('scrollable');
+  }
+
   getMaxHeight() {
     return window.innerHeight;
   }
@@ -44,5 +51,9 @@ class ScrollixBlock {
 
   getStart() {
     return this.start;
+  }
+
+  getElement() {
+    return this.element;
   }
 }

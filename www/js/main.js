@@ -152,14 +152,19 @@
   };
 
   $(document).ready(function () {
-    $('html').removeClass('no-js');
-  }());
+    return new ScrollixBase(elements(), appearanceHandler, deviceCheck() && browserCheck() && sizeCheck() && !!elements().length);
+  }
+  // false,
+  );
 
   $(document).ready(function () {
-    return new ScrollixBase(elements(), appearanceHandler,
-    // deviceCheck() && browserCheck() && sizeCheck() && !!elements().length,
-    false);
-  });
+    $('html').removeClass('no-js');
+    var elements = $('[data-smooth-scroll="true"]').get();
+
+    return function () {
+      return new SmoothScrolling(elements);
+    };
+  }());
 })();
 'use strict';
 
@@ -439,7 +444,7 @@ function _toConsumableArray(arr) { if (Array.isArray(arr)) { for (var i = 0, arr
     }
   });
 })();
-'use strict';
+"use strict";
 
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
@@ -458,7 +463,7 @@ var SmoothScrolling = function () {
   }
 
   _createClass(SmoothScrolling, [{
-    key: 'jumpOnLoad',
+    key: "jumpOnLoad",
     value: function jumpOnLoad() {
       var offset = this.getAnchorOffset() - this.getFixedOffset();
 
@@ -467,19 +472,19 @@ var SmoothScrolling = function () {
       });
     }
   }, {
-    key: 'getFixedOffset',
+    key: "getFixedOffset",
     value: function getFixedOffset() {
       return this.offsetHeight;
     }
   }, {
-    key: 'getAnchorOffset',
+    key: "getAnchorOffset",
     value: function getAnchorOffset(el) {
       var elem = el || document.getElementById(this.getAnchor());
 
       return $(elem).offset().top;
     }
   }, {
-    key: 'getAnchor',
+    key: "getAnchor",
     value: function getAnchor(el) {
       if (!el) {
         var anchor = window.location.hash.slice(1);
@@ -487,12 +492,12 @@ var SmoothScrolling = function () {
         return !!anchor ? anchor : false;
       }
 
-      var hash = el.hash.slice(1);
+      var hash = el.hash ? el.hash.slice(1) : false;
 
-      return document.getElementById(hash);
+      return hash ? document.getElementById(hash) : false;
     }
   }, {
-    key: 'setListners',
+    key: "setListners",
     value: function setListners(elements) {
       var _this = this;
 
@@ -504,7 +509,7 @@ var SmoothScrolling = function () {
       });
     }
   }, {
-    key: 'getListner',
+    key: "getListner",
     value: function getListner(el) {
       var _this2 = this;
 
@@ -512,6 +517,8 @@ var SmoothScrolling = function () {
         ev.preventDefault();
 
         var target = _this2.getAnchor(el);
+        if (!target) return;
+
         var offset = _this2.getAnchorOffset(target);
 
         $("html, body").animate({ scrollTop: offset - _this2.getFixedOffset() }, 500);
@@ -521,9 +528,6 @@ var SmoothScrolling = function () {
 
   return SmoothScrolling;
 }();
-
-var elements = $('[data-smooth-scroll="true"]').get();
-new SmoothScrolling(elements);
 'use strict';
 
 var Player;
@@ -591,11 +595,13 @@ var ScrollixBase = function () {
     this.events = new ScrollixEvents(this, customHandler);
     this.hasStructure = makeStructure;
     if (!makeStructure) this.events.clean();
-    this.setBreakpoints();
     this.scrollTop = this.getScrollTop();
     this.scrollBottom = this.getScrollBottom();
     this.setScrollDirection(1);
+    this.setBreakpoints();
     this.setNextIndex();
+
+    console.log(this.breakpoints);
   }
 
   _createClass(ScrollixBase, [{
@@ -645,7 +651,7 @@ var ScrollixBase = function () {
     value: function setBreakpoints() {
       this.breakpoints = this.elements.map(function (element, index, array) {
         var start = element.getStart();
-        var end = index < array.length - 1 ? array[index + 1].getStart() : $(document).innerHeight();
+        var end = index < array.length - 1 ? start + $(element.getElement()).outerHeight(true) : $(document).innerHeight();
         return { index: index, start: start, end: end };
       });
     }
@@ -663,10 +669,18 @@ var ScrollixBase = function () {
       };
 
       var nextElement = this.scrollDirection ? find(function (brp) {
-        return brp.end - curTop >= 0;
+        return brp.end >= curTop && curTop > brp.start;
       }) : find(function (brp) {
-        return brp.start - curBot >= 0;
+        return brp.start <= curBot && curBot < brp.end;
       });
+
+      if (!nextElement) {
+        nextElement = this.scrollDirection ? find(function (brp) {
+          return brp.end - curTop >= 0;
+        }) : find(function (brp) {
+          return brp.start - curBot >= 0;
+        });
+      }
 
       var nextIndex = nextElement ? nextElement.index : this.elements.length - 1;
       this.nextIndex = nextIndex;
@@ -712,7 +726,7 @@ var ScrollixBase = function () {
       });
 
       $('html, body').animate({
-        scrollTop: element.start - 60
+        scrollTop: element.start
       }, 1000);
     }
   }]);
@@ -741,9 +755,13 @@ var ScrollixBlock = function () {
     this.element = $(element).get(0);
     this.index = index;
     this.start = Math.floor($(element).offset().top);
-    this.scrollable = $(element).outerHeight() > this.getMaxHeight() ? false : scrollable;
 
     if (makeStructure) this.makeStructure();
+    var innerH = $(element).children().first().innerHeight() + 70;
+    this.scrollable = innerH > this.getMaxHeight() ? false : scrollable;
+    console.log(innerH);
+    console.log(this);
+    if (!this.scrollable) this.destroyStructure();
   }
 
   _createClass(ScrollixBlock, [{
@@ -770,6 +788,12 @@ var ScrollixBlock = function () {
       $(this.element).addClass('scrollable');
     }
   }, {
+    key: 'destroyStructure',
+    value: function destroyStructure() {
+      $(this.element).children().first().removeClass('scrollable__wrapper');
+      $(this.element).removeClass('scrollable');
+    }
+  }, {
     key: 'getMaxHeight',
     value: function getMaxHeight() {
       return window.innerHeight;
@@ -783,6 +807,11 @@ var ScrollixBlock = function () {
     key: 'getStart',
     value: function getStart() {
       return this.start;
+    }
+  }, {
+    key: 'getElement',
+    value: function getElement() {
+      return this.element;
     }
   }]);
 
@@ -861,7 +890,10 @@ var ScrollixEvents = function () {
   }, {
     key: 'wheelHandler',
     value: function wheelHandler(event) {
-      // if(!this.base.getNextElement().isScrollable()) return console.log(this.base.elements);
+      var dir = event.originalEvent.deltaY < 0 ? 1 : 0;
+      this.base.setScrollDirection(dir);
+      this.base.setNextIndex();
+      if (!this.base.getNextElement().isScrollable() || this.base.getScrollBottom() == $(document).height()) return;
       $(window).unbind('wheel');
       var block = function block(e) {
         return e.preventDefault();
@@ -869,9 +901,6 @@ var ScrollixEvents = function () {
       $(window).bind('wheel', block);
 
       event.preventDefault();
-      var dir = event.originalEvent.deltaY < 0 ? 1 : 0;
-      this.base.setScrollDirection(dir);
-      this.base.setNextIndex();
       this.base.next();
 
       var _this = this;
@@ -895,11 +924,15 @@ var ScrollixEvents = function () {
       var keys = { 'KeyW': 1, 'KeyS': 0, 'Space': 0, 'ArrowUp': 1, 'ArrowDown': 0 };
       var curKey = event.originalEvent.code;
 
+      var dir = keys[curKey];
+      this.base.setScrollDirection(dir);
+      this.base.setNextIndex();
+
       if (curKey === 'Escape') return this.clean();
       if (!Object.keys(keys).find(function (e) {
         return e === curKey;
       })) return;
-      // if(!this.base.getNextElement().isScrollable()) return console.log(this.base.elements);
+      if (!this.base.getNextElement().isScrollable() || this.base.getScrollBottom() == $(document).height()) return;
       event.preventDefault();
 
       $(window).unbind('keydown');
@@ -908,9 +941,6 @@ var ScrollixEvents = function () {
       };
       $(window).bind('keydown', block);
 
-      var dir = keys[curKey];
-      this.base.setScrollDirection(dir);
-      this.base.setNextIndex();
       this.base.next();
 
       var _this = this;

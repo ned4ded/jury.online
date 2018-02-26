@@ -32,6 +32,10 @@
     width: auto;
 
     @media(min-width: 992px) {
+      height: 185px;
+    }
+
+    @media(min-width: 1200px) {
       height: 230px;
     }
 

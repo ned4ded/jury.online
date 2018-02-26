@@ -43,15 +43,15 @@ class ScrollixEvents {
   }
 
   wheelHandler(event) {
-    // if(!this.base.getNextElement().isScrollable()) return console.log(this.base.elements);
+    const dir = (event.originalEvent.deltaY < 0) ? 1 : 0;
+    this.base.setScrollDirection(dir);
+    this.base.setNextIndex();
+    if(!this.base.getNextElement().isScrollable() || this.base.getScrollBottom() == $( document ).height()) return;
     $( window ).unbind('wheel');
     const block = e => e.preventDefault();
     $( window ).bind('wheel', block);
 
     event.preventDefault();
-    const dir = (event.originalEvent.deltaY < 0) ? 1 : 0;
-    this.base.setScrollDirection(dir);
-    this.base.setNextIndex();
     this.base.next();
 
     const _this = this;
@@ -72,18 +72,19 @@ class ScrollixEvents {
     const keys = { 'KeyW': 1, 'KeyS': 0, 'Space': 0, 'ArrowUp': 1, 'ArrowDown': 0 };
     const curKey = event.originalEvent.code;
 
+    const dir = keys[curKey];
+    this.base.setScrollDirection(dir);
+    this.base.setNextIndex();
+
     if(curKey === 'Escape') return this.clean();
     if(!Object.keys(keys).find(e => e === curKey)) return;
-    // if(!this.base.getNextElement().isScrollable()) return console.log(this.base.elements);
+    if(!this.base.getNextElement().isScrollable() || this.base.getScrollBottom() == $( document ).height()) return;
     event.preventDefault();
 
     $( window ).unbind('keydown');
     const block = e => e.preventDefault();
     $( window ).bind('keydown', block);
 
-    const dir = keys[curKey];
-    this.base.setScrollDirection(dir);
-    this.base.setNextIndex();
     this.base.next();
 
     const _this = this;

@@ -31,13 +31,12 @@ class SmoothScrolling {
       return !!(anchor) ? anchor : false;
     }
 
-    const hash = el.has ? el.hash.slice(1) : false;
+    const hash = el.hash ? el.hash.slice(1) : false;
 
     return hash ? document.getElementById(hash) : false;
   }
 
   setListners(elements) {
-
     elements.forEach(el => {
       const $el = $( el );
       const fn = this.getListner(el);
@@ -59,6 +58,3 @@ class SmoothScrolling {
     };
   }
 }
-
-const elements = $('[data-smooth-scroll="true"]').get();
-new SmoothScrolling(elements);

@@ -47,9 +47,12 @@ body {
     overflow:hidden;
 
     @media (min-width: 768px) {
-      font-size: 81px;
+      font-size: 60px;
       width: auto;
       overflow: inherit;
+    }
+    @media (min-width: 1200px) {
+      font-size: 81px;
     }
   }
 

@@ -14,11 +14,11 @@
   &__wrapper {
     @media(min-height: 650px) and (min-width: 992px) {
       position: relative;
-      top: 50%;
+      top: calc(50% + 35px);
       transform: translateY(-50%);
 
       .main-info--index & {
-        top: 45%;
+        top: 46%;
       }
 
       .footer & {
@@ -26,54 +26,58 @@
         transform: none;
       }
 
-      .news-block & {
-        top: 45%;
+      // .news-block & {
+      //   top: 56%;
+      // }
+
+      // .video & {
+      //   top: 56%;
+      // }
+      //
+      // .concept & {
+      //   top: 56%;
+      // }
+
+      // .features & {
+      //   top: 47%;
+      // }
+
+       .cta & {
+         top: 48%;
       }
 
-      .video & {
-        top: 43%;
-      }
-
-      .concept & {
-        top: 45%;
-      }
-
-      .features & {
-        top: 47%;
-      }
-
-      .cta & {
-        top: 44%;
-      }
-
-      .arbiters-block & {
-        top: 46%;
-      }
-
-      .team & {
-        top: 46%;
-      }
+      // .arbiters-block & {
+      //   top: 46%;
+      // }
+      //
+      // .team & {
+      //   top: 46%;
+      // }
 
       .clients & {
-        top: 40%;
+        top: 48%;
       }
 
-      .press & {
-        top: 45%;
-      }
-
-      .documents & {
-        top: 50%;
-
-        @media (min-height:650px) and (max-height: 749px) {
-          top: 46%;
-        }
-
-        @media (min-height:750px) and (max-height: 850px) {
-          top: 47%;
-        }
-      }
+      // .press & {
+      //   top: 45%;
+      // }
+      //
+      // .documents & {
+      //   top: 50%;
+      //
+      //   @media (min-height:650px) and (max-height: 749px) {
+      //     top: 46%;
+      //   }
+      //
+      //   @media (min-height:750px) and (max-height: 850px) {
+      //     top: 47%;
+      //   }
+      // }
     }
+  }
+
+  & .heading-2[data-text-abaft]::after {
+    font-size: 58px;
   }
 
   & .news-block  {
@@ -85,6 +89,7 @@
 
       &__heading {
         font-size: 40px;
+        margin-bottom: 10px;
       }
     }
     @media (min-height:750px) and (max-height: 950px) {
@@ -102,7 +107,7 @@
   & .news-card  {
     @media (min-height:650px) and (max-height: 749px) {
       &__image {
-        max-height: 250px;
+        max-height: 200px;
         margin-bottom: 25px;
       }
 
@@ -115,14 +120,14 @@
       }
 
       &__text {
-        font-size: 12px;
+        font-size: 14px;
         margin-bottom: 6px;
         line-height: 1.1;
       }
     }
     @media (min-height:750px) and (max-height: 950px) {
       &__image {
-        max-height: 300px;
+        max-height: 250px;
         margin-bottom: 30px;
       }
 
@@ -135,7 +140,7 @@
       }
 
       &__text {
-        font-size: 14px;
+        font-size: 16px;
         margin-bottom: 6px;
         line-height: 1.2;
       }
@@ -143,7 +148,7 @@
   }
 
   & .video {
-    @media (min-height:650px) and (max-height: 749px) and (max-width: 1199px) {
+    @media (min-height:650px) and (max-height: 749px) {
       &__container{
         width: 75%;
       }
@@ -155,7 +160,7 @@
         font-size: 20px;
       }
     }
-    @media (min-height:750px) and (max-height: 950px) and (max-width: 1199px) {
+    @media (min-height:750px) and (max-height: 950px) {
       &__container{
         width: 85%;
       }
@@ -181,13 +186,24 @@
       &__image {
         width: 70%;
       }
-
     }
+
+    @media (min-height:650px) and (max-height: 749px) and (min-width: 1200px) {
+      &__image {
+        width: 60%;
+      }
+    }
+
     @media (min-height:750px) and (max-height: 950px) {
       &__image {
-        width: 85%;
+        width: 75%;
       }
+    }
 
+    @media (min-height:650px) and (max-height: 749px) and (min-width: 1200px) {
+      &__image {
+        width: 60%;
+      }
     }
 
     @media (min-height:650px) and (max-height: 800px) and (min-width: 1366px) {
@@ -312,6 +328,17 @@
         }
       }
     }
+  }
+
+  & .ads {
+    @media(min-height: 650px) and (min-width: 992px) {
+      &__text {
+        margin-bottom: 20px;
+      }
+    }
+
+    // @media (min-height:750px) and (min-width: 749px) {
+    // }
   }
 
   & .cta {
@@ -445,8 +472,16 @@
       }
     }
     @media (min-height:750px) and (max-height: 950px) {
+      &__heading {
+        margin-bottom: 0;
+      }
+
+      &__text {
+        margin-bottom: 0;
+      }
+
       &__photo {
-        height: 400px;
+        height: 300px;
       }
     }
   }
@@ -536,10 +571,6 @@
       &__copy-container {
         margin-bottom: 5px;
       }
-
-      &__copy {
-        height: 190px;
-      }
     }
 
     @media (min-height:750px) and (max-height: 850px) {
@@ -554,10 +585,6 @@
 
       &__copy-container {
         margin-bottom: 10px;
-      }
-
-      &__copy {
-        height: 230px;
       }
     }
 
