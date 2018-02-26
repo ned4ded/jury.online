@@ -51,10 +51,13 @@ class SmoothScrolling {
 
       const target = this.getAnchor(el);
       if(!target) return;
-      
+
       const offset = this.getAnchorOffset(target);
 
-      $("html, body").animate({ scrollTop: offset - this.getFixedOffset() }, 500);
+      const noOffset = $( el ).data('noOffset');
+      const offsetMargin = noOffset? 0 : this.getFixedOffset();
+
+      $("html, body").animate({ scrollTop: offset - offsetMargin }, 500);
     };
   }
 }

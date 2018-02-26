@@ -4560,9 +4560,9 @@ body {
   .scrollable .team-block__heading {
     margin-bottom: 0; }
   .scrollable .team-block__text {
-    margin-bottom: 0; }
+    margin-bottom: 20px; }
   .scrollable .team-block__photo {
-    height: 300px; }
+    height: 400px; }
   .scrollable .team-block__card {
     margin-bottom: 0; } }
 

@@ -444,7 +444,7 @@ function _toConsumableArray(arr) { if (Array.isArray(arr)) { for (var i = 0, arr
     }
   });
 })();
-"use strict";
+'use strict';
 
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
@@ -463,7 +463,7 @@ var SmoothScrolling = function () {
   }
 
   _createClass(SmoothScrolling, [{
-    key: "jumpOnLoad",
+    key: 'jumpOnLoad',
     value: function jumpOnLoad() {
       var offset = this.getAnchorOffset() - this.getFixedOffset();
 
@@ -472,19 +472,19 @@ var SmoothScrolling = function () {
       });
     }
   }, {
-    key: "getFixedOffset",
+    key: 'getFixedOffset',
     value: function getFixedOffset() {
       return this.offsetHeight;
     }
   }, {
-    key: "getAnchorOffset",
+    key: 'getAnchorOffset',
     value: function getAnchorOffset(el) {
       var elem = el || document.getElementById(this.getAnchor());
 
       return $(elem).offset().top;
     }
   }, {
-    key: "getAnchor",
+    key: 'getAnchor',
     value: function getAnchor(el) {
       if (!el) {
         var anchor = window.location.hash.slice(1);
@@ -497,7 +497,7 @@ var SmoothScrolling = function () {
       return hash ? document.getElementById(hash) : false;
     }
   }, {
-    key: "setListners",
+    key: 'setListners',
     value: function setListners(elements) {
       var _this = this;
 
@@ -509,7 +509,7 @@ var SmoothScrolling = function () {
       });
     }
   }, {
-    key: "getListner",
+    key: 'getListner',
     value: function getListner(el) {
       var _this2 = this;
 
@@ -521,7 +521,10 @@ var SmoothScrolling = function () {
 
         var offset = _this2.getAnchorOffset(target);
 
-        $("html, body").animate({ scrollTop: offset - _this2.getFixedOffset() }, 500);
+        var noOffset = $(el).data('noOffset');
+        var offsetMargin = noOffset ? 0 : _this2.getFixedOffset();
+
+        $("html, body").animate({ scrollTop: offset - offsetMargin }, 500);
       };
     }
   }]);
@@ -759,8 +762,6 @@ var ScrollixBlock = function () {
     if (makeStructure) this.makeStructure();
     var innerH = $(element).children().first().innerHeight() + 70;
     this.scrollable = innerH > this.getMaxHeight() ? false : scrollable;
-    console.log(innerH);
-    console.log(this);
     if (!this.scrollable) this.destroyStructure();
   }
 
@@ -893,7 +894,7 @@ var ScrollixEvents = function () {
       var dir = event.originalEvent.deltaY < 0 ? 1 : 0;
       this.base.setScrollDirection(dir);
       this.base.setNextIndex();
-      if (!this.base.getNextElement().isScrollable() || this.base.getScrollBottom() == $(document).height()) return;
+      if (!this.base.getNextElement().isScrollable() || this.base.getScrollBottom() == $(document).height() || this.base.getScrollTop() == 0) return;
       $(window).unbind('wheel');
       var block = function block(e) {
         return e.preventDefault();
@@ -932,7 +933,7 @@ var ScrollixEvents = function () {
       if (!Object.keys(keys).find(function (e) {
         return e === curKey;
       })) return;
-      if (!this.base.getNextElement().isScrollable() || this.base.getScrollBottom() == $(document).height()) return;
+      if (!this.base.getNextElement().isScrollable() || this.base.getScrollBottom() == $(document).height() || this.base.getScrollTop() == 0) return;
       event.preventDefault();
 
       $(window).unbind('keydown');

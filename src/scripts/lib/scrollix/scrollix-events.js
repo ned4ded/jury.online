@@ -46,7 +46,9 @@ class ScrollixEvents {
     const dir = (event.originalEvent.deltaY < 0) ? 1 : 0;
     this.base.setScrollDirection(dir);
     this.base.setNextIndex();
-    if(!this.base.getNextElement().isScrollable() || this.base.getScrollBottom() == $( document ).height()) return;
+    if(!this.base.getNextElement().isScrollable()
+    || this.base.getScrollBottom() == $( document ).height()
+    || this.base.getScrollTop() == 0) return;
     $( window ).unbind('wheel');
     const block = e => e.preventDefault();
     $( window ).bind('wheel', block);
@@ -78,7 +80,9 @@ class ScrollixEvents {
 
     if(curKey === 'Escape') return this.clean();
     if(!Object.keys(keys).find(e => e === curKey)) return;
-    if(!this.base.getNextElement().isScrollable() || this.base.getScrollBottom() == $( document ).height()) return;
+    if(!this.base.getNextElement().isScrollable()
+    || this.base.getScrollBottom() == $( document ).height()
+    || this.base.getScrollTop() == 0) return;
     event.preventDefault();
 
     $( window ).unbind('keydown');

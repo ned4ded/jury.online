@@ -9,8 +9,6 @@ class ScrollixBlock {
     if(makeStructure) this.makeStructure();
     const innerH = $( element ).children().first().innerHeight() + 70;
     this.scrollable = (innerH > this.getMaxHeight()) ? false : scrollable;
-    console.log(innerH);
-    console.log(this);
     if(!this.scrollable) this.destroyStructure();
   }
 
