@@ -465,7 +465,10 @@ var SmoothScrolling = function () {
   _createClass(SmoothScrolling, [{
     key: 'jumpOnLoad',
     value: function jumpOnLoad() {
-      var offset = this.getAnchorOffset() - this.getFixedOffset();
+      var noOffset = $(document.getElementById(this.getAnchor())).data('noOffset');
+      var fixedOffset = noOffset ? 0 : this.getFixedOffset();
+      console.log(noOffset);
+      var offset = this.getAnchorOffset() - fixedOffset;
 
       $(document).ready(function () {
         return window.scrollTo(window.pageXOffset, offset);
@@ -603,8 +606,6 @@ var ScrollixBase = function () {
     this.setScrollDirection(1);
     this.setBreakpoints();
     this.setNextIndex();
-
-    console.log(this.breakpoints);
   }
 
   _createClass(ScrollixBase, [{

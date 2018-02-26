@@ -10,9 +10,6 @@ class ScrollixBase {
     this.setScrollDirection(1);
     this.setBreakpoints();
     this.setNextIndex();
-
-    console.log(this.breakpoints);
-
   }
 
   getScrollTop() {

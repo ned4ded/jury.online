@@ -9,7 +9,10 @@ class SmoothScrolling {
   }
 
   jumpOnLoad() {
-    const offset = this.getAnchorOffset() - this.getFixedOffset();
+    const noOffset = $( document.getElementById(this.getAnchor()) ).data('noOffset');
+    const fixedOffset = noOffset? 0 : this.getFixedOffset();
+    console.log(noOffset);
+    const offset = this.getAnchorOffset() - fixedOffset;
 
     $( document ).ready(() => window.scrollTo(window.pageXOffset, offset));
   }
