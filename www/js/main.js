@@ -467,7 +467,6 @@ var SmoothScrolling = function () {
     value: function jumpOnLoad() {
       var noOffset = $(document.getElementById(this.getAnchor())).data('noOffset');
       var fixedOffset = noOffset ? 0 : this.getFixedOffset();
-      console.log(noOffset);
       var offset = this.getAnchorOffset() - fixedOffset;
 
       $(document).ready(function () {
