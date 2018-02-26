@@ -470,6 +470,10 @@
       &__photo {
         height: 300px;
       }
+
+      &__card {
+        margin-bottom: 0;
+      }
     }
     @media (min-height:750px) and (max-height: 950px) {
       &__heading {
@@ -482,6 +486,10 @@
 
       &__photo {
         height: 300px;
+      }
+
+      &__card {
+        margin-bottom: 0;
       }
     }
   }
