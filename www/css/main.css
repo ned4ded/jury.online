@@ -27,9 +27,7 @@
   .show > .dropdown-menu {
     width: 100%;
     border: none;
-    border-radius: 0;
-    max-height: 75px;
-    overflow-y: auto; } }
+    border-radius: 0; } }
 
 body {
   min-width: 500px; }
@@ -127,6 +125,8 @@ body {
     width: 100%;
     margin: 20px 0;
     padding: 0;
+    overflow: auto;
+    max-height: 500px;
     list-style: none; }
     @media (min-width: 1200px) {
       .header__menu {
