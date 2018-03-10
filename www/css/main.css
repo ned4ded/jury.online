@@ -140,6 +140,7 @@ body {
         -webkit-box-pack: end;
             -ms-flex-pack: end;
                 justify-content: flex-end;
+                overflow: inherit;
         margin: 0; } }
     @media (min-width: 1200px) {
       .header__menu-item {
