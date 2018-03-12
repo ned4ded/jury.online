@@ -280,9 +280,7 @@ body {
           display: inline-block;
           padding: 0; } }
     .header__dropdown-menu {
-      position: static;
-      top: 38px;
-      left: -52px;
+      position: relative;
       padding: 7px 15px;
       opacity: 0.95;
       border: 1px solid #b896bb;
