@@ -287,7 +287,9 @@ body {
       background-color: #4d2464; }
       @media (min-width: 1200px) {
         .header__dropdown-menu {
-          position: absolute; } }
+          position: absolute;
+          top: 38px;
+          left: -52px; } }
       .header__dropdown-menu .dropdown-item {
         position: relative;
         padding: 8px 10px 8px 30px;
