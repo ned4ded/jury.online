@@ -290,6 +290,9 @@ body {
           position: absolute;
           top: 38px;
           left: -52px; } }
+      .header__dropdown .dropdown-backdrop {
+        display: none;
+      }
       .header__dropdown-menu .dropdown-item {
         position: relative;
         padding: 8px 10px 8px 30px;
