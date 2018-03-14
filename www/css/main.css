@@ -27,7 +27,9 @@
   .show > .dropdown-menu {
     width: 100%;
     border: none;
-    border-radius: 0; } }
+    border-radius: 0;
+    max-height: 75px;
+    overflow-y: auto; } }
 
 body {
   min-width: 500px; }
@@ -125,8 +127,6 @@ body {
     width: 100%;
     margin: 20px 0;
     padding: 0;
-    overflow: auto;
-    max-height: 500px;
     list-style: none; }
     @media (min-width: 1200px) {
       .header__menu {
@@ -140,7 +140,6 @@ body {
         -webkit-box-pack: end;
             -ms-flex-pack: end;
                 justify-content: flex-end;
-                overflow: inherit;
         margin: 0; } }
     @media (min-width: 1200px) {
       .header__menu-item {
@@ -280,19 +279,16 @@ body {
           display: inline-block;
           padding: 0; } }
     .header__dropdown-menu {
-      position: relative;
+      position: static;
+      top: 38px;
+      left: -52px;
       padding: 7px 15px;
       opacity: 0.95;
       border: 1px solid #b896bb;
       background-color: #4d2464; }
       @media (min-width: 1200px) {
         .header__dropdown-menu {
-          position: absolute;
-          top: 38px;
-          left: -52px; } }
-      .header__dropdown .dropdown-backdrop {
-        display: none;
-      }
+          position: absolute; } }
       .header__dropdown-menu .dropdown-item {
         position: relative;
         padding: 8px 10px 8px 30px;
@@ -1742,6 +1738,8 @@ body {
       -ms-flex-pack: justify;
           justify-content: space-between;
   width: 260px; }
+  .copyright__logo {
+    margin-right: 10px; }
   .copyright__text {
     margin: 0;
     margin-bottom: 9px;
@@ -1749,6 +1747,28 @@ body {
     font-family: "Futura", serif;
     font-size: 15px;
     line-height: 15px; }
+
+.verified {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column nowrap;
+          flex-flow: column nowrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center; }
+  .verified__text {
+    color: white;
+    font-family: "Futura", serif;
+    font-size: 13px;
+    font-weight: 600;
+    line-height: 100%;
+    text-transform: uppercase; }
 
 .placeholder {
   padding: 30px 20px;

@@ -152,10 +152,10 @@
   };
 
   $(document).ready(function () {
-    return new ScrollixBase(elements(), appearanceHandler, deviceCheck() && browserCheck() && sizeCheck() && !!elements().length);
-  }
-  // false,
-  );
+    return new ScrollixBase(elements(), appearanceHandler,
+    // deviceCheck() && browserCheck() && sizeCheck() && !!elements().length,
+    false);
+  });
 
   $(document).ready(function () {
     $('html').removeClass('no-js');

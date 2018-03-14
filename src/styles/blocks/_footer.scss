@@ -217,6 +217,10 @@
 
   width: 260px;
 
+  &__logo {
+    margin-right: 10px;
+  }
+
   &__text {
     margin: 0;
     margin-bottom: 9px;
@@ -226,5 +230,21 @@
     font-family: $avenir;
     font-size: 15px;
     line-height: 15px;;
+  }
+}
+
+.verified {
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  justify-content: center;
+
+  &__text {
+    color: white;
+    font-family: $avenir;
+    font-size: 13px;
+    font-weight: 600;
+    line-height: 100%;
+    text-transform: uppercase;
   }
 }

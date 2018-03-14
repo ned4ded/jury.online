@@ -40,8 +40,8 @@
   $( document ).ready(() => new ScrollixBase(
       elements(),
       appearanceHandler,
-      deviceCheck() && browserCheck() && sizeCheck() && !!elements().length,
-      // false,
+      // deviceCheck() && browserCheck() && sizeCheck() && !!elements().length,
+      false,
     ));
 
     $( document ).ready(function() {
