@@ -27,9 +27,7 @@
   .show > .dropdown-menu {
     width: 100%;
     border: none;
-    border-radius: 0;
-    max-height: 75px;
-    overflow-y: auto; } }
+    border-radius: 0; } }
 
 body {
   min-width: 500px; }
@@ -220,6 +218,8 @@ body {
             border-radius: 10px; } }
   .header__dropdown {
     position: relative; }
+    .header__dropdown .dropdown-backdrop {
+      display: none; }
     .header__dropdown-btn {
       position: relative;
       display: block;
@@ -279,16 +279,16 @@ body {
           display: inline-block;
           padding: 0; } }
     .header__dropdown-menu {
-      position: static;
-      top: 38px;
-      left: -52px;
+      position: relative;
       padding: 7px 15px;
       opacity: 0.95;
       border: 1px solid #b896bb;
       background-color: #4d2464; }
       @media (min-width: 1200px) {
         .header__dropdown-menu {
-          position: absolute; } }
+          position: absolute;
+          top: 38px;
+          left: -52px; } }
       .header__dropdown-menu .dropdown-item {
         position: relative;
         padding: 8px 10px 8px 30px;
@@ -884,7 +884,7 @@ body {
     font-weight: 300;
     text-align: justify;
     color: #6a5776;
-    max-width: 419px; }
+    max-width: 100%; }
     @media (min-width: 768px) {
       .news-card__text {
         font-size: 17px; } }
@@ -1756,12 +1756,14 @@ body {
   -webkit-box-direction: normal;
       -ms-flex-flow: column nowrap;
           flex-flow: column nowrap;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center; }
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start; }
+  @media (min-width: 768px) {
+    .verified {
+      -webkit-box-align: center;
+          -ms-flex-align: center;
+              align-items: center; } }
   .verified__text {
     color: white;
     font-family: "Futura", serif;

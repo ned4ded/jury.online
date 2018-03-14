@@ -236,8 +236,11 @@
 .verified {
   display: flex;
   flex-flow: column nowrap;
-  align-items: center;
-  justify-content: center;
+  align-items: flex-start;
+
+  @media(min-width: 768px) {
+    align-items: center;
+  }
 
   &__text {
     color: white;
