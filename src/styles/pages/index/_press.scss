@@ -146,7 +146,7 @@
     justify-content: center;
 
     min-height: 700px;
-    margin: 45px -15px;
+    margin: 45px -15px 20px;
     padding: 0;
 
     list-style: none;
@@ -155,7 +155,7 @@
       justify-content: space-around;
 
       min-height: 600px;
-      margin: 90px -15px;
+      margin: 90px -15px 40px;
     }
 
     @media(min-width: 992px) {
@@ -163,7 +163,7 @@
     }
 
     @media(min-width: 1200px) {
-      margin: 125px -15px;
+      margin: 125px -15px 55px;
     }
   }
 
@@ -202,6 +202,41 @@
 
     @media(min-width: 992px) {
       width: 20%;
+    }
+  }
+
+  &__icobench {
+    margin-bottom: 45px;
+
+    @media(min-width: 768px) {
+      margin-bottom: 90px;
+    }
+    @media(min-width: 1200px) {
+      margin-bottom: 125px;
+    }
+
+    &-link {
+      display: flex;
+      flex-flow: column nowrap;
+      justify-content: center;
+      align-items: center;
+      height: 100%;
+    }
+
+    &-img {
+      max-width: 300px;
+      width: 100%;
+      display: block;
+      margin: auto;
+      height: auto;
+
+      @media(min-width: 768px) {
+        width: 75%;
+      }
+
+      @media(min-width: 992px) {
+        width: 50%;
+      }
     }
   }
 }

@@ -27,7 +27,7 @@ gulp.task('webserver', ['styles', 'html', 'scripts'], function() {
     server: './www',
     files: './www/index.html',
     host: '192.168.1.130',
-    port: 3001,
+    port: 3000,
     reloadOnRestart: true,
     logConnections: true,
     ghostMode: false,

@@ -16,18 +16,95 @@
   }
 
   &__text {
-    margin-bottom: 40px;
+    // margin-bottom: 40px;
 
     @media (min-width: 768px) {
-      margin-bottom: 60px;
+      // margin-bottom: 60px;
     }
   }
 
   &__btn {
+    width: 90%;
+
+    @media (min-width: 768px) {
+      width: auto;
+    }
+
     &-container {
       width: 100%;
 
-      text-align: right;
+      text-align: center;
+    }
+  }
+
+  &__slide {
+    padding: 40px 0;
+
+    @media (min-width: 992px) {
+      padding: 70px 0;
+    }
+
+    &s {
+      padding: 0;
+      margin: 0;
+      margin-bottom: 10px;
+
+      @media (min-width: 768px) {
+        margin-bottom: 20px;
+      }
+    }
+
+    &-content {
+      width: 100%;
+      margin: auto;
+    }
+
+
+  }
+
+  &__carousel-indicators {
+    bottom: 10px;
+
+    margin: 0;
+
+    @media(min-width: 768px) {
+      bottom: 20px;
+    }
+
+    @media(min-width: 1200px) {
+      bottom: 30px;
+    }
+
+    & li {
+      flex: 0 0 auto;
+
+      width: 7px;
+      height: 7px;
+      margin-right: 8px;
+      margin-left: 8px;
+      cursor: pointer;
+      border-radius: 100%;
+      background-color: rgba(208, 193, 218, 0.6);
+
+
+      @media(min-width: 768px) {
+        width: 8.5px;
+        height: 8.5px;
+      }
+      @media(min-width: 992px) {
+        width: 10px;
+        height: 10px;
+      }
+
+      &.active {
+        background-image: linear-gradient(180grad, rgba(163, 51, 170, 1) 0%, rgba(64, 59, 123, 1) 100%);
+        box-shadow: 0px 0px 9px 4px rgba(165, 93, 202, .39), inset 0px 0px 9px 2px rgba(165, 93, 202, .39);
+      }
+
+      &:hover {
+        background-color: rgba(208, 193, 218, .8);
+        box-shadow: 0px 0px 10px 4px rgba(165, 93, 202, 0.2), inset 0px 0px 1px 1px rgba(165, 93, 202, 0.3);
+      }
     }
   }
 }

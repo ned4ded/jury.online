@@ -224,6 +224,17 @@ var appearanceHandler = function appearanceHandler(ev, height) {
 };
 'use strict';
 
+(function () {
+  var $carousel = $('#arbiters-block-carousel');
+  if (!$carousel) return;
+
+  var slidesCount = $carousel.find('.carousel-item').length;
+  var randomizedSlide = Math.floor(Math.random() * slidesCount);
+
+  return $carousel.carousel(randomizedSlide).carousel({ ride: true });
+})();
+'use strict';
+
 function _toConsumableArray(arr) { if (Array.isArray(arr)) { for (var i = 0, arr2 = Array(arr.length); i < arr.length; i++) { arr2[i] = arr[i]; } return arr2; } else { return Array.from(arr); } }
 
 (function () {

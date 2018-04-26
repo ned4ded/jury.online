@@ -44,10 +44,10 @@
       false,
     ));
 
-    $( document ).ready(function() {
-      $('html').removeClass('no-js');
-      const elements = $('[data-smooth-scroll="true"]').get();
+  $( document ).ready(function() {
+    $('html').removeClass('no-js');
+    const elements = $('[data-smooth-scroll="true"]').get();
 
-      return () => new SmoothScrolling(elements);
-    }());
+    return () => new SmoothScrolling(elements);
+  }());
 }());
