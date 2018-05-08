@@ -2601,12 +2601,12 @@ body {
   background-image: linear-gradient(169deg, #85338c, #4a246f); }
   @media (min-width: 768px) {
     .cta {
-      padding-top: 70px;
+      padding-top: 80px;
       padding-bottom: 100px; } }
   @media (min-width: 1200px) {
     .cta {
-      padding-top: 80px;
-      padding-bottom: 165px; } }
+      padding-top: 105px;
+      padding-bottom: 120px; } }
   .cta__heading {
     margin-bottom: 0;
     text-align: center;
@@ -2646,7 +2646,11 @@ body {
       background-image: -webkit-gradient(linear, left top, right top, from(rgba(89, 37, 101, 0.4)), to(rgba(82, 35, 98, 0.4)));
       background-image: linear-gradient(to right, rgba(89, 37, 101, 0.4), rgba(82, 35, 98, 0.4)); }
     .cta__price > svg {
-      display: inline-block; }
+      display: inline-block;
+      width: 470px; }
+      @media (min-width: 776px) {
+        .cta__price > svg {
+          width: 580px; } }
   .cta__total {
     font-family: "Futura", serif;
     font-weight: bold; }
@@ -2654,14 +2658,24 @@ body {
     text-transform: uppercase;
     display: -webkit-box;
     display: -ms-flexbox;
-    display: flex; }
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: row wrap;
+            flex-flow: row wrap;
+    margin-bottom: 55px; }
     .cta__fiat-text {
       display: block;
-      width: 50%;
+      width: 100%;
       padding: 0 15px;
-      text-align: right; }
+      text-align: left; }
+      @media (min-width: 768px) {
+        .cta__fiat-text {
+          width: 50%;
+          text-align: right; } }
       .cta__fiat-text > svg {
-        display: inline-block; }
+        display: inline-block;
+        width: auto; }
   .cta__currency {
     padding: 0;
     margin: 0;
@@ -2677,7 +2691,7 @@ body {
     max-width: 1020px;
     margin: auto; }
     .cta__currency-item {
-      margin: 10px 15px;
+      margin: 10px 10px;
       width: auto;
       -webkit-box-flex: 1;
           -ms-flex-positive: 1;
@@ -2711,19 +2725,69 @@ body {
               justify-content: flex-end;
       border-radius: 10px;
       -webkit-box-shadow: 0 0 28px 7px rgba(225, 103, 141, 0.1), 0 0 10px 3px rgba(225, 103, 141, 0.1), 0 13px 21px 0 rgba(35, 31, 32, 0.2);
-              box-shadow: 0 0 28px 7px rgba(225, 103, 141, 0.1), 0 0 10px 3px rgba(225, 103, 141, 0.1), 0 13px 21px 0 rgba(35, 31, 32, 0.2); }
+              box-shadow: 0 0 28px 7px rgba(225, 103, 141, 0.1), 0 0 10px 3px rgba(225, 103, 141, 0.1), 0 13px 21px 0 rgba(35, 31, 32, 0.2);
+      overflow: hidden; }
+      .cta__currency-badge:before {
+        position: absolute;
+        top: 50%;
+        left: -44px;
+        width: 88px;
+        height: 88px;
+        content: '';
+        background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(192, 69, 115, 0.29)), to(rgba(169, 40, 82, 0.29)));
+        background-image: linear-gradient(to bottom, rgba(192, 69, 115, 0.29), rgba(169, 40, 82, 0.29));
+        border-radius: 100%;
+        -webkit-transform: translateY(-50%);
+                transform: translateY(-50%); }
+      .cta__currency-badge--currency--ltc {
+        background-image: -webkit-gradient(linear, left top, left bottom, color-stop(30%, #de63ba), to(#aa3080));
+        background-image: linear-gradient(to bottom, #de63ba 30%, #aa3080 100%); }
+        .cta__currency-badge--currency--ltc:before {
+          background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(192, 69, 156, 0.29)), to(rgba(156, 33, 116, 0.29)));
+          background-image: linear-gradient(to bottom, rgba(192, 69, 156, 0.29), rgba(156, 33, 116, 0.29)); }
+      .cta__currency-badge--currency--eth {
+        background-image: -webkit-gradient(linear, left top, left bottom, color-stop(30%, #aa61d8), to(#643c9a));
+        background-image: linear-gradient(to bottom, #aa61d8 30%, #643c9a 100%);
+        -webkit-box-shadow: 0 0 28px 7px rgba(184, 119, 225, 0.1), 0 0 10px 3px rgba(184, 119, 225, 0.1), 0 13px 21px 0 rgba(35, 31, 32, 0.2);
+                box-shadow: 0 0 28px 7px rgba(184, 119, 225, 0.1), 0 0 10px 3px rgba(184, 119, 225, 0.1), 0 13px 21px 0 rgba(35, 31, 32, 0.2); }
+        .cta__currency-badge--currency--eth:before {
+          background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(140, 67, 186, 0.29)), to(rgba(91, 41, 143, 0.29)));
+          background-image: linear-gradient(to bottom, rgba(140, 67, 186, 0.29), rgba(91, 41, 143, 0.29)); }
+      .cta__currency-badge--currency--bch {
+        background-image: -webkit-gradient(linear, left top, left bottom, from(#758ed8), to(#444b9e));
+        background-image: linear-gradient(to bottom, #758ed8 0%, #444b9e 100%);
+        -webkit-box-shadow: 0 0 28px 7px rgba(149, 167, 231, 0.1), 0 0 10px 3px rgba(149, 167, 231, 0.1), 0 13px 21px 0 rgba(35, 31, 32, 0.2);
+                box-shadow: 0 0 28px 7px rgba(149, 167, 231, 0.1), 0 0 10px 3px rgba(149, 167, 231, 0.1), 0 13px 21px 0 rgba(35, 31, 32, 0.2); }
+        .cta__currency-badge--currency--bch:before {
+          background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(76, 97, 173, 0.29)), to(rgba(49, 60, 141, 0.29)));
+          background-image: linear-gradient(to bottom, rgba(76, 97, 173, 0.29), rgba(49, 60, 141, 0.29)); }
+      .cta__currency-badge--currency--etc {
+        background-image: -webkit-gradient(linear, left top, left bottom, from(#97e1f6), to(#3c8faa));
+        background-image: linear-gradient(to bottom, #97e1f6 0%, #3c8faa 100%);
+        -webkit-box-shadow: 0 0 28px 7px rgba(173, 226, 241, 0.1), 0 0 10px 3px rgba(173, 226, 241, 0.1), 0 13px 21px 0 rgba(35, 31, 32, 0.2);
+                box-shadow: 0 0 28px 7px rgba(173, 226, 241, 0.1), 0 0 10px 3px rgba(173, 226, 241, 0.1), 0 13px 21px 0 rgba(35, 31, 32, 0.2); }
+        .cta__currency-badge--currency--etc:before {
+          background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(97, 173, 196, 0.29)), to(rgba(48, 129, 155, 0.29)));
+          background-image: linear-gradient(to bottom, rgba(97, 173, 196, 0.29), rgba(48, 129, 155, 0.29)); }
     .cta__currency-value {
       font-family: "Futura", serif;
       color: #f9e8fe;
       font-size: 40px;
       font-weight: bold;
-      line-height: 1; }
+      line-height: 1;
+      z-index: 0;
+      position: relative;
+      text-shadow: 0 1px 1px rgba(0, 15, 41, 0.38); }
     .cta__currency-name {
       color: #fff2e0;
       font-family: "Futura", serif;
       font-size: 21px;
       font-weight: bold;
-      line-height: 1; }
+      line-height: 1;
+      z-index: 0;
+      position: relative;
+      text-transform: uppercase;
+      text-shadow: 0 1px 1px rgba(0, 15, 41, 0.38); }
 
 .arbiters-block {
   padding-top: 84px;
