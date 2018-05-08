@@ -1,6 +1,6 @@
 (() => {
   const $carousel = $('#arbiters-block-carousel');
-  if(!$carousel) return;
+  if(!$carousel.length) return;
 
   const slidesCount = $carousel.find('.carousel-item').length;
   const randomizedSlide = Math.floor(Math.random() * slidesCount);

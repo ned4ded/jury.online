@@ -9,10 +9,15 @@
       text-transform: uppercase;
 
       color: rgba(255, 255, 255, 0.8);
-      text-shadow: 0px 9px 8px rgba(35, 31, 32, 0.2);
+      text-shadow: 0px 2px 2px rgba(35, 31, 32, 0.4);
 
       font-family: $avenir;
       font-size: 21px;
+
+      &--view--finished {
+        font-size: 26px;
+        margin-bottom: 45px;
+      }
     }
   }
 

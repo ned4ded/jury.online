@@ -1,18 +1,18 @@
 .cta {
   margin-right: -15px;
   margin-left: -15px;
-  padding-top: 35px;
+  padding-top: 50px;
   padding-bottom: 54px;
 
   background-image: linear-gradient(169deg, #85338c, #4a246f);
 
   @media(min-width: 768px) {
-    padding-top: 54px;
+    padding-top: 70px;
     padding-bottom: 100px;
   }
 
   @media(min-width: 1200px) {
-    padding-top: 65px;
+    padding-top: 80px;
     padding-bottom: 165px;
   }
 
@@ -42,6 +42,112 @@
 
     @media(min-width: 768px) {
       margin-bottom: 110px;
+    }
+  }
+
+  &__price {
+    display: inline-block;
+    position: relative;
+    z-index: 0;
+    margin-bottom: 30px;
+
+    &:before {
+      content: '';
+      display: block;
+      width: 100%;
+      height: calc(100% - 10px);
+      background-color: #fff;
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: -1;
+      margin-bottom: 0;
+      border-radius: 10px;
+      background-color: rgba(45, 20, 55, 0.4);
+      background-image: linear-gradient(to right, rgba(89, 37, 101, .4), rgba(82, 35, 98, .4));
+    }
+
+    & > svg {
+      display: inline-block;
+    }
+  }
+
+  &__total {
+    font-family: "Futura", serif;
+    font-weight: bold;
+  }
+
+  &__fiat {
+    text-transform: uppercase;
+    display: flex;
+
+    &-text {
+      display: block;
+      width: 50%;
+      padding: 0 15px;
+      text-align: right;
+
+      & > svg {
+        display: inline-block;
+      }
+    }
+  }
+
+  &__currency {
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-flow: row wrap;
+    list-style: none;
+    width: 100%;
+    max-width: 1020px;
+    margin: auto;
+
+    &-item {
+      margin: 10px 15px;
+      width: auto;
+      flex-grow: 1;
+      &:first-of-type {
+        margin-left: 0;
+      }
+
+      &:last-of-type {
+        margin-right: 0;
+      }
+    }
+
+    &-badge {
+      display: inline-flex;
+      position: relative;
+      flex-flow: column nowrap;
+      align-items: flex-end;
+      width: auto;
+      min-width: 185px;
+      min-height: 120px;
+      max-width: 200%;
+      margin: 0;
+      padding: 16px 20px;
+      background-image: linear-gradient( to bottom, rgb(222, 99, 145) 30%, rgb(190, 58, 99) 100%);
+      justify-content: flex-end;
+      border-radius: 10px;
+      // box-shadow: ;
+      box-shadow: 0 0 28px 7px rgba(225, 103, 141, .1), 0 0 10px 3px rgba(225, 103, 141, .1), 0 13px 21px 0 rgba(35, 31, 32, .2);
+    }
+
+    &-value {
+      font-family: "Futura", serif;
+      color: rgba(249, 232, 254, 1);
+      font-size: 40px;
+      font-weight: bold;
+      line-height: 1;
+    }
+
+    &-name {
+      color: rgba(255, 242, 224, 1);
+      font-family: "Futura", serif;
+      font-size: 21px;
+      font-weight: bold;
+      line-height: 1;
     }
   }
 }

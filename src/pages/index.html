@@ -426,7 +426,117 @@
           <div class="cta" data-scrollable="true">
             <div class="container">
               <div class="cta__container row justify-content-between align-items-center align-items-lg-end">
-                <div class="col-12 col-lg-6">
+                <div class="col-12 text-center">
+                  <h3 class="discount__heading discount__heading--view--finished">ICO has successfully finished</h3>
+                  <p class="timer__dates timer__dates--view--finished">
+                    <time datetime="2018-02-12">12 february</time> - <time  datetime="2018-04-30">30 april 2018</time>
+                  </p>
+                  <div class="cta__price">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="580" height="95" viewBox="0 0 554 60">
+                      <defs>
+                        <linearGradient id="discount-text-gradient-1" x1="0" x2="0" y1="0" y2="1">
+                          <stop offset="50%" stop-color="rgba(251, 191, 242, 1)"></stop>
+                          <stop offset="100%" stop-color="rgba(232, 153, 215, 1)"></stop>
+                        </linearGradient>
+                        <filter id="discount-text-shadow-1" x="-50%" y="-50%" width="200%" height="200%">
+                          <feOffset result="offOut" in="SourceGraphic" dx="0" dy="0" />
+                          <feGaussianBlur result="blurOut" in="offOut" stdDeviation="15" />
+                          <feBlend in="SourceGraphic" in2="blurOut" mode="normal" />
+                          <feComponentTransfer>
+                            <feFuncA type="linear" slope="0.5"/>
+                          </feComponentTransfer>
+                          <feMerge>
+                            <feMergeNode/>
+                            <feMergeNode in="SourceGraphic"/>
+                          </feMerge>
+                        </filter>
+                      </defs>
+                      <text text-anchor="middle" x="277" class="cta__total" fill="url(#discount-text-gradient-1)" filter="url(#discount-text-shadow-1)" x="0" y="50" font-size="55">
+                          3 228 464,80 USD
+                      </text>
+                    </svg>
+                  </div>
+                  <div class="cta__collected">
+                    <h3 class="discount__heading discount__heading--view--collected">
+                      <span class="discount__heading-divider"></span>
+                      <span class="discount__heading-content">Collected during ico</span>
+                      <span class="discount__heading-divider"></span>
+                    </h3>
+                    <div class="cta__fiat">
+                      <div class="cta__fiat-text">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="auto" height="46" viewBox="0 0 279 46">
+                          <defs>
+                            <linearGradient id="fiat-text-gradient-1" x1="0" x2="0" y1="0" y2="1">
+                              <stop offset="50%" stop-color="rgba(243, 216, 227, 1)"></stop>
+                              <stop offset="100%" stop-color="rgba(236, 200, 213, 1)"></stop>
+                            </linearGradient>
+                            <filter id="fiat-text-shadow" x="-50%" y="-50%" width="200%" height="200%">
+                              <feOffset result="offOut" in="SourceGraphic" dx="0" dy="0" />
+                              <feGaussianBlur result="blurOut" in="offOut" stdDeviation="5" />
+
+                              <feComponentTransfer result="glow" in="blurOut">
+                                <feFuncA type="linear" slope="0.07"/>
+                              </feComponentTransfer>
+
+                              <feOffset result="offOut-2" in="SourceAlpha" dx="0" dy="3" />
+                              <feGaussianBlur result="blurOut-2" in="offOut-2" stdDeviation="2" />
+
+                              <feComponentTransfer result="shadow" in="blurOut-2">
+                                <feFuncA type="linear" slope="0.5"/>
+                              </feComponentTransfer>
+
+
+                              <feMerge>
+                                <feMergeNode in="glow"/>
+                                <feMergeNode in="shadow"/>
+                                <feMergeNode in="SourceGraphic"/>
+                              </feMerge>
+                            </filter>
+                          </defs>
+                          <text text-anchor="end" class="cta__total" fill="url(#fiat-text-gradient-1)" filter="url(#fiat-text-shadow)" x="279" y="38" font-size="36.4">
+                              Including fiat:
+                          </text>
+                        </svg>
+                      </div>
+                      <svg class="cta__fiat-text" xmlns="http://www.w3.org/2000/svg" height="46">
+                        <defs>
+                          <linearGradient id="fiat-text-gradient-2" x1="0" x2="0" y1="0" y2="1">
+                            <stop offset="50%" stop-color="rgba(248, 176, 191, 1)"></stop>
+                            <stop offset="100%" stop-color="rgba(239, 153, 177, 1)"></stop>
+                          </linearGradient>
+
+                        </defs>
+                        <text text-anchor="start" class="cta__total" fill="url(#fiat-text-gradient-2)" filter="url(#fiat-text-shadow)" x="0" y="38" font-size="36.4">
+                             3 927 408 USD
+                        </text>
+                      </svg>
+                    </div>
+                    <ul class="cta__currency">
+                      <li class="cta__currency-item">
+                        <p class="cta__currency-badge">
+                          <span class="cta__currency-value">4,20</span><span class="cta__currency-name">BTC</span>
+                        </p>
+                      </li>
+                      <li class="cta__currency-item">
+                        <p class="cta__currency-badge">
+                          <span class="cta__currency-value">4,20</span><span class="cta__currency-name">BTC</span>
+                        </p>
+                      </li>
+                      <li class="cta__currency-item">
+                        <p class="cta__currency-badge">
+                          <span class="cta__currency-value">4,20</span><span class="cta__currency-name">BTC</span>
+                        </p>
+                      </li>
+                      <li class="cta__currency-item">
+                        <p class="cta__currency-badge">
+                          <span class="cta__currency-value">4,20</span><span class="cta__currency-name">BTC</span>
+                        </p>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+
+                <!-- <div class="col-12 col-lg-6">
                   <div class="discount" data-appearance="true" data-appearance-type="opacity" data-appearance-delay="0.5s">
                     <h3 class="discount__heading">Join us and get discount now </h3>
                     <div class="discount__offering">
@@ -498,7 +608,7 @@
                       </div>
                     </div>
                   </div>
-                </div>
+                </div> -->
               </div>
             </div>
           </div>

@@ -226,7 +226,7 @@ var appearanceHandler = function appearanceHandler(ev, height) {
 
 (function () {
   var $carousel = $('#arbiters-block-carousel');
-  if (!$carousel) return;
+  if (!$carousel.length) return;
 
   var slidesCount = $carousel.find('.carousel-item').length;
   var randomizedSlide = Math.floor(Math.random() * slidesCount);

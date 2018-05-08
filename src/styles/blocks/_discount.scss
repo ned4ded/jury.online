@@ -18,6 +18,9 @@
   }
 
   &__heading {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     margin-bottom: 28px;
 
     text-align: center;
@@ -30,6 +33,37 @@
     font-size: 40px;
     font-weight: 600;
     line-height: 1;
+
+    &--view {
+      &--finished {
+        font-weight: bold;
+        letter-spacing: 0;
+        margin-bottom: 5px;
+      }
+
+      &--collected {
+        font-size: 26px;
+        color: rgba(255, 255, 255, .8);
+        letter-spacing: 0;
+        font-weight: normal;
+        max-width: 1175px;
+        text-shadow: 3px 0 5px rgba(35, 31, 32, .5);
+        margin-bottom: 10px;
+      }
+    }
+
+    &-content {
+      width: auto;
+      padding: 0 40px;
+    }
+
+    &-divider {
+      flex-grow: 1;
+
+      height: 2px;
+      background-color: rgba(255, 255, 255, .8);
+      box-shadow: 3px 0 5px 0 rgba(35, 31, 32, .5);
+    }
   }
 
   &__offering {
