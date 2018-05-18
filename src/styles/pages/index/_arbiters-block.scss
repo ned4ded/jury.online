@@ -107,4 +107,74 @@
       }
     }
   }
+
+  @keyframes hover-in {
+    0% {
+      opacity: 1;
+      display: block;
+    }
+
+    99% {
+      opacity: 0;
+      display: block;
+    }
+
+    100% {
+      display: none;
+    }
+  }
+
+  @keyframes hover-out {
+    0% {
+      display: none;
+    }
+
+    1% {
+      display: block;
+      opacity: 0;
+    }
+
+    100% {
+      opacity: 1;
+    }
+  }
+
+  & .arbiter-card__content {
+    height: 415px;
+    overflow: hidden;
+    position: relative;
+
+    &:after {
+      display: block;
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 100px;
+      background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0), rgba(255, 255, 255, 1) 75%);
+      border-radius: 10px;
+      opacity: 1;
+    }
+
+    &--anim--forward:after {
+      display: block;
+      opacity: 0;
+      animation-name: hover-in;
+      animation-fill-mode: forwards;
+      animation-duration: .2s;
+    }
+
+    &--anim--reverse:after {
+      opacity: 0;
+      display: block;
+      animation-name: hover-out;
+      animation-duration: .2s;
+      animation-fill-mode: forwards;
+    }
+  }
+
+  & .arbiter-card__photo {
+    height: 415px;
+  }
 }
